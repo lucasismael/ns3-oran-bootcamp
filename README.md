@@ -60,23 +60,23 @@ O bootcamp está dividido em etapas práticas. Acesse os roteiros de cada labora
 
 | Laboratório | Descrição | Status |
 | :--- | :--- | :---: |
-| 🌐 [**Lab 1: Deploy do Near-RT RIC**](./labs/lab01-setup-RIC.md) | Instalação do cluster Kubernetes, Helm, configuração da RECIPE e deploy dos componentes do RIC | ✅ Disponível |
-| ⚙️ [**Lab 2: Instalação do ns-O-RAN**](./labs/lab02-setup-ns3.md) | Instalação de dependências, compilação da biblioteca E2sim e compilação do ns-3 com módulo O-RAN | ✅ Disponível |
-| 🔄 [**Lab 3: Validação da Integração ns-3 e Near-RT RIC**](./labs/lab03-validacao-e2setup.md) | Execução do cenário de simulação e validação do handshake E2 Setup via SCTP em tempo real | ✅ Disponível |
+| 🌐 [**Lab 1: Fundamentos da Arquitetura O-RAN e Deploy do Near-RT RIC**](./labs/lab01-setup-RIC.md) | Fundamentos da Arquitetura O-RAN, orquestração Cloud-Native (Kubernetes e Helm), configuração da RECIPE e deploy dos microsserviços do RIC | ✅ Disponível |
+| ⚙️ [**Lab 2: Fundamentos do ns-3, Arquitetura ns-O-RAN e Preparação do Ambiente**](./labs/lab02-setup-ns3.md) | Fundamentos do ns-3 (DES e tempo real), pilha 5G mmWave/DC, arquitetura ns-O-RAN (E2sim, E2SM-KPM/RC) e compilação com Waf | ✅ Disponível |
+| 🔄 [**Lab 3: Validação da Integração ns-3 e Near-RT RIC**](./labs/lab03-validacao-e2setup.md) | Protocolo E2AP, transporte SCTP, barramento RMR, execução do cenário DC e validação via REST API | ✅ Disponível |
 | 📊 **Lab 4: Onboarding do KPIMon xApp e Simulação** | Implantação de xApp no RIC e coleta de telemetria da simulação em tempo real | ⏳ *Em breve* |
 
 ---
 
-### [Lab 1: Deploy do Near-RT RIC](./labs/lab01-setup-RIC.md)
-Nesta etapa, o foco é levantar a infraestrutura principal do RIC da O-RAN SC. O roteiro aborda a instalação do cluster Kubernetes e Helm, a configuração de IPs na receita de deploy e a preparação do ambiente gerenciador de xApps (xApp Onboarder e `dms_cli`).
+### [Lab 1: Fundamentos da Arquitetura O-RAN e Deploy do Near-RT RIC](./labs/lab01-setup-RIC.md)
+Nesta etapa, exploramos a fundamentação teórica da Arquitetura O-RAN (desagregação da RAN, loops de controle temporal, SMO, RICs e interfaces abertas) e os princípios de infraestrutura Cloud-Native com Kubernetes e Helm. Em seguida, realizamos o provisionamento prático de um cluster Kubernetes *single-node*, a customização da receita de deploy (*RECIPE*) e a implantação completa dos microsserviços do Near-RT RIC da O-RAN SC.
 
-### [Lab 2: Instalação do ns-O-RAN](./labs/lab02-setup-ns3.md)
-O objetivo deste laboratório é preparar o simulador de redes para se comunicar com o RIC. O roteiro guia o aluno pela instalação das dependências de compilação, construção da biblioteca `E2sim` a partir do código-fonte e a compilação nativa do simulador `ns-3` integrado aos módulos `mmwave` e `oran-interface`.
+### [Lab 2: Fundamentos do ns-3, Arquitetura ns-O-RAN e Preparação do Ambiente](./labs/lab02-setup-ns3.md)
+Neste laboratório, aprofundamos a teoria do simulador ns-3 (versão 3.33), o funcionamento de simulações de eventos discretos (DES) versus tempo real com `RealtimeSimulatorImpl`, e a pilha de protocolos de ondas milimétricas do módulo `ns3-mmwave` com Conectividade Dupla (LTE + mmWave). Exploramos a arquitetura do arcabouço `ns-O-RAN`, detalhando a comunicação multi-threaded via `E2sim`, os modelos de serviço E2SM-KPM e E2SM-RC, e o processo prático de compilação da biblioteca ASN.1 e do simulador com o sistema Waf.
 
 <!-- *(Conteúdo Extra)* O laboratório também discute a alternativa de deploy conteinerizado do ns-3 via Docker. -->
 
 ### [Lab 3: Validação da Integração ns-3 e Near-RT RIC (O Caminho do E2 Setup)](./labs/lab03-validacao-e2setup.md)
-Neste laboratório, o foco é validar a comunicação fim-a-fim entre o simulador ns-3 e o Near-RT RIC através do procedimento de E2 Setup. O roteiro detalha a anatomia do handshake E2AP, a parametrização do cenário de simulação (`scenario-trainning.cc`), o monitoramento dos logs do `e2term` e a confirmação do registro dos nós via API REST do E2 Manager.
+Neste laboratório, o foco é validar e dissecar a comunicação fim-a-fim entre o ns-3 e o Near-RT RIC através do procedimento de E2 Setup. O roteiro aprofunda a especificação do protocolo E2AP (Procedimentos Elementares e codificação ASN.1 APER), a camada de transporte SCTP (multi-streaming e RFC 4960), a mensageria interna RMR e o armazenamento na Shared Data Layer (SDL/Redis). Guiamos o aluno pela parametrização do cenário de Conectividade Dupla (`scenario-trainning.cc`), observabilidade em tempo real nos pods do `e2term` e homologação definitiva dos nós com status CONNECTED via API REST do E2 Manager.
 
 ### Lab 4: Onboarding do KPIMon xApp e Execução da Simulação *(Em breve)*
 O último laboratório realiza o fechamento do loop da arquitetura (Simulador ↔ RIC ↔ xApp). O roteiro orientará sobre como obter o código de um xApp de monitoramento de métricas, configurar um registro local de imagens Docker, realizar o processo de onboarding e lançamento no cluster Kubernetes e visualizar as métricas sendo coletadas em tempo real.
