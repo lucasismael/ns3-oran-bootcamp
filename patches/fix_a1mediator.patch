@@ -1,0 +1,45 @@
+--- a/templates/config.yaml
++++ b/templates/config.yaml
+@@ -33,4 +33,4 @@
+     rte|20012|{{ include "common.servicename.a1mediator.rmr" . }}.{{ include "common.namespace.platform" . }}:{{ include "common.serviceport.a1mediator.rmr.data" . }}
+     newrt|end
+   loglevel.txt: |
+-    log-level: {{ .Values.loglevel }}
++    log-level: {{ .Values.a1mediator.loglevel }}
+--- a/templates/deployment.yaml
++++ b/templates/deployment.yaml
+@@ -71,11 +71,11 @@
+               protocol: TCP
+           livenessProbe:
+             httpGet:
+-              path: /A1-P/v2/healthcheck
++              path: /a1-p/healthcheck
+               port: http
+           readinessProbe:
+             httpGet:
+-              path: /A1-P/v2/healthcheck
++              path: /a1-p/healthcheck
+               port: http
+       volumes:
+         - name: "a1conf"
+--- a/templates/ingress-a1mediator.yaml
++++ b/templates/ingress-a1mediator.yaml
+@@ -6,8 +6,8 @@
+   rules:
+   - http:
+       paths:
+-      - path: {{ include "common.kongpath.ric.a1mediator" . }}
+-        pathType: Prefix
++      - pathType: Prefix
++        path: {{ include "common.kongpath.ric.a1mediator" . }}
+         backend:
+           service:
+             name: {{ include "common.servicename.a1mediator.http" . }}
+--- a/values.yaml
++++ b/values.yaml
+@@ -38,4 +38,4 @@
+     a1_rcv_retry_times: 20
+     ins_del_no_resp_ttl: 5
+     ins_del_resp_ttl: 10
+-  loglevel: "INFO"
++  loglevel: "DEBUG"

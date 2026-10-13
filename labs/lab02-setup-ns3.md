@@ -276,7 +276,7 @@ Com isso, as bibliotecas compartilhadas `libe2sim.so` e seus respectivos cabeça
 
 2. Clone o módulo oficial da interface O-RAN (`sim-ns3-o-ran-e2`) diretamente dentro da pasta `contrib/oran-interface` do simulador:
    ```bash
-   git clone -b master https://github.com/o-ran-sc/sim-ns3-o-ran-e2 ~/ns3-mmwave-oran/contrib/oran-interface
+   git clone -b h-release https://github.com/o-ran-sc/sim-ns3-o-ran-e2 ~/ns3-mmwave-oran/contrib/oran-interface
    ```
 
 ---

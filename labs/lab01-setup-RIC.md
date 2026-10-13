@@ -391,80 +391,56 @@ Na Release E da O-RAN Software Community, o componente **A1 Mediator** apresenta
 1. **Falha nas Probes de Verificação de Saúde do Kubernetes (*Readiness & Liveness Probes*):** O template de deployment do A1 Mediator foi empacotado configurado para consultar o endpoint legado `/A1-P/v2/healthcheck`. No entanto, na imagem Docker da Release E, o servidor HTTP interno responde no caminho padronizado `/a1-p/healthcheck`. Como a rota não respondia com sucesso (código HTTP 200), o Kubelet concluiu que a aplicação não estava pronta para receber tráfego.
 2. **Escopo Incorreto de Variável no Helm:** O arquivo `config.yaml` procurava o parâmetro `.Values.loglevel`, enquanto o arquivo `values.yaml` o definia sob o escopo `.Values.a1mediator.loglevel`.
 
-#### Procedimento de Correção (Patch):
+#### Procedimento de Correção:
 
-1. Crie o arquivo de correção `fix_a1mediator.patch`:
-   ```bash
-   cat << 'EOF' > ~/ric-dep/helm/a1mediator/fix_a1mediator.patch
-   diff -ruN ./templates/config.yaml /root/ric-plt-ric-dep/helm/a1mediator/templates/config.yaml
-   --- ./templates/config.yaml	2024-07-06 15:04:40.941990000 -0300
-   +++ /root/ric-plt-ric-dep/helm/a1mediator/templates/config.yaml	2024-07-06 16:30:01.342419312 -0300
-   @@ -33,4 +33,4 @@
-        rte|20012|{{ include "common.servicename.a1mediator.rmr" . }}.{{ include "common.namespace.platform" . }}:{{ include "common.serviceport.a1mediator.rmr.data" . }}
-        newrt|end
-      loglevel.txt: |
-   -    log-level: {{ .Values.loglevel }}
-   +    log-level: {{ .Values.a1mediator.loglevel }}
-   diff -ruN ./templates/deployment.yaml /root/ric-plt-ric-dep/helm/a1mediator/templates/deployment.yaml
-   --- ./templates/deployment.yaml	2024-07-06 15:04:40.941990000 -0300
-   +++ /root/ric-plt-ric-dep/helm/a1mediator/templates/deployment.yaml	2024-07-06 16:30:01.342419312 -0300
-   @@ -71,11 +71,11 @@
-                  protocol: TCP
-              livenessProbe:
-                httpGet:
-   -              path: /A1-P/v2/healthcheck
-   +              path: /a1-p/healthcheck
-                  port: http
-              readinessProbe:
-                httpGet:
-   -              path: /A1-P/v2/healthcheck
-   +              path: /a1-p/healthcheck
-                  port: http
-          volumes:
-            - name: "a1conf"
-   diff -ruN ./templates/ingress-a1mediator.yaml /root/ric-plt-ric-dep/helm/a1mediator/templates/ingress-a1mediator.yaml
-   --- ./templates/ingress-a1mediator.yaml	2024-07-06 15:04:40.941990000 -0300
-   +++ /root/ric-plt-ric-dep/helm/a1mediator/templates/ingress-a1mediator.yaml	2024-07-06 16:30:01.342419312 -0300
-   @@ -6,8 +6,8 @@
-      rules:
-      - http:
-          paths:
-   -      - path: {{ include "common.kongpath.ric.a1mediator" . }}
-   -        pathType: Prefix
-   +      - pathType: Prefix
-   +        path: {{ include "common.kongpath.ric.a1mediator" . }}
-            backend:
-              service:
-                name: {{ include "common.servicename.a1mediator.http" . }}
-   diff -ruN ./values.yaml /root/ric-plt-ric-dep/helm/a1mediator/values.yaml
-   --- ./values.yaml	2024-07-06 15:04:40.941990000 -0300
-   +++ /root/ric-plt-ric-dep/helm/a1mediator/values.yaml	2024-07-06 16:30:01.342419312 -0300
-   @@ -38,4 +38,4 @@
-        a1_rcv_retry_times: 20
-        ins_del_no_resp_ttl: 5
-        ins_del_resp_ttl: 10
-   -  loglevel: "INFO"
-   +  loglevel: "DEBUG"
-   EOF
-   ```
+Você pode aplicar a correção utilizando o arquivo de patch já disponível neste repositório (**Opção A**, mais rápida) ou aplicando as substituições diretamente com o comando `sed` (**Opção B**):
 
-2. Navegue até a pasta do chart do A1 Mediator:
+##### Opção A: Aplicar o Patch Fornecido no Repositório (Recomendado)
+
+O repositório do bootcamp já inclui o arquivo [`fix_a1mediator.patch`](../patches/fix_a1mediator.patch) testado e formatado sem dependências de quebras de linha ou caracteres de tabulação:
+
+1. Acesse o diretório do chart do A1 Mediator:
    ```bash
    cd ~/ric-dep/helm/a1mediator
    ```
 
-3. Aplique o patch:
+2. Aplique o patch a partir do arquivo do bootcamp:
    ```bash
-   patch -p1 < fix_a1mediator.patch
+   patch -p1 < ~/ns3-oran-bootcamp/patches/fix_a1mediator.patch
    ```
 
-4. Reinstale a plataforma executando o `./install` novamente a partir de `~/ric-dep/bin`:
+---
+
+##### Opção B: Correção Direta via `sed` (Sem Arquivo de Patch)
+
+Caso prefira não utilizar o utilitário `patch`, execute os comandos abaixo para realizar as substituições diretamente nos manifestos do Helm:
+
+```bash
+cd ~/ric-dep/helm/a1mediator
+
+# 1. Corrige o caminho das probes de Liveness e Readiness para o endpoint padronizado
+sed -i 's|/A1-P/v2/healthcheck|/a1-p/healthcheck|g' templates/deployment.yaml
+
+# 2. Corrige o escopo da variável loglevel no ConfigMap
+sed -i 's|\.Values\.loglevel|\.Values\.a1mediator\.loglevel|g' templates/config.yaml
+
+# 3. Define o nível de log padrão para DEBUG no values.yaml
+sed -i 's|loglevel: "INFO"|loglevel: "DEBUG"|g' values.yaml
+```
+
+---
+
+##### Reinstalação e Validação do Near-RT RIC
+
+Após aplicar a correção (seja pela Opção A ou B):
+
+1. Reinstale a plataforma executando o script `./install` a partir de `~/ric-dep/bin`:
    ```bash
    cd ~/ric-dep/bin
    ./install -f ../RECIPE_EXAMPLE/example_recipe_oran_e_release.yaml
    ```
 
-5. Verifique se o pod do `a1mediator` agora atinge o status `Ready 1/1`:
+2. Verifique se o pod do `a1mediator` agora atinge o status **`Running`** com **`Ready 1/1`**:
    ```bash
    kubectl get pods -n ricplt | grep a1mediator
    ```
