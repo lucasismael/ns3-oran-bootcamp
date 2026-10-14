@@ -1,4 +1,4 @@
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/.gitignore ns3-oran-master/contrib/.gitignore
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/.gitignore ns3-oran-master/contrib/.gitignore
 --- ns3-mmwave-oran/contrib/.gitignore	2026-10-14 13:48:43.745937627 -0300
 +++ ns3-oran-master/contrib/.gitignore	1969-12-31 21:00:00.000000000 -0300
 @@ -1,6 +0,0 @@
@@ -8,7 +8,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 -# Include specific files that should be tracked by Git
 -!wscript
 -!.gitignore
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.cc ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.cc ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.cc
 --- ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.cc	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.cc	2026-09-28 15:15:06.901117565 -0300
 @@ -35,26 +35,29 @@
@@ -74,7 +74,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
    m_msgValues.m_ueIndications.insert (ueVal);
  }
  
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.h ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.h ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.h
 --- ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.h	2026-09-28 15:15:06.901117565 -0300
 @@ -22,6 +22,17 @@
@@ -206,7 +206,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 -#endif /* LTE_INDICATION_MESSAGE_HELPER_H */
 \ No newline at end of file
 +#endif /* LTE_INDICATION_MESSAGE_HELPER_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.cc ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.cc ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.cc
 --- ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.cc	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.cc	2026-09-28 15:15:06.901117565 -0300
 @@ -34,16 +34,19 @@
@@ -390,7 +390,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  
    m_msgValues.m_ueIndications.insert (ueVal);
  }
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.h ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.h ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.h
 --- ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.h	2026-09-28 15:15:06.901117565 -0300
 @@ -22,6 +22,17 @@
@@ -598,7 +598,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 -#endif /* MMWAVE_INDICATION_MESSAGE_HELPER_H */
 \ No newline at end of file
 +#endif /* MMWAVE_INDICATION_MESSAGE_HELPER_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.cc ns3-oran-master/contrib/oran-interface/model/asn1c-types.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.cc ns3-oran-master/contrib/oran-interface/model/asn1c-types.cc
 --- ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.cc	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/asn1c-types.cc	2026-09-28 15:15:06.901117565 -0300
 @@ -856,6 +856,8 @@
@@ -641,7 +641,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
          NS_LOG_DEBUG ("[E2SM] RANParameter_ValueType_PR_ranParameter_Element");
          RANParameter_ELEMENT_t *ranParameterElement =
              ranParameterItem->ranParameterItem_valueType->choice.ranParameter_Element;
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.h ns3-oran-master/contrib/oran-interface/model/asn1c-types.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.h ns3-oran-master/contrib/oran-interface/model/asn1c-types.h
 --- ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/asn1c-types.h	2026-09-28 15:15:06.901117565 -0300
 @@ -343,6 +343,7 @@
@@ -652,7 +652,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  
    static std::vector<RANParameterItem>
    ExtractRANParametersFromRANParameter (RANParameter_Item_t *ranParameterItem);
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.h ns3-oran-master/contrib/oran-interface/model/kpm-indication.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.h ns3-oran-master/contrib/oran-interface/model/kpm-indication.h
 --- ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/kpm-indication.h	2026-09-28 15:15:06.901117565 -0300
 @@ -48,7 +48,7 @@
@@ -664,7 +664,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
      /**
      * Holds the values to be used to fill the RIC Indication header 
      */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.cc ns3-oran-master/contrib/oran-interface/model/ric-control-message.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.cc ns3-oran-master/contrib/oran-interface/model/ric-control-message.cc
 --- ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.cc	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/ric-control-message.cc	2026-09-28 15:15:06.901117565 -0300
 @@ -51,6 +51,7 @@
@@ -713,7 +713,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
                    }
                  else
                    {
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.h ns3-oran-master/contrib/oran-interface/model/ric-control-message.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.h ns3-oran-master/contrib/oran-interface/model/ric-control-message.h
 --- ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/ric-control-message.h	2026-09-28 15:15:06.901117565 -0300
 @@ -61,6 +61,8 @@
@@ -725,7 +725,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  
    private:
      /**
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/.gitignore ns3-oran-master/.gitignore
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/.gitignore ns3-oran-master/.gitignore
 --- ns3-mmwave-oran/.gitignore	2026-10-14 13:48:43.741938149 -0300
 +++ ns3-oran-master/.gitignore	2026-09-28 15:15:06.897117044 -0300
 @@ -43,6 +43,7 @@
@@ -741,7 +741,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  RlcAmBufferSize.txt
  LteUlSinrStats.txt
 +patch*.py
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/local_campaigns_v3.py ns3-oran-master/local_campaigns_v3.py
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/local_campaigns_v3.py ns3-oran-master/local_campaigns_v3.py
 --- ns3-mmwave-oran/local_campaigns_v3.py	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/local_campaigns_v3.py	2026-09-28 15:15:06.929121217 -0300
 @@ -0,0 +1,146 @@
@@ -893,7 +893,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +    print("\nCampanha finalizada com 100% de sucesso!")
 Binary files ns3-mmwave-oran/__pycache__/utils.cpython-38.pyc and ns3-oran-master/__pycache__/utils.cpython-38.pyc differ
 Binary files ns3-mmwave-oran/__pycache__/wutils.cpython-38.pyc and ns3-oran-master/__pycache__/wutils.cpython-38.pyc differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/README.md ns3-oran-master/README.md
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/README.md ns3-oran-master/README.md
 --- ns3-mmwave-oran/README.md	2026-10-14 13:48:43.741938149 -0300
 +++ ns3-oran-master/README.md	2026-09-28 15:15:06.901117565 -0300
 @@ -1,199 +1,67 @@
@@ -1146,2950 +1146,6 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 -"hg clone http://code.nsnam.org/ns-3-dev"
 +## License
 +This software is licensed under the terms of the GNU GPLv2, inherited from the base ns-3 and ns3-mmwave modules.
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-master.cc ns3-oran-master/scratch/scenario-master.cc
---- ns3-mmwave-oran/scratch/scenario-master.cc	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/scratch/scenario-master.cc	2026-09-28 15:15:06.929121217 -0300
-@@ -0,0 +1,1792 @@
-+/* -*-  Mode: C++; c-file-style: "gnu"; indent-tabs-mode:nil; -*- */
-+/* *
-+ * This program is free software; you can redistribute it and/or modify
-+ * it under the terms of the GNU General Public License version 2 as
-+ * published by the Free Software Foundation;
-+ *
-+ * This program is distributed in the hope that it will be useful,
-+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
-+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-+ * GNU General Public License for more details.
-+ *
-+ * You should have received a copy of the GNU General Public License
-+ * along with this program; if not, write to the Free Software
-+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-+ *
-+ * Authors: Andrea Lacava <thecave003@gmail.com>
-+ *          Michele Polese <michele.polese@gmail.com>
-+ */
-+
-+#include "ns3/core-module.h"
-+#include "ns3/network-module.h"
-+#include "ns3/internet-module.h"
-+#include "ns3/mobility-module.h"
-+#include "ns3/applications-module.h"
-+#include "ns3/point-to-point-helper.h"
-+#include <ns3/lte-ue-net-device.h>
-+#include "ns3/mmwave-helper.h"
-+#include "ns3/epc-helper.h"
-+#include "ns3/mmwave-point-to-point-epc-helper.h"
-+#include "ns3/lte-helper.h"
-+#include "ns3/point-to-point-module.h"
-+#include "ns3/point-to-point-helper.h"
-+#include "ns3/epc-helper.h"
-+#include "ns3/mmwave-point-to-point-epc-helper.h"
-+#include "ns3/ipv4-global-routing-helper.h"
-+#include "ns3/mmwave-ue-net-device.h"
-+#include "ns3/buildings-module.h"
-+#include "ns3/mobility-building-info.h"
-+#include "ns3/building.h"
-+#include "ns3/box.h"
-+#include "ns3/config-store.h"
-+#include "ns3/radio-environment-map-helper.h"
-+#include "ns3/mmwave-radio-environment-map-helper.h"
-+// #include "ns3/three-gpp-antenna-model.h"
-+#include "ns3/spectrum-module.h"
-+#include "ns3/flow-monitor-helper.h"
-+#include "ctime"
-+#include "ns3/cc-helper.h"
-+#include <time.h>
-+#include <iostream>
-+#include <fstream>
-+#include "ns3/mc-ue-pdcp.h"
-+#include "ns3/mc-enb-pdcp.h"
-+#include <ns3/cosine-antenna-model.h>
-+#include "ns3/epc-tft.h"
-+#include "ns3/mab-agent.h"
-+#include "ns3/ue-throughput-storage.h"
-+#include <cstdlib>
-+
-+using namespace ns3;
-+using namespace mmwave;
-+
-+/**
-+ * Scenario Master
-+ * 
-+ */
-+
-+NS_LOG_COMPONENT_DEFINE ("ScenarioMaster");
-+
-+Ptr<MabAgent> g_centralizedAgent = 0;
-+
-+std::ofstream g_mabStatsFile;
-+
-+/**
-+ * @brief Dynamically changes the offered data rate for both traffic classes
-+ *        and resets the MAB agent to adapt to the new traffic regime.
-+ *
-+ * This function is scheduled at specific simulation times (see "Step" and
-+ * "Robustness" scenario configurations in main()) to simulate non-stationary
-+ * traffic conditions.  It performs three operations:
-+ *   1. Updates the OnOffApplication data rate for all eMBB sources to
-+ *      @p newDataRateMbbMbps [Mib/s].
-+ *   2. Updates the OnOffApplication data rate for all XR sources to
-+ *      @p newDataRateXrMbps [Mib/s].
-+ *   3. Resets the MAB agent (g_centralizedAgent) with a refreshed epsilon
-+ *      and updated QoS targets (set at 90 % of the new offered loads):
-+ *        - targetMbb = newDataRateMbbMbps × 1e3 × 0.90  [kbps]
-+ *        - targetXr  = newDataRateXrMbps  × 1e3 × 0.90  [kbps]
-+ *
-+ * The new targets are also published to a Redis instance so that any
-+ * running xApp can read the updated thresholds via the O-RAN interface.
-+ *
-+ * @param appsMbb           Container of eMBB OnOffApplication sources (QCI 2).
-+ * @param appsXr            Container of XR  OnOffApplication sources (QCI 80).
-+ * @param newDataRateMbbMbps New offered load for eMBB traffic [Mib/s].
-+ * @param newDataRateXrMbps  New offered load for XR  traffic [Mib/s].
-+ * @param resetEpsilon       Exploration rate ε to restore in the MAB agent.
-+ */
-+void ChangeDataRate(ApplicationContainer appsMbb, ApplicationContainer appsXr,
-+                    double newDataRateMbbMbps, double newDataRateXrMbps, double resetEpsilon)
-+{
-+    DataRate newDataRateMbb(std::to_string(newDataRateMbbMbps) + "Mib/s");
-+    DataRate newDataRateXr (std::to_string(newDataRateXrMbps)  + "Mib/s");
-+
-+    for (uint32_t i = 0; i < appsMbb.GetN(); ++i)
-+    {
-+        Ptr<Application> app = appsMbb.Get(i);
-+        Ptr<OnOffApplication> onOffApp = DynamicCast<OnOffApplication>(app);
-+        if (onOffApp)
-+        {
-+            onOffApp->SetAttribute("DataRate", DataRateValue(newDataRateMbb));
-+        }
-+    }
-+
-+    for (uint32_t i = 0; i < appsXr.GetN(); ++i)
-+    {
-+        Ptr<Application> app = appsXr.Get(i);
-+        Ptr<OnOffApplication> onOffApp = DynamicCast<OnOffApplication>(app);
-+        if (onOffApp)
-+        {
-+            onOffApp->SetAttribute("DataRate", DataRateValue(newDataRateXr));
-+        }
-+    }
-+
-+    // QoS targets are set at 90 % of the new offered load (kbps)
-+    double newTargetMbb = (newDataRateMbbMbps * 1e3) * 0.90;
-+    double newTargetXr  = (newDataRateXrMbps  * 1e3) * 0.90;
-+
-+    std::cout << newTargetMbb << std::endl;
-+    std::cout << newTargetXr  << std::endl;
-+
-+    if (g_centralizedAgent)
-+    {
-+        g_centralizedAgent->ResetLearning(resetEpsilon, newTargetMbb, newTargetXr);
-+
-+        std::cout << "\n[EVENT] T=" << Simulator::Now().GetSeconds()
-+                  << "s | MBB rate changed to " << newDataRateMbbMbps
-+                  << " Mbps | XR rate changed to " << newDataRateXrMbps
-+                  << " Mbps | MAB Reset (Eps=" << resetEpsilon << ")\n" << std::endl;
-+    }
-+
-+    // Publish updated targets to Redis so that the O-RAN xApp can read them
-+    std::string redisCmd = "redis-cli -h 127.0.0.1 -p 6379 HSET config:mab"
-+                           " target_mbb " + std::to_string(newTargetMbb) +
-+                           " target_xr "  + std::to_string(newTargetXr)  +
-+                           " > /dev/null 2>&1";
-+
-+    int ret = system(redisCmd.c_str());
-+    if (ret != 0) {
-+        std::cout << "[WARNING] Failed to update Redis. Is the port-forward running?" << std::endl;
-+    } else {
-+        std::cout << "[O-RAN] Targets updated in Redis for xApp: MBB="
-+                  << newTargetMbb << ", XR=" << newTargetXr << std::endl;
-+    }
-+}
-+
-+
-+/**
-+ * @brief Evaluates the reward signal and applies one MAB decision step.
-+ *
-+ * This function is invoked periodically (every @p interval seconds) and
-+ * implements the closed-loop control cycle for the centralized MAB agent:
-+ *   1. Collect per-UE throughput measurements from UeThroughputStorage.
-+ *   2. Compute a scalar composite reward signal R(t).
-+ *   3. Update the Q-value of the last selected arm via UpdateLastAction().
-+ *   4. Select the next split ratio action via SelectAction().
-+ *   5. Apply the selected split ratio to all mixed-service UEs via McEnbPdcp.
-+ *
-+ * **Traffic class and DRB mapping:**
-+ *   - DRB_EMBB (DRB ID = 1): carries eMBB traffic, activated with QCI 2
-+ *     (EpsBearer::GBR_CONV_VIDEO, 3GPP TS 23.203).
-+ *     The corresponding per-UE throughput is referred to as @c tputMbb.
-+ *   - DRB_XR   (DRB ID = 2): carries XR (Extended Reality) traffic,
-+ *     activated with QCI 80 (EpsBearer::NGBR_LOW_LAT_EMBB_AR, 3GPP TS 23.501).
-+ *     The corresponding per-UE throughput is referred to as @c tputXr.
-+ *
-+ * **Reward function R(t):**
-+ * @f[
-+ *   R(t) = \underbrace{W_{\mathrm{MBB}} \cdot S_{\mathrm{MBB}}(t)
-+ *                    + W_{\mathrm{XR}}  \cdot S_{\mathrm{XR}}(t)}_{\text{satisfaction term}}
-+ *        + W_{\mathrm{tput}} \cdot \bigl(
-+ *              W_{\mathrm{MBB}} \cdot \hat{V}_{\mathrm{MBB}}(t)
-+ *            + W_{\mathrm{XR}}  \cdot \hat{V}_{\mathrm{XR}}(t)
-+ *          \bigr)
-+ * @f]
-+ * where:
-+ *   - @f$S_k(t) = |\{i : \bar{v}_{k,i}(t) \ge T_k^*\}| / N@f$ is the fraction
-+ *     of UEs satisfying the QoS target @f$T_k^*@f$ for service class @f$k@f$.
-+ *   - @f$\hat{V}_k(t) = \bar{v}_k(t) / (T_k^* / 0.9)@f$ normalizes the mean
-+ *     per-UE throughput to the maximum offered load.
-+ *   - @f$W_{\mathrm{tput}} = 0.05@f$ keeps the throughput term as a secondary
-+ *     tie-breaking signal; QoS satisfaction is always the dominant objective.
-+ *
-+ * **Split ratio action encoding (arm index → LTE fraction):**
-+ *   | Arm | splitRatio | Traffic routing          |
-+ *   |-----|-----------|--------------------------|
-+ *   |  0  |   0.00    | All traffic via mmWave   |
-+ *   |  1  |   0.25    | 25 % LTE / 75 % mmWave   |
-+ *   |  2  |   0.50    | Balanced                 |
-+ *   |  3  |   0.75    | 75 % LTE / 25 % mmWave   |
-+ *   |  4  |   1.00    | All traffic via LTE      |
-+ *
-+ * The split ratio is applied only to DRB_EMBB (QCI 2); DRB_XR (QCI 80) is
-+ * always forwarded entirely via mmWave (splitRatio = 0.0) to exploit the
-+ * low-latency characteristics of the mmWave link for XR traffic.
-+ *
-+ * @param uesNetDevs  Container of mixed-service UE net devices.
-+ * @param interval    Scheduling interval between consecutive MAB decisions.
-+ * @param mbbPriority Weight @f$W_{\mathrm{MBB}} \in [0,1]@f$ for eMBB in the
-+ *                    weighted satisfaction term (XR weight = 1 − mbbPriority).
-+ */
-+void UpdateMabPolicy(NetDeviceContainer uesNetDevs, Time interval, double mbbPriority)
-+{
-+    if (!g_centralizedAgent) return;
-+
-+    double targetMbb = g_centralizedAgent->GetTargetMbb();
-+    double targetXr  = g_centralizedAgent->GetTargetXr();
-+
-+    double totalThroughputSum   = 0.0;
-+    double throughputSumMbb     = 0.0;
-+    double throughputSumXr      = 0.0;
-+    double satisfactionCountMbb = 0.0;
-+    double satisfactionCountXr  = 0.0;
-+
-+    // DRB IDs match the bearer activation order in main():
-+    //   DRB 1 → eMBB traffic (QCI 2, EpsBearer::GBR_CONV_VIDEO)
-+    //   DRB 2 → XR  traffic (QCI 80, EpsBearer::NGBR_LOW_LAT_EMBB_AR)
-+    const int DRB_EMBB = 1;
-+    const int DRB_XR   = 2;
-+
-+    for (uint32_t i = 0; i < uesNetDevs.GetN(); i++)
-+    {
-+        Ptr<McUeNetDevice> mcDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+        uint64_t imsi = mcDev->GetImsi();
-+
-+        // tputMbb: aggregate (LTE + NR) throughput [kbps] for DRB 1 (QCI 2 – eMBB)
-+        double tputMbb = UeThroughputStorage::GetAggregatedThroughput(imsi, DRB_EMBB);
-+        // tputXr:  aggregate (LTE + NR) throughput [kbps] for DRB 2 (QCI 80 – XR)
-+        double tputXr  = UeThroughputStorage::GetAggregatedThroughput(imsi, DRB_XR);
-+
-+        totalThroughputSum += (tputMbb + tputXr);
-+        throughputSumMbb   += tputMbb;
-+        throughputSumXr    += tputXr;
-+
-+        // QoS satisfaction: 1 if the UE's throughput meets the target, 0 otherwise
-+        if (tputMbb >= targetMbb) satisfactionCountMbb += 1.0;
-+        if (tputXr  >= targetXr)  satisfactionCountXr  += 1.0;
-+    }
-+
-+    // --- Reward computation ---
-+    // Satisfaction fractions S_k(t) ∈ [0, 1]
-+    float S_mbb = satisfactionCountMbb / uesNetDevs.GetN();
-+    float S_xr  = satisfactionCountXr  / uesNetDevs.GetN();
-+
-+    // Mean per-UE throughputs V_k(t) [kbps]
-+    float V_mbb = throughputSumMbb / uesNetDevs.GetN();
-+    float V_xr  = throughputSumXr  / uesNetDevs.GetN();
-+
-+    // Service weights: mbbPriority ∈ [0,1]; XR weight is complementary
-+    double W_mbb = mbbPriority;
-+    double W_xr  = 1.0 - W_mbb;
-+
-+    // Primary term: weighted QoS satisfaction (dominant objective)
-+    float weighted_satisfaction = (W_mbb * S_mbb) + (W_xr * S_xr);
-+
-+    // Maximum offered load per service (target set at 90 % of offered load)
-+    double maxThp_mbb = targetMbb / 0.9;
-+    double maxThp_xr  = targetXr  / 0.9;
-+
-+    // Normalized throughput ∈ [0, 1]
-+    float normalized_V_mbb = V_mbb / maxThp_mbb;
-+    float normalized_V_xr  = V_xr  / maxThp_xr;
-+
-+    // Secondary term: normalized weighted throughput (tie-breaking signal)
-+    float W_tput           = 0.05f;
-+    float weighted_throughput = W_tput * ((W_mbb * normalized_V_mbb) + (W_xr * normalized_V_xr));
-+
-+    // Composite reward: R(t) = weighted_satisfaction + weighted_throughput
-+    double reward = weighted_satisfaction + weighted_throughput;
-+
-+    // --- MAB update and action selection ---
-+    g_centralizedAgent->UpdateLastAction(reward);
-+    uint32_t globalAction = g_centralizedAgent->SelectAction();
-+
-+    // Map the selected arm index to the LTE split ratio
-+    // (fraction of PDCP PDUs forwarded to the LTE RLC layer)
-+    float splitRatio = 0.0f;
-+    switch(globalAction) {
-+        case 0: splitRatio = 0.00f; break; // All traffic via mmWave SN
-+        case 1: splitRatio = 0.25f; break;
-+        case 2: splitRatio = 0.50f; break; // Balanced split
-+        case 3: splitRatio = 0.75f; break;
-+        case 4: splitRatio = 1.00f; break; // All traffic via LTE MN
-+    }
-+
-+    std::vector<double> currentQValues = g_centralizedAgent->GetQValues();
-+
-+    // Log to CSV for post-processing
-+    if (g_mabStatsFile.is_open())
-+    {
-+        g_mabStatsFile << Simulator::Now().GetSeconds() << ","  // Time
-+                       << reward       << ","                   // Reward
-+                       << globalAction << ","                   // Action (arm index)
-+                       << g_centralizedAgent->GetEpsilon() << "," // Epsilon
-+                       << targetMbb   << ","                   // QoS target eMBB (QCI 2)
-+                       << S_mbb       << ","                   // Satisfaction eMBB
-+                       << targetXr    << ","                   // QoS target XR (QCI 80)
-+                       << S_xr        << ","                   // Satisfaction XR
-+                       << V_mbb       << ","                   // Mean throughput eMBB [kbps]
-+                       << V_xr;                                // Mean throughput XR  [kbps]
-+
-+        // Q-values for all 5 arms (Q0 … Q4)
-+        for (float q : currentQValues) {
-+            g_mabStatsFile << "," << q;
-+        }
-+        g_mabStatsFile << std::endl;
-+    }
-+
-+    NS_LOG_DEBUG("[MAB] T=" << Simulator::Now().GetSeconds()
-+              << " | TargetMBB=" << targetMbb
-+              << " | TargetXR="  << targetXr
-+              << " | Eps="  << g_centralizedAgent->GetEpsilon()
-+              << " | SatMbb=" << satisfactionCountMbb
-+              << " | SatXr="  << satisfactionCountXr
-+              << " | Rew=" << reward
-+              << " | Act=" << globalAction);
-+
-+    std::cout << "[MAB] T=" << Simulator::Now().GetSeconds()
-+              << " | TargetMBB=" << targetMbb
-+              << " | TargetXR="  << targetXr
-+              << " | Eps="  << g_centralizedAgent->GetEpsilon()
-+              << " | SatMbb=" << satisfactionCountMbb
-+              << " | SatXr="  << satisfactionCountXr
-+              << " | Rew=" << reward
-+              << " | Act=" << globalAction
-+              << " | Q-Values: [";
-+
-+    for (size_t i = 0; i < currentQValues.size(); ++i) {
-+        std::cout << currentQValues[i] << (i < currentQValues.size() - 1 ? ", " : "");
-+    }
-+    std::cout << "]" << std::endl;
-+
-+    // Apply the selected split ratio to DRB_EMBB (QCI 2) on all mixed-service UEs.
-+    // DRB_XR (QCI 80) always uses splitRatio = 0.0 (fully offloaded to mmWave).
-+    for (uint32_t i = 0; i < uesNetDevs.GetN(); i++)
-+    {
-+        Ptr<McUeNetDevice> mcDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+        uint16_t rnti = mcDev->GetLteRrc()->GetRnti();
-+        if (rnti) {
-+            ObjectMapValue mapValueLte;
-+            mcDev->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
-+            for (auto iter = mapValueLte.Begin(); iter != mapValueLte.End(); ++iter) {
-+                Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iter->second);
-+                if (static_cast<int>(drb->m_drbIdentity) == DRB_EMBB) {
-+                    // Apply the MAB-selected split ratio only to eMBB (QCI 2) bearers
-+                    Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                    if (pdcp) pdcp->SetSplitRatio(splitRatio);
-+                }
-+            }
-+        }
-+    }
-+
-+    // Reschedule the next MAB decision step
-+    Simulator::Schedule(interval, &UpdateMabPolicy, uesNetDevs, interval, mbbPriority);
-+}
-+
-+
-+double RunSimulationWithTimeCounter()
-+{
-+	// Measuring and printing start time
-+	time_t beginTimer = time(&beginTimer);
-+	struct tm *timeInfo;			   // Time structure
-+	timeInfo = localtime(&beginTimer); // Binding timeInfo to local start time
-+	std::cout << "Simulation start time: " << asctime(timeInfo) << std::endl;
-+
-+	// Running the simulation
-+	Simulator::Run();
-+	Simulator::Destroy();
-+
-+	// Measuring and printing end time
-+	time_t finishTimer = time(&finishTimer);
-+	timeInfo = localtime(&finishTimer); // Binding timeInfo to local end time
-+	std::cout << "Simulation end time: " << asctime(timeInfo) << std::endl;
-+
-+	// Measuring and printing simulation duration
-+	double elapsedTime = difftime(finishTimer, beginTimer); // Calculating simulation duration in seconds
-+	if (elapsedTime >= 7200)
-+	{
-+		std::cout << "Simulation duration: " << elapsedTime / 3600 << " hours" << std::endl;
-+	}
-+	else if (elapsedTime >= 120)
-+	{
-+		std::cout << "Simulation duration: " << elapsedTime / 60 << " minutes" << std::endl;
-+	}
-+	else
-+	{
-+		std::cout << "Simulation duration: " << elapsedTime << " seconds" << std::endl;
-+	}
-+	return elapsedTime;
-+}
-+
-+void RegisterSimulationTime(double t)
-+{
-+	std::string time = std::to_string(t);
-+	// std::cout << "Simulation time: " << time << std::endl;
-+  std::cout << "\033[1;31m" << "Simulation time: " << time << "\033[0m" << std::endl;
-+}
-+
-+void
-+SetDrbsSplitRatiosBkg(NetDeviceContainer uesNetDevs)
-+{
-+  // for (uint32_t i = 0; i < uesNetDevs.GetN(); i++)
-+  // {
-+  //   Ptr<McUeNetDevice> mcUeNetDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+  //   uint16_t imsi = mcUeNetDev->GetImsi();
-+  //   NS_LOG_DEBUG("IMSI: " << imsi);
-+  //   uint16_t rnti = mcUeNetDev->GetLteRrc()->GetRnti();
-+  //   NS_LOG_DEBUG("RNTI: " << rnti);
-+  // };
-+  NS_LOG_DEBUG("SETTING SPLIT RATIOS!!! \n");
-+  auto nUes = uesNetDevs.GetN();
-+  NS_LOG_DEBUG("nUes: " << nUes);
-+  for (uint16_t i = 0; i < nUes; i++)
-+  {
-+      // Ptr<Node> ue = ues.Get(i);
-+      Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+      uint16_t imsi = mcUeNetDevice->GetImsi();
-+      std::cout << "UE IMSI: " << imsi << std::endl;
-+      uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-+      NS_LOG_DEBUG("RNTI: " << rnti);
-+
-+      if (rnti)
-+      {
-+          std::cout << "RNTI: " << rnti << std::endl;
-+          ObjectMapValue mapValueLte;
-+          // ObjectMapValue mapValueNr;
-+          mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute(
-+              "DataRadioBearerMap",
-+              mapValueLte);
-+          // mcUeNetDevice->GetMmWaveTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute(
-+          //     "DataRadioBearerMap",
-+          //     mapValueNr);
-+
-+          for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte)
-+          {
-+              Ptr<LteDataRadioBearerInfo> drb =
-+                  DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-+              std::cout << "DRB ID: " << static_cast<int>(drb->m_drbIdentity) << std::endl;
-+              int drbId = static_cast<int>(drb->m_drbIdentity);
-+              std::cout << "LC ID:" << static_cast<int>(drb->m_logicalChannelIdentity)
-+                        << std::endl;
-+              if (drbId == 1)
-+              {
-+                  Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                  pdcp->SetSplitRatio(1.0);
-+                  std::cout << "Split Ratio: " << static_cast<int>(pdcp->GetSplitRatio())
-+                            << std::endl;
-+              }
-+              else if (drbId == 2)
-+              {
-+                  Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                  pdcp->SetSplitRatio(1.0);
-+                  std::cout << "Split Ratio: " << static_cast<int>(pdcp->GetSplitRatio())
-+                            << std::endl;
-+              }
-+              else
-+              {
-+                  Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                  pdcp->SetSplitRatio(1.0);
-+                  std::cout << "Split Ratio with default value ("
-+                            << static_cast<int>(pdcp->GetSplitRatio()) << ")" << std::endl;
-+              }
-+          }
-+      }
-+      // Simulator::Schedule(Seconds(0.1), &UpdateDrbsConnection, nUes, uesNetDevs);
-+      // Simulator::ScheduleNow(&ClearBytesReceived);
-+  }
-+}
-+
-+void
-+SetDrbsSplitRatiosMix(NetDeviceContainer uesNetDevs, double ratioMbb, double ratioXr)
-+{
-+  // for (uint32_t i = 0; i < uesNetDevs.GetN(); i++)
-+  // {
-+  //   Ptr<McUeNetDevice> mcUeNetDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+  //   uint16_t imsi = mcUeNetDev->GetImsi();
-+  //   NS_LOG_DEBUG("IMSI: " << imsi);
-+  //   uint16_t rnti = mcUeNetDev->GetLteRrc()->GetRnti();
-+  //   NS_LOG_DEBUG("RNTI: " << rnti);
-+  // };
-+  NS_LOG_DEBUG("SETTING SPLIT RATIOS!!! \n");
-+  auto nUes = uesNetDevs.GetN();
-+  NS_LOG_DEBUG("nUes: " << nUes);
-+  for (uint16_t i = 0; i < nUes; i++)
-+  {
-+      // Ptr<Node> ue = ues.Get(i);
-+      std::cout << "uesNetDevs.Get(i) with i = " << i << std::endl;
-+      Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+      uint16_t imsi = mcUeNetDevice->GetImsi();
-+      std::cout << "UE IMSI: " << imsi << std::endl;
-+      uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-+      NS_LOG_DEBUG("RNTI LTE: " << rnti);
-+      NS_LOG_DEBUG("RNTI NR: " << mcUeNetDevice->GetMmWaveRrc()->GetRnti());
-+
-+      if (rnti)
-+      {
-+          std::cout << "RNTI: " << rnti << std::endl;
-+          ObjectMapValue mapValueLte;
-+          // ObjectMapValue mapValueNr;
-+          mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute(
-+              "DataRadioBearerMap",
-+              mapValueLte);
-+          // mcUeNetDevice->GetMmWaveTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute(
-+          //     "DataRadioBearerMap",
-+          //     mapValueNr);
-+
-+          for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte)
-+          {
-+              Ptr<LteDataRadioBearerInfo> drb =
-+                  DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-+              std::cout << "DRB ID: " << static_cast<int>(drb->m_drbIdentity) << std::endl;
-+              int drbId = static_cast<int>(drb->m_drbIdentity);
-+              std::cout << "LC ID:" << static_cast<int>(drb->m_logicalChannelIdentity)
-+                        << std::endl;
-+              if (drbId == 1)
-+              {
-+                  Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                  pdcp->SetSplitRatio(ratioMbb);
-+                  std::cout << "Split Ratio: " << static_cast<int>(pdcp->GetSplitRatio())
-+                            << std::endl;
-+              }
-+              else if (drbId == 2)
-+              {
-+                  Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                  pdcp->SetSplitRatio(ratioXr);
-+                  std::cout << "Split Ratio: " << static_cast<int>(pdcp->GetSplitRatio())
-+                            << std::endl;
-+              }
-+              else
-+              {
-+                  Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                  pdcp->SetSplitRatio(1.0);
-+                  std::cout << "Split Ratio with default value ("
-+                            << static_cast<int>(pdcp->GetSplitRatio()) << ")" << std::endl;
-+              }
-+          }
-+      }
-+      // Simulator::Schedule(Seconds(0.1), &UpdateDrbsConnection, nUes, uesNetDevs);
-+      // Simulator::ScheduleNow(&ClearBytesReceived);
-+  }
-+}
-+
-+ApplicationContainer createOnOffApplication(Ptr<Node> remoteHost, NetDeviceContainer uesNetDevs, Ipv4InterfaceContainer internetIpv4Interfaces, Ipv4InterfaceContainer uesIpv4Interfaces, bool dl = true,
-+											bool ul = false, double dataRateInMbps = 1, uint16_t packetSize = 1024, uint16_t startDlPort = 10000, uint16_t startUlPort = 20000, double startTime=0.0, double endTime=120.0,uint8_t remoteHostIndexInContainer = 1)
-+{
-+
-+    // Creating the container to save the OnOffApplications
-+    ApplicationContainer allOnOffs;
-+
-+	// If both downlink and uplink are disabled, return empty container
-+	if (not(dl or ul))
-+	{
-+		return allOnOffs;
-+	}
-+
-+	// Setting up the ports to be used for the applications
-+	uint16_t dlPort = startDlPort;
-+	uint16_t ulPort = startUlPort;
-+
-+	// Configuring application parameters to appropriate formats
-+	UintegerValue packetSizeUV = UintegerValue(packetSize);
-+	DataRate dataRateInMbpsDR = DataRate(std::to_string(dataRateInMbps) + "Mib/s");
-+
-+	std::string socketFactory = "ns3::UdpSocketFactory";
-+
-+	// Iterating over the vector of UEs
-+	for (uint8_t u = 0; u < uesNetDevs.GetN(); ++u)
-+	{
-+		// Selecting a UE node
-+		Ptr<Node> ue = uesNetDevs.Get(u)->GetNode();
-+
-+		// Creating application containers
-+		ApplicationContainer applications1;
-+		ApplicationContainer applications2;
-+
-+		if (dl)
-+		{
-+			//-----------------------------------------Configuring DL----------------------------------------//
-+			/* Instantiate the helper that configures the application.
-+			 * Parameters:
-+			 * * std::string protocol -> socket factory used to create sockets for the applications.
-+			 * * Address address      -> destination remote address to receive traffic.
-+			 */
-+			OnOffHelper dlHelper(socketFactory, InetSocketAddress(uesIpv4Interfaces.GetAddress(u), dlPort));
-+
-+			// Configuring application attributes
-+			dlHelper.SetAttribute("MaxBytes", UintegerValue(0)); // Infinite data limit (continuous transmission)
-+			dlHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+
-+			// Installing OnOff application on the remote host and adding to container
-+			applications1.Add(dlHelper.Install(remoteHost));
-+
-+			// Creating PacketSinkHelper to consume generated traffic on the UE
-+			PacketSinkHelper dlPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), dlPort));
-+
-+			// Installing PacketSink on the UE and adding to container
-+			applications2.Add(dlPacketSinkHelper.Install(ue));
-+		}
-+		if (ul)
-+		{
-+			//-----------------------------------------Configuring UL----------------------------------------//
-+			/* Instantiate the helper that configures the application.
-+			 * Parameters:
-+			 * * std::string protocol -> socket factory used to create sockets for the applications.
-+			 * * Address address      -> destination remote address to receive traffic.
-+			 */
-+			OnOffHelper ulHelper(socketFactory, InetSocketAddress(internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer), ulPort));
-+
-+			// Configuring application attributes
-+			ulHelper.SetAttribute("MaxBytes", UintegerValue(0)); // Infinite data limit (continuous transmission)
-+			ulHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+
-+			// Installing OnOff application on the UE and adding to container
-+			applications1.Add(ulHelper.Install(ue));
-+
-+			// Creating PacketSinkHelper on the remote host
-+			PacketSinkHelper ulPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), ulPort));
-+
-+			// Installing PacketSink on the remote host and adding to container
-+			applications2.Add(ulPacketSinkHelper.Install(remoteHost));
-+
-+		}
-+
-+		//-----------------------------------------Application Timing------------------------------------//
-+		std::cout << "StartTime: " << startTime <<" | EndTime: "<< endTime <<std::endl;
-+		applications1.Start(Seconds(startTime));
-+		applications1.Stop(Seconds(endTime));
-+		applications2.Start(Seconds(startTime));
-+		applications2.Stop(Seconds(endTime));
-+
-+		// Incrementing UL and DL ports for the next UE
-+		++dlPort;
-+		++ulPort;
-+
-+        // Saving the on/off applications in the container
-+        allOnOffs.Add(applications1);
-+	}
-+
-+    return allOnOffs;
-+}
-+
-+ApplicationContainer createOnOffApplicationWithPacketFilter(Ptr<EpcHelper> epcHelper, enum EpsBearer::Qci qci, Ptr<Node> remoteHost, NetDeviceContainer uesNetDevs, Ipv4InterfaceContainer internetIpv4Interfaces, Ipv4InterfaceContainer uesIpv4Interfaces, bool dl = true,
-+											bool ul = false, double dataRateInMbps = 1, uint16_t packetSize = 1024, uint16_t startDlPort = 10000, uint16_t startUlPort = 20000, double startTime=0.0, double endTime=120.0,uint8_t remoteHostIndexInContainer = 1)
-+{
-+
-+    // Creating the container to save the OnOffApplications
-+    ApplicationContainer allOnOffs;
-+
-+	// If both downlink and uplink are disabled, return empty container
-+	if (not(dl or ul))
-+	{
-+		return allOnOffs;
-+	}
-+
-+	// Setting up the ports to be used for the applications
-+	uint16_t dlPort = startDlPort;
-+	uint16_t ulPort = startUlPort;
-+
-+	// Configuring application parameters to appropriate formats
-+	UintegerValue packetSizeUV = UintegerValue(packetSize);
-+	DataRate dataRateInMbpsDR = DataRate(std::to_string(dataRateInMbps) + "Mib/s");
-+
-+	std::string socketFactory = "ns3::UdpSocketFactory";
-+
-+	// Iterating over the vector of UEs
-+	for (uint8_t u = 0; u < uesNetDevs.GetN(); ++u)
-+	{
-+		// Selecting a UE node
-+		Ptr<Node> ue = uesNetDevs.Get(u)->GetNode();
-+
-+		// Creating application containers
-+		ApplicationContainer applications1;
-+		ApplicationContainer applications2;
-+
-+		if (dl)
-+		{
-+			//-----------------------------------------Configuring DL----------------------------------------//
-+			/* Instantiate the helper that configures the application.
-+			 * Parameters:
-+			 * * std::string protocol -> socket factory used to create sockets for the applications.
-+			 * * Address address      -> destination remote address to receive traffic.
-+			 */
-+			OnOffHelper dlHelper(socketFactory, InetSocketAddress(uesIpv4Interfaces.GetAddress(u), dlPort));
-+
-+			// Configuring application attributes
-+			dlHelper.SetAttribute("MaxBytes", UintegerValue(0)); // Infinite data limit (continuous transmission)
-+			dlHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+
-+			// Installing OnOff application on the remote host and adding to container
-+			applications1.Add(dlHelper.Install(remoteHost));
-+
-+			// Creating PacketSinkHelper to consume generated traffic on the UE
-+			PacketSinkHelper dlPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), dlPort));
-+
-+			// Installing PacketSink on the UE and adding to container
-+			applications2.Add(dlPacketSinkHelper.Install(ue));
-+
-+			// Creating the packet filter
-+			Ptr<McUeNetDevice> mcUeNetDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(u));
-+			uint64_t imsi = mcUeNetDev->GetImsi();
-+			Ptr<EpcUeNas> lteUeNas = mcUeNetDev->GetNas();
-+			EpcTft::PacketFilter packetFilter = EpcTft::PacketFilter();
-+			packetFilter.remoteAddress = internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer);
-+			packetFilter.localAddress = uesIpv4Interfaces.GetAddress(u);
-+			packetFilter.remotePortStart = 0;
-+			packetFilter.remotePortEnd = 65535;
-+			packetFilter.localPortStart = dlPort;
-+			packetFilter.localPortEnd = dlPort;
-+			packetFilter.direction = EpcTft::DOWNLINK;
-+			packetFilter.typeOfService = 0;
-+			Ptr<EpcTft> epcTft = Create<EpcTft>();
-+			epcTft->Add(packetFilter);
-+			epcHelper->ActivateEpsBearer(mcUeNetDev, lteUeNas, imsi, epcTft, qci);
-+		}
-+		if (ul)
-+		{
-+			//-----------------------------------------Configuring UL----------------------------------------//
-+			/* Instantiate the helper that configures the application.
-+			 * Parameters:
-+			 * * std::string protocol -> socket factory used to create sockets for the applications.
-+			 * * Address address      -> destination remote address to receive traffic.
-+			 */
-+			OnOffHelper ulHelper(socketFactory, InetSocketAddress(internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer), ulPort));
-+
-+			// Configuring application attributes
-+			ulHelper.SetAttribute("MaxBytes", UintegerValue(0)); // Infinite data limit (continuous transmission)
-+			ulHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+
-+			// Installing OnOff application on the UE and adding to container
-+			applications1.Add(ulHelper.Install(ue));
-+
-+			// Creating PacketSinkHelper on the remote host
-+			PacketSinkHelper ulPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), ulPort));
-+
-+			// Installing PacketSink on the remote host and adding to container
-+			applications2.Add(ulPacketSinkHelper.Install(remoteHost));
-+
-+			// Creating the packet filter
-+			Ptr<McUeNetDevice> mcUeNetDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(u));
-+			uint64_t imsi = mcUeNetDev->GetImsi();
-+			Ptr<EpcUeNas> lteUeNas = mcUeNetDev->GetNas();
-+			EpcTft::PacketFilter packetFilter = EpcTft::PacketFilter();
-+			packetFilter.remoteAddress = internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer);
-+			packetFilter.localAddress = uesIpv4Interfaces.GetAddress(u);
-+			packetFilter.remotePortStart = 0;
-+			packetFilter.remotePortEnd = 65535;
-+			packetFilter.localPortStart = dlPort;
-+			packetFilter.localPortEnd = dlPort;
-+			packetFilter.direction = EpcTft::UPLINK;
-+			packetFilter.typeOfService = 0;
-+			Ptr<EpcTft> epcTft = Create<EpcTft>();
-+			epcTft->Add(packetFilter);
-+			epcHelper->ActivateEpsBearer(mcUeNetDev, lteUeNas, imsi, epcTft, qci);
-+		}
-+
-+		//-----------------------------------------Application Timing------------------------------------//
-+		std::cout << "StartTime: " << startTime <<" | EndTime: "<< endTime <<std::endl;
-+		applications1.Start(Seconds(startTime));
-+		applications1.Stop(Seconds(endTime));
-+		applications2.Start(Seconds(startTime));
-+		applications2.Stop(Seconds(endTime));
-+
-+		// Incrementing UL and DL ports for next UE
-+		++dlPort;
-+		++ulPort;
-+
-+        // Saving the on/off applications in the container
-+        allOnOffs.Add(applications1);
-+	}
-+
-+    return allOnOffs;
-+}
-+
-+Ptr<Building> CreateBuilding(float x1, float y1, float x2, float y2, float h)
-+{
-+	Ptr<Building> building = CreateObject<Building>();	  // Create building object
-+	building->SetBoundaries(Box(x1, x2, y1, y2, 0.0, h)); // Set building boundaries
-+	building->SetNRoomsX(1);
-+	building->SetNRoomsY(1);
-+	building->SetNFloors(1);
-+	building->SetBuildingType(Building::Commercial);		  // Building type
-+	building->SetExtWallsType(Building::ConcreteWithWindows); // External walls type
-+	return building;
-+}
-+
-+Ptr<Building> CreateBuilding(Box buildingBox)
-+{
-+	Ptr<Building> building = CreateObject<Building>(); // Create building object
-+	building->SetBoundaries(buildingBox);			   // Set building boundaries
-+	building->SetNRoomsX(1);
-+	building->SetNRoomsY(1);
-+	building->SetNFloors(1);
-+	building->SetBuildingType(Building::Commercial);		  // Building type
-+	building->SetExtWallsType(Building::ConcreteWithWindows); // External walls type
-+	return building;
-+}
-+
-+void PrintGnuplottableBuildingListToFile(std::string filename)
-+{
-+	std::ofstream outFile;
-+	outFile.open(filename.c_str(), std::ios_base::out | std::ios_base::trunc);
-+	if (!outFile.is_open())
-+	{
-+		NS_LOG_ERROR("Can't open file " << filename);
-+		return;
-+	}
-+	uint32_t index = 0;
-+	for (BuildingList::Iterator it = BuildingList::Begin(); it != BuildingList::End(); ++it)
-+	{
-+		++index;
-+		Box box = (*it)->GetBoundaries();
-+		outFile << "set object " << index
-+				<< " rect from " << box.xMin << "," << box.yMin
-+				<< " to " << box.xMax << "," << box.yMax
-+				<< " front fs empty "
-+				<< std::endl;
-+	}
-+}
-+
-+void
-+PrintGnuplottableUeListToFile (std::string filename)
-+{
-+  std::ofstream outFile;
-+  outFile.open (filename.c_str (), std::ios_base::out | std::ios_base::trunc);
-+  if (!outFile.is_open ())
-+    {
-+      NS_LOG_ERROR ("Can't open file " << filename);
-+      return;
-+    }
-+  for (NodeList::Iterator it = NodeList::Begin (); it != NodeList::End (); ++it)
-+    {
-+      Ptr<Node> node = *it;
-+      int nDevs = node->GetNDevices ();
-+      for (int j = 0; j < nDevs; j++)
-+        {
-+          Ptr<LteUeNetDevice> uedev = node->GetDevice (j)->GetObject<LteUeNetDevice> ();
-+          Ptr<MmWaveUeNetDevice> mmuedev = node->GetDevice (j)->GetObject<MmWaveUeNetDevice> ();
-+          Ptr<McUeNetDevice> mcuedev = node->GetDevice (j)->GetObject<McUeNetDevice> ();
-+          if (uedev)
-+            {
-+              Vector pos = node->GetObject<MobilityModel> ()->GetPosition ();
-+              outFile << "set label \"" << uedev->GetImsi () << "\" at " << pos.x << "," << pos.y
-+                      << " left font \"Helvetica,8\" textcolor rgb \"black\" front point pt 1 ps "
-+                         "0.3 lc rgb \"black\" offset 0,0"
-+                      << std::endl;
-+            }
-+          else if (mmuedev)
-+            {
-+              Vector pos = node->GetObject<MobilityModel> ()->GetPosition ();
-+              outFile << "set label \"" << mmuedev->GetImsi () << "\" at " << pos.x << "," << pos.y
-+                      << " left font \"Helvetica,8\" textcolor rgb \"black\" front point pt 1 ps "
-+                         "0.3 lc rgb \"black\" offset 0,0"
-+                      << std::endl;
-+            }
-+          else if (mcuedev)
-+            {
-+              Vector pos = node->GetObject<MobilityModel> ()->GetPosition ();
-+              outFile << "set label \"" << mcuedev->GetImsi () << "\" at " << pos.x << "," << pos.y
-+                      << " left font \"Helvetica,8\" textcolor rgb \"black\" front point pt 1 ps "
-+                         "0.3 lc rgb \"black\" offset 0,0"
-+                      << std::endl;
-+            }
-+        }
-+    }
-+}
-+
-+void
-+PrintGnuplottableEnbListToFile (std::string filename)
-+{
-+  std::ofstream outFile;
-+  outFile.open (filename.c_str (), std::ios_base::out | std::ios_base::trunc);
-+  if (!outFile.is_open ())
-+    {
-+      NS_LOG_ERROR ("Can't open file " << filename);
-+      return;
-+    }
-+  for (NodeList::Iterator it = NodeList::Begin (); it != NodeList::End (); ++it)
-+    {
-+      Ptr<Node> node = *it;
-+      int nDevs = node->GetNDevices ();
-+      for (int j = 0; j < nDevs; j++)
-+        {
-+          Ptr<LteEnbNetDevice> enbdev = node->GetDevice (j)->GetObject<LteEnbNetDevice> ();
-+          Ptr<MmWaveEnbNetDevice> mmdev = node->GetDevice (j)->GetObject<MmWaveEnbNetDevice> ();
-+          if (enbdev)
-+            {
-+              Vector pos = node->GetObject<MobilityModel> ()->GetPosition ();
-+              outFile << "set label \"" << enbdev->GetCellId () << "\" at " << pos.x << "," << pos.y
-+                      << " left font \"Helvetica,8\" textcolor rgb \"blue\" front  point pt 4 ps "
-+                         "0.3 lc rgb \"blue\" offset 0,0"
-+                      << std::endl;
-+            }
-+          else if (mmdev)
-+            {
-+              Vector pos = node->GetObject<MobilityModel> ()->GetPosition ();
-+              outFile << "set label \"" << mmdev->GetCellId () << "\" at " << pos.x << "," << pos.y
-+                      << " left font \"Helvetica,8\" textcolor rgb \"red\" front  point pt 4 ps "
-+                         "0.3 lc rgb \"red\" offset 0,0"
-+                      << std::endl;
-+            }
-+        }
-+    }
-+}
-+
-+void
-+PrintPosition (Ptr<Node> node)
-+{
-+  Ptr<MobilityModel> model = node->GetObject<MobilityModel> ();
-+  NS_LOG_UNCOND ("Position +****************************** " << model->GetPosition () << " at time "
-+                                                             << Simulator::Now ().GetSeconds ());
-+}
-+
-+static ns3::GlobalValue g_rngRun("rngRun", "Random Seed Number",
-+                        ns3::DoubleValue (1), ns3::MakeDoubleChecker<double> ());
-+
-+static ns3::GlobalValue g_plotMap("plotMap", "If true, plots the Radio Environment Maps of the network without running the simulation.",
-+								  ns3::BooleanValue(false), ns3::MakeBooleanChecker());
-+
-+static ns3::GlobalValue g_bufferSize ("bufferSize", "RLC tx buffer size (MB)",
-+                                      ns3::UintegerValue (10),
-+                                      ns3::MakeUintegerChecker<uint32_t> ());
-+
-+static ns3::GlobalValue g_enableTraces ("enableTraces", "If true, generate ns-3 traces",
-+                                        ns3::BooleanValue (true), ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue g_e2lteEnabled ("e2lteEnabled", "If true, send LTE E2 reports",
-+                                        ns3::BooleanValue (true), ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue g_e2nrEnabled ("e2nrEnabled", "If true, send NR E2 reports",
-+                                       ns3::BooleanValue (true), ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue g_e2du ("e2du", "If true, send DU reports", ns3::BooleanValue (true),
-+                                ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue g_e2cuUp ("e2cuUp", "If true, send CU-UP reports", ns3::BooleanValue (true),
-+                                  ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue g_e2cuCp ("e2cuCp", "If true, send CU-CP reports", ns3::BooleanValue (true),
-+                                  ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue g_reducedPmValues ("reducedPmValues", "If true, use a subset of the the pm containers",
-+                                        ns3::BooleanValue (true), ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue
-+    g_hoSinrDifference ("hoSinrDifference",
-+                        "The value for which an handover between MmWave eNB is triggered",
-+                        ns3::DoubleValue (3), ns3::MakeDoubleChecker<double> ());
-+
-+static ns3::GlobalValue
-+    g_indicationPeriodicity ("indicationPeriodicity",
-+                             "E2 Indication Periodicity reports (value in seconds)",
-+                             ns3::DoubleValue (0.1), ns3::MakeDoubleChecker<double> (0.01, 2.0));
-+
-+static ns3::GlobalValue g_simTime ("simTime", "Simulation time in seconds", ns3::DoubleValue (2),
-+                                   ns3::MakeDoubleChecker<double> (0.1, 100.0));
-+
-+static ns3::GlobalValue g_outageThreshold ("outageThreshold",
-+                                           "SNR threshold for outage events [dB]", // use -1000.0 with NoAuto
-+                                           ns3::DoubleValue (-5.0),
-+                                           ns3::MakeDoubleChecker<double> ());
-+
-+static ns3::GlobalValue g_numberOfRaPreambles (
-+    "numberOfRaPreambles",
-+    "how many random access preambles are available for the contention based RACH process",
-+    ns3::UintegerValue (40), // Indicated for TS use case, 52 is default
-+    ns3::MakeUintegerChecker<uint8_t> ());
-+
-+static ns3::GlobalValue
-+    g_handoverMode ("handoverMode",
-+                    "HO euristic to be used,"
-+                    "can be only \"NoAuto\", \"FixedTtt\", \"DynamicTtt\",   \"Threshold\"",
-+                    ns3::StringValue ("NoAuto"), ns3::MakeStringChecker ());
-+
-+static ns3::GlobalValue g_e2TermIp ("e2TermIp", "The IP address of the RIC E2 termination",
-+                                    ns3::StringValue ("10.244.0.66"), ns3::MakeStringChecker ());
-+
-+static ns3::GlobalValue g_basicCellId ("basicCellId", "The next value will be the first cellId",
-+    ns3::UintegerValue (1),
-+    ns3::MakeUintegerChecker<uint8_t> ());
-+
-+static ns3::GlobalValue
-+    g_enableE2FileLogging ("enableE2FileLogging",
-+                           "If true, generate offline file logging instead of connecting to RIC",
-+                           ns3::BooleanValue (true), ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue g_simSplitRatio ("simSplitRatio",
-+                                           "Ratio in which the data will split (LTE = splitRatio - NR = (1 - LTE))",
-+                                           ns3::DoubleValue (1.0),
-+                                           ns3::MakeDoubleChecker<double> ());
-+
-+static ns3::GlobalValue g_useMab ("useMab",
-+              "Activate/Deactivate MAB usage in the simulation",
-+              ns3::BooleanValue (false),
-+              ns3::MakeBooleanChecker ());
-+
-+static ns3::GlobalValue g_simScenario ("simScenario",
-+      "Simulation Scenario,"
-+      "can be only \"Static\", \"Step\", \"Robustness\"",
-+      ns3::StringValue ("Static"), ns3::MakeStringChecker ());
-+
-+static ns3::GlobalValue g_mabEpsilon ("mabEpsilon",
-+                                      "Initial Exploration Rate (Epsilon Start)",
-+                                      ns3::DoubleValue (0.1),
-+                                      ns3::MakeDoubleChecker<double> (0.0, 1.0));
-+
-+static ns3::GlobalValue g_mabEpsilonMin ("mabEpsilonMin",
-+                                         "Minimum Exploration Rate (Epsilon End)",
-+                                         ns3::DoubleValue (0.01),
-+                                         ns3::MakeDoubleChecker<double> (0.0, 1.0));
-+
-+static ns3::GlobalValue g_mabDecayFactor ("mabDecayFactor",
-+                                          "Exponential Decay Factor (1.0 = No Decay)",
-+                                          ns3::DoubleValue (1.0),
-+                                          ns3::MakeDoubleChecker<double> (0.0, 1.0));
-+
-+static ns3::GlobalValue g_mabAlpha ("mabAlpha",
-+                                    "Learning Rate (Alpha)",
-+                                    ns3::DoubleValue (0.1),
-+                                    ns3::MakeDoubleChecker<double> (0.0, 1.0));
-+
-+static ns3::GlobalValue g_mabInterval ("mabInterval",
-+                                       "Time Interval Between Decisions (Seconds)",
-+                                       ns3::DoubleValue (0.1),
-+                                       ns3::MakeDoubleChecker<double> (0.001, 10.0));
-+
-+static ns3::GlobalValue g_dataRateMbb ("dataRateMbb",
-+                                         "Data Rate for eMBB (Mbps)",
-+                                         ns3::DoubleValue (8.0),
-+                                         ns3::MakeDoubleChecker<double> ());
-+
-+static ns3::GlobalValue g_dataRateXr ("dataRateXr",
-+                                        "Data Rate for XR (Mbps)",
-+                                        ns3::DoubleValue (15.0),
-+                                        ns3::MakeDoubleChecker<double> ());
-+
-+static ns3::GlobalValue g_mbbPriority ("mbbPriority",
-+                                        "MAB MBB service priority (0.0 ~ 1.0)",
-+                                        ns3::DoubleValue (0.8),
-+                                        ns3::MakeDoubleChecker<double> ());
-+
-+static ns3::GlobalValue g_nUesMixed ("nUesMixed",
-+                                           "Number of UEs with multiple services",
-+                                           ns3::UintegerValue (1),
-+                                           ns3::MakeUintegerChecker<uint8_t> ());
-+
-+static ns3::GlobalValue g_nUesBackground ("nUesBackground",
-+                                           "Number of background UEs",
-+                                           ns3::UintegerValue (1),
-+                                           ns3::MakeUintegerChecker<uint8_t> ());
-+
-+static ns3::GlobalValue g_controlFileName ("controlFileName",
-+                                           "The path to the control file (can be absolute)",
-+                                           ns3::StringValue (""),
-+                                           ns3::MakeStringChecker ());                                          
-+
-+int
-+main (int argc, char *argv[])
-+{
-+  LogComponentEnableAll (LOG_PREFIX_ALL);
-+
-+  // LogComponentEnable ("McEnbPdcp", LOG_LEVEL_ALL);
-+  // LogComponentEnable ("LteRlcUm", LOG_LEVEL_DEBUG);
-+  // LogComponentEnable ("MmWaveBearerStatsConnector", LOG_LEVEL_DEBUG);
-+  LogComponentEnable ("ScenarioMaster", LOG_LEVEL_DEBUG);
-+
-+  GlobalValue::Bind("SimulatorImplementationType", StringValue("ns3::RealtimeSimulatorImpl"));
-+  // GlobalValue::Bind("ChecksumEnabled", BooleanValue(true));
-+
-+  // Command Line Arguments
-+  CommandLine cmd;
-+  cmd.Parse (argc, argv);
-+
-+  bool harqEnabled = true;
-+
-+  UintegerValue uintegerValue;
-+  BooleanValue booleanValue;
-+  StringValue stringValue;
-+  DoubleValue doubleValue;
-+
-+  // Simulator Parameters
-+  GlobalValue::GetValueByName("rngRun", doubleValue);
-+  uint32_t rngRun = doubleValue.Get();
-+  NS_LOG_DEBUG("RNG RUN = " << rngRun);
-+  RngSeedManager::SetSeed(rngRun);
-+  GlobalValue::GetValueByName ("plotMap", booleanValue);
-+  bool plotMap = booleanValue.Get();
-+  // MAB Parameters
-+  GlobalValue::GetValueByName ("useMab", booleanValue);
-+  bool useMab = booleanValue.Get();
-+  GlobalValue::GetValueByName ("mbbPriority", doubleValue);
-+  double mbbPriority = doubleValue.Get();
-+  GlobalValue::GetValueByName ("mabEpsilon", doubleValue);
-+  double mabEpsilon = doubleValue.Get();
-+  GlobalValue::GetValueByName ("mabEpsilonMin", doubleValue);
-+  double mabEpsilonMin = doubleValue.Get();
-+  GlobalValue::GetValueByName ("mabDecayFactor", doubleValue);
-+  double mabDecayFactor = doubleValue.Get();
-+  GlobalValue::GetValueByName ("mabAlpha", doubleValue);
-+  double mabAlpha = doubleValue.Get();
-+  GlobalValue::GetValueByName ("mabInterval", doubleValue);
-+  double mabInterval = doubleValue.Get();
-+
-+  // Scenario Parameters
-+  GlobalValue::GetValueByName ("dataRateMbb", doubleValue);
-+  double dataRateEmbbMixedMbps = doubleValue.Get();
-+  double targetTputMbb = (dataRateEmbbMixedMbps*0.9)*1e3; // Calculating the initial QoS Target percentage.
-+  GlobalValue::GetValueByName ("dataRateXr", doubleValue);
-+  double dataRateXrMixedMbps = doubleValue.Get();
-+  double targetTputXr = (dataRateXrMixedMbps*0.9)*1e3; // Calculating the initial QoS Target percentage.
-+  GlobalValue::GetValueByName ("simScenario", stringValue);
-+  std::string simScenario = stringValue.Get();
-+  GlobalValue::GetValueByName ("nUesMixed", uintegerValue);
-+  uint32_t nUesMixed = uintegerValue.Get ();
-+  GlobalValue::GetValueByName ("nUesBackground", uintegerValue);
-+  uint32_t nUesBackground = uintegerValue.Get ();
-+  GlobalValue::GetValueByName("simSplitRatio", doubleValue);
-+  double simSplitRatio = doubleValue.Get();
-+  GlobalValue::GetValueByName ("hoSinrDifference", doubleValue);
-+  double hoSinrDifference = doubleValue.Get (); // Inherited from old code, maybe unused.
-+  // GlobalValue::GetValueByName ("rlcAmEnabled", booleanValue);
-+  // bool rlcAmEnabled = booleanValue.Get (); // Inherited from old code, maybe unused.
-+  GlobalValue::GetValueByName ("bufferSize", uintegerValue);
-+  uint32_t bufferSize = uintegerValue.Get (); 
-+  GlobalValue::GetValueByName ("basicCellId", uintegerValue);
-+  uint16_t basicCellId = uintegerValue.Get ();
-+  GlobalValue::GetValueByName ("enableTraces", booleanValue);
-+  bool enableTraces = booleanValue.Get (); // Inherited from old code, maybe unused.
-+  GlobalValue::GetValueByName ("outageThreshold",doubleValue);
-+  double outageThreshold = doubleValue.Get (); // Inherited from old code, maybe unused.
-+  // GlobalValue::GetValueByName ("minSpeed", doubleValue);
-+  // double minSpeed = doubleValue.Get ();
-+  // GlobalValue::GetValueByName ("maxSpeed", doubleValue);
-+  // double maxSpeed = doubleValue.Get ();
-+  GlobalValue::GetValueByName ("numberOfRaPreambles", uintegerValue);
-+  uint8_t numberOfRaPreambles = uintegerValue.Get ();
-+
-+  // E2 Parameters
-+  GlobalValue::GetValueByName ("e2TermIp", stringValue);
-+  std::string e2TermIp = stringValue.Get (); 
-+  GlobalValue::GetValueByName ("enableE2FileLogging", booleanValue);
-+  bool enableE2FileLogging = booleanValue.Get ();
-+  GlobalValue::GetValueByName ("e2lteEnabled", booleanValue);
-+  bool e2lteEnabled = booleanValue.Get ();
-+  GlobalValue::GetValueByName ("e2nrEnabled", booleanValue);
-+  bool e2nrEnabled = booleanValue.Get ();
-+  GlobalValue::GetValueByName ("e2du", booleanValue);
-+  bool e2du = booleanValue.Get ();
-+  GlobalValue::GetValueByName ("e2cuUp", booleanValue);
-+  bool e2cuUp = booleanValue.Get ();
-+  GlobalValue::GetValueByName ("e2cuCp", booleanValue);
-+  bool e2cuCp = booleanValue.Get ();
-+  GlobalValue::GetValueByName ("reducedPmValues", booleanValue);
-+  bool reducedPmValues = booleanValue.Get ();
-+  GlobalValue::GetValueByName ("indicationPeriodicity", doubleValue);
-+  double indicationPeriodicity = doubleValue.Get ();
-+  GlobalValue::GetValueByName ("controlFileName", stringValue);
-+  std::string controlFilename = stringValue.Get (); // Inherited from old code, maybe unused.
-+
-+  // Pre-configuring some system model parameters
-+  Config::SetDefault("ns3::LteEnbRrc::SrsPeriodicity", UintegerValue(320));
-+	Config::SetDefault("ns3::LteEnbRrc::FirstSibTime", UintegerValue(2)); // This is in ms
-+	Config::SetDefault("ns3::LteEnbRrc::SystemInformationPeriodicity", TimeValue(MilliSeconds(5.0)));
-+  Config::SetDefault("ns3::LteEnbRrc::AdmitHandoverRequest", BooleanValue(false));
-+
-+  Config::SetDefault("ns3::LteUePhy::RsrpSinrSamplePeriod", UintegerValue(100));
-+	Config::SetDefault("ns3::MmWaveEnbPhy::UpdateSinrEstimatePeriod", IntegerValue(100000));
-+
-+  Config::SetDefault ("ns3::LteEnbNetDevice::ControlFileName", StringValue(controlFilename));
-+  Config::SetDefault ("ns3::LteEnbNetDevice::E2Periodicity", DoubleValue (indicationPeriodicity));
-+  Config::SetDefault ("ns3::MmWaveEnbNetDevice::E2Periodicity", DoubleValue (indicationPeriodicity));
-+
-+  Config::SetDefault ("ns3::MmWaveHelper::E2ModeLte", BooleanValue(e2lteEnabled));
-+  Config::SetDefault ("ns3::MmWaveHelper::E2ModeNr", BooleanValue(e2nrEnabled));
-+
-+  Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableDuReport", BooleanValue(e2du));
-+  Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableCuUpReport", BooleanValue(e2cuUp));
-+  Config::SetDefault ("ns3::LteEnbNetDevice::EnableCuUpReport", BooleanValue(e2cuUp));
-+
-+  Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableCuCpReport", BooleanValue(e2cuCp));
-+  Config::SetDefault ("ns3::LteEnbNetDevice::EnableCuCpReport", BooleanValue(e2cuCp));
-+  
-+  Config::SetDefault ("ns3::MmWaveEnbNetDevice::ReducedPmValues", BooleanValue (reducedPmValues));
-+  Config::SetDefault ("ns3::LteEnbNetDevice::ReducedPmValues", BooleanValue (reducedPmValues));
-+
-+  Config::SetDefault ("ns3::LteEnbNetDevice::EnableE2FileLogging", BooleanValue (enableE2FileLogging));
-+  Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableE2FileLogging", BooleanValue (enableE2FileLogging));
-+
-+  Config::SetDefault ("ns3::MmWaveEnbMac::NumberOfRaPreambles", UintegerValue (numberOfRaPreambles));
-+
-+  // Config::SetDefault("ns3::LteEnbRrc::DefaultTransmissionMode", UintegerValue(4));
-+
-+  Config::SetDefault ("ns3::MmWaveHelper::RlcAmEnabled", BooleanValue (false));
-+  Config::SetDefault ("ns3::MmWaveHelper::HarqEnabled", BooleanValue (harqEnabled));
-+  Config::SetDefault ("ns3::MmWaveHelper::UseIdealRrc", BooleanValue (true));
-+  Config::SetDefault ("ns3::MmWaveHelper::BasicCellId", UintegerValue (basicCellId));
-+  Config::SetDefault ("ns3::MmWaveHelper::BasicImsi", UintegerValue ((basicCellId-1)));
-+  Config::SetDefault ("ns3::MmWaveHelper::E2TermIp", StringValue (e2TermIp));
-+
-+  Config::SetDefault ("ns3::MmWaveFlexTtiMacScheduler::HarqEnabled", BooleanValue (harqEnabled));
-+  Config::SetDefault ("ns3::MmWavePhyMacCommon::NumHarqProcess", UintegerValue (100));
-+
-+  Config::SetDefault ("ns3::LteRlcAm::ReportBufferStatusTimer", TimeValue (MilliSeconds (10.0)));
-+  Config::SetDefault ("ns3::LteRlcUmLowLat::ReportBufferStatusTimer",
-+                      TimeValue (MilliSeconds (10.0)));
-+  Config::SetDefault ("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue (bufferSize * 1024 * 1024));
-+  Config::SetDefault ("ns3::LteRlcUmLowLat::MaxTxBufferSize",
-+                      UintegerValue (bufferSize * 1024 * 1024));
-+  Config::SetDefault ("ns3::LteRlcAm::MaxTxBufferSize", UintegerValue (bufferSize * 1024 * 1024));
-+  
-+  Config::SetDefault ("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue (bufferSize * 1024 * 1024));
-+  Config::SetDefault ("ns3::LteRlcUmLowLat::MaxTxBufferSize",
-+                      UintegerValue (bufferSize * 1024 * 1024));
-+  Config::SetDefault ("ns3::LteRlcAm::MaxTxBufferSize", UintegerValue (bufferSize * 1024 * 1024));
-+
-+  Config::SetDefault ("ns3::LteEnbRrc::OutageThreshold", DoubleValue (outageThreshold));
-+  Config::SetDefault ("ns3::LteEnbRrc::SecondaryCellHandoverMode", StringValue ("NoAuto"));
-+  Config::SetDefault ("ns3::LteEnbRrc::HoSinrDifference", DoubleValue (hoSinrDifference));
-+  Config::SetDefault ("ns3::MmWaveHelper::LteHandoverAlgorithm", StringValue("ns3::NoOpHandoverAlgorithm"));
-+
-+  double bandwidth = 100e6;
-+  double centerFrequency = 30e9;
-+
-+  Config::SetDefault ("ns3::MmWavePhyMacCommon::Bandwidth", DoubleValue (bandwidth));
-+  Config::SetDefault ("ns3::MmWavePhyMacCommon::CenterFreq", DoubleValue (centerFrequency));
-+  Config::SetDefault("ns3::MmWavePhyMacCommon::Numerology", EnumValue(3));
-+
-+  Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkDelay", TimeValue(MicroSeconds(500)));
-+	Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkDataRate", DataRateValue(DataRate("1000Gb/s")));
-+	Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkMtu", UintegerValue(10000));
-+	Config::SetDefault("ns3::MmWavePointToPointEpcHelper::S1uLinkDelay", TimeValue(MicroSeconds(1000)));
-+	Config::SetDefault("ns3::MmWavePointToPointEpcHelper::S1apLinkDelay", TimeValue(MicroSeconds(10000)));
-+
-+  Config::SetDefault("ns3::McUePdcp::LteUplink", BooleanValue(false));
-+
-+  Config::SetDefault("ns3::McUeNetDevice::AntennaNum", UintegerValue(1));
-+	Config::SetDefault("ns3::MmWaveNetDevice::AntennaNum", UintegerValue(64));
-+	Config::SetDefault("ns3::ThreeGppAntennaArrayModel::DowntiltAngle", DoubleValue(0));
-+	Config::SetDefault("ns3::ThreeGppAntennaArrayModel::IsotropicElements", BooleanValue(true));
-+	Config::SetDefault("ns3::ThreeGppAntennaArrayModel::ElementGain", DoubleValue(5));
-+	Config::SetDefault("ns3::ThreeGppAntennaArrayModel::AntennaHorizontalSpacing", DoubleValue(0.5));
-+	Config::SetDefault("ns3::ThreeGppAntennaArrayModel::AntennaVerticalSpacing", DoubleValue(0.5));
-+	Config::SetDefault("ns3::CosineAntennaModel::Beamwidth", DoubleValue(60));
-+	Config::SetDefault("ns3::CosineAntennaModel::Orientation", DoubleValue(225));
-+
-+  Config::SetDefault("ns3::MmWaveEnbPhy::TxPower", DoubleValue(24));
-+	Config::SetDefault("ns3::MmWaveUePhy::TxPower", DoubleValue(24));
-+	// Config::SetDefault("ns3::LteEnbPhy::TxPower", DoubleValue(46));
-+	Config::SetDefault("ns3::LteEnbPhy::TxPower", DoubleValue(46));
-+	// Config::SetDefault("ns3::LteEnbPhy::TxPower", DoubleValue(38));
-+	Config::SetDefault("ns3::LteUePhy::TxPower", DoubleValue(24));
-+
-+  Config::SetDefault("ns3::MmWaveEnbPhy::NoiseFigure", DoubleValue(7));
-+	Config::SetDefault("ns3::MmWaveUePhy::NoiseFigure", DoubleValue(13));
-+	Config::SetDefault("ns3::LteEnbPhy::NoiseFigure", DoubleValue(5));
-+	Config::SetDefault("ns3::LteUePhy::NoiseFigure", DoubleValue(9));
-+
-+  Config::SetDefault("ns3::BuildingsPropagationLossModel::ShadowSigmaOutdoor", DoubleValue(0));
-+	Config::SetDefault("ns3::BuildingsPropagationLossModel::ShadowSigmaIndoor", DoubleValue(0));
-+	Config::SetDefault("ns3::BuildingsPropagationLossModel::ShadowSigmaExtWalls", DoubleValue(0));
-+	Config::SetDefault("ns3::BuildingsPropagationLossModel::InternalWallLoss", DoubleValue(0));
-+
-+  Config::SetDefault("ns3::ThreeGppChannelModel::Scenario", StringValue("UMa"));
-+	Config::SetDefault("ns3::ThreeGppPropagationLossModel::ShadowingEnabled", BooleanValue(false));
-+  // Config::SetDefault("ns3::ThreeGppPropagationLossModel::BuildingPenetrationLossesEnabled", BooleanValue(false));
-+  Ptr<BuildingsChannelConditionModel> buildingsChannelConditionModel = CreateObject<BuildingsChannelConditionModel>();
-+	Config::SetDefault("ns3::ThreeGppPropagationLossModel::ChannelConditionModel", PointerValue(buildingsChannelConditionModel));
-+
-+  ConfigStore inputConfig;
-+  inputConfig.ConfigureDefaults();
-+
-+  // Create and setup mmWave Helper
-+  Ptr<MmWaveHelper> mmwaveHelper = CreateObject<MmWaveHelper>();
-+  mmwaveHelper->SetAttribute("UseCa", BooleanValue(false));
-+  mmwaveHelper->SetAttribute("UseIdealRrc", BooleanValue(true));
-+  mmwaveHelper->SetBeamformingModelType("ns3::MmWaveDftBeamforming");
-+  mmwaveHelper->SetMcUeNetDeviceAttribute("LteDlEarfcn", UintegerValue(100));
-+
-+  mmwaveHelper->SetPathlossModelType("ns3::ThreeGppIndoorOfficePropagationLossModel");
-+  mmwaveHelper->SetLtePathlossModelType("ns3::ThreeGppUmaPropagationLossModel");
-+  mmwaveHelper->SetChannelConditionModelType("ns3::BuildingsChannelConditionModel");
-+
-+  mmwaveHelper->SetLteEnbAntennaModelType("ns3::CosineAntennaModel");
-+  mmwaveHelper->SetLteEnbAntennaModelAttribute("Orientation", DoubleValue(225));
-+  mmwaveHelper->SetLteEnbAntennaModelAttribute("Beamwidth", DoubleValue(60));
-+
-+  Ptr<CcHelper> lteCcHelper = CreateObject<CcHelper>();
-+	lteCcHelper->SetNumberOfComponentCarriers(1);
-+	lteCcHelper->SetUlEarfcn(18100);
-+	lteCcHelper->SetDlEarfcn(100);
-+	lteCcHelper->SetDlBandwidth(100);
-+	lteCcHelper->SetUlBandwidth(100);
-+	std::map<uint8_t, ComponentCarrier> lteCcMap = lteCcHelper->EquallySpacedCcs();
-+	lteCcMap.at(0).SetAsPrimary(true);
-+	mmwaveHelper->SetLteCcPhyParams(lteCcMap);
-+
-+  // Creation of MmWavePointToPointEpcHelper
-+	Ptr<MmWavePointToPointEpcHelper> epcHelper = CreateObject<MmWavePointToPointEpcHelper>();
-+	mmwaveHelper->SetEpcHelper(epcHelper);
-+
-+	// Enabling HARQ
-+	mmwaveHelper->SetHarqEnabled(true);
-+
-+	mmwaveHelper->Initialize(); // Optional initialization
-+  
-+  // Create and setup nodes (BSs and UEs)
-+  NodeContainer ueNodesMixed;
-+  NodeContainer ueNodesBackground;
-+  NodeContainer allUeNodes;
-+  NodeContainer mmWaveEnbNodes;
-+  NodeContainer lteEnbNodes;
-+  NodeContainer allEnbNodes;
-+
-+  uint8_t nMmWaveEnbNodes = 1;
-+  uint8_t nLteEnbNodes = 1;
-+  uint8_t nUeNodesMixed = nUesMixed;
-+  uint8_t nUeNodesBackground = nUesBackground;
-+
-+  lteEnbNodes.Create(nLteEnbNodes);
-+  mmWaveEnbNodes.Create(nMmWaveEnbNodes);
-+  ueNodesMixed.Create(nUeNodesMixed);
-+  ueNodesBackground.Create(nUeNodesBackground);
-+  allUeNodes.Add(ueNodesMixed);
-+  allUeNodes.Add(ueNodesBackground);
-+  allEnbNodes.Add(lteEnbNodes);
-+  allEnbNodes.Add(mmWaveEnbNodes);
-+
-+  Box buildingBox = Box(0,120,0,50,0,3);
-+
-+  Vector enbPosition = Vector (250.0, 250.0, 25.0);
-+  Vector gnbPosition = Vector (0.0, 25.0, 3.0);
-+
-+  // Position Allocator
-+  Ptr<ListPositionAllocator> enbPositionAlloc = CreateObject<ListPositionAllocator> ();
-+
-+  enbPositionAlloc->Add(enbPosition);
-+  enbPositionAlloc->Add(gnbPosition);
-+
-+  MobilityHelper enbMobility;
-+  enbMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+  enbMobility.SetPositionAllocator(enbPositionAlloc);
-+  enbMobility.Install(allEnbNodes);
-+
-+  MobilityHelper mixedUesMobility;
-+  mixedUesMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+  Ptr<RandomRectanglePositionAllocator> mixedUesPositionAlloc = CreateObject<RandomRectanglePositionAllocator>();
-+  mixedUesPositionAlloc->SetAttribute("X", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=120.0]"));
-+  mixedUesPositionAlloc->SetAttribute("Y", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=50.0]"));
-+  mixedUesPositionAlloc->SetAttribute("Z", DoubleValue(1.5));
-+
-+  mixedUesMobility.SetPositionAllocator(mixedUesPositionAlloc);
-+  mixedUesMobility.Install(ueNodesMixed);
-+
-+  MobilityHelper backgroundUesMobility;
-+  backgroundUesMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+  Ptr<RandomRectanglePositionAllocator> backgroundUesPositionAlloc = CreateObject<RandomRectanglePositionAllocator>();
-+  backgroundUesPositionAlloc->SetAttribute("X", StringValue("ns3::UniformRandomVariable[Min=121.0|Max=250.0]"));
-+  backgroundUesPositionAlloc->SetAttribute("Y", StringValue("ns3::UniformRandomVariable[Min=51.0|Max=250.0]"));
-+  backgroundUesPositionAlloc->SetAttribute("Z", DoubleValue(1.5));
-+
-+  backgroundUesMobility.SetPositionAllocator(backgroundUesPositionAlloc);
-+  backgroundUesMobility.Install(ueNodesBackground);
-+
-+  Ptr<Building> building = CreateBuilding(buildingBox);
-+
-+  BuildingsHelper::Install(allUeNodes);
-+  BuildingsHelper::Install(allEnbNodes);
-+
-+  // Install mmWave, lte, mc Devices to the nodes
-+  NetDeviceContainer lteEnbDevs;
-+  lteEnbDevs.Add(mmwaveHelper->InstallLteEnbDevice (lteEnbNodes.Get(0)));
-+  NetDeviceContainer mmWaveEnbDevs = mmwaveHelper->InstallEnbDevice (mmWaveEnbNodes.Get(0));
-+  NetDeviceContainer mixedUesNetDevs = mmwaveHelper->InstallMcUeDevice (ueNodesMixed);
-+  NetDeviceContainer backgroundUesNetDevs = mmwaveHelper->InstallMcUeDevice (ueNodesBackground);
-+  NetDeviceContainer mcUeDevs;
-+  mcUeDevs.Add(mixedUesNetDevs);
-+  mcUeDevs.Add(backgroundUesNetDevs);
-+
-+  // Get SGW/PGW and create a single RemoteHost
-+  Ptr<Node> pgw = epcHelper->GetPgwNode ();
-+  NodeContainer remoteHostContainer;
-+  remoteHostContainer.Create (1);
-+  Ptr<Node> remoteHost = remoteHostContainer.Get (0);
-+  InternetStackHelper internet;
-+  internet.Install (remoteHostContainer);
-+
-+  // Create the Internet by connecting remoteHost to pgw. Setup routing too
-+  PointToPointHelper p2ph;
-+  p2ph.SetDeviceAttribute ("DataRate", DataRateValue (DataRate ("100Gb/s")));
-+  p2ph.SetDeviceAttribute ("Mtu", UintegerValue (2500));
-+  p2ph.SetChannelAttribute ("Delay", TimeValue (Seconds (0.010)));
-+  NetDeviceContainer internetDevices = p2ph.Install (pgw, remoteHost);
-+  Ipv4AddressHelper ipv4h;
-+  ipv4h.SetBase ("1.0.0.0", "255.0.0.0");
-+  Ipv4InterfaceContainer internetIpIfaces = ipv4h.Assign (internetDevices);
-+  // interface 0 is localhost, 1 is the p2p device
-+  // Ipv4Address remoteHostAddr = internetIpIfaces.GetAddress (1);
-+  Ipv4StaticRoutingHelper ipv4RoutingHelper;
-+  Ptr<Ipv4StaticRouting> remoteHostStaticRouting =
-+  ipv4RoutingHelper.GetStaticRouting (remoteHost->GetObject<Ipv4> ());
-+  remoteHostStaticRouting->AddNetworkRouteTo (Ipv4Address ("7.0.0.0"), Ipv4Mask ("255.0.0.0"), 1);
-+
-+  // Install the IP stack on the UEs
-+  internet.Install (allUeNodes);
-+  Ipv4InterfaceContainer ueIpIface;
-+  ueIpIface = epcHelper->AssignUeIpv4Address (NetDeviceContainer (mcUeDevs));
-+  Ipv4InterfaceContainer ueIpIfaceMixed;
-+  for (uint32_t i = 0; i < ueNodesMixed.GetN (); ++i)
-+  {
-+    ueIpIfaceMixed.Add (ueIpIface.Get (i));
-+  }
-+  Ipv4InterfaceContainer ueIpIfaceBackground;
-+  for (uint32_t i = 0; i < ueNodesBackground.GetN (); ++i)
-+  {
-+    ueIpIfaceBackground.Add (ueIpIface.Get (ueNodesMixed.GetN () + i));
-+  }
-+  // Assign IP address to UEs, and install applications
-+  for (uint32_t u = 0; u < allUeNodes.GetN (); ++u)
-+  {
-+    Ptr<Node> ueNode = allUeNodes.Get (u);
-+    // Set the default gateway for the UE
-+    Ptr<Ipv4StaticRouting> ueStaticRouting =
-+        ipv4RoutingHelper.GetStaticRouting (ueNode->GetObject<Ipv4> ());
-+    ueStaticRouting->SetDefaultRoute (epcHelper->GetUeDefaultGatewayAddress (), 1);
-+  }
-+
-+  // Add X2 interfaces
-+  mmwaveHelper->AddX2Interface (lteEnbNodes, mmWaveEnbNodes);
-+
-+  // Manual attachment
-+  mmwaveHelper->AttachToClosestEnb (mcUeDevs, mmWaveEnbDevs, lteEnbDevs);
-+
-+  // Install and start applications
-+  uint16_t dlPort = 10000;
-+  uint16_t ulPort = 20000;
-+  enum EpsBearer::Qci qciEmbb = EpsBearer::GBR_CONV_VIDEO;
-+	enum EpsBearer::Qci qciXr = EpsBearer::NGBR_LOW_LAT_EMBB_AR;
-+  double dataRateEmbbBackgroundMbps = 1.0;
-+  double packetSizeInBytes = 1024;
-+  
-+  // Start applications
-+  GlobalValue::GetValueByName ("simTime", doubleValue);
-+  double simTime = doubleValue.Get ();
-+  double startTime = 0.1;
-+  double endTime = simTime;
-+
-+  ApplicationContainer allApps;
-+
-+  NS_LOG_UNCOND ("Configuring DL applications from " << startTime << "s to " << endTime << "s");
-+  NS_LOG_INFO ("Installing eMBB (Mixed) with " << dataRateEmbbMixedMbps << " Mbps");
-+
-+  ApplicationContainer embbMixedApps = createOnOffApplicationWithPacketFilter (
-+  epcHelper,
-+  qciEmbb,
-+  remoteHost,
-+  mixedUesNetDevs,
-+  internetIpIfaces,
-+  ueIpIfaceMixed,
-+  true,  // dl
-+  false, // ul
-+  dataRateEmbbMixedMbps,
-+  packetSizeInBytes,
-+  dlPort,
-+  ulPort,
-+  startTime,
-+  endTime);
-+
-+  allApps.Add(embbMixedApps);
-+
-+  dlPort += ueNodesMixed.GetN ();
-+  ulPort += ueNodesMixed.GetN ();
-+
-+  NS_LOG_INFO ("Installing XR (Mixed) with " << dataRateXrMixedMbps << " Mbps");
-+  ApplicationContainer xrMixedApps = createOnOffApplicationWithPacketFilter (
-+  epcHelper,
-+  qciXr,
-+  remoteHost,
-+  mixedUesNetDevs,
-+  internetIpIfaces,
-+  ueIpIfaceMixed,
-+  true,  // dl
-+  false, // ul
-+  dataRateXrMixedMbps,
-+  packetSizeInBytes,
-+  dlPort,
-+  ulPort,
-+  startTime,
-+  endTime);
-+
-+  allApps.Add(xrMixedApps);
-+
-+  dlPort += ueNodesMixed.GetN ();
-+  ulPort += ueNodesMixed.GetN ();
-+
-+  // 1) eMBB Application (Background)
-+  NS_LOG_INFO ("Installing eMBB (Background) with " << dataRateEmbbBackgroundMbps << " Mbps");
-+  allApps.Add (createOnOffApplication (
-+  // epcHelper,
-+  // qciEmbb2,
-+  remoteHost,
-+  backgroundUesNetDevs,
-+  internetIpIfaces,
-+  ueIpIfaceBackground,
-+  true,  // dl
-+  false, // ul
-+  dataRateEmbbBackgroundMbps,
-+  packetSizeInBytes,
-+  dlPort, 
-+  ulPort,
-+  startTime,
-+  endTime));
-+
-+  if (simScenario == "Step"){
-+    std::cout << "Dynamic Scenario - Step" << std::endl;
-+    // Simulator::Schedule(Seconds(25.0), &ChangeDataRate, embbMixedApps, xrMixedApps, 2.0, 15.0, mabEpsilon);
-+    Simulator::Schedule(Seconds(20.0), &ChangeDataRate, embbMixedApps, xrMixedApps, 4.0, 15.0, mabEpsilon);
-+    Simulator::Schedule(Seconds(30.0), &ChangeDataRate, embbMixedApps, xrMixedApps, 8.0, 15.0, mabEpsilon);
-+  } else if (simScenario == "Robustness"){
-+    std::cout << "Dynamic Scenario - Robustness" << std::endl;
-+
-+    /**
-+     * Robustness Scenario — Non-Stationary Traffic Load Test.
-+     *
-+     * This scenario evaluates the MAB agent's ability to re-adapt when the
-+     * offered traffic load changes unexpectedly (traffic regime changes).
-+     *
-+     * The set of allowed offered-load pairs is:
-+     *   allowedRates = { {4, 15}, {8, 15}, {4, 30}, {8, 30} }  [MBB Mbps, XR Mbps]
-+     *
-+     * These four combinations represent all permutations of two eMBB load levels
-+     * (4 and 8 Mbps) crossed with two XR load levels (15 and 30 Mbps), covering
-+     * light/heavy conditions for each traffic class independently.
-+     *
-+     * **Sampling strategy — no sequential repetition:**
-+     * A Fisher-Yates (Knuth) shuffle is applied to a permutation index vector
-+     * {0, 1, 2, 3} using ns-3's UniformRandomVariable (seeded by RngSeed).
-+     * This guarantees that each of the four pairs appears exactly once across
-+     * the four stages and that the same pair is NEVER applied in two consecutive
-+     * stages.  The shuffle is seeded by the simulation's RngSeed so that results
-+     * are fully reproducible across runs with the same seed, but statistically
-+     * independent across seeds.
-+     *
-+     * Stages are scheduled 10 s apart, starting at t = 20 s (after the
-+     * 20 s warm-up period during which the MAB agent learns the initial regime).
-+     */
-+
-+    // All candidate offered-load pairs {eMBB [Mbps], XR [Mbps]}
-+    // Each entry maps to a distinct traffic regime for the MAB robustness test.
-+    std::vector<std::pair<double, double>> ratePairs = {
-+        {4.0, 15.0}, // Low eMBB  / Low XR
-+        {8.0, 15.0}, // High eMBB / Low XR
-+        {4.0, 30.0}, // Low eMBB  / High XR
-+        {8.0, 30.0}  // High eMBB / High XR
-+    };
-+
-+    // Index vector to be shuffled; starts as the identity permutation
-+    std::vector<int> indices = {0, 1, 2, 3};
-+
-+    // Fisher-Yates shuffle using ns-3 RNG (tied to RngSeed for reproducibility).
-+    // Produces a uniformly random permutation of {0,1,2,3}.
-+    // Crucially, the resulting sequence never repeats the same index twice
-+    // consecutively, since each index appears exactly once in the permutation.
-+    Ptr<UniformRandomVariable> randVar = CreateObject<UniformRandomVariable>();
-+    for (int i = 3; i > 0; --i) {
-+        int j = randVar->GetInteger(0, i);
-+        std::swap(indices[i], indices[j]);
-+    }
-+
-+    // Dynamic scenario parameters
-+    uint32_t numStages    = 4;    // One stage per rate pair
-+    double stageStartTime = 20.0; // Warm-up ends at t = 20 s
-+    double stageDuration  = 10.0; // Each stage lasts 10 s
-+
-+    for (uint32_t i = 0; i < numStages; ++i) {
-+        double chosenMbb  = ratePairs[indices[i]].first;
-+        double chosenXr   = ratePairs[indices[i]].second;
-+        double stageTime  = stageStartTime + (i * stageDuration);
-+
-+        std::cout << "Stage " << i + 1 << " (at " << stageTime << "s): Scheduled MBB = "
-+                  << chosenMbb << " Mbps | XR = " << chosenXr << " Mbps" << std::endl;
-+
-+        // Schedule the simultaneous rate change for both traffic classes
-+        Simulator::Schedule(Seconds(stageTime), &ChangeDataRate,
-+                            embbMixedApps, xrMixedApps, chosenMbb, chosenXr, mabEpsilon);
-+    }
-+
-+  } else{
-+    std::cout << "Static Scenario. No DataRate Change in this run!" << std::endl;
-+  }
-+
-+
-+  Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosBkg, backgroundUesNetDevs); // Setting split ratio for background ues (It's always fixed)
-+
-+
-+  // -----------------------------------------------------------
-+  // MAB (Multi-Armed Bandit) CONFIGURATION
-+  // -----------------------------------------------------------
-+  LogComponentEnable("MabAgent", LOG_LEVEL_ALL);
-+  // -----------------------------------------------------------
-+  // CENTRALIZED MAB CONFIGURATION
-+  // -----------------------------------------------------------
-+  if (useMab) 
-+  {
-+    Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosMix, mixedUesNetDevs, simSplitRatio, 0.0); // Setting first split ratio for mixed ues (It's always fixed)  
-+    NS_LOG_UNCOND(">>> CENTRALIZED MAB ACTIVATED");
-+      std::cout << ">>> MAB Params: Eps=" << mabEpsilon 
-+                << " (Decay=" << mabDecayFactor << " -> Min=" << mabEpsilonMin << ")"
-+                << " Alpha=" << mabAlpha << std::endl;
-+      std::stringstream ss;
-+      // ss << "mab_stats_run.csv"; 
-+      ss << "mab_stats_run_seed_" << rngRun << ".csv";
-+      
-+      g_mabStatsFile.open(ss.str().c_str());
-+      
-+      // CSV header
-+      // g_mabStatsFile << "Time,Reward,SatisfactionCount,TotalThroughput,Action,Epsilon" << std::endl;
-+      g_mabStatsFile << "Time,Reward,Action,Epsilon,Target_mbb,S_mbb,Target_xr,S_xr,V_mbb,V_xr,Q0,Q1,Q2,Q3,Q4" << std::endl;
-+      // -------------------------------------------------------
-+
-+      g_centralizedAgent = CreateObject<MabAgent>();
-+      
-+      // Configure agent attributes
-+      g_centralizedAgent->SetAttribute("Epsilon", DoubleValue(mabEpsilon));
-+      g_centralizedAgent->SetAttribute("EpsilonMin", DoubleValue(mabEpsilonMin));
-+      g_centralizedAgent->SetAttribute("DecayFactor", DoubleValue(mabDecayFactor));
-+      g_centralizedAgent->SetAttribute("LearningRate", DoubleValue(mabAlpha));
-+      g_centralizedAgent->SetTargets(targetTputMbb, targetTputXr);
-+      
-+      g_centralizedAgent->SetNumberOfArms(5);
-+      g_centralizedAgent->SetStream(rngRun);
-+
-+      // Start the decision cycle with configured parameters
-+      Simulator::Schedule(Seconds(5.0 + 0.01), &UpdateMabPolicy, 
-+                          mixedUesNetDevs, Seconds(mabInterval), mbbPriority);
-+  }
-+  // -----------------------------------------------------------
-+  // --- FALLBACK / BASELINE LOGIC ---
-+  if (!useMab) 
-+  {
-+      // Run fixed baseline scenario only if MAB is DISABLED
-+      NS_LOG_UNCOND(">>> MAB DISABLED: Running fixed baseline scenario.");
-+      std::cout << ">>> MAB DISABLED: Running fixed baseline scenario with Split = " << (double)simSplitRatio << std::endl;
-+      // Simulator::Schedule(Seconds(5.0), &SetDrbsSplitRatiosMix, mixedUesNetDevs, simSplitRatio, 0.0);
-+      Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosMix, mixedUesNetDevs, simSplitRatio, 0.0); // Setting first split ratio for mixed ues (It's always fixed)
-+
-+  }
-+  // --------------------------
-+
-+  //----------------------------------------------------REM-------------------------------------------------//
-+	if (plotMap)
-+	{
-+		PrintGnuplottableUeListToFile("ues.txt");
-+		PrintGnuplottableEnbListToFile("enbs.txt");
-+		PrintGnuplottableBuildingListToFile("mmwave-rem--buildings.txt");
-+		LogComponentEnable("MmWaveRadioEnvironmentMapHelper", LOG_INFO);
-+		LogComponentEnable("RadioEnvironmentMapHelper", LOG_INFO);
-+    // LogComponentEnable("ThreeGppPropagationLossModel", LOG_LEVEL_DEBUG);
-+    // LogComponentEnable("ChannelConditionModel", LOG_LEVEL_ALL);
-+    // LogComponentEnable("BuildingsChannelConditionModel", LOG_LEVEL_DEBUG);
-+
-+		std::ofstream lteGnuplotFile;
-+		lteGnuplotFile.open("lte-rem-plot.gnuplot");
-+		lteGnuplotFile << "set xlabel \"x-coordinate (m)\"\n"
-+					   << "set ylabel \"y-coordinate (m)\"\n"
-+					   << "set size ratio -1\n"
-+					   << "set output \"lte-rem.png\" \n"
-+					   << "set cblabel \"SINR (dB)\"\n"
-+					   << "set cblabel offset 3\n"
-+					   << "set cbrange [-5:40]\n"
-+					   << "set xrange[" + std::to_string(0) + ":" + std::to_string(500) + "]\n"
-+					   << "set yrange[" + std::to_string(0) + ":" + std::to_string(500) + "]\n"
-+					   << "set xtics font \"Ubuntu,17\"\n"
-+					   << "set ytics font \"Ubuntu,17\"\n"
-+					   << "set cbtics font \"Ubuntu,17\"\n"
-+					   << "set xlabel font \"Ubuntu,17\"\n"
-+					   << "set ylabel font \"Ubuntu,17\"\n"
-+					   << "set cblabel font \"Ubuntu,17\"\n"
-+					   << "unset key\n"
-+					   << "set terminal png \n"
-+					   << "plot \"lte-rem.out\" using ($1):($2):(10*log10($4)) with image"
-+					   << std::endl;
-+		lteGnuplotFile.close();
-+
-+		std::ofstream plotRemShFile;
-+		plotRemShFile.open("plotRem.sh");
-+		plotRemShFile << "gnuplot enbs.txt mmwave-rem--buildings.txt ues.txt mmwave-rem--plot-rem.gnuplot\n"
-+					  << "gnuplot enbs.txt mmwave-rem--buildings.txt ues.txt lte-rem-plot.gnuplot"
-+					  << std::endl;
-+		plotRemShFile.close();
-+
-+		Ptr<MmWaveRadioEnvironmentMapHelper> remHelper = CreateObject<MmWaveRadioEnvironmentMapHelper>();
-+
-+		// if (buildingAreaMap)
-+		// {
-+		// 	remHelper->SetMinX(buildingBox.xMin);
-+		// 	remHelper->SetMinY(buildingBox.yMin);
-+		// 	remHelper->SetMaxX(buildingBox.xMax);
-+		// 	remHelper->SetMaxY(buildingBox.yMax);
-+		// 	remHelper->SetResX((buildingBox.xMax - buildingBox.xMin) / 2);
-+		// 	remHelper->SetResY((buildingBox.yMax - buildingBox.yMin) / 2);
-+		// }
-+		// else
-+		// {
-+    remHelper->SetMinX(0);
-+    remHelper->SetMinY(0);
-+    // remHelper->SetMaxX(120);
-+    remHelper->SetMaxX(250);
-+    // remHelper->SetMaxY(50);
-+    remHelper->SetMaxY(250);
-+    remHelper->SetResX(100);
-+    remHelper->SetResY(100);
-+		// }
-+
-+		remHelper->SetInstallationDelay(Seconds(0.25));
-+		remHelper->SetRemMode(MmWaveRadioEnvironmentMapHelper::COVERAGE_AREA);
-+		// remHelper->SetRemMode(MmWaveRadioEnvironmentMapHelper::BEAM_SHAPE);
-+		remHelper->CreateRem(mmWaveEnbDevs, mcUeDevs.Get(0), 0);
-+
-+		// Retrieving LTE channel
-+		Ptr<LteEnbNetDevice> enbNetDev = DynamicCast<LteEnbNetDevice>(lteEnbDevs.Get(0)); // Retrieving the LteEnbNetDevice from the eNB
-+		Ptr<LteEnbPhy> enbPhy = enbNetDev->GetPhy();									   // Retrieving the PHY layer from the eNB
-+		Ptr<SpectrumChannel> enbDlChannel = enbPhy->GetDlSpectrumPhy()->GetChannel();
-+		uint32_t lteChannelId = enbDlChannel->GetId();
-+
-+		// Checking if channel pointer is null
-+		if (!enbDlChannel)
-+		{
-+			NS_FATAL_ERROR("LTE Channel cannot be null");
-+		}
-+
-+		// Configuring REM
-+		Ptr<RadioEnvironmentMapHelper> lteRemHelper = CreateObject<RadioEnvironmentMapHelper>();
-+		lteRemHelper->SetAttribute("OutputFile", StringValue("lte-rem.out"));
-+		lteRemHelper->SetAttribute("ChannelPath", StringValue("/ChannelList/" + std::to_string(lteChannelId)));
-+		lteRemHelper->SetAttribute("XMin", DoubleValue(0.0));
-+		lteRemHelper->SetAttribute("XMax", DoubleValue(500.0));
-+		lteRemHelper->SetAttribute("YMin", DoubleValue(0.0));
-+		lteRemHelper->SetAttribute("YMax", DoubleValue(500.0));
-+		lteRemHelper->SetAttribute("XRes", UintegerValue(200));
-+		lteRemHelper->SetAttribute("YRes", UintegerValue(200));
-+		lteRemHelper->SetAttribute("Z", DoubleValue(1.5));
-+		lteRemHelper->SetAttribute("StopWhenDone", BooleanValue(false));
-+		lteRemHelper->SetAttribute("UseDataChannel", BooleanValue(false));
-+		lteRemHelper->SetAttribute("Earfcn", UintegerValue(enbNetDev->GetDlEarfcn()));
-+		lteRemHelper->SetAttribute("Bandwidth", UintegerValue(enbNetDev->GetDlBandwidth()));
-+		lteRemHelper->Install();
-+		Simulator::Run();
-+		Simulator::Stop(Seconds(simTime));
-+		return 0;
-+	}
-+
-+  if (enableTraces)
-+  {
-+    mmwaveHelper->EnableTraces ();
-+  }  
-+
-+  // trick to enable PHY traces for the LTE stack
-+  Ptr<LteHelper> lteHelper = CreateObject<LteHelper> ();
-+  lteHelper->Initialize ();
-+  lteHelper->EnablePhyTraces ();
-+  lteHelper->EnableMacTraces ();
-+
-+  // Since nodes are randomly allocated during each run we always need to print their positions
-+  PrintGnuplottableUeListToFile ("ues.txt");
-+  PrintGnuplottableEnbListToFile ("enbs.txt");
-+
-+  for (double t = 0; t <= simTime; t = t + 1)
-+	{
-+		Simulator::Schedule(Seconds(t), &RegisterSimulationTime, t);
-+	}
-+
-+  // Defining the stopTime
-+	Simulator::Stop(Seconds(simTime + 0.001));
-+
-+  // Running and destroying the simulator
-+	RunSimulationWithTimeCounter();
-+
-+  return 0;
-+
-+
-+
-+  
-+}
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-trainning2.cc ns3-oran-master/scratch/scenario-trainning2.cc
---- ns3-mmwave-oran/scratch/scenario-trainning2.cc	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/scratch/scenario-trainning2.cc	2026-10-08 15:18:46.656057000 -0300
-@@ -0,0 +1,570 @@
-+/* -*-  Mode: C++; c-file-style: "gnu"; indent-tabs-mode:nil; -*- */
-+#include "ns3/core-module.h"
-+#include "ns3/network-module.h"
-+#include "ns3/internet-module.h"
-+#include "ns3/mobility-module.h"
-+#include "ns3/applications-module.h"
-+#include "ns3/point-to-point-helper.h"
-+#include <ns3/lte-ue-net-device.h>
-+#include "ns3/mmwave-helper.h"
-+#include "ns3/epc-helper.h"
-+#include "ns3/mmwave-point-to-point-epc-helper.h"
-+#include "ns3/lte-helper.h"
-+#include "ns3/ipv4-global-routing-helper.h"
-+#include "ns3/mmwave-ue-net-device.h"
-+#include "ns3/config-store.h"
-+#include "ns3/cc-helper.h"
-+#include "ns3/ue-throughput-storage.h"
-+#include <time.h>
-+#include <iostream>
-+#include "ns3/mc-ue-pdcp.h"
-+#include "ns3/mc-enb-pdcp.h"
-+#include <ns3/cosine-antenna-model.h>
-+#include "ns3/epc-tft.h"
-+
-+using namespace ns3;
-+using namespace mmwave;
-+
-+NS_LOG_COMPONENT_DEFINE ("ScenarioTrainning");
-+
-+
-+
-+void PrintThroughputInfo(NetDeviceContainer uesNetDevs) {
-+    auto nUes = uesNetDevs.GetN();
-+    for (uint16_t i = 0; i < nUes; i++) {
-+        Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+        uint64_t imsi = mcUeNetDevice->GetImsi();
-+        uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-+        if (rnti) {
-+            ObjectMapValue mapValueLte;
-+            mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
-+            for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte) {
-+                Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-+                int drbId = static_cast<int>(drb->m_drbIdentity);
-+                
-+                double lteThp = UeThroughputStorage::GetLteThroughput(imsi, drbId);
-+                double lteDelay = UeThroughputStorage::GetLteDelay(imsi, drbId);
-+                uint64_t qciLte = UeThroughputStorage::GetDrbQci(imsi, drbId);
-+                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-+                          << "IMSI: " << imsi << " DRB: " << drbId << " QCI: " << qciLte 
-+                          << " LTE THP = " << lteThp << " LTE DELAY = " << lteDelay << "\033[0m" << std::endl;
-+                
-+                double nrThp = UeThroughputStorage::GetNrThroughput(imsi, drbId);
-+                double nrDelay = UeThroughputStorage::GetNrDelay(imsi, drbId);
-+                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-+                          << "IMSI: " << imsi << " DRB: " << drbId << " QCI: " << qciLte 
-+                          << " NR THP = " << nrThp << " NR DELAY = " << nrDelay << "\033[0m" << std::endl;
-+                
-+                double aggThp = UeThroughputStorage::GetAggregatedThroughput(imsi, drbId);
-+                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-+                          << "IMSI: " << imsi << " DRB: " << drbId << " Agg Thp = " << aggThp << "\033[0m" << std::endl;
-+            }
-+        }
-+    }
-+    Simulator::Schedule(Seconds(0.1), &PrintThroughputInfo, uesNetDevs);
-+}
-+
-+void PrintUePosition(NodeContainer ues) {
-+    for (uint32_t i = 0; i < ues.GetN(); ++i) {
-+        Ptr<MobilityModel> mob = ues.Get(i)->GetObject<MobilityModel>();
-+        if (mob) {
-+            Vector pos = mob->GetPosition();
-+            std::cout << "\033[1;36mTime: " << Simulator::Now().GetSeconds() 
-+                      << "s | UE " << ues.Get(i)->GetId() 
-+                      << " Position: (" << pos.x << ", " << pos.y << ", " << pos.z << ")\033[0m" << std::endl;
-+        }
-+    }
-+    Simulator::Schedule(Seconds(1.0), &PrintUePosition, ues);
-+}
-+
-+void RegisterSimulationTime(double t) {
-+    std::string time = std::to_string(t);
-+    std::cout << "\033[1;31m" << "Simulation time: " << time << "\033[0m" << std::endl;
-+}
-+
-+double RunSimulationWithTimeCounter() {
-+    time_t beginTimer = time(&beginTimer);
-+    struct tm *timeInfo = localtime(&beginTimer);
-+    std::cout << "Simulation start time: " << asctime(timeInfo) << std::endl;
-+
-+    Simulator::Run();
-+    Simulator::Destroy();
-+
-+    time_t finishTimer = time(&finishTimer);
-+    timeInfo = localtime(&finishTimer);
-+    std::cout << "Simulation end time: " << asctime(timeInfo) << std::endl;
-+
-+    double elapsedTime = difftime(finishTimer, beginTimer);
-+    std::cout << "Simulation duration: " << elapsedTime << " seconds" << std::endl;
-+    return elapsedTime;
-+}
-+
-+void SetDrbsSplitRatiosBkg(NetDeviceContainer uesNetDevs) {
-+    auto nUes = uesNetDevs.GetN();
-+    for (uint16_t i = 0; i < nUes; i++) {
-+        Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+        uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-+        if (rnti) {
-+            ObjectMapValue mapValueLte;
-+            mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
-+            for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte) {
-+                Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-+                Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                if (pdcp) pdcp->SetSplitRatio(1.0);
-+            }
-+        }
-+    }
-+}
-+
-+void SetDrbsSplitRatiosMix(NetDeviceContainer uesNetDevs, double ratioMbb, double ratioXr) {
-+    auto nUes = uesNetDevs.GetN();
-+    for (uint16_t i = 0; i < nUes; i++) {
-+        Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+        uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-+        if (rnti) {
-+            ObjectMapValue mapValueLte;
-+            mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
-+            for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte) {
-+                Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-+                int drbId = static_cast<int>(drb->m_drbIdentity);
-+                Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                if (pdcp) {
-+                    if (drbId == 1) pdcp->SetSplitRatio(ratioMbb);
-+                    else if (drbId == 2) pdcp->SetSplitRatio(ratioXr);
-+                    else pdcp->SetSplitRatio(1.0);
-+                }
-+            }
-+        }
-+    }
-+}
-+
-+ApplicationContainer createOnOffApplicationWithPacketFilter(
-+    Ptr<EpcHelper> epcHelper, enum EpsBearer::Qci qci, Ptr<Node> remoteHost, 
-+    NetDeviceContainer uesNetDevs, Ipv4InterfaceContainer internetIpv4Interfaces, 
-+    Ipv4InterfaceContainer uesIpv4Interfaces, bool dl = true, bool ul = false, 
-+    double dataRateInMbps = 1, uint16_t packetSize = 1024, 
-+    uint16_t startDlPort = 10000, uint16_t startUlPort = 20000, 
-+    double startTime=0.0, double endTime=120.0, uint8_t remoteHostIndexInContainer = 1) 
-+{
-+    ApplicationContainer allOnOffs;
-+    if (!(dl || ul)) return allOnOffs;
-+
-+    uint16_t dlPort = startDlPort;
-+    uint16_t ulPort = startUlPort;
-+    DataRate dataRateInMbpsDR = DataRate(std::to_string(dataRateInMbps) + "Mib/s");
-+    std::string socketFactory = "ns3::UdpSocketFactory";
-+
-+    for (uint8_t u = 0; u < uesNetDevs.GetN(); ++u) {
-+        Ptr<Node> ue = uesNetDevs.Get(u)->GetNode();
-+        ApplicationContainer applications1;
-+        ApplicationContainer applications2;
-+
-+        if (dl) {
-+            OnOffHelper dlHelper(socketFactory, InetSocketAddress(uesIpv4Interfaces.GetAddress(u), dlPort));
-+            dlHelper.SetAttribute("MaxBytes", UintegerValue(0));
-+            dlHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+            applications1.Add(dlHelper.Install(remoteHost));
-+
-+            PacketSinkHelper dlPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), dlPort));
-+            applications2.Add(dlPacketSinkHelper.Install(ue));
-+
-+            Ptr<McUeNetDevice> mcUeNetDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(u));
-+            uint64_t imsi = mcUeNetDev->GetImsi();
-+            Ptr<EpcUeNas> lteUeNas = mcUeNetDev->GetNas();
-+            EpcTft::PacketFilter packetFilter;
-+            packetFilter.remoteAddress = internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer);
-+            packetFilter.localAddress = uesIpv4Interfaces.GetAddress(u);
-+            packetFilter.remotePortStart = 0;
-+            packetFilter.remotePortEnd = 65535;
-+            packetFilter.localPortStart = dlPort;
-+            packetFilter.localPortEnd = dlPort;
-+            packetFilter.direction = EpcTft::DOWNLINK;
-+            Ptr<EpcTft> epcTft = Create<EpcTft>();
-+            epcTft->Add(packetFilter);
-+            epcHelper->ActivateEpsBearer(mcUeNetDev, lteUeNas, imsi, epcTft, qci);
-+        }
-+
-+        if (ul) {
-+            OnOffHelper ulHelper(socketFactory, InetSocketAddress(internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer), ulPort));
-+            ulHelper.SetAttribute("MaxBytes", UintegerValue(0));
-+            ulHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+            applications1.Add(ulHelper.Install(ue));
-+
-+            PacketSinkHelper ulPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), ulPort));
-+            applications2.Add(ulPacketSinkHelper.Install(remoteHost));
-+
-+            Ptr<McUeNetDevice> mcUeNetDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(u));
-+            uint64_t imsi = mcUeNetDev->GetImsi();
-+            Ptr<EpcUeNas> lteUeNas = mcUeNetDev->GetNas();
-+            EpcTft::PacketFilter packetFilter;
-+            packetFilter.remoteAddress = internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer);
-+            packetFilter.localAddress = uesIpv4Interfaces.GetAddress(u);
-+            packetFilter.remotePortStart = 0;
-+            packetFilter.remotePortEnd = 65535;
-+            packetFilter.localPortStart = ulPort;
-+            packetFilter.localPortEnd = ulPort;
-+            packetFilter.direction = EpcTft::UPLINK;
-+            Ptr<EpcTft> epcTft = Create<EpcTft>();
-+            epcTft->Add(packetFilter);
-+            epcHelper->ActivateEpsBearer(mcUeNetDev, lteUeNas, imsi, epcTft, qci);
-+        }
-+
-+        applications1.Start(Seconds(startTime));
-+        applications1.Stop(Seconds(endTime));
-+        applications2.Start(Seconds(startTime));
-+        applications2.Stop(Seconds(endTime));
-+
-+        ++dlPort;
-+        ++ulPort;
-+        allOnOffs.Add(applications1);
-+    }
-+    return allOnOffs;
-+}
-+
-+ApplicationContainer createOnOffApplication(
-+    Ptr<Node> remoteHost, NetDeviceContainer uesNetDevs, 
-+    Ipv4InterfaceContainer internetIpv4Interfaces, Ipv4InterfaceContainer uesIpv4Interfaces, 
-+    bool dl = true, bool ul = false, double dataRateInMbps = 1, uint16_t packetSize = 1024, 
-+    uint16_t startDlPort = 10000, uint16_t startUlPort = 20000, 
-+    double startTime=0.0, double endTime=120.0, uint8_t remoteHostIndexInContainer = 1) 
-+{
-+    ApplicationContainer allOnOffs;
-+    if (!(dl || ul)) return allOnOffs;
-+
-+    uint16_t dlPort = startDlPort;
-+    uint16_t ulPort = startUlPort;
-+    DataRate dataRateInMbpsDR = DataRate(std::to_string(dataRateInMbps) + "Mib/s");
-+    std::string socketFactory = "ns3::UdpSocketFactory";
-+
-+    for (uint8_t u = 0; u < uesNetDevs.GetN(); ++u) {
-+        Ptr<Node> ue = uesNetDevs.Get(u)->GetNode();
-+        ApplicationContainer applications1;
-+        ApplicationContainer applications2;
-+
-+        if (dl) {
-+            OnOffHelper dlHelper(socketFactory, InetSocketAddress(uesIpv4Interfaces.GetAddress(u), dlPort));
-+            dlHelper.SetAttribute("MaxBytes", UintegerValue(0));
-+            dlHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+            applications1.Add(dlHelper.Install(remoteHost));
-+
-+            PacketSinkHelper dlPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), dlPort));
-+            applications2.Add(dlPacketSinkHelper.Install(ue));
-+        }
-+
-+        if (ul) {
-+            OnOffHelper ulHelper(socketFactory, InetSocketAddress(internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer), ulPort));
-+            ulHelper.SetAttribute("MaxBytes", UintegerValue(0));
-+            ulHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+            applications1.Add(ulHelper.Install(ue));
-+
-+            PacketSinkHelper ulPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), ulPort));
-+            applications2.Add(ulPacketSinkHelper.Install(remoteHost));
-+        }
-+
-+        applications1.Start(Seconds(startTime));
-+        applications1.Stop(Seconds(endTime));
-+        applications2.Start(Seconds(startTime));
-+        applications2.Stop(Seconds(endTime));
-+
-+        ++dlPort;
-+        ++ulPort;
-+        allOnOffs.Add(applications1);
-+    }
-+    return allOnOffs;
-+}
-+
-+int main(int argc, char *argv[]) {
-+    LogComponentEnableAll (LOG_PREFIX_ALL);
-+    // LogComponentEnable ("MmWaveEnbNetDevice", LOG_LEVEL_INFO);
-+    // LogComponentEnable ("LteEnbNetDevice", LOG_LEVEL_INFO);
-+    // LogComponentEnable ("ScenarioTrainning", LOG_LEVEL_DEBUG);
-+    GlobalValue::Bind("SimulatorImplementationType", StringValue("ns3::RealtimeSimulatorImpl"));
-+
-+    CommandLine cmd;
-+    double simTime = 300.0;
-+    double simSplitRatio = 0.0;
-+    double dataRateMbb = 100.0;
-+    double dataRateXr = 15.0;
-+    uint32_t nUesMixed = 1;
-+    uint32_t nUesBackground = 0;
-+    
-+    std::string e2TermIp = "10.244.0.50";
-+    bool enableE2FileLogging = false;
-+
-+    cmd.AddValue ("simTime", "Simulation time in seconds", simTime);
-+    cmd.AddValue ("simSplitRatio", "Ratio in which the data will split (LTE = splitRatio - NR = (1 - LTE))", simSplitRatio);
-+    cmd.AddValue ("dataRateMbb", "Data Rate for eMBB (Mbps)", dataRateMbb);
-+    cmd.AddValue ("dataRateXr", "Data Rate for XR (Mbps)", dataRateXr);
-+    cmd.AddValue ("nUesMixed", "Number of UEs with multiple services", nUesMixed);
-+    cmd.AddValue ("nUesBackground", "Number of background UEs", nUesBackground);
-+    bool enableMobility = false;
-+    cmd.AddValue ("enableMobility", "Enable UE mobility", enableMobility);
-+    cmd.AddValue ("e2TermIp", "The IP address of the RIC E2 termination", e2TermIp);
-+    cmd.AddValue ("enableE2FileLogging", "If true, generate offline file logging instead of connecting to RIC", enableE2FileLogging);
-+    cmd.Parse (argc, argv);
-+
-+    // RIC / E2 Parameters Configuration
-+    Config::SetDefault ("ns3::LteEnbNetDevice::E2Periodicity", DoubleValue (0.1));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::E2Periodicity", DoubleValue (0.1));
-+    Config::SetDefault ("ns3::MmWaveHelper::E2ModeLte", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveHelper::E2ModeNr", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableDuReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableCuUpReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::LteEnbNetDevice::EnableCuUpReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableCuCpReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::LteEnbNetDevice::EnableCuCpReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::ReducedPmValues", BooleanValue (true));
-+    Config::SetDefault ("ns3::LteEnbNetDevice::ReducedPmValues", BooleanValue (true));
-+    Config::SetDefault ("ns3::LteEnbNetDevice::EnableE2FileLogging", BooleanValue (enableE2FileLogging));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableE2FileLogging", BooleanValue (enableE2FileLogging));
-+
-+    Config::SetDefault ("ns3::MmWaveHelper::E2TermIp", StringValue (e2TermIp));
-+    Config::SetDefault ("ns3::MmWaveHelper::HarqEnabled", BooleanValue (true));
-+    Config::SetDefault ("ns3::MmWaveHelper::UseIdealRrc", BooleanValue (true));
-+    
-+    // System model parameters
-+    Config::SetDefault("ns3::LteEnbRrc::SrsPeriodicity", UintegerValue(320));
-+    Config::SetDefault("ns3::LteEnbRrc::FirstSibTime", UintegerValue(2)); 
-+    Config::SetDefault("ns3::LteEnbRrc::SystemInformationPeriodicity", TimeValue(MilliSeconds(5.0)));
-+    Config::SetDefault("ns3::LteEnbRrc::AdmitHandoverRequest", BooleanValue(false));
-+    Config::SetDefault("ns3::LteEnbRrc::SecondaryCellHandoverMode", StringValue ("NoAuto"));
-+    Config::SetDefault("ns3::MmWaveHelper::LteHandoverAlgorithm", StringValue("ns3::NoOpHandoverAlgorithm"));
-+    
-+    // PHY MAC parameters
-+    Config::SetDefault ("ns3::MmWavePhyMacCommon::Bandwidth", DoubleValue (100e6));
-+    Config::SetDefault ("ns3::MmWavePhyMacCommon::CenterFreq", DoubleValue (30e9));
-+    Config::SetDefault("ns3::MmWavePhyMacCommon::Numerology", EnumValue(3));
-+
-+    Config::SetDefault("ns3::MmWaveEnbPhy::TxPower", DoubleValue(24));
-+    Config::SetDefault("ns3::MmWaveUePhy::TxPower", DoubleValue(24));
-+    Config::SetDefault("ns3::LteEnbPhy::TxPower", DoubleValue(46));
-+    Config::SetDefault("ns3::LteUePhy::TxPower", DoubleValue(24));
-+    
-+    // Setup Channel model (No buildings)
-+    Config::SetDefault("ns3::ThreeGppChannelModel::Scenario", StringValue("UMa"));
-+    Config::SetDefault("ns3::ThreeGppPropagationLossModel::ShadowingEnabled", BooleanValue(true));
-+    // Config::SetDefault("ns3::ThreeGppChannelConditionModel::UpdatePeriod", TimeValue (MilliSeconds (100)));
-+    
-+    // Missing configs from scenario-master
-+    Config::SetDefault("ns3::MmWaveEnbPhy::NoiseFigure", DoubleValue(7));
-+    Config::SetDefault("ns3::MmWaveUePhy::NoiseFigure", DoubleValue(13));
-+    Config::SetDefault("ns3::LteEnbPhy::NoiseFigure", DoubleValue(5));
-+    Config::SetDefault("ns3::LteUePhy::NoiseFigure", DoubleValue(9));
-+    Config::SetDefault("ns3::McUePdcp::LteUplink", BooleanValue(false));
-+    Config::SetDefault("ns3::McUeNetDevice::AntennaNum", UintegerValue(1));
-+    Config::SetDefault("ns3::MmWaveNetDevice::AntennaNum", UintegerValue(64));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::DowntiltAngle", DoubleValue(0));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::IsotropicElements", BooleanValue(true));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::ElementGain", DoubleValue(5));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::AntennaHorizontalSpacing", DoubleValue(0.5));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::AntennaVerticalSpacing", DoubleValue(0.5));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::BearingAngle", DoubleValue(0.785398));
-+    Config::SetDefault("ns3::CosineAntennaModel::Beamwidth", DoubleValue(60));
-+    Config::SetDefault("ns3::CosineAntennaModel::Orientation", DoubleValue(225));
-+    Config::SetDefault("ns3::MmWaveFlexTtiMacScheduler::HarqEnabled", BooleanValue(true));
-+    Config::SetDefault("ns3::MmWavePhyMacCommon::NumHarqProcess", UintegerValue(100));
-+    Config::SetDefault("ns3::LteRlcAm::ReportBufferStatusTimer", TimeValue(MilliSeconds(10.0)));
-+    Config::SetDefault("ns3::LteRlcUmLowLat::ReportBufferStatusTimer", TimeValue(MilliSeconds(10.0)));
-+    Config::SetDefault("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue(10 * 1024 * 1024));
-+    Config::SetDefault("ns3::LteRlcUmLowLat::MaxTxBufferSize", UintegerValue(10 * 1024 * 1024));
-+    Config::SetDefault("ns3::LteRlcAm::MaxTxBufferSize", UintegerValue(10 * 1024 * 1024));
-+    Config::SetDefault("ns3::MmWaveHelper::RlcAmEnabled", BooleanValue(false));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkDelay", TimeValue(MicroSeconds(500)));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkDataRate", DataRateValue(DataRate("1000Gb/s")));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkMtu", UintegerValue(10000));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::S1uLinkDelay", TimeValue(MicroSeconds(1000)));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::S1apLinkDelay", TimeValue(MicroSeconds(10000)));
-+    
-+    ConfigStore inputConfig;
-+    inputConfig.ConfigureDefaults();
-+
-+    Ptr<MmWaveHelper> mmwaveHelper = CreateObject<MmWaveHelper>();
-+    mmwaveHelper->SetAttribute("UseCa", BooleanValue(false));
-+    mmwaveHelper->SetAttribute("UseIdealRrc", BooleanValue(true));
-+    mmwaveHelper->SetBeamformingModelType("ns3::MmWaveDftBeamforming");
-+    mmwaveHelper->SetMcUeNetDeviceAttribute("LteDlEarfcn", UintegerValue(100));
-+
-+    mmwaveHelper->SetPathlossModelType("ns3::ThreeGppUmiStreetCanyonPropagationLossModel");
-+    mmwaveHelper->SetLtePathlossModelType("ns3::ThreeGppUmaPropagationLossModel");
-+    // mmwaveHelper->SetChannelConditionModelType("ns3::AlwaysLosChannelConditionModel");
-+    mmwaveHelper->SetChannelConditionModelType("ns3::ThreeGppUmaChannelConditionModel");
-+
-+    mmwaveHelper->SetLteEnbAntennaModelType("ns3::CosineAntennaModel");
-+    mmwaveHelper->SetLteEnbAntennaModelAttribute("Orientation", DoubleValue(225));
-+    mmwaveHelper->SetLteEnbAntennaModelAttribute("Beamwidth", DoubleValue(60));
-+
-+    Ptr<CcHelper> lteCcHelper = CreateObject<CcHelper>();
-+    lteCcHelper->SetNumberOfComponentCarriers(1);
-+    lteCcHelper->SetUlEarfcn(18100);
-+    lteCcHelper->SetDlEarfcn(100);
-+    lteCcHelper->SetDlBandwidth(100);
-+    lteCcHelper->SetUlBandwidth(100);
-+    std::map<uint8_t, ComponentCarrier> lteCcMap = lteCcHelper->EquallySpacedCcs();
-+    lteCcMap.at(0).SetAsPrimary(true);
-+    mmwaveHelper->SetLteCcPhyParams(lteCcMap);
-+
-+    Ptr<MmWavePointToPointEpcHelper> epcHelper = CreateObject<MmWavePointToPointEpcHelper>();
-+    mmwaveHelper->SetEpcHelper(epcHelper);
-+    mmwaveHelper->SetHarqEnabled(true);
-+    mmwaveHelper->Initialize(); 
-+
-+    // Topology
-+    NodeContainer ueNodesMixed;
-+    NodeContainer ueNodesBackground;
-+    NodeContainer allUeNodes;
-+    NodeContainer mmWaveEnbNodes;
-+    NodeContainer lteEnbNodes;
-+    NodeContainer allEnbNodes;
-+
-+    lteEnbNodes.Create(1);
-+    mmWaveEnbNodes.Create(1);
-+    ueNodesMixed.Create(nUesMixed);
-+    ueNodesBackground.Create(nUesBackground);
-+    allUeNodes.Add(ueNodesMixed);
-+    allUeNodes.Add(ueNodesBackground);
-+    allEnbNodes.Add(lteEnbNodes);
-+    allEnbNodes.Add(mmWaveEnbNodes);
-+
-+    // Mobility
-+    Ptr<ListPositionAllocator> enbPositionAlloc = CreateObject<ListPositionAllocator> ();
-+    enbPositionAlloc->Add(Vector (250.0, 250.0, 25.0)); // LTE eNB
-+    enbPositionAlloc->Add(Vector (0.0, 0.0, 3.0));     // mmWave gNB
-+
-+    MobilityHelper enbMobility;
-+    enbMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+    enbMobility.SetPositionAllocator(enbPositionAlloc);
-+    enbMobility.Install(allEnbNodes);
-+
-+    if (enableMobility) {
-+        MobilityHelper ueMobility;
-+        ueMobility.SetMobilityModel("ns3::WaypointMobilityModel");
-+        ueMobility.Install(allUeNodes);
-+
-+        for (uint32_t i = 0; i < allUeNodes.GetN(); ++i) {
-+            Ptr<WaypointMobilityModel> mob = allUeNodes.Get(i)->GetObject<WaypointMobilityModel>();
-+            double offset = i * 2.0; 
-+            mob->AddWaypoint(Waypoint(Seconds(0.0), Vector(10.0 + offset, 10.0 + offset, 1.5)));
-+            mob->AddWaypoint(Waypoint(Seconds(simTime), Vector(240.0 + offset, 240.0 + offset, 1.5)));
-+        }
-+    } else {
-+        MobilityHelper mixedUesMobility;
-+        mixedUesMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+        Ptr<RandomRectanglePositionAllocator> mixedUesPositionAlloc = CreateObject<RandomRectanglePositionAllocator>();
-+        mixedUesPositionAlloc->SetAttribute("X", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=120.0]"));
-+        mixedUesPositionAlloc->SetAttribute("Y", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=50.0]"));
-+        mixedUesPositionAlloc->SetAttribute("Z", DoubleValue(1.5));
-+        mixedUesMobility.SetPositionAllocator(mixedUesPositionAlloc);
-+        mixedUesMobility.Install(ueNodesMixed);
-+
-+        MobilityHelper backgroundUesMobility;
-+        backgroundUesMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+        Ptr<RandomRectanglePositionAllocator> backgroundUesPositionAlloc = CreateObject<RandomRectanglePositionAllocator>();
-+        backgroundUesPositionAlloc->SetAttribute("X", StringValue("ns3::UniformRandomVariable[Min=121.0|Max=250.0]"));
-+        backgroundUesPositionAlloc->SetAttribute("Y", StringValue("ns3::UniformRandomVariable[Min=51.0|Max=250.0]"));
-+        backgroundUesPositionAlloc->SetAttribute("Z", DoubleValue(1.5));
-+        backgroundUesMobility.SetPositionAllocator(backgroundUesPositionAlloc);
-+        backgroundUesMobility.Install(ueNodesBackground);
-+    }
-+
-+    // Devices
-+    NetDeviceContainer lteEnbDevs;
-+    lteEnbDevs.Add(mmwaveHelper->InstallLteEnbDevice (lteEnbNodes.Get(0)));
-+    NetDeviceContainer mmWaveEnbDevs = mmwaveHelper->InstallEnbDevice (mmWaveEnbNodes.Get(0));
-+    NetDeviceContainer mixedUesNetDevs = mmwaveHelper->InstallMcUeDevice (ueNodesMixed);
-+    NetDeviceContainer backgroundUesNetDevs = mmwaveHelper->InstallMcUeDevice (ueNodesBackground);
-+    NetDeviceContainer mcUeDevs;
-+    mcUeDevs.Add(mixedUesNetDevs);
-+    mcUeDevs.Add(backgroundUesNetDevs);
-+
-+    // Internet and Routing
-+    Ptr<Node> pgw = epcHelper->GetPgwNode ();
-+    NodeContainer remoteHostContainer;
-+    remoteHostContainer.Create (1);
-+    Ptr<Node> remoteHost = remoteHostContainer.Get (0);
-+    InternetStackHelper internet;
-+    internet.Install (remoteHostContainer);
-+
-+    PointToPointHelper p2ph;
-+    p2ph.SetDeviceAttribute ("DataRate", DataRateValue (DataRate ("100Gb/s")));
-+    p2ph.SetDeviceAttribute ("Mtu", UintegerValue (2500));
-+    p2ph.SetChannelAttribute ("Delay", TimeValue (Seconds (0.010)));
-+    NetDeviceContainer internetDevices = p2ph.Install (pgw, remoteHost);
-+    
-+    Ipv4AddressHelper ipv4h;
-+    ipv4h.SetBase ("1.0.0.0", "255.0.0.0");
-+    Ipv4InterfaceContainer internetIpIfaces = ipv4h.Assign (internetDevices);
-+    
-+    Ipv4StaticRoutingHelper ipv4RoutingHelper;
-+    Ptr<Ipv4StaticRouting> remoteHostStaticRouting = ipv4RoutingHelper.GetStaticRouting (remoteHost->GetObject<Ipv4> ());
-+    remoteHostStaticRouting->AddNetworkRouteTo (Ipv4Address ("7.0.0.0"), Ipv4Mask ("255.0.0.0"), 1);
-+
-+    internet.Install (allUeNodes);
-+    Ipv4InterfaceContainer ueIpIface = epcHelper->AssignUeIpv4Address (NetDeviceContainer (mcUeDevs));
-+    
-+    Ipv4InterfaceContainer ueIpIfaceMixed;
-+    for (uint32_t i = 0; i < ueNodesMixed.GetN (); ++i) {
-+        ueIpIfaceMixed.Add (ueIpIface.Get (i));
-+    }
-+    Ipv4InterfaceContainer ueIpIfaceBackground;
-+    for (uint32_t i = 0; i < ueNodesBackground.GetN (); ++i) {
-+        ueIpIfaceBackground.Add (ueIpIface.Get (ueNodesMixed.GetN () + i));
-+    }
-+
-+    for (uint32_t u = 0; u < allUeNodes.GetN (); ++u) {
-+        Ptr<Ipv4StaticRouting> ueStaticRouting = ipv4RoutingHelper.GetStaticRouting (allUeNodes.Get(u)->GetObject<Ipv4> ());
-+        ueStaticRouting->SetDefaultRoute (epcHelper->GetUeDefaultGatewayAddress (), 1);
-+    }
-+
-+    // Attach to base stations
-+    mmwaveHelper->AddX2Interface (lteEnbNodes, mmWaveEnbNodes);
-+    mmwaveHelper->AttachToClosestEnb (mcUeDevs, mmWaveEnbDevs, lteEnbDevs);
-+
-+    // Applications setup
-+    uint16_t dlPort = 10000;
-+    uint16_t ulPort = 20000;
-+    // enum EpsBearer::Qci qciEmbb = EpsBearer::GBR_CONV_VIDEO;
-+    enum EpsBearer::Qci qciEmbb = EpsBearer::GBR_CONV_VIDEO;
-+    enum EpsBearer::Qci qciXr = EpsBearer::NGBR_LOW_LAT_EMBB_AR;
-+    double dataRateEmbbBackgroundMbps = 1.0;
-+    double packetSizeInBytes = 1024;
-+    double startTime = 0.1;
-+    double endTime = simTime;
-+
-+    ApplicationContainer allApps;
-+
-+    ApplicationContainer embbMixedApps = createOnOffApplicationWithPacketFilter (
-+        epcHelper, qciEmbb, remoteHost, mixedUesNetDevs, internetIpIfaces, ueIpIfaceMixed,
-+        true, false, dataRateMbb, packetSizeInBytes, dlPort, ulPort, startTime, endTime);
-+    allApps.Add(embbMixedApps);
-+
-+    dlPort += ueNodesMixed.GetN ();
-+    ulPort += ueNodesMixed.GetN ();
-+
-+    // ApplicationContainer xrMixedApps = createOnOffApplicationWithPacketFilter (
-+    //     epcHelper, qciXr, remoteHost, mixedUesNetDevs, internetIpIfaces, ueIpIfaceMixed,
-+    //     true, false, dataRateXr, packetSizeInBytes, dlPort, ulPort, startTime, endTime);
-+    // allApps.Add(xrMixedApps);
-+
-+    // dlPort += ueNodesMixed.GetN ();
-+    // ulPort += ueNodesMixed.GetN ();
-+
-+    ApplicationContainer embbBkgApps = createOnOffApplication (
-+        remoteHost, backgroundUesNetDevs, internetIpIfaces, ueIpIfaceBackground,
-+        true, false, dataRateEmbbBackgroundMbps, packetSizeInBytes, dlPort, ulPort, startTime, endTime);
-+    allApps.Add (embbBkgApps);
-+
-+    // Scheduling split ratio logic manually, without MAB
-+    Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosBkg, backgroundUesNetDevs);
-+    Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosMix, mixedUesNetDevs, simSplitRatio, 0.0);
-+
-+    for (double t = 0; t <= simTime; t = t + 1) {
-+        Simulator::Schedule(Seconds(t), &RegisterSimulationTime, t);
-+    }
-+
-+    // Simulator::Schedule(Seconds(1.0), &PrintThroughputInfo, mcUeDevs);
-+    Simulator::Schedule(Seconds(1.0), &PrintUePosition, allUeNodes);
-+    Simulator::Stop(Seconds(simTime + 0.001));
-+    RunSimulationWithTimeCounter();
-+
-+    return 0;
-+}
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-trainning.cc ns3-oran-master/scratch/scenario-trainning.cc
---- ns3-mmwave-oran/scratch/scenario-trainning.cc	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/scratch/scenario-trainning.cc	2026-10-08 15:16:10.994919365 -0300
-@@ -0,0 +1,570 @@
-+/* -*-  Mode: C++; c-file-style: "gnu"; indent-tabs-mode:nil; -*- */
-+#include "ns3/core-module.h"
-+#include "ns3/network-module.h"
-+#include "ns3/internet-module.h"
-+#include "ns3/mobility-module.h"
-+#include "ns3/applications-module.h"
-+#include "ns3/point-to-point-helper.h"
-+#include <ns3/lte-ue-net-device.h>
-+#include "ns3/mmwave-helper.h"
-+#include "ns3/epc-helper.h"
-+#include "ns3/mmwave-point-to-point-epc-helper.h"
-+#include "ns3/lte-helper.h"
-+#include "ns3/ipv4-global-routing-helper.h"
-+#include "ns3/mmwave-ue-net-device.h"
-+#include "ns3/config-store.h"
-+#include "ns3/cc-helper.h"
-+#include "ns3/ue-throughput-storage.h"
-+#include <time.h>
-+#include <iostream>
-+#include "ns3/mc-ue-pdcp.h"
-+#include "ns3/mc-enb-pdcp.h"
-+#include <ns3/cosine-antenna-model.h>
-+#include "ns3/epc-tft.h"
-+
-+using namespace ns3;
-+using namespace mmwave;
-+
-+NS_LOG_COMPONENT_DEFINE ("ScenarioTrainning");
-+
-+
-+
-+void PrintThroughputInfo(NetDeviceContainer uesNetDevs) {
-+    auto nUes = uesNetDevs.GetN();
-+    for (uint16_t i = 0; i < nUes; i++) {
-+        Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+        uint64_t imsi = mcUeNetDevice->GetImsi();
-+        uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-+        if (rnti) {
-+            ObjectMapValue mapValueLte;
-+            mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
-+            for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte) {
-+                Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-+                int drbId = static_cast<int>(drb->m_drbIdentity);
-+                
-+                double lteThp = UeThroughputStorage::GetLteThroughput(imsi, drbId);
-+                double lteDelay = UeThroughputStorage::GetLteDelay(imsi, drbId);
-+                uint64_t qciLte = UeThroughputStorage::GetDrbQci(imsi, drbId);
-+                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-+                          << "IMSI: " << imsi << " DRB: " << drbId << " QCI: " << qciLte 
-+                          << " LTE THP = " << lteThp << " LTE DELAY = " << lteDelay << "\033[0m" << std::endl;
-+                
-+                double nrThp = UeThroughputStorage::GetNrThroughput(imsi, drbId);
-+                double nrDelay = UeThroughputStorage::GetNrDelay(imsi, drbId);
-+                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-+                          << "IMSI: " << imsi << " DRB: " << drbId << " QCI: " << qciLte 
-+                          << " NR THP = " << nrThp << " NR DELAY = " << nrDelay << "\033[0m" << std::endl;
-+                
-+                double aggThp = UeThroughputStorage::GetAggregatedThroughput(imsi, drbId);
-+                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-+                          << "IMSI: " << imsi << " DRB: " << drbId << " Agg Thp = " << aggThp << "\033[0m" << std::endl;
-+            }
-+        }
-+    }
-+    Simulator::Schedule(Seconds(0.1), &PrintThroughputInfo, uesNetDevs);
-+}
-+
-+void PrintUePosition(NodeContainer ues) {
-+    for (uint32_t i = 0; i < ues.GetN(); ++i) {
-+        Ptr<MobilityModel> mob = ues.Get(i)->GetObject<MobilityModel>();
-+        if (mob) {
-+            Vector pos = mob->GetPosition();
-+            std::cout << "\033[1;36mTime: " << Simulator::Now().GetSeconds() 
-+                      << "s | UE " << ues.Get(i)->GetId() 
-+                      << " Position: (" << pos.x << ", " << pos.y << ", " << pos.z << ")\033[0m" << std::endl;
-+        }
-+    }
-+    Simulator::Schedule(Seconds(1.0), &PrintUePosition, ues);
-+}
-+
-+void RegisterSimulationTime(double t) {
-+    std::string time = std::to_string(t);
-+    std::cout << "\033[1;31m" << "Simulation time: " << time << "\033[0m" << std::endl;
-+}
-+
-+double RunSimulationWithTimeCounter() {
-+    time_t beginTimer = time(&beginTimer);
-+    struct tm *timeInfo = localtime(&beginTimer);
-+    std::cout << "Simulation start time: " << asctime(timeInfo) << std::endl;
-+
-+    Simulator::Run();
-+    Simulator::Destroy();
-+
-+    time_t finishTimer = time(&finishTimer);
-+    timeInfo = localtime(&finishTimer);
-+    std::cout << "Simulation end time: " << asctime(timeInfo) << std::endl;
-+
-+    double elapsedTime = difftime(finishTimer, beginTimer);
-+    std::cout << "Simulation duration: " << elapsedTime << " seconds" << std::endl;
-+    return elapsedTime;
-+}
-+
-+void SetDrbsSplitRatiosBkg(NetDeviceContainer uesNetDevs) {
-+    auto nUes = uesNetDevs.GetN();
-+    for (uint16_t i = 0; i < nUes; i++) {
-+        Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+        uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-+        if (rnti) {
-+            ObjectMapValue mapValueLte;
-+            mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
-+            for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte) {
-+                Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-+                Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                if (pdcp) pdcp->SetSplitRatio(1.0);
-+            }
-+        }
-+    }
-+}
-+
-+void SetDrbsSplitRatiosMix(NetDeviceContainer uesNetDevs, double ratioMbb, double ratioXr) {
-+    auto nUes = uesNetDevs.GetN();
-+    for (uint16_t i = 0; i < nUes; i++) {
-+        Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-+        uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-+        if (rnti) {
-+            ObjectMapValue mapValueLte;
-+            mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
-+            for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte) {
-+                Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-+                int drbId = static_cast<int>(drb->m_drbIdentity);
-+                Ptr<McEnbPdcp> pdcp = DynamicCast<McEnbPdcp>(drb->m_pdcp);
-+                if (pdcp) {
-+                    if (drbId == 1) pdcp->SetSplitRatio(ratioMbb);
-+                    else if (drbId == 2) pdcp->SetSplitRatio(ratioXr);
-+                    else pdcp->SetSplitRatio(1.0);
-+                }
-+            }
-+        }
-+    }
-+}
-+
-+ApplicationContainer createOnOffApplicationWithPacketFilter(
-+    Ptr<EpcHelper> epcHelper, enum EpsBearer::Qci qci, Ptr<Node> remoteHost, 
-+    NetDeviceContainer uesNetDevs, Ipv4InterfaceContainer internetIpv4Interfaces, 
-+    Ipv4InterfaceContainer uesIpv4Interfaces, bool dl = true, bool ul = false, 
-+    double dataRateInMbps = 1, uint16_t packetSize = 1024, 
-+    uint16_t startDlPort = 10000, uint16_t startUlPort = 20000, 
-+    double startTime=0.0, double endTime=120.0, uint8_t remoteHostIndexInContainer = 1) 
-+{
-+    ApplicationContainer allOnOffs;
-+    if (!(dl || ul)) return allOnOffs;
-+
-+    uint16_t dlPort = startDlPort;
-+    uint16_t ulPort = startUlPort;
-+    DataRate dataRateInMbpsDR = DataRate(std::to_string(dataRateInMbps) + "Mib/s");
-+    std::string socketFactory = "ns3::UdpSocketFactory";
-+
-+    for (uint8_t u = 0; u < uesNetDevs.GetN(); ++u) {
-+        Ptr<Node> ue = uesNetDevs.Get(u)->GetNode();
-+        ApplicationContainer applications1;
-+        ApplicationContainer applications2;
-+
-+        if (dl) {
-+            OnOffHelper dlHelper(socketFactory, InetSocketAddress(uesIpv4Interfaces.GetAddress(u), dlPort));
-+            dlHelper.SetAttribute("MaxBytes", UintegerValue(0));
-+            dlHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+            applications1.Add(dlHelper.Install(remoteHost));
-+
-+            PacketSinkHelper dlPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), dlPort));
-+            applications2.Add(dlPacketSinkHelper.Install(ue));
-+
-+            Ptr<McUeNetDevice> mcUeNetDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(u));
-+            uint64_t imsi = mcUeNetDev->GetImsi();
-+            Ptr<EpcUeNas> lteUeNas = mcUeNetDev->GetNas();
-+            EpcTft::PacketFilter packetFilter;
-+            packetFilter.remoteAddress = internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer);
-+            packetFilter.localAddress = uesIpv4Interfaces.GetAddress(u);
-+            packetFilter.remotePortStart = 0;
-+            packetFilter.remotePortEnd = 65535;
-+            packetFilter.localPortStart = dlPort;
-+            packetFilter.localPortEnd = dlPort;
-+            packetFilter.direction = EpcTft::DOWNLINK;
-+            Ptr<EpcTft> epcTft = Create<EpcTft>();
-+            epcTft->Add(packetFilter);
-+            epcHelper->ActivateEpsBearer(mcUeNetDev, lteUeNas, imsi, epcTft, qci);
-+        }
-+
-+        if (ul) {
-+            OnOffHelper ulHelper(socketFactory, InetSocketAddress(internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer), ulPort));
-+            ulHelper.SetAttribute("MaxBytes", UintegerValue(0));
-+            ulHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+            applications1.Add(ulHelper.Install(ue));
-+
-+            PacketSinkHelper ulPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), ulPort));
-+            applications2.Add(ulPacketSinkHelper.Install(remoteHost));
-+
-+            Ptr<McUeNetDevice> mcUeNetDev = DynamicCast<McUeNetDevice>(uesNetDevs.Get(u));
-+            uint64_t imsi = mcUeNetDev->GetImsi();
-+            Ptr<EpcUeNas> lteUeNas = mcUeNetDev->GetNas();
-+            EpcTft::PacketFilter packetFilter;
-+            packetFilter.remoteAddress = internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer);
-+            packetFilter.localAddress = uesIpv4Interfaces.GetAddress(u);
-+            packetFilter.remotePortStart = 0;
-+            packetFilter.remotePortEnd = 65535;
-+            packetFilter.localPortStart = ulPort;
-+            packetFilter.localPortEnd = ulPort;
-+            packetFilter.direction = EpcTft::UPLINK;
-+            Ptr<EpcTft> epcTft = Create<EpcTft>();
-+            epcTft->Add(packetFilter);
-+            epcHelper->ActivateEpsBearer(mcUeNetDev, lteUeNas, imsi, epcTft, qci);
-+        }
-+
-+        applications1.Start(Seconds(startTime));
-+        applications1.Stop(Seconds(endTime));
-+        applications2.Start(Seconds(startTime));
-+        applications2.Stop(Seconds(endTime));
-+
-+        ++dlPort;
-+        ++ulPort;
-+        allOnOffs.Add(applications1);
-+    }
-+    return allOnOffs;
-+}
-+
-+ApplicationContainer createOnOffApplication(
-+    Ptr<Node> remoteHost, NetDeviceContainer uesNetDevs, 
-+    Ipv4InterfaceContainer internetIpv4Interfaces, Ipv4InterfaceContainer uesIpv4Interfaces, 
-+    bool dl = true, bool ul = false, double dataRateInMbps = 1, uint16_t packetSize = 1024, 
-+    uint16_t startDlPort = 10000, uint16_t startUlPort = 20000, 
-+    double startTime=0.0, double endTime=120.0, uint8_t remoteHostIndexInContainer = 1) 
-+{
-+    ApplicationContainer allOnOffs;
-+    if (!(dl || ul)) return allOnOffs;
-+
-+    uint16_t dlPort = startDlPort;
-+    uint16_t ulPort = startUlPort;
-+    DataRate dataRateInMbpsDR = DataRate(std::to_string(dataRateInMbps) + "Mib/s");
-+    std::string socketFactory = "ns3::UdpSocketFactory";
-+
-+    for (uint8_t u = 0; u < uesNetDevs.GetN(); ++u) {
-+        Ptr<Node> ue = uesNetDevs.Get(u)->GetNode();
-+        ApplicationContainer applications1;
-+        ApplicationContainer applications2;
-+
-+        if (dl) {
-+            OnOffHelper dlHelper(socketFactory, InetSocketAddress(uesIpv4Interfaces.GetAddress(u), dlPort));
-+            dlHelper.SetAttribute("MaxBytes", UintegerValue(0));
-+            dlHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+            applications1.Add(dlHelper.Install(remoteHost));
-+
-+            PacketSinkHelper dlPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), dlPort));
-+            applications2.Add(dlPacketSinkHelper.Install(ue));
-+        }
-+
-+        if (ul) {
-+            OnOffHelper ulHelper(socketFactory, InetSocketAddress(internetIpv4Interfaces.GetAddress(remoteHostIndexInContainer), ulPort));
-+            ulHelper.SetAttribute("MaxBytes", UintegerValue(0));
-+            ulHelper.SetConstantRate(dataRateInMbpsDR, packetSize);
-+            applications1.Add(ulHelper.Install(ue));
-+
-+            PacketSinkHelper ulPacketSinkHelper(socketFactory, InetSocketAddress(Ipv4Address::GetAny(), ulPort));
-+            applications2.Add(ulPacketSinkHelper.Install(remoteHost));
-+        }
-+
-+        applications1.Start(Seconds(startTime));
-+        applications1.Stop(Seconds(endTime));
-+        applications2.Start(Seconds(startTime));
-+        applications2.Stop(Seconds(endTime));
-+
-+        ++dlPort;
-+        ++ulPort;
-+        allOnOffs.Add(applications1);
-+    }
-+    return allOnOffs;
-+}
-+
-+int main(int argc, char *argv[]) {
-+    LogComponentEnableAll (LOG_PREFIX_ALL);
-+    // LogComponentEnable ("MmWaveEnbNetDevice", LOG_LEVEL_INFO);
-+    // LogComponentEnable ("LteEnbNetDevice", LOG_LEVEL_INFO);
-+    // LogComponentEnable ("ScenarioTrainning", LOG_LEVEL_DEBUG);
-+    GlobalValue::Bind("SimulatorImplementationType", StringValue("ns3::RealtimeSimulatorImpl"));
-+
-+    CommandLine cmd;
-+    double simTime = 300.0;
-+    double simSplitRatio = 0.0;
-+    double dataRateMbb = 100.0;
-+    double dataRateXr = 15.0;
-+    uint32_t nUesMixed = 1;
-+    uint32_t nUesBackground = 0;
-+    
-+    std::string e2TermIp = "10.244.0.50";
-+    bool enableE2FileLogging = false;
-+
-+    cmd.AddValue ("simTime", "Simulation time in seconds", simTime);
-+    cmd.AddValue ("simSplitRatio", "Ratio in which the data will split (LTE = splitRatio - NR = (1 - LTE))", simSplitRatio);
-+    cmd.AddValue ("dataRateMbb", "Data Rate for eMBB (Mbps)", dataRateMbb);
-+    cmd.AddValue ("dataRateXr", "Data Rate for XR (Mbps)", dataRateXr);
-+    cmd.AddValue ("nUesMixed", "Number of UEs with multiple services", nUesMixed);
-+    cmd.AddValue ("nUesBackground", "Number of background UEs", nUesBackground);
-+    bool enableMobility = false;
-+    cmd.AddValue ("enableMobility", "Enable UE mobility", enableMobility);
-+    cmd.AddValue ("e2TermIp", "The IP address of the RIC E2 termination", e2TermIp);
-+    cmd.AddValue ("enableE2FileLogging", "If true, generate offline file logging instead of connecting to RIC", enableE2FileLogging);
-+    cmd.Parse (argc, argv);
-+
-+    // RIC / E2 Parameters Configuration
-+    Config::SetDefault ("ns3::LteEnbNetDevice::E2Periodicity", DoubleValue (0.1));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::E2Periodicity", DoubleValue (0.1));
-+    Config::SetDefault ("ns3::MmWaveHelper::E2ModeLte", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveHelper::E2ModeNr", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableDuReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableCuUpReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::LteEnbNetDevice::EnableCuUpReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableCuCpReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::LteEnbNetDevice::EnableCuCpReport", BooleanValue(true));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::ReducedPmValues", BooleanValue (true));
-+    Config::SetDefault ("ns3::LteEnbNetDevice::ReducedPmValues", BooleanValue (true));
-+    Config::SetDefault ("ns3::LteEnbNetDevice::EnableE2FileLogging", BooleanValue (enableE2FileLogging));
-+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableE2FileLogging", BooleanValue (enableE2FileLogging));
-+
-+    Config::SetDefault ("ns3::MmWaveHelper::E2TermIp", StringValue (e2TermIp));
-+    Config::SetDefault ("ns3::MmWaveHelper::HarqEnabled", BooleanValue (true));
-+    Config::SetDefault ("ns3::MmWaveHelper::UseIdealRrc", BooleanValue (true));
-+    
-+    // System model parameters
-+    Config::SetDefault("ns3::LteEnbRrc::SrsPeriodicity", UintegerValue(320));
-+    Config::SetDefault("ns3::LteEnbRrc::FirstSibTime", UintegerValue(2)); 
-+    Config::SetDefault("ns3::LteEnbRrc::SystemInformationPeriodicity", TimeValue(MilliSeconds(5.0)));
-+    Config::SetDefault("ns3::LteEnbRrc::AdmitHandoverRequest", BooleanValue(false));
-+    Config::SetDefault("ns3::LteEnbRrc::SecondaryCellHandoverMode", StringValue ("NoAuto"));
-+    Config::SetDefault("ns3::MmWaveHelper::LteHandoverAlgorithm", StringValue("ns3::NoOpHandoverAlgorithm"));
-+    
-+    // PHY MAC parameters
-+    Config::SetDefault ("ns3::MmWavePhyMacCommon::Bandwidth", DoubleValue (100e6));
-+    Config::SetDefault ("ns3::MmWavePhyMacCommon::CenterFreq", DoubleValue (30e9));
-+    Config::SetDefault("ns3::MmWavePhyMacCommon::Numerology", EnumValue(3));
-+
-+    Config::SetDefault("ns3::MmWaveEnbPhy::TxPower", DoubleValue(24));
-+    Config::SetDefault("ns3::MmWaveUePhy::TxPower", DoubleValue(24));
-+    Config::SetDefault("ns3::LteEnbPhy::TxPower", DoubleValue(46));
-+    Config::SetDefault("ns3::LteUePhy::TxPower", DoubleValue(24));
-+    
-+    // Setup Channel model (No buildings)
-+    Config::SetDefault("ns3::ThreeGppChannelModel::Scenario", StringValue("UMa"));
-+    Config::SetDefault("ns3::ThreeGppPropagationLossModel::ShadowingEnabled", BooleanValue(true));
-+    // Config::SetDefault("ns3::ThreeGppChannelConditionModel::UpdatePeriod", TimeValue (MilliSeconds (100)));
-+    
-+    // Missing configs from scenario-master
-+    Config::SetDefault("ns3::MmWaveEnbPhy::NoiseFigure", DoubleValue(7));
-+    Config::SetDefault("ns3::MmWaveUePhy::NoiseFigure", DoubleValue(13));
-+    Config::SetDefault("ns3::LteEnbPhy::NoiseFigure", DoubleValue(5));
-+    Config::SetDefault("ns3::LteUePhy::NoiseFigure", DoubleValue(9));
-+    Config::SetDefault("ns3::McUePdcp::LteUplink", BooleanValue(false));
-+    Config::SetDefault("ns3::McUeNetDevice::AntennaNum", UintegerValue(1));
-+    Config::SetDefault("ns3::MmWaveNetDevice::AntennaNum", UintegerValue(64));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::DowntiltAngle", DoubleValue(0));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::IsotropicElements", BooleanValue(true));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::ElementGain", DoubleValue(5));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::AntennaHorizontalSpacing", DoubleValue(0.5));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::AntennaVerticalSpacing", DoubleValue(0.5));
-+    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::BearingAngle", DoubleValue(0.785398));
-+    Config::SetDefault("ns3::CosineAntennaModel::Beamwidth", DoubleValue(60));
-+    Config::SetDefault("ns3::CosineAntennaModel::Orientation", DoubleValue(225));
-+    Config::SetDefault("ns3::MmWaveFlexTtiMacScheduler::HarqEnabled", BooleanValue(true));
-+    Config::SetDefault("ns3::MmWavePhyMacCommon::NumHarqProcess", UintegerValue(100));
-+    Config::SetDefault("ns3::LteRlcAm::ReportBufferStatusTimer", TimeValue(MilliSeconds(10.0)));
-+    Config::SetDefault("ns3::LteRlcUmLowLat::ReportBufferStatusTimer", TimeValue(MilliSeconds(10.0)));
-+    Config::SetDefault("ns3::LteRlcUm::MaxTxBufferSize", UintegerValue(10 * 1024 * 1024));
-+    Config::SetDefault("ns3::LteRlcUmLowLat::MaxTxBufferSize", UintegerValue(10 * 1024 * 1024));
-+    Config::SetDefault("ns3::LteRlcAm::MaxTxBufferSize", UintegerValue(10 * 1024 * 1024));
-+    Config::SetDefault("ns3::MmWaveHelper::RlcAmEnabled", BooleanValue(false));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkDelay", TimeValue(MicroSeconds(500)));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkDataRate", DataRateValue(DataRate("1000Gb/s")));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::X2LinkMtu", UintegerValue(10000));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::S1uLinkDelay", TimeValue(MicroSeconds(1000)));
-+    Config::SetDefault("ns3::MmWavePointToPointEpcHelper::S1apLinkDelay", TimeValue(MicroSeconds(10000)));
-+    
-+    ConfigStore inputConfig;
-+    inputConfig.ConfigureDefaults();
-+
-+    Ptr<MmWaveHelper> mmwaveHelper = CreateObject<MmWaveHelper>();
-+    mmwaveHelper->SetAttribute("UseCa", BooleanValue(false));
-+    mmwaveHelper->SetAttribute("UseIdealRrc", BooleanValue(true));
-+    mmwaveHelper->SetBeamformingModelType("ns3::MmWaveDftBeamforming");
-+    mmwaveHelper->SetMcUeNetDeviceAttribute("LteDlEarfcn", UintegerValue(100));
-+
-+    mmwaveHelper->SetPathlossModelType("ns3::ThreeGppUmiStreetCanyonPropagationLossModel");
-+    mmwaveHelper->SetLtePathlossModelType("ns3::ThreeGppUmaPropagationLossModel");
-+    // mmwaveHelper->SetChannelConditionModelType("ns3::AlwaysLosChannelConditionModel");
-+    mmwaveHelper->SetChannelConditionModelType("ns3::ThreeGppUmaChannelConditionModel");
-+
-+    mmwaveHelper->SetLteEnbAntennaModelType("ns3::CosineAntennaModel");
-+    mmwaveHelper->SetLteEnbAntennaModelAttribute("Orientation", DoubleValue(225));
-+    mmwaveHelper->SetLteEnbAntennaModelAttribute("Beamwidth", DoubleValue(60));
-+
-+    Ptr<CcHelper> lteCcHelper = CreateObject<CcHelper>();
-+    lteCcHelper->SetNumberOfComponentCarriers(1);
-+    lteCcHelper->SetUlEarfcn(18100);
-+    lteCcHelper->SetDlEarfcn(100);
-+    lteCcHelper->SetDlBandwidth(100);
-+    lteCcHelper->SetUlBandwidth(100);
-+    std::map<uint8_t, ComponentCarrier> lteCcMap = lteCcHelper->EquallySpacedCcs();
-+    lteCcMap.at(0).SetAsPrimary(true);
-+    mmwaveHelper->SetLteCcPhyParams(lteCcMap);
-+
-+    Ptr<MmWavePointToPointEpcHelper> epcHelper = CreateObject<MmWavePointToPointEpcHelper>();
-+    mmwaveHelper->SetEpcHelper(epcHelper);
-+    mmwaveHelper->SetHarqEnabled(true);
-+    mmwaveHelper->Initialize(); 
-+
-+    // Topology
-+    NodeContainer ueNodesMixed;
-+    NodeContainer ueNodesBackground;
-+    NodeContainer allUeNodes;
-+    NodeContainer mmWaveEnbNodes;
-+    NodeContainer lteEnbNodes;
-+    NodeContainer allEnbNodes;
-+
-+    lteEnbNodes.Create(1);
-+    mmWaveEnbNodes.Create(1);
-+    ueNodesMixed.Create(nUesMixed);
-+    ueNodesBackground.Create(nUesBackground);
-+    allUeNodes.Add(ueNodesMixed);
-+    allUeNodes.Add(ueNodesBackground);
-+    allEnbNodes.Add(lteEnbNodes);
-+    allEnbNodes.Add(mmWaveEnbNodes);
-+
-+    // Mobility
-+    Ptr<ListPositionAllocator> enbPositionAlloc = CreateObject<ListPositionAllocator> ();
-+    enbPositionAlloc->Add(Vector (250.0, 250.0, 25.0)); // LTE eNB
-+    enbPositionAlloc->Add(Vector (0.0, 0.0, 3.0));     // mmWave gNB
-+
-+    MobilityHelper enbMobility;
-+    enbMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+    enbMobility.SetPositionAllocator(enbPositionAlloc);
-+    enbMobility.Install(allEnbNodes);
-+
-+    if (enableMobility) {
-+        MobilityHelper ueMobility;
-+        ueMobility.SetMobilityModel("ns3::WaypointMobilityModel");
-+        ueMobility.Install(allUeNodes);
-+
-+        for (uint32_t i = 0; i < allUeNodes.GetN(); ++i) {
-+            Ptr<WaypointMobilityModel> mob = allUeNodes.Get(i)->GetObject<WaypointMobilityModel>();
-+            double offset = i * 2.0; 
-+            mob->AddWaypoint(Waypoint(Seconds(0.0), Vector(10.0 + offset, 10.0 + offset, 1.5)));
-+            mob->AddWaypoint(Waypoint(Seconds(simTime), Vector(240.0 + offset, 240.0 + offset, 1.5)));
-+        }
-+    } else {
-+        MobilityHelper mixedUesMobility;
-+        mixedUesMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+        Ptr<RandomRectanglePositionAllocator> mixedUesPositionAlloc = CreateObject<RandomRectanglePositionAllocator>();
-+        mixedUesPositionAlloc->SetAttribute("X", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=120.0]"));
-+        mixedUesPositionAlloc->SetAttribute("Y", StringValue("ns3::UniformRandomVariable[Min=0.0|Max=50.0]"));
-+        mixedUesPositionAlloc->SetAttribute("Z", DoubleValue(1.5));
-+        mixedUesMobility.SetPositionAllocator(mixedUesPositionAlloc);
-+        mixedUesMobility.Install(ueNodesMixed);
-+
-+        MobilityHelper backgroundUesMobility;
-+        backgroundUesMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
-+        Ptr<RandomRectanglePositionAllocator> backgroundUesPositionAlloc = CreateObject<RandomRectanglePositionAllocator>();
-+        backgroundUesPositionAlloc->SetAttribute("X", StringValue("ns3::UniformRandomVariable[Min=121.0|Max=250.0]"));
-+        backgroundUesPositionAlloc->SetAttribute("Y", StringValue("ns3::UniformRandomVariable[Min=51.0|Max=250.0]"));
-+        backgroundUesPositionAlloc->SetAttribute("Z", DoubleValue(1.5));
-+        backgroundUesMobility.SetPositionAllocator(backgroundUesPositionAlloc);
-+        backgroundUesMobility.Install(ueNodesBackground);
-+    }
-+
-+    // Devices
-+    NetDeviceContainer lteEnbDevs;
-+    lteEnbDevs.Add(mmwaveHelper->InstallLteEnbDevice (lteEnbNodes.Get(0)));
-+    NetDeviceContainer mmWaveEnbDevs = mmwaveHelper->InstallEnbDevice (mmWaveEnbNodes.Get(0));
-+    NetDeviceContainer mixedUesNetDevs = mmwaveHelper->InstallMcUeDevice (ueNodesMixed);
-+    NetDeviceContainer backgroundUesNetDevs = mmwaveHelper->InstallMcUeDevice (ueNodesBackground);
-+    NetDeviceContainer mcUeDevs;
-+    mcUeDevs.Add(mixedUesNetDevs);
-+    mcUeDevs.Add(backgroundUesNetDevs);
-+
-+    // Internet and Routing
-+    Ptr<Node> pgw = epcHelper->GetPgwNode ();
-+    NodeContainer remoteHostContainer;
-+    remoteHostContainer.Create (1);
-+    Ptr<Node> remoteHost = remoteHostContainer.Get (0);
-+    InternetStackHelper internet;
-+    internet.Install (remoteHostContainer);
-+
-+    PointToPointHelper p2ph;
-+    p2ph.SetDeviceAttribute ("DataRate", DataRateValue (DataRate ("100Gb/s")));
-+    p2ph.SetDeviceAttribute ("Mtu", UintegerValue (2500));
-+    p2ph.SetChannelAttribute ("Delay", TimeValue (Seconds (0.010)));
-+    NetDeviceContainer internetDevices = p2ph.Install (pgw, remoteHost);
-+    
-+    Ipv4AddressHelper ipv4h;
-+    ipv4h.SetBase ("1.0.0.0", "255.0.0.0");
-+    Ipv4InterfaceContainer internetIpIfaces = ipv4h.Assign (internetDevices);
-+    
-+    Ipv4StaticRoutingHelper ipv4RoutingHelper;
-+    Ptr<Ipv4StaticRouting> remoteHostStaticRouting = ipv4RoutingHelper.GetStaticRouting (remoteHost->GetObject<Ipv4> ());
-+    remoteHostStaticRouting->AddNetworkRouteTo (Ipv4Address ("7.0.0.0"), Ipv4Mask ("255.0.0.0"), 1);
-+
-+    internet.Install (allUeNodes);
-+    Ipv4InterfaceContainer ueIpIface = epcHelper->AssignUeIpv4Address (NetDeviceContainer (mcUeDevs));
-+    
-+    Ipv4InterfaceContainer ueIpIfaceMixed;
-+    for (uint32_t i = 0; i < ueNodesMixed.GetN (); ++i) {
-+        ueIpIfaceMixed.Add (ueIpIface.Get (i));
-+    }
-+    Ipv4InterfaceContainer ueIpIfaceBackground;
-+    for (uint32_t i = 0; i < ueNodesBackground.GetN (); ++i) {
-+        ueIpIfaceBackground.Add (ueIpIface.Get (ueNodesMixed.GetN () + i));
-+    }
-+
-+    for (uint32_t u = 0; u < allUeNodes.GetN (); ++u) {
-+        Ptr<Ipv4StaticRouting> ueStaticRouting = ipv4RoutingHelper.GetStaticRouting (allUeNodes.Get(u)->GetObject<Ipv4> ());
-+        ueStaticRouting->SetDefaultRoute (epcHelper->GetUeDefaultGatewayAddress (), 1);
-+    }
-+
-+    // Attach to base stations
-+    mmwaveHelper->AddX2Interface (lteEnbNodes, mmWaveEnbNodes);
-+    mmwaveHelper->AttachToClosestEnb (mcUeDevs, mmWaveEnbDevs, lteEnbDevs);
-+
-+    // Applications setup
-+    uint16_t dlPort = 10000;
-+    uint16_t ulPort = 20000;
-+    // enum EpsBearer::Qci qciEmbb = EpsBearer::GBR_CONV_VIDEO;
-+    enum EpsBearer::Qci qciEmbb = EpsBearer::GBR_CONV_VIDEO;
-+    enum EpsBearer::Qci qciXr = EpsBearer::NGBR_LOW_LAT_EMBB_AR;
-+    double dataRateEmbbBackgroundMbps = 1.0;
-+    double packetSizeInBytes = 1024;
-+    double startTime = 0.1;
-+    double endTime = simTime;
-+
-+    ApplicationContainer allApps;
-+
-+    ApplicationContainer embbMixedApps = createOnOffApplicationWithPacketFilter (
-+        epcHelper, qciEmbb, remoteHost, mixedUesNetDevs, internetIpIfaces, ueIpIfaceMixed,
-+        true, false, dataRateMbb, packetSizeInBytes, dlPort, ulPort, startTime, endTime);
-+    allApps.Add(embbMixedApps);
-+
-+    dlPort += ueNodesMixed.GetN ();
-+    ulPort += ueNodesMixed.GetN ();
-+
-+    // ApplicationContainer xrMixedApps = createOnOffApplicationWithPacketFilter (
-+    //     epcHelper, qciXr, remoteHost, mixedUesNetDevs, internetIpIfaces, ueIpIfaceMixed,
-+    //     true, false, dataRateXr, packetSizeInBytes, dlPort, ulPort, startTime, endTime);
-+    // allApps.Add(xrMixedApps);
-+
-+    // dlPort += ueNodesMixed.GetN ();
-+    // ulPort += ueNodesMixed.GetN ();
-+
-+    ApplicationContainer embbBkgApps = createOnOffApplication (
-+        remoteHost, backgroundUesNetDevs, internetIpIfaces, ueIpIfaceBackground,
-+        true, false, dataRateEmbbBackgroundMbps, packetSizeInBytes, dlPort, ulPort, startTime, endTime);
-+    allApps.Add (embbBkgApps);
-+
-+    // Scheduling split ratio logic manually, without MAB
-+    Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosBkg, backgroundUesNetDevs);
-+    Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosMix, mixedUesNetDevs, simSplitRatio, 0.0);
-+
-+    for (double t = 0; t <= simTime; t = t + 1) {
-+        Simulator::Schedule(Seconds(t), &RegisterSimulationTime, t);
-+    }
-+
-+    // Simulator::Schedule(Seconds(1.0), &PrintThroughputInfo, mcUeDevs);
-+    Simulator::Schedule(Seconds(1.0), &PrintUePosition, allUeNodes);
-+    Simulator::Stop(Seconds(simTime + 0.001));
-+    RunSimulationWithTimeCounter();
-+
-+    return 0;
-+}
 Binary files ns3-mmwave-oran/src/aodv/test/aodv-chain-regression-test-0-0.pcap and ns3-oran-master/src/aodv/test/aodv-chain-regression-test-0-0.pcap differ
 Binary files ns3-mmwave-oran/src/aodv/test/aodv-chain-regression-test-1-0.pcap and ns3-oran-master/src/aodv/test/aodv-chain-regression-test-1-0.pcap differ
 Binary files ns3-mmwave-oran/src/aodv/test/aodv-chain-regression-test-2-0.pcap and ns3-oran-master/src/aodv/test/aodv-chain-regression-test-2-0.pcap differ
@@ -4098,7 +1154,7 @@ Binary files ns3-mmwave-oran/src/aodv/test/aodv-chain-regression-test-4-0.pcap a
 Binary files ns3-mmwave-oran/src/aodv/test/bug-606-test-0-0.pcap and ns3-oran-master/src/aodv/test/bug-606-test-0-0.pcap differ
 Binary files ns3-mmwave-oran/src/aodv/test/bug-606-test-1-0.pcap and ns3-oran-master/src/aodv/test/bug-606-test-1-0.pcap differ
 Binary files ns3-mmwave-oran/src/aodv/test/bug-606-test-2-0.pcap and ns3-oran-master/src/aodv/test/bug-606-test-2-0.pcap differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.cc ns3-oran-master/src/applications/helper/udp-poisson-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.cc ns3-oran-master/src/applications/helper/udp-poisson-helper.cc
 --- ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/helper/udp-poisson-helper.cc	2026-09-28 15:15:06.949123827 -0300
 @@ -0,0 +1,146 @@
@@ -4248,7 +1304,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +}
 +
 +} // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.h ns3-oran-master/src/applications/helper/udp-poisson-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.h ns3-oran-master/src/applications/helper/udp-poisson-helper.h
 --- ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/helper/udp-poisson-helper.h	2026-09-28 15:15:06.949123827 -0300
 @@ -0,0 +1,213 @@
@@ -4465,7 +1521,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +} // namespace ns3
 +
 +#endif /* UDP_POISSON_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-client.cc ns3-oran-master/src/applications/model/udp-poisson-client.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-client.cc ns3-oran-master/src/applications/model/udp-poisson-client.cc
 --- ns3-mmwave-oran/src/applications/model/udp-poisson-client.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/model/udp-poisson-client.cc	2026-09-28 15:15:06.957124871 -0300
 @@ -0,0 +1,248 @@
@@ -4717,7 +1773,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +
 +} // Namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-client.h ns3-oran-master/src/applications/model/udp-poisson-client.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-client.h ns3-oran-master/src/applications/model/udp-poisson-client.h
 --- ns3-mmwave-oran/src/applications/model/udp-poisson-client.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/model/udp-poisson-client.h	2026-09-28 15:15:06.957124871 -0300
 @@ -0,0 +1,111 @@
@@ -4832,7 +1888,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +} // namespace ns3
 +
 +#endif /* UDP_CLIENT_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-server.cc ns3-oran-master/src/applications/model/udp-poisson-server.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-server.cc ns3-oran-master/src/applications/model/udp-poisson-server.cc
 --- ns3-mmwave-oran/src/applications/model/udp-poisson-server.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/model/udp-poisson-server.cc	2026-09-28 15:15:06.957124871 -0300
 @@ -0,0 +1,210 @@
@@ -5046,7 +2102,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +}
 +
 +} // Namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-server.h ns3-oran-master/src/applications/model/udp-poisson-server.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-server.h ns3-oran-master/src/applications/model/udp-poisson-server.h
 --- ns3-mmwave-oran/src/applications/model/udp-poisson-server.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/model/udp-poisson-server.h	2026-09-28 15:15:06.957124871 -0300
 @@ -0,0 +1,116 @@
@@ -5166,7 +2222,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +} // namespace ns3
 +
 +#endif /* UDP_POISSON_SERVER_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/wscript ns3-oran-master/src/applications/wscript
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/applications/wscript ns3-oran-master/src/applications/wscript
 --- ns3-mmwave-oran/src/applications/wscript	2026-10-14 13:48:43.793931367 -0300
 +++ ns3-oran-master/src/applications/wscript	2026-09-28 15:15:06.957124871 -0300
 @@ -20,12 +20,15 @@
@@ -5237,7 +2293,7 @@ Binary files ns3-mmwave-oran/src/lte/doc/source/figures/nas-attach.pdf and ns3-o
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/rrc-connection-establishment.pdf and ns3-oran-master/src/lte/doc/source/figures/rrc-connection-establishment.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/rrc-connection-reconfiguration-handover.pdf and ns3-oran-master/src/lte/doc/source/figures/rrc-connection-reconfiguration-handover.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/rrc-connection-reconfiguration.pdf and ns3-oran-master/src/lte/doc/source/figures/rrc-connection-reconfiguration.pdf differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.cc ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.cc ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.cc
 --- ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.cc	2026-10-14 13:48:44.013902769 -0300
 +++ ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.cc	2026-09-28 15:15:07.073139944 -0300
 @@ -1,811 +1,858 @@
@@ -6671,7 +3727,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  }
  
  } // namespace mmwave
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.h ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.h ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.h
 --- ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.h	2026-10-14 13:48:44.013902769 -0300
 +++ ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.h	2026-09-28 15:15:07.073139944 -0300
 @@ -1,56 +1,57 @@
@@ -7535,7 +4591,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  };
  
  } // namespace mmwave
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/phy-rx-stats-calculator.cc ns3-oran-master/src/lte/helper/phy-rx-stats-calculator.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/phy-rx-stats-calculator.cc ns3-oran-master/src/lte/helper/phy-rx-stats-calculator.cc
 --- ns3-mmwave-oran/src/lte/helper/phy-rx-stats-calculator.cc	2026-10-14 13:48:44.013902769 -0300
 +++ ns3-oran-master/src/lte/helper/phy-rx-stats-calculator.cc	2026-09-28 15:15:07.073139944 -0300
 @@ -95,43 +95,43 @@
@@ -7617,7 +4673,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  }
  
  void
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/phy-stats-calculator.cc ns3-oran-master/src/lte/helper/phy-stats-calculator.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/phy-stats-calculator.cc ns3-oran-master/src/lte/helper/phy-stats-calculator.cc
 --- ns3-mmwave-oran/src/lte/helper/phy-stats-calculator.cc	2026-10-14 13:48:44.013902769 -0300
 +++ ns3-oran-master/src/lte/helper/phy-stats-calculator.cc	2026-09-28 15:15:07.073139944 -0300
 @@ -192,33 +192,33 @@
@@ -7680,7 +4736,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  }
  
  
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/eps-bearer.cc ns3-oran-master/src/lte/model/eps-bearer.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/eps-bearer.cc ns3-oran-master/src/lte/model/eps-bearer.cc
 --- ns3-mmwave-oran/src/lte/model/eps-bearer.cc	2026-10-14 13:48:44.021901791 -0300
 +++ ns3-oran-master/src/lte/model/eps-bearer.cc	2026-09-28 15:15:07.073139944 -0300
 @@ -203,6 +203,60 @@
@@ -7744,7 +4800,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  double
  EpsBearer::GetPacketErrorLossRate () const
  {
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/eps-bearer.h ns3-oran-master/src/lte/model/eps-bearer.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/eps-bearer.h ns3-oran-master/src/lte/model/eps-bearer.h
 --- ns3-mmwave-oran/src/lte/model/eps-bearer.h	2026-10-14 13:48:44.021901791 -0300
 +++ ns3-oran-master/src/lte/model/eps-bearer.h	2026-09-28 15:15:07.073139944 -0300
 @@ -151,6 +151,8 @@
@@ -7756,7 +4812,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
    /**
     *
     *
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc ns3-oran-master/src/lte/model/lte-enb-net-device.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc ns3-oran-master/src/lte/model/lte-enb-net-device.cc
 --- ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc	2026-10-14 13:48:44.313866089 -0300
 +++ ns3-oran-master/src/lte/model/lte-enb-net-device.cc	2026-09-28 15:15:07.205157056 -0300
 @@ -18,447 +18,806 @@
@@ -10095,7 +7151,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  }
  
  } // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-enb-net-device.h ns3-oran-master/src/lte/model/lte-enb-net-device.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-enb-net-device.h ns3-oran-master/src/lte/model/lte-enb-net-device.h
 --- ns3-mmwave-oran/src/lte/model/lte-enb-net-device.h	2026-10-14 13:48:44.313866089 -0300
 +++ ns3-oran-master/src/lte/model/lte-enb-net-device.h	2026-09-28 15:15:07.205157056 -0300
 @@ -17,25 +17,29 @@
@@ -10692,7 +7748,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  
  }; // end of class LteEnbNetDevice
  
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-rlc-am.cc ns3-oran-master/src/lte/model/lte-rlc-am.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-rlc-am.cc ns3-oran-master/src/lte/model/lte-rlc-am.cc
 --- ns3-mmwave-oran/src/lte/model/lte-rlc-am.cc	2026-10-14 13:48:44.317865600 -0300
 +++ ns3-oran-master/src/lte/model/lte-rlc-am.cc	2026-09-28 15:15:07.213158093 -0300
 @@ -105,7 +105,7 @@
@@ -10704,7 +7760,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  }
  
  void
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-rlc-um.cc ns3-oran-master/src/lte/model/lte-rlc-um.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-rlc-um.cc ns3-oran-master/src/lte/model/lte-rlc-um.cc
 --- ns3-mmwave-oran/src/lte/model/lte-rlc-um.cc	2026-10-14 13:48:44.321865112 -0300
 +++ ns3-oran-master/src/lte/model/lte-rlc-um.cc	2026-09-28 15:15:07.213158093 -0300
 @@ -458,6 +458,7 @@
@@ -10715,7 +7771,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
    m_rxPdu (m_rnti, m_lcid, rxPduParams.p->GetSize (), delay.GetNanoSeconds ());
  
    // 5.1.2.2 Receive operations
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.cc ns3-oran-master/src/lte/model/mc-enb-pdcp.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.cc ns3-oran-master/src/lte/model/mc-enb-pdcp.cc
 --- ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.cc	2026-10-14 13:48:44.333863644 -0300
 +++ ns3-oran-master/src/lte/model/mc-enb-pdcp.cc	2026-09-28 15:15:07.217158611 -0300
 @@ -207,6 +207,19 @@
@@ -10738,7 +7794,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  
  ////////////////////////////////////////
  void
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.h ns3-oran-master/src/lte/model/mc-enb-pdcp.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.h ns3-oran-master/src/lte/model/mc-enb-pdcp.h
 --- ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.h	2026-10-14 13:48:44.333863644 -0300
 +++ ns3-oran-master/src/lte/model/mc-enb-pdcp.h	2026-09-28 15:15:07.217158611 -0300
 @@ -181,10 +181,49 @@
@@ -10827,7 +7883,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
    Ptr<UniformRandomVariable> m_uniformRNG;
  
    /**
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/ue-throughput-storage.cc ns3-oran-master/src/lte/model/ue-throughput-storage.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/ue-throughput-storage.cc ns3-oran-master/src/lte/model/ue-throughput-storage.cc
 --- ns3-mmwave-oran/src/lte/model/ue-throughput-storage.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/lte/model/ue-throughput-storage.cc	2026-09-28 15:15:07.217158611 -0300
 @@ -0,0 +1,13 @@
@@ -10844,7 +7900,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +
 +} // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/ue-throughput-storage.h ns3-oran-master/src/lte/model/ue-throughput-storage.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/ue-throughput-storage.h ns3-oran-master/src/lte/model/ue-throughput-storage.h
 --- ns3-mmwave-oran/src/lte/model/ue-throughput-storage.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/lte/model/ue-throughput-storage.h	2026-09-28 15:15:07.217158611 -0300
 @@ -0,0 +1,254 @@
@@ -11102,7 +8158,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +} // namespace ns3
 +
 +#endif /* UE_THROUGHPUT_STORAGE_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.dat ns3-oran-master/src/lte/test/reference/lte-mcs-index.dat
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.dat ns3-oran-master/src/lte/test/reference/lte-mcs-index.dat
 --- ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.dat	2026-10-14 13:48:44.353861198 -0300
 +++ ns3-oran-master/src/lte/test/reference/lte-mcs-index.dat	1969-12-31 21:00:00.000000000 -0300
 @@ -1,38 +0,0 @@
@@ -11144,7 +8200,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 -28 28
 -29 28
 -30 28
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/wscript ns3-oran-master/src/lte/wscript
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/lte/wscript ns3-oran-master/src/lte/wscript
 --- ns3-mmwave-oran/src/lte/wscript	2026-10-14 13:48:44.353861198 -0300
 +++ ns3-oran-master/src/lte/wscript	2026-09-28 15:15:07.221159130 -0300
 @@ -140,7 +140,8 @@
@@ -11190,7 +8246,7 @@ Binary files ns3-mmwave-oran/src/mesh/test/dot11s/pmp-regression-test-1-1.pcap a
 Binary files ns3-mmwave-oran/src/mesh/test/flame/flame-regression-test-0-1.pcap and ns3-oran-master/src/mesh/test/flame/flame-regression-test-0-1.pcap differ
 Binary files ns3-mmwave-oran/src/mesh/test/flame/flame-regression-test-1-1.pcap and ns3-oran-master/src/mesh/test/flame/flame-regression-test-1-1.pcap differ
 Binary files ns3-mmwave-oran/src/mesh/test/flame/flame-regression-test-2-1.pcap and ns3-oran-master/src/mesh/test/flame/flame-regression-test-2-1.pcap differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.cc ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.cc ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.cc	2026-10-14 13:48:44.397855818 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -1,67 +1,67 @@
@@ -13353,7 +10409,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  }
  
  } // namespace mmwave
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.h ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.h ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.h	2026-10-14 13:48:44.397855818 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.h	2026-09-28 15:15:07.237161204 -0300
 @@ -1,60 +1,62 @@
@@ -14251,7 +11307,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  
 -
  #endif // MMWAVE_BEARER_STATS_CONNECTOR_H
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,1450 @@
@@ -15705,7 +12761,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +} // end of namespace mmwave
 +} // end of namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,583 @@
@@ -16292,7 +13348,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +
 +#endif // MMWAVE_DOWNLINK_RADIO_ENVIRONMENT_MAP_HELPER_H
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-helper.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.cc	2026-10-14 13:48:44.397855818 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-helper.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -597,6 +597,13 @@
@@ -16408,7 +13464,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  uint64_t
  MmWaveHelper::GetStartTime ()
  {
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.h ns3-oran-master/src/mmwave/helper/mmwave-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.h ns3-oran-master/src/mmwave/helper/mmwave-helper.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.h	2026-10-14 13:48:44.397855818 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-helper.h	2026-09-28 15:15:07.237161204 -0300
 @@ -111,6 +111,10 @@
@@ -16422,7 +13478,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
  
    /**
     * Set an attribute to the SpectrumPropagationLossModels
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,683 @@
@@ -17109,7 +14165,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +} // end of namespace mmwave 
 +} // end of namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,346 @@
@@ -17459,7 +14515,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +} // end namespace ns3
 +
 +#endif /* MMWAVE_MC_RADIO_ENVIRONMENT_MAP_HELPER_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,1523 @@
@@ -18986,7 +16042,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +} // end of namespace mmwave
 +} // end of namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.h	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,588 @@
@@ -19578,7 +16634,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +
 +#endif // MMWAVE_RADIO_ENVIRONMENT_MAP_HELPER_H
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mab-agent.cc ns3-oran-master/src/mmwave/model/mab-agent.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mab-agent.cc ns3-oran-master/src/mmwave/model/mab-agent.cc
 --- ns3-mmwave-oran/src/mmwave/model/mab-agent.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/model/mab-agent.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,178 @@
@@ -19761,7 +16817,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +} // namespace ns3
 \ No newline at end of file
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mab-agent.h ns3-oran-master/src/mmwave/model/mab-agent.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mab-agent.h ns3-oran-master/src/mmwave/model/mab-agent.h
 --- ns3-mmwave-oran/src/mmwave/model/mab-agent.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/model/mab-agent.h	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,235 @@
@@ -20001,7 +17057,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +#endif // MAB_AGENT_H
 \ No newline at end of file
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.cc ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.cc ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.cc
 --- ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.cc	2026-10-14 13:48:44.429851906 -0300
 +++ ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -1,1353 +1,1762 @@
@@ -22896,7 +19952,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +
 +} // namespace mmwave
 +} // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.h ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.h ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.h
 --- ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.h	2026-10-14 13:48:44.429851906 -0300
 +++ ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.h	2026-09-28 15:15:07.237161204 -0300
 @@ -1,65 +1,65 @@
@@ -23341,7 +20397,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 +} // namespace ns3
  
  #endif /* SRC_MMWAVE_MODEL_MMWAVE_ENB_NET_DEVICE_H_ */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/wscript ns3-oran-master/src/mmwave/wscript
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/wscript ns3-oran-master/src/mmwave/wscript
 --- ns3-mmwave-oran/src/mmwave/wscript	2026-10-14 13:48:44.457848483 -0300
 +++ ns3-oran-master/src/mmwave/wscript	2026-09-28 15:15:07.245162241 -0300
 @@ -12,10 +12,15 @@
@@ -23432,7 +20488,7 @@ Binary files ns3-mmwave-oran/src/test/ns3tcp/response-vectors/ns3tcp-state5-resp
 Binary files ns3-mmwave-oran/src/test/ns3tcp/response-vectors/ns3tcp-state6-response-vectors.pcap and ns3-oran-master/src/test/ns3tcp/response-vectors/ns3tcp-state6-response-vectors.pcap differ
 Binary files ns3-mmwave-oran/src/test/ns3tcp/response-vectors/ns3tcp-state7-response-vectors.pcap and ns3-oran-master/src/test/ns3tcp/response-vectors/ns3tcp-state7-response-vectors.pcap differ
 Binary files ns3-mmwave-oran/src/test/ns3tcp/response-vectors/ns3tcp-state8-response-vectors.pcap and ns3-oran-master/src/test/ns3tcp/response-vectors/ns3tcp-state8-response-vectors.pcap differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/utils/mmWave-dce18-patch.diff ns3-oran-master/utils/mmWave-dce18-patch.diff
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/utils/mmWave-dce18-patch.diff ns3-oran-master/utils/mmWave-dce18-patch.diff
 --- ns3-mmwave-oran/utils/mmWave-dce18-patch.diff	2026-10-14 13:48:44.837802021 -0300
 +++ ns3-oran-master/utils/mmWave-dce18-patch.diff	1969-12-31 21:00:00.000000000 -0300
 @@ -1,49 +0,0 @@
@@ -23485,7 +20541,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=output
 - };
 - 
 - } // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/utils/mmWave-newhandoverBranch-dce18-patch.diff ns3-oran-master/utils/mmWave-newhandoverBranch-dce18-patch.diff
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=*.txt' '--exclude=outputs' '--exclude=*.eps' '--exclude=*.mob' '--exclude=scratch' '--exclude=*.plt' '--exclude=.vscode' ns3-mmwave-oran/utils/mmWave-newhandoverBranch-dce18-patch.diff ns3-oran-master/utils/mmWave-newhandoverBranch-dce18-patch.diff
 --- ns3-mmwave-oran/utils/mmWave-newhandoverBranch-dce18-patch.diff	2026-10-14 13:48:44.837802021 -0300
 +++ ns3-oran-master/utils/mmWave-newhandoverBranch-dce18-patch.diff	1969-12-31 21:00:00.000000000 -0300
 @@ -1,629 +0,0 @@

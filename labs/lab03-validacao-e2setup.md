@@ -437,7 +437,7 @@ No mesmo instante, o pod `e2term` registrará as conexões recebidas e a devolu�
 {"ts":1791489942085,"crit":"INFO","id":"E2Terminator","mdc":{"PID":"139818054952704","POD_NAME":"deployment-ricplt-e2term-alpha-fc6459948-bs4mk","CONTAINER_NAME":"container-ricplt-e2term","SERVICE_NAME":"RIC_E2_TERM","HOST_NAME":"mastervm","SYSTEM_NAME":"SEP"},"msg":"send message to gnb_131_133_31000000 address"}
 ```
 
-* **Duas entradas `"New connection request from sctp network"`:** Confirmam a chegada independente de duas associações SCTP — uma correspondente à estação LTE (`eNB`) e a outra à estação mmWave NR (`gNB`).
+* **Duas entradas `"New connection request from sctp network"`:** Confirmam a chegada independente de duas associações SCTP (uma correspondente à estação LTE `eNB` e a outra à estação mmWave NR `gNB`).
 * **Mensagens `"send message to gnb_... address"`:** Confirmam que o E2 Manager processou as solicitações e instruiu o `e2term` a devolver o `E2setupResponse` para as duas estações de rádio (`gnb_131_133_31000000` e `gnb_131_133_32000000`).
 
 ---

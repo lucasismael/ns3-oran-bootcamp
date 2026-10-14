@@ -12,7 +12,7 @@ Ao final deste laboratório, você será capaz de:
 3. Entender a arquitetura do **ns-O-RAN**: como a classe `E2Termination` do módulo `oran-interface` e a biblioteca `E2sim` transformam nós simulados em estações rádio O-RAN (*E2 Nodes*).
 4. Diferenciar os modelos de serviço O-RAN suportados: **E2SM-KPM** (telemetria de métricas de desempenho) e **E2SM-RC** (controle de rádio e direcionamento de tráfego / *Traffic Steering*).
 5. Compilar, empacotar (.deb) e registrar as bibliotecas C++ da `E2sim` com suporte à codificação binária ASN.1 PER e sockets SCTP.
-6. Integrar o módulo `oran-interface` à árvore de código do `ns3-mmwave` e configurar a suíte de compilação com o motor **Waf** utilizando perfis de alta performance (*optimized*).
+6. Integrar o módulo `oran-interface` à árvore de código do `ns3-mmwave`, aplicar o patch de customizações do bootcamp (`patch_bootcamp.patch`) e configurar a suíte de compilação com o motor **Waf** utilizando perfis de alta performance (*optimized*).
 7. Validar a compilação do simulador e preparar os binários para o procedimento de conexão (*E2 Setup*) com o Near-RT RIC.
 
 ---
@@ -281,9 +281,32 @@ Com isso, as bibliotecas compartilhadas `libe2sim.so` e seus respectivos cabeça
 
 ---
 
-### Passo 4: Configuração e Compilação do Simulador com Waf
+### Passo 4: Aplicação do Patch de Customizações do Bootcamp (`patch_bootcamp.patch`)
 
-Com todo o código-fonte posicionado e a biblioteca E2sim registrada no sistema, configuramos o ambiente de compilação com as flags de otimização de alta performance.
+Os repositórios oficiais clonados no Passo 3 fornecem a base genérica do simulador e da interface O-RAN. Para que os experimentos do bootcamp funcionem perfeitamente (incluindo suporte a métricas adicionais de Conectividade Dupla MR-DC, modelos de tráfego estocástico e extensões nos módulos de rádio), devemos aplicar as modificações desenvolvidas para o bootcamp através do arquivo [`patches/patch_bootcamp.patch`](../patches/patch_bootcamp.patch).
+
+#### O que este patch modifica?
+* **Módulo `oran-interface` (`contrib/oran-interface`):** Atualiza os *helpers* de telemetria E2SM-KPM (`lte-indication-message-helper` e `mmwave-indication-message-helper`) para coletar métricas aprimoradas de QoS/QCI, vazão e qualidade de enlace por UE (RS-SINR), além de ajustar as estruturas de mensagens de controle E2SM-RC (`ric-control-message`) e definições de tipos ASN.1.
+* **Módulos `lte` e `mmwave` (`src/`):** Incorpora o subsistema de medição e armazenamento de vazão por UE (`UeThroughputStorage`), a lógica de divisão dinâmica de tráfego no PDCP (`McEnbPdcp`), conectores de estatísticas (`mmwave-bearer-stats-connector`), mapas de ambiente de rádio (REM) e classes de suporte a agentes inteligentes baseados em *Multi-Armed Bandit* (`MabAgent`).
+* **Módulo `applications` (`src/`):** Adiciona geradores de tráfego com distribuição estocástica de Poisson (`UdpPoissonClient` / `UdpPoissonServer`) para simulação de aplicações móveis realistas (como eMBB e tráfego interativo de Extended Reality / XR).
+
+#### Comando para Aplicação do Patch:
+
+Acesse o diretório raiz do simulador e aplique o patch utilizando o utilitário `patch` com o nível de prefixo `-p1`:
+
+```bash
+cd ~/ns3-mmwave-oran
+patch -p1 < ~/ns3-oran-bootcamp/patches/patch_bootcamp.patch
+```
+
+> [!TIP]
+> O comando `-p1` descarta o primeiro nível de diretórios contido no arquivo de patch, aplicando as alterações automaticamente nos arquivos correspondentes dentro de `~/ns3-mmwave-oran`. Certifique-se de estar dentro do diretório `~/ns3-mmwave-oran` ao executar a instrução.
+
+---
+
+### Passo 5: Configuração e Compilação do Simulador com Waf
+
+Com todo o código-fonte posicionado, as customizações aplicadas e a biblioteca E2sim registrada no sistema, configuramos o ambiente de compilação com as flags de otimização de alta performance.
 
 1. Acesse o diretório raiz do simulador:
    ```bash
@@ -313,7 +336,23 @@ Ao término da compilação bem-sucedida, o Waf exibirá a mensagem de confirma�
 
 ---
 
-## 🧠 5. Questões de Fixação e Autoavaliação
+### Passo 6: Verificação Pós-Build
+
+Para confirmar que a compilação gerou os executáveis de simulação e que as bibliotecas do módulo O-RAN foram vinculadas corretamente, verifique o perfil de compilação ativo:
+```bash
+./waf --check-profile
+```
+
+Você também pode inspecionar se a biblioteca dinâmica da interface O-RAN foi gerada no diretório de saída:
+```bash
+ls -lh build/optimized/contrib/oran-interface/libns3.33-oran-interface-optimized.so
+```
+
+Com a biblioteca presente e as customizações do patch incorporadas, o simulador está pronto para executar cenários com a interface E2 integrada.
+
+---
+
+## 🧠 6. Questões de Fixação e Autoavaliação
 
 Para consolidar os conceitos teóricos e práticos explorados neste laboratório, responda às seguintes perguntas:
 
