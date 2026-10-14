@@ -107,7 +107,7 @@ flowchart TB
 * Opera nos modos **UM** (*Unacknowledged Mode*) e **AM** (*Acknowledged Mode*). No módulo mmWave, o RLC incorpora **re-segmentação dinâmica** de pacotes, garantindo que grandes blocos de dados possam ser fragmentados para se ajustar às mudanças bruscas de canal causadas por bloqueio de feixes.
 
 #### 4. Camada PDCP e Conectividade Dupla (*Dual Connectivity* - DC):
-* O módulo adota uma arquitetura **Não-Autônoma (*Non-Standalone* - NSA)**, onde o dispositivo do usuário (`McUeNetDevice`) comunica-se simultaneamente com uma macrocélula LTE tradicional (âncora de controle) e com uma célula de ondas milimétricas 5G (transferência massiva de dados).
+* O módulo adota uma arquitetura *Non-Standalone* (NSA), onde o dispositivo do usuário (`McUeNetDevice`) comunica-se simultaneamente com uma macrocélula LTE tradicional (âncora de controle) e com uma célula de ondas milimétricas 5G (transferência massiva de dados).
 * O protocolo `McUePdcp` atua como o ponto de decisão, permitindo direcionar pacotes dinamicamente entre os dois ramos de rádio (*traffic steering*).
 
 ---

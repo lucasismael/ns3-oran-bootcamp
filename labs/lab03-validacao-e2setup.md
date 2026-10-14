@@ -51,10 +51,29 @@ Uma requisição de E2 Setup transporta três conjuntos críticos de informaçõ
    * Para cada função, acompanha uma estrutura `RANfunctionDefinition` contendo o esquema formal binário que dita quais parâmetros podem ser coletados ou alterados.
 3. **`E2nodeComponentConfigAddition-List`:** Declara os componentes arquiteturais internos presentes no nó (interfaces F1-C, F1-U, E1, X2 ou Xn).
 
-#### Por que a Codificação ASN.1 APER (*Aligned Packed Encoding Rules*)?
-Diferente de microsserviços convencionais da Web que utilizam JSON ou XML, telecomunicações de missão crítica utilizam **ASN.1 APER**:
-* **Densidade Extrema de Bits:** Em vez de transmitir nomes de chaves em texto claro (`"connectionStatus": "CONNECTED"` consome dezenas de bytes), o APER empacota campos booleanos em bits únicos e inteiros em seus limites estritos. Uma mensagem E2AP completa pode ocupar menos de 200 bytes.
-* **Deterministicidade e Baixa Latência:** A decodificação binária em C/C++ consome frações de microssegundo da CPU, essencial para nós de rádio que operam com intervalos de subquadro de $1\text{ ms}$ (TTI).
+#### O que é o ASN.1 e por que utilizá-lo no E2AP?
+
+A especificação de mensagens do protocolo E2AP não utiliza formatos baseados em texto comuns da Web moderna (como JSON ou XML), mas sim **ASN.1** com regras de codificação **APER**.
+
+##### 1. O que é o ASN.1 (*Abstract Syntax Notation One*)?
+Padronizado pela ITU-T (X.680) e ISO/IEC, o **ASN.1** é uma linguagem formal e rigorosa utilizada para definir tipos de dados e estruturas de mensagens de forma totalmente independente de:
+* Linguagem de programação (C, C++, Go, Python);
+* Arquitetura de hardware e sistema operacional (processadores x86 vs. ARM, arquiteturas de 32 vs. 64 bits);
+* Ordem de bytes na memória (*Endianness*, Little-Endian vs. Big-Endian).
+
+No ASN.1, a especificação técnica descreve apenas a **estrutura abstrata** das informações utilizando tipos formais (como `INTEGER`, `BOOLEAN`, `OCTET STRING`, `SEQUENCE` e `CHOICE`).
+
+A grande vantagem prática é que, a partir desse arquivo de especificação textual (ex: `e2ap-v01.01.asn`), ferramentas automáticas como o compilador **`asn1c`** geram diretamente as estruturas de dados (`struct`) e as rotinas de serialização em linguagem C/C++. Isso assegura que diferentes fabricantes (como Ericsson, Nokia e bibliotecas de código aberto como a `E2sim`) conversem entre si sem qualquer discrepância na interpretação de campos.
+
+##### 2. Por que o ASN.1 é o Padrão em Redes Móveis e na O-RAN?
+Desde o início das redes celulares (2G GSM, 3G, 4G LTE e agora no 5G 3GPP e O-RAN), o ASN.1 é o padrão consagrado devido a características indispensáveis para telecomunicações:
+* **Garantia de Interoperabilidade Multi-Fabricante:** Impede que variações de sintaxe quebrem a comunicação entre estações rádio de marcas diferentes e o controlador de rede.
+* **Desacoplamento entre Estrutura e Transferência:** A representação dos dados é separada das regras com que esses dados são codificados para envio pelo fio (*wire format*). O mesmo modelo abstrato pode ser inspecionado visualmente ou empacotado de forma ultracompacta.
+
+##### 3. A Regra de Codificação Binária APER (*Aligned Packed Encoding Rules*)
+Para o transporte de mensagens na interface E2, a O-RAN Alliance padronizou o uso das regras **APER** (*Aligned Packed Encoding Rules*):
+* **Densidade Extrema de Bits:** Em formatos como JSON, uma propriedade como `{"connectionStatus": "CONNECTED"}` consome dezenas de bytes repetindo chaves e aspas em texto claro. No APER, um campo booleano é codificado em exatamente 1 bit, e inteiros ocupam estritamente o número mínimo de bits necessário para representar seu valor, alinhados em limites de octetos. Como resultado, uma mensagem `E2setupRequest` completa frequentemente ocupa menos de 200 bytes.
+* **Baixíssima Latência e Determinismo de CPU:** A serialização e decodificação binária em C/C++ consome frações de microssegundo do processador. Isso é mandatório para estações rádio da RAN, que operam sob restrições severas de tempo real com intervalos de transmissão de subquadro de $1\text{ ms}$ (TTI).
 
 ---
 
@@ -467,7 +486,7 @@ A chamada realizada no Passo 4.5 retornará o JSON consolidado do estado dos nó
 ```
 
 > [!NOTE]
-> **Inspeção Detalhada de Funções RAN:**  
+> **Inspeção Detalhada de RAN Functions:**  
 > Se desejar inspecionar o registro individual de um dos nós e comprovar que o Near-RT RIC catalogou as funções **E2SM-KPM (200)** e **E2SM-RC (300)** anunciadas pelo simulador, execute:
 > ```bash
 > kubectl exec -it -n ricplt $E2MGR_POD -- curl -s http://localhost:3800/v1/nodeb/gnb_131_133_32000000 | jq .
