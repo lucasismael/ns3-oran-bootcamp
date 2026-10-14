@@ -1,4 +1,4 @@
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/.gitignore ns3-oran-master/contrib/.gitignore
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/.gitignore ns3-oran-master/contrib/.gitignore
 --- ns3-mmwave-oran/contrib/.gitignore	2026-10-14 13:48:43.745937627 -0300
 +++ ns3-oran-master/contrib/.gitignore	1969-12-31 21:00:00.000000000 -0300
 @@ -1,6 +0,0 @@
@@ -8,7 +8,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -# Include specific files that should be tracked by Git
 -!wscript
 -!.gitignore
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.cc ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.cc ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.cc
 --- ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.cc	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.cc	2026-09-28 15:15:06.901117565 -0300
 @@ -35,26 +35,29 @@
@@ -74,7 +74,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
    m_msgValues.m_ueIndications.insert (ueVal);
  }
  
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.h ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.h ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.h
 --- ns3-mmwave-oran/contrib/oran-interface/helper/lte-indication-message-helper.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/helper/lte-indication-message-helper.h	2026-09-28 15:15:06.901117565 -0300
 @@ -22,6 +22,17 @@
@@ -206,7 +206,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -#endif /* LTE_INDICATION_MESSAGE_HELPER_H */
 \ No newline at end of file
 +#endif /* LTE_INDICATION_MESSAGE_HELPER_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.cc ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.cc ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.cc
 --- ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.cc	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.cc	2026-09-28 15:15:06.901117565 -0300
 @@ -34,16 +34,19 @@
@@ -390,7 +390,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  
    m_msgValues.m_ueIndications.insert (ueVal);
  }
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.h ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.h ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.h
 --- ns3-mmwave-oran/contrib/oran-interface/helper/mmwave-indication-message-helper.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/helper/mmwave-indication-message-helper.h	2026-09-28 15:15:06.901117565 -0300
 @@ -22,6 +22,17 @@
@@ -598,7 +598,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -#endif /* MMWAVE_INDICATION_MESSAGE_HELPER_H */
 \ No newline at end of file
 +#endif /* MMWAVE_INDICATION_MESSAGE_HELPER_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.cc ns3-oran-master/contrib/oran-interface/model/asn1c-types.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.cc ns3-oran-master/contrib/oran-interface/model/asn1c-types.cc
 --- ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.cc	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/asn1c-types.cc	2026-09-28 15:15:06.901117565 -0300
 @@ -856,6 +856,8 @@
@@ -641,7 +641,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
          NS_LOG_DEBUG ("[E2SM] RANParameter_ValueType_PR_ranParameter_Element");
          RANParameter_ELEMENT_t *ranParameterElement =
              ranParameterItem->ranParameterItem_valueType->choice.ranParameter_Element;
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.h ns3-oran-master/contrib/oran-interface/model/asn1c-types.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.h ns3-oran-master/contrib/oran-interface/model/asn1c-types.h
 --- ns3-mmwave-oran/contrib/oran-interface/model/asn1c-types.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/asn1c-types.h	2026-09-28 15:15:06.901117565 -0300
 @@ -343,6 +343,7 @@
@@ -652,7 +652,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  
    static std::vector<RANParameterItem>
    ExtractRANParametersFromRANParameter (RANParameter_Item_t *ranParameterItem);
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.h ns3-oran-master/contrib/oran-interface/model/kpm-indication.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.h ns3-oran-master/contrib/oran-interface/model/kpm-indication.h
 --- ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/kpm-indication.h	2026-09-28 15:15:06.901117565 -0300
 @@ -48,7 +48,7 @@
@@ -664,7 +664,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
      /**
      * Holds the values to be used to fill the RIC Indication header 
      */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.cc ns3-oran-master/contrib/oran-interface/model/ric-control-message.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.cc ns3-oran-master/contrib/oran-interface/model/ric-control-message.cc
 --- ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.cc	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/ric-control-message.cc	2026-09-28 15:15:06.901117565 -0300
 @@ -51,6 +51,7 @@
@@ -713,7 +713,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
                    }
                  else
                    {
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.h ns3-oran-master/contrib/oran-interface/model/ric-control-message.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.h ns3-oran-master/contrib/oran-interface/model/ric-control-message.h
 --- ns3-mmwave-oran/contrib/oran-interface/model/ric-control-message.h	2026-10-14 13:48:54.232959080 -0300
 +++ ns3-oran-master/contrib/oran-interface/model/ric-control-message.h	2026-09-28 15:15:06.901117565 -0300
 @@ -61,6 +61,8 @@
@@ -725,31 +725,31 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  
    private:
      /**
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/cu-cp-cell-1.txt ns3-oran-master/cu-cp-cell-1.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/cu-cp-cell-1.txt ns3-oran-master/cu-cp-cell-1.txt
 --- ns3-mmwave-oran/cu-cp-cell-1.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/cu-cp-cell-1.txt	2026-10-08 15:17:14.771386220 -0300
 @@ -0,0 +1,2 @@
 +timestamp, ueImsiComplete, numActiveUes, cellId, sameCellSinr, sameCellSinr 3gpp encoded
 +1791483434746,00001,1,1,-inf,0.000000
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/cu-cp-cell-2.txt ns3-oran-master/cu-cp-cell-2.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/cu-cp-cell-2.txt ns3-oran-master/cu-cp-cell-2.txt
 --- ns3-mmwave-oran/cu-cp-cell-2.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/cu-cp-cell-2.txt	2026-10-08 15:17:14.771386220 -0300
 @@ -0,0 +1,2 @@
 +timestamp,ueImsiComplete,numActiveUes,cellId,serving SINR,L3 serving SINR 3gpp,
 +1791483434746,00001,1,2,-2.583835,41.000000
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/cu-up-cell-1.txt ns3-oran-master/cu-up-cell-1.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/cu-up-cell-1.txt ns3-oran-master/cu-up-cell-1.txt
 --- ns3-mmwave-oran/cu-up-cell-1.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/cu-up-cell-1.txt	2026-10-08 15:17:14.771386220 -0300
 @@ -0,0 +1,2 @@
 +timestamp,ueImsiComplete,qci,pdcpThroughput,pdcp2RlcThroughput,
 +1791483434746,00001,2,0.000000,0.000000
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/cu-up-cell-2.txt ns3-oran-master/cu-up-cell-2.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/cu-up-cell-2.txt ns3-oran-master/cu-up-cell-2.txt
 --- ns3-mmwave-oran/cu-up-cell-2.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/cu-up-cell-2.txt	2026-10-08 15:17:14.771386220 -0300
 @@ -0,0 +1,2 @@
 +timestamp,ueImsiComplete,qci,pdcp2RlcThroughput,pdcp2RlcLatency
 +1791483434746,00001,2,0.000000
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/DlE2PdcpStatsLte.txt ns3-oran-master/DlE2PdcpStatsLte.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/DlE2PdcpStatsLte.txt ns3-oran-master/DlE2PdcpStatsLte.txt
 --- ns3-mmwave-oran/DlE2PdcpStatsLte.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/DlE2PdcpStatsLte.txt	2026-10-08 17:28:14.577509421 -0300
 @@ -0,0 +1,32 @@
@@ -785,7 +785,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +28	29	1	1	1	3	369779	389747066	1060	1117240	14.4023	8.31834	0.014887	28.7898	1054	0	1054	1054	
 +29	30	1	1	1	3	382579	403238266	1097	1156238	14.905	8.60857	0.014887	29.7951	1054	0	1054	1054	
 +30	31	1	1	1	3	382591	403250914	1097	1156238	14.905	8.60857	0.014887	29.7951	1054	0	1054	1054	
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/DlE2PdcpStats.txt ns3-oran-master/DlE2PdcpStats.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/DlE2PdcpStats.txt ns3-oran-master/DlE2PdcpStats.txt
 --- ns3-mmwave-oran/DlE2PdcpStats.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/DlE2PdcpStats.txt	2026-10-08 17:28:14.573509401 -0300
 @@ -0,0 +1,31 @@
@@ -820,23 +820,23 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +27	28	1	1	1	3	356979	376255866	1023	1078242	13.8996	8.02812	0.014887	27.7844	1054	0	1054	1054	
 +28	29	1	1	1	3	369779	389747066	1060	1117240	14.4023	8.31834	0.014887	28.7898	1054	0	1054	1054	
 +29	30	1	1	1	3	382579	403238266	1097	1156238	14.905	8.60857	0.014887	29.7951	1054	0	1054	1054	
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/DlE2RlcStatsLte.txt ns3-oran-master/DlE2RlcStatsLte.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/DlE2RlcStatsLte.txt ns3-oran-master/DlE2RlcStatsLte.txt
 --- ns3-mmwave-oran/DlE2RlcStatsLte.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/DlE2RlcStatsLte.txt	2026-10-08 17:27:16.361224467 -0300
 @@ -0,0 +1 @@
 +% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/DlE2RlcStats.txt ns3-oran-master/DlE2RlcStats.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/DlE2RlcStats.txt ns3-oran-master/DlE2RlcStats.txt
 --- ns3-mmwave-oran/DlE2RlcStats.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/DlE2RlcStats.txt	2026-10-08 17:27:16.361224467 -0300
 @@ -0,0 +1 @@
 +% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/du-ue-metrics-2.txt ns3-oran-master/du-ue-metrics-2.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/du-ue-metrics-2.txt ns3-oran-master/du-ue-metrics-2.txt
 --- ns3-mmwave-oran/du-ue-metrics-2.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/du-ue-metrics-2.txt	2026-10-08 15:17:14.771386220 -0300
 @@ -0,0 +1,2 @@
 +timestamp,ueImsiComplete,qci,lteThp,lteDelay,nrThp,nrDelay,aggThp
 +1791483434746,00001,2,0.000000,0.000000,0.000000,0.000000,0.000000
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/.gitignore ns3-oran-master/.gitignore
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/.gitignore ns3-oran-master/.gitignore
 --- ns3-mmwave-oran/.gitignore	2026-10-14 13:48:43.741938149 -0300
 +++ ns3-oran-master/.gitignore	2026-09-28 15:15:06.897117044 -0300
 @@ -43,6 +43,7 @@
@@ -852,7 +852,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  RlcAmBufferSize.txt
  LteUlSinrStats.txt
 +patch*.py
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/local_campaigns_v3.py ns3-oran-master/local_campaigns_v3.py
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/local_campaigns_v3.py ns3-oran-master/local_campaigns_v3.py
 --- ns3-mmwave-oran/local_campaigns_v3.py	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/local_campaigns_v3.py	2026-09-28 15:15:06.929121217 -0300
 @@ -0,0 +1,146 @@
@@ -1002,7 +1002,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +        print(res)
 +    
 +    print("\nCampanha finalizada com 100% de sucesso!")
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/MmWaveSinrTime.txt ns3-oran-master/MmWaveSinrTime.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/MmWaveSinrTime.txt ns3-oran-master/MmWaveSinrTime.txt
 --- ns3-mmwave-oran/MmWaveSinrTime.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/MmWaveSinrTime.txt	2026-10-08 17:28:14.573509401 -0300
 @@ -0,0 +1,18751 @@
@@ -19757,2151 +19757,9 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +29.9973 1 2 -2.58383
 +29.9989 1 2 -2.58383
 +30.0005 1 2 -2.58383
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/DlE2PdcpStatsLte.txt ns3-oran-master/outputs/teste/DlE2PdcpStatsLte.txt
---- ns3-mmwave-oran/outputs/teste/DlE2PdcpStatsLte.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/DlE2PdcpStatsLte.txt	2026-09-28 16:15:12.298913974 -0300
-@@ -0,0 +1,4 @@
-+% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-+0	1	1	1	1	3	11379	11993466	11365	11978710	0.000508717	3.6331e-05	0.000456172	0.000869115	1054	0	1054	1054	
-+1	2	1	1	1	3	24179	25484666	24165	25469910	0.00050867	3.61611e-05	0.000456172	0.000869115	1054	0	1054	1054	
-+2	3	1	1	1	3	36979	38975866	36965	38961110	0.000508655	3.61087e-05	0.000456172	0.000869115	1054	0	1054	1054	
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/DlE2PdcpStats.txt ns3-oran-master/outputs/teste/DlE2PdcpStats.txt
---- ns3-mmwave-oran/outputs/teste/DlE2PdcpStats.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/DlE2PdcpStats.txt	2026-09-28 16:15:12.298913974 -0300
-@@ -0,0 +1,4 @@
-+% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-+0	1	1	1	1	3	11379	11993466	11365	11978710	0.000508717	3.6331e-05	0.000456172	0.000869115	1054	0	1054	1054	
-+1	2	1	1	1	3	24179	25484666	24165	25469910	0.00050867	3.61611e-05	0.000456172	0.000869115	1054	0	1054	1054	
-+2	3	1	1	1	3	36979	38975866	36965	38961110	0.000508655	3.61087e-05	0.000456172	0.000869115	1054	0	1054	1054	
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/DlE2RlcStatsLte.txt ns3-oran-master/outputs/teste/DlE2RlcStatsLte.txt
---- ns3-mmwave-oran/outputs/teste/DlE2RlcStatsLte.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/DlE2RlcStatsLte.txt	2026-09-28 16:15:08.591062272 -0300
-@@ -0,0 +1 @@
-+% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/DlE2RlcStats.txt ns3-oran-master/outputs/teste/DlE2RlcStats.txt
---- ns3-mmwave-oran/outputs/teste/DlE2RlcStats.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/DlE2RlcStats.txt	2026-09-28 16:15:08.591062272 -0300
-@@ -0,0 +1 @@
-+% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/MmWaveSinrTime.txt ns3-oran-master/outputs/teste/MmWaveSinrTime.txt
---- ns3-mmwave-oran/outputs/teste/MmWaveSinrTime.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/MmWaveSinrTime.txt	2026-09-28 16:15:13.110881655 -0300
-@@ -0,0 +1,2092 @@
-+0.0005 1 2 52.2124
-+0.0021 1 2 47.4699
-+0.0037 1 2 47.5936
-+0.0053 1 2 47.5518
-+0.0069 1 2 47.5509
-+0.0085 1 2 47.4148
-+0.0101 1 2 47.346
-+0.0117 1 2 47.4764
-+0.0133 1 2 47.5618
-+0.0149 1 2 47.6063
-+0.0165 1 2 47.5805
-+0.0181 1 2 47.6019
-+0.0197 1 2 47.6649
-+0.0213 1 2 47.695
-+0.0229 1 2 47.6711
-+0.0245 1 2 47.5822
-+0.0261 1 2 47.5328
-+0.0277 1 2 47.4635
-+0.0293 1 2 47.4581
-+0.0309 1 2 47.4713
-+0.0325 1 2 47.4625
-+0.0341 1 2 47.4802
-+0.0357 1 2 47.3987
-+0.0373 1 2 47.2585
-+0.0389 1 2 47.2536
-+0.0405 1 2 47.2993
-+0.0421 1 2 47.3048
-+0.0437 1 2 47.3113
-+0.0453 1 2 47.2087
-+0.0469 1 2 47.2809
-+0.0485 1 2 47.3412
-+0.0501 1 2 47.3021
-+0.0517 1 2 47.29
-+0.0533 1 2 47.2962
-+0.0549 1 2 47.3557
-+0.0565 1 2 47.3241
-+0.0581 1 2 47.3478
-+0.0597 1 2 47.3275
-+0.0613 1 2 47.3049
-+0.0629 1 2 47.2924
-+0.0645 1 2 47.3127
-+0.0661 1 2 47.4623
-+0.0677 1 2 47.4937
-+0.0693 1 2 47.4375
-+0.0709 1 2 47.2556
-+0.0725 1 2 47.1669
-+0.0741 1 2 47.2036
-+0.0757 1 2 47.1373
-+0.0773 1 2 47.2427
-+0.0789 1 2 47.0895
-+0.0805 1 2 47.0385
-+0.0821 1 2 47.0309
-+0.0837 1 2 46.9711
-+0.0853 1 2 47.0425
-+0.0869 1 2 47.0714
-+0.0885 1 2 47.041
-+0.0901 1 2 47.0353
-+0.0917 1 2 47.0777
-+0.0933 1 2 47.0738
-+0.0949 1 2 47.0998
-+0.0965 1 2 47.1915
-+0.0981 1 2 47.2209
-+0.0997 1 2 47.1948
-+0.1013 1 2 47.1561
-+0.1029 1 2 47.0537
-+0.1045 1 2 46.9797
-+0.1061 1 2 46.9433
-+0.1077 1 2 47.0266
-+0.1093 1 2 47.0329
-+0.1109 1 2 47.0439
-+0.1125 1 2 47.1548
-+0.1141 1 2 47.1987
-+0.1157 1 2 47.2392
-+0.1173 1 2 47.2601
-+0.1189 1 2 47.221
-+0.1205 1 2 47.269
-+0.1221 1 2 47.3794
-+0.1237 1 2 47.4427
-+0.1253 1 2 47.4368
-+0.1269 1 2 47.3714
-+0.1285 1 2 47.4539
-+0.1301 1 2 47.3892
-+0.1317 1 2 47.4986
-+0.1333 1 2 47.5328
-+0.1349 1 2 47.5077
-+0.1365 1 2 47.5612
-+0.1381 1 2 47.5503
-+0.1397 1 2 47.469
-+0.1413 1 2 47.4857
-+0.1429 1 2 47.4044
-+0.1445 1 2 47.4192
-+0.1461 1 2 47.3279
-+0.1477 1 2 47.2973
-+0.1493 1 2 47.3403
-+0.1509 1 2 47.185
-+0.1525 1 2 47.2047
-+0.1541 1 2 47.2097
-+0.1557 1 2 47.1133
-+0.1573 1 2 47.0447
-+0.1589 1 2 47.0769
-+0.1605 1 2 47.1175
-+0.1621 1 2 46.9756
-+0.1637 1 2 46.9543
-+0.1653 1 2 46.9191
-+0.1669 1 2 46.8422
-+0.1685 1 2 46.8957
-+0.1701 1 2 46.6562
-+0.1717 1 2 46.6401
-+0.1733 1 2 46.6175
-+0.1749 1 2 46.5048
-+0.1765 1 2 46.5131
-+0.1781 1 2 46.5184
-+0.1797 1 2 46.4849
-+0.1813 1 2 46.4319
-+0.1829 1 2 46.3782
-+0.1845 1 2 46.3829
-+0.1861 1 2 46.3112
-+0.1877 1 2 46.2381
-+0.1893 1 2 46.1799
-+0.1909 1 2 46.1608
-+0.1925 1 2 46.1016
-+0.1941 1 2 46.1846
-+0.1957 1 2 46.021
-+0.1973 1 2 45.9876
-+0.1989 1 2 45.9725
-+0.2005 1 2 45.8565
-+0.2021 1 2 45.8455
-+0.2037 1 2 45.8307
-+0.2053 1 2 45.695
-+0.2069 1 2 45.7032
-+0.2085 1 2 45.6888
-+0.2101 1 2 45.7619
-+0.2117 1 2 45.793
-+0.2133 1 2 45.907
-+0.2149 1 2 45.8517
-+0.2165 1 2 45.8009
-+0.2181 1 2 45.8797
-+0.2197 1 2 45.7874
-+0.2213 1 2 45.8505
-+0.2229 1 2 45.9585
-+0.2245 1 2 46.0075
-+0.2261 1 2 46.0734
-+0.2277 1 2 46.1706
-+0.2293 1 2 46.0365
-+0.2309 1 2 46.0244
-+0.2325 1 2 45.9664
-+0.2341 1 2 45.9435
-+0.2357 1 2 46.0075
-+0.2373 1 2 45.947
-+0.2389 1 2 45.8441
-+0.2405 1 2 45.8857
-+0.2421 1 2 45.8377
-+0.2437 1 2 45.8674
-+0.2453 1 2 45.8147
-+0.2469 1 2 45.8219
-+0.2485 1 2 45.7817
-+0.2501 1 2 45.6653
-+0.2517 1 2 45.5046
-+0.2533 1 2 45.5029
-+0.2549 1 2 45.5785
-+0.2565 1 2 45.6111
-+0.2581 1 2 45.5208
-+0.2597 1 2 45.4898
-+0.2613 1 2 45.2971
-+0.2629 1 2 45.3486
-+0.2645 1 2 45.3116
-+0.2661 1 2 45.3243
-+0.2677 1 2 45.2124
-+0.2693 1 2 45.24
-+0.2709 1 2 45.1323
-+0.2725 1 2 45.1605
-+0.2741 1 2 45.1865
-+0.2757 1 2 45.1666
-+0.2773 1 2 45.1372
-+0.2789 1 2 45.2447
-+0.2805 1 2 45.37
-+0.2821 1 2 45.3042
-+0.2837 1 2 45.2365
-+0.2853 1 2 45.2455
-+0.2869 1 2 45.2291
-+0.2885 1 2 45.122
-+0.2901 1 2 45.0888
-+0.2917 1 2 45.1993
-+0.2933 1 2 45.2153
-+0.2949 1 2 45.2337
-+0.2965 1 2 45.2149
-+0.2981 1 2 45.1859
-+0.2997 1 2 45.2325
-+0.3013 1 2 45.288
-+0.3029 1 2 45.145
-+0.3045 1 2 45.146
-+0.3061 1 2 44.9911
-+0.3077 1 2 45.0402
-+0.3093 1 2 45.0843
-+0.3109 1 2 45.0791
-+0.3125 1 2 45.1227
-+0.3141 1 2 45.0705
-+0.3157 1 2 45.2108
-+0.3173 1 2 45.211
-+0.3189 1 2 45.3246
-+0.3205 1 2 45.274
-+0.3221 1 2 45.362
-+0.3237 1 2 45.3315
-+0.3253 1 2 45.2385
-+0.3269 1 2 45.2357
-+0.3285 1 2 45.2356
-+0.3301 1 2 45.209
-+0.3317 1 2 45.307
-+0.3333 1 2 45.3114
-+0.3349 1 2 45.1954
-+0.3365 1 2 45.1873
-+0.3381 1 2 45.32
-+0.3397 1 2 45.3491
-+0.3413 1 2 45.3833
-+0.3429 1 2 45.3481
-+0.3445 1 2 45.3591
-+0.3461 1 2 45.3299
-+0.3477 1 2 45.2494
-+0.3493 1 2 45.3538
-+0.3509 1 2 45.2938
-+0.3525 1 2 45.2385
-+0.3541 1 2 45.1017
-+0.3557 1 2 45.1185
-+0.3573 1 2 45.1566
-+0.3589 1 2 45.2374
-+0.3605 1 2 45.078
-+0.3621 1 2 45.1689
-+0.3637 1 2 45.2147
-+0.3653 1 2 45.1943
-+0.3669 1 2 45.2246
-+0.3685 1 2 45.26
-+0.3701 1 2 45.3872
-+0.3717 1 2 45.4561
-+0.3733 1 2 45.4754
-+0.3749 1 2 45.5194
-+0.3765 1 2 45.4825
-+0.3781 1 2 45.4847
-+0.3797 1 2 45.562
-+0.3813 1 2 45.4721
-+0.3829 1 2 45.4892
-+0.3845 1 2 45.4976
-+0.3861 1 2 45.552
-+0.3877 1 2 45.5276
-+0.3893 1 2 45.6968
-+0.3909 1 2 45.6495
-+0.3925 1 2 45.4961
-+0.3941 1 2 45.5592
-+0.3957 1 2 45.5091
-+0.3973 1 2 45.6162
-+0.3989 1 2 45.6714
-+0.4005 1 2 45.5298
-+0.4021 1 2 45.5618
-+0.4037 1 2 45.6305
-+0.4053 1 2 45.5543
-+0.4069 1 2 45.6192
-+0.4085 1 2 45.7119
-+0.4101 1 2 45.6912
-+0.4117 1 2 45.7201
-+0.4133 1 2 45.6507
-+0.4149 1 2 45.6618
-+0.4165 1 2 45.601
-+0.4181 1 2 45.6998
-+0.4197 1 2 45.5606
-+0.4213 1 2 45.3744
-+0.4229 1 2 45.3382
-+0.4245 1 2 45.3571
-+0.4261 1 2 45.3287
-+0.4277 1 2 45.1671
-+0.4293 1 2 45.0705
-+0.4309 1 2 45.0463
-+0.4325 1 2 44.9605
-+0.4341 1 2 44.9435
-+0.4357 1 2 45.0183
-+0.4373 1 2 45.0065
-+0.4389 1 2 45.0417
-+0.4405 1 2 44.9225
-+0.4421 1 2 44.9636
-+0.4437 1 2 44.9649
-+0.4453 1 2 44.9797
-+0.4469 1 2 44.8823
-+0.4485 1 2 44.917
-+0.4501 1 2 45.0171
-+0.4517 1 2 45.057
-+0.4533 1 2 45.068
-+0.4549 1 2 45.1212
-+0.4565 1 2 45.1364
-+0.4581 1 2 45.0604
-+0.4597 1 2 44.9627
-+0.4613 1 2 44.9371
-+0.4629 1 2 44.9604
-+0.4645 1 2 44.9339
-+0.4661 1 2 44.9458
-+0.4677 1 2 45.0048
-+0.4693 1 2 45.039
-+0.4709 1 2 45.2034
-+0.4725 1 2 45.1705
-+0.4741 1 2 45.2197
-+0.4757 1 2 45.2893
-+0.4773 1 2 45.2419
-+0.4789 1 2 45.2196
-+0.4805 1 2 45.1905
-+0.4821 1 2 45.1411
-+0.4837 1 2 45.0661
-+0.4853 1 2 45.112
-+0.4869 1 2 44.9568
-+0.4885 1 2 45.0361
-+0.4901 1 2 45.0696
-+0.4917 1 2 45.0913
-+0.4933 1 2 45.0879
-+0.4949 1 2 45.0914
-+0.4965 1 2 45.0858
-+0.4981 1 2 45.0304
-+0.4997 1 2 45.1866
-+0.5013 1 2 45.2526
-+0.5029 1 2 45.2723
-+0.5045 1 2 45.363
-+0.5061 1 2 45.3583
-+0.5077 1 2 45.382
-+0.5093 1 2 45.3266
-+0.5109 1 2 45.2606
-+0.5125 1 2 45.2648
-+0.5141 1 2 45.1175
-+0.5157 1 2 45.205
-+0.5173 1 2 45.2236
-+0.5189 1 2 45.2645
-+0.5205 1 2 45.2848
-+0.5221 1 2 45.1967
-+0.5237 1 2 45.0346
-+0.5253 1 2 44.9502
-+0.5269 1 2 44.9387
-+0.5285 1 2 44.9958
-+0.5301 1 2 45.1394
-+0.5317 1 2 45.1248
-+0.5333 1 2 45.0912
-+0.5349 1 2 45.0255
-+0.5365 1 2 45.1743
-+0.5381 1 2 45.1595
-+0.5397 1 2 45.0737
-+0.5413 1 2 45.0696
-+0.5429 1 2 45.0609
-+0.5445 1 2 44.9479
-+0.5461 1 2 44.8463
-+0.5477 1 2 44.8624
-+0.5493 1 2 45.023
-+0.5509 1 2 45.0439
-+0.5525 1 2 45.0062
-+0.5541 1 2 44.9781
-+0.5557 1 2 44.9923
-+0.5573 1 2 45.049
-+0.5589 1 2 45.0719
-+0.5605 1 2 45.0069
-+0.5621 1 2 45.0261
-+0.5637 1 2 44.9172
-+0.5653 1 2 44.9248
-+0.5669 1 2 44.8438
-+0.5685 1 2 44.7215
-+0.5701 1 2 44.5892
-+0.5717 1 2 44.5389
-+0.5733 1 2 44.547
-+0.5749 1 2 44.4473
-+0.5765 1 2 44.4024
-+0.5781 1 2 44.2832
-+0.5797 1 2 44.2617
-+0.5813 1 2 44.3334
-+0.5829 1 2 44.3647
-+0.5845 1 2 44.3814
-+0.5861 1 2 44.3148
-+0.5877 1 2 44.2731
-+0.5893 1 2 44.2859
-+0.5909 1 2 44.3236
-+0.5925 1 2 44.2774
-+0.5941 1 2 44.2553
-+0.5957 1 2 44.2778
-+0.5973 1 2 44.1015
-+0.5989 1 2 44.0891
-+0.6005 1 2 44.0309
-+0.6021 1 2 44.0221
-+0.6037 1 2 44.0822
-+0.6053 1 2 44.0499
-+0.6069 1 2 44.0251
-+0.6085 1 2 44.1007
-+0.6101 1 2 44.0367
-+0.6117 1 2 44.0792
-+0.6133 1 2 44.034
-+0.6149 1 2 43.8917
-+0.6165 1 2 43.9142
-+0.6181 1 2 44.0425
-+0.6197 1 2 44.0795
-+0.6213 1 2 44.0148
-+0.6229 1 2 44.0261
-+0.6245 1 2 43.918
-+0.6261 1 2 43.7934
-+0.6277 1 2 43.8617
-+0.6293 1 2 43.9158
-+0.6309 1 2 44.0167
-+0.6325 1 2 43.9331
-+0.6341 1 2 43.9821
-+0.6357 1 2 43.8813
-+0.6373 1 2 43.7908
-+0.6389 1 2 43.6937
-+0.6405 1 2 43.6043
-+0.6421 1 2 43.6124
-+0.6437 1 2 43.6448
-+0.6453 1 2 43.683
-+0.6469 1 2 43.7259
-+0.6485 1 2 43.6533
-+0.6501 1 2 43.6394
-+0.6517 1 2 43.6688
-+0.6533 1 2 43.7656
-+0.6549 1 2 43.7676
-+0.6565 1 2 43.7394
-+0.6581 1 2 43.8001
-+0.6597 1 2 43.8257
-+0.6613 1 2 43.7371
-+0.6629 1 2 43.804
-+0.6645 1 2 43.6488
-+0.6661 1 2 43.5788
-+0.6677 1 2 43.5814
-+0.6693 1 2 43.5572
-+0.6709 1 2 43.6327
-+0.6725 1 2 43.6018
-+0.6741 1 2 43.5183
-+0.6757 1 2 43.4053
-+0.6773 1 2 43.4327
-+0.6789 1 2 43.4214
-+0.6805 1 2 43.3955
-+0.6821 1 2 43.294
-+0.6837 1 2 43.2476
-+0.6853 1 2 43.1495
-+0.6869 1 2 43.1773
-+0.6885 1 2 43.1912
-+0.6901 1 2 43.051
-+0.6917 1 2 43.0505
-+0.6933 1 2 43.0203
-+0.6949 1 2 42.9892
-+0.6965 1 2 42.9361
-+0.6981 1 2 42.9275
-+0.6997 1 2 42.8694
-+0.7013 1 2 42.7121
-+0.7029 1 2 42.7323
-+0.7045 1 2 42.6276
-+0.7061 1 2 42.5699
-+0.7077 1 2 42.5661
-+0.7093 1 2 42.4745
-+0.7109 1 2 42.4341
-+0.7125 1 2 42.5395
-+0.7141 1 2 42.3226
-+0.7157 1 2 42.202
-+0.7173 1 2 42.1872
-+0.7189 1 2 42.1648
-+0.7205 1 2 42.0434
-+0.7221 1 2 42.0238
-+0.7237 1 2 41.9706
-+0.7253 1 2 41.8906
-+0.7269 1 2 41.8008
-+0.7285 1 2 41.7127
-+0.7301 1 2 41.7303
-+0.7317 1 2 41.5473
-+0.7333 1 2 41.5003
-+0.7349 1 2 41.4909
-+0.7365 1 2 41.589
-+0.7381 1 2 41.5784
-+0.7397 1 2 41.575
-+0.7413 1 2 41.6429
-+0.7429 1 2 41.6561
-+0.7445 1 2 41.7093
-+0.7461 1 2 41.7111
-+0.7477 1 2 41.7482
-+0.7493 1 2 41.751
-+0.7509 1 2 41.7509
-+0.7525 1 2 41.6889
-+0.7541 1 2 41.7738
-+0.7557 1 2 41.6257
-+0.7573 1 2 41.7331
-+0.7589 1 2 41.8556
-+0.7605 1 2 41.8726
-+0.7621 1 2 41.8219
-+0.7637 1 2 41.7687
-+0.7653 1 2 41.7883
-+0.7669 1 2 41.6754
-+0.7685 1 2 41.5196
-+0.7701 1 2 41.3765
-+0.7717 1 2 41.3856
-+0.7733 1 2 41.4343
-+0.7749 1 2 41.3742
-+0.7765 1 2 41.3941
-+0.7781 1 2 41.3453
-+0.7797 1 2 41.4227
-+0.7813 1 2 41.2748
-+0.7829 1 2 41.2474
-+0.7845 1 2 41.1628
-+0.7861 1 2 41.3078
-+0.7877 1 2 41.298
-+0.7893 1 2 41.3646
-+0.7909 1 2 41.1318
-+0.7925 1 2 41.1916
-+0.7941 1 2 41.1975
-+0.7957 1 2 40.9938
-+0.7973 1 2 40.9209
-+0.7989 1 2 40.907
-+0.8005 1 2 40.9054
-+0.8021 1 2 40.893
-+0.8037 1 2 40.9962
-+0.8053 1 2 40.9997
-+0.8069 1 2 41.0093
-+0.8085 1 2 40.9829
-+0.8101 1 2 40.9874
-+0.8117 1 2 41.0395
-+0.8133 1 2 41.0609
-+0.8149 1 2 41.0883
-+0.8165 1 2 41.1016
-+0.8181 1 2 41.0792
-+0.8197 1 2 41.0116
-+0.8213 1 2 40.9343
-+0.8229 1 2 40.9615
-+0.8245 1 2 40.9544
-+0.8261 1 2 41.0532
-+0.8277 1 2 40.9124
-+0.8293 1 2 40.8347
-+0.8309 1 2 40.8369
-+0.8325 1 2 40.9206
-+0.8341 1 2 40.9025
-+0.8357 1 2 40.9114
-+0.8373 1 2 40.9259
-+0.8389 1 2 41.0848
-+0.8405 1 2 41.055
-+0.8421 1 2 41.1182
-+0.8437 1 2 41.2258
-+0.8453 1 2 41.3268
-+0.8469 1 2 41.4021
-+0.8485 1 2 41.4087
-+0.8501 1 2 41.3871
-+0.8517 1 2 41.3426
-+0.8533 1 2 41.3273
-+0.8549 1 2 41.2248
-+0.8565 1 2 41.3155
-+0.8581 1 2 41.2911
-+0.8597 1 2 41.3522
-+0.8613 1 2 41.3584
-+0.8629 1 2 41.5033
-+0.8645 1 2 41.4985
-+0.8661 1 2 41.4864
-+0.8677 1 2 41.3353
-+0.8693 1 2 41.328
-+0.8709 1 2 41.3397
-+0.8725 1 2 41.2861
-+0.8741 1 2 41.3092
-+0.8757 1 2 41.1636
-+0.8773 1 2 41.1701
-+0.8789 1 2 41.2651
-+0.8805 1 2 41.3177
-+0.8821 1 2 41.2824
-+0.8837 1 2 41.3427
-+0.8853 1 2 41.3579
-+0.8869 1 2 41.2619
-+0.8885 1 2 41.3395
-+0.8901 1 2 41.3266
-+0.8917 1 2 41.2231
-+0.8933 1 2 41.2127
-+0.8949 1 2 41.0905
-+0.8965 1 2 41.1689
-+0.8981 1 2 41.1517
-+0.8997 1 2 41.0887
-+0.9013 1 2 41.1196
-+0.9029 1 2 41.0672
-+0.9045 1 2 41.1371
-+0.9061 1 2 41.2415
-+0.9077 1 2 41.1465
-+0.9093 1 2 41.2054
-+0.9109 1 2 41.2379
-+0.9125 1 2 41.2257
-+0.9141 1 2 41.2309
-+0.9157 1 2 41.2736
-+0.9173 1 2 41.2959
-+0.9189 1 2 41.3417
-+0.9205 1 2 41.5069
-+0.9221 1 2 41.6154
-+0.9237 1 2 41.5823
-+0.9253 1 2 41.5454
-+0.9269 1 2 41.5218
-+0.9285 1 2 41.6376
-+0.9301 1 2 41.7531
-+0.9317 1 2 41.8471
-+0.9333 1 2 41.9727
-+0.9349 1 2 42.048
-+0.9365 1 2 42.064
-+0.9381 1 2 42.0122
-+0.9397 1 2 42.0276
-+0.9413 1 2 42.0137
-+0.9429 1 2 41.9535
-+0.9445 1 2 41.8999
-+0.9461 1 2 41.9008
-+0.9477 1 2 41.9092
-+0.9493 1 2 41.8957
-+0.9509 1 2 41.9042
-+0.9525 1 2 41.7923
-+0.9541 1 2 41.7152
-+0.9557 1 2 41.6053
-+0.9573 1 2 41.5473
-+0.9589 1 2 41.3991
-+0.9605 1 2 41.3352
-+0.9621 1 2 41.3839
-+0.9637 1 2 41.4781
-+0.9653 1 2 41.557
-+0.9669 1 2 41.7139
-+0.9685 1 2 41.6104
-+0.9701 1 2 41.5926
-+0.9717 1 2 41.5784
-+0.9733 1 2 41.6658
-+0.9749 1 2 41.714
-+0.9765 1 2 41.7333
-+0.9781 1 2 41.7686
-+0.9797 1 2 41.8398
-+0.9813 1 2 41.6165
-+0.9829 1 2 41.6292
-+0.9845 1 2 41.6036
-+0.9861 1 2 41.593
-+0.9877 1 2 41.6015
-+0.9893 1 2 41.494
-+0.9909 1 2 41.4298
-+0.9925 1 2 41.5169
-+0.9941 1 2 41.5661
-+0.9957 1 2 41.6077
-+0.9973 1 2 41.7765
-+0.9989 1 2 41.776
-+1.0005 1 2 41.7298
-+1.0021 1 2 41.516
-+1.0037 1 2 41.565
-+1.0053 1 2 41.504
-+1.0069 1 2 41.4432
-+1.0085 1 2 41.6138
-+1.0101 1 2 41.5613
-+1.0117 1 2 41.489
-+1.0133 1 2 41.4613
-+1.0149 1 2 41.5228
-+1.0165 1 2 41.5718
-+1.0181 1 2 41.6839
-+1.0197 1 2 41.7434
-+1.0213 1 2 41.7467
-+1.0229 1 2 41.6794
-+1.0245 1 2 41.643
-+1.0261 1 2 41.6224
-+1.0277 1 2 41.5909
-+1.0293 1 2 41.555
-+1.0309 1 2 41.5301
-+1.0325 1 2 41.4861
-+1.0341 1 2 41.4599
-+1.0357 1 2 41.4397
-+1.0373 1 2 41.2709
-+1.0389 1 2 41.2432
-+1.0405 1 2 41.239
-+1.0421 1 2 41.064
-+1.0437 1 2 41.2202
-+1.0453 1 2 41.1305
-+1.0469 1 2 41.1591
-+1.0485 1 2 41.2021
-+1.0501 1 2 41.2899
-+1.0517 1 2 41.2146
-+1.0533 1 2 41.2314
-+1.0549 1 2 41.2096
-+1.0565 1 2 41.1565
-+1.0581 1 2 41.0537
-+1.0597 1 2 41.0777
-+1.0613 1 2 41.2734
-+1.0629 1 2 41.2694
-+1.0645 1 2 41.2696
-+1.0661 1 2 41.2628
-+1.0677 1 2 41.3686
-+1.0693 1 2 41.5402
-+1.0709 1 2 41.5707
-+1.0725 1 2 41.5681
-+1.0741 1 2 41.5193
-+1.0757 1 2 41.3901
-+1.0773 1 2 41.3161
-+1.0789 1 2 41.3196
-+1.0805 1 2 41.36
-+1.0821 1 2 41.3429
-+1.0837 1 2 41.4154
-+1.0853 1 2 41.3298
-+1.0869 1 2 41.4227
-+1.0885 1 2 41.3953
-+1.0901 1 2 41.4071
-+1.0917 1 2 41.4005
-+1.0933 1 2 41.344
-+1.0949 1 2 41.3411
-+1.0965 1 2 41.2143
-+1.0981 1 2 41.1425
-+1.0997 1 2 41.2142
-+1.1013 1 2 41.4414
-+1.1029 1 2 41.4101
-+1.1045 1 2 41.3679
-+1.1061 1 2 41.3721
-+1.1077 1 2 41.4707
-+1.1093 1 2 41.5889
-+1.1109 1 2 41.598
-+1.1125 1 2 41.6113
-+1.1141 1 2 41.4775
-+1.1157 1 2 41.5789
-+1.1173 1 2 41.6459
-+1.1189 1 2 41.6633
-+1.1205 1 2 41.6875
-+1.1221 1 2 41.5782
-+1.1237 1 2 41.6103
-+1.1253 1 2 41.6056
-+1.1269 1 2 41.6751
-+1.1285 1 2 41.6729
-+1.1301 1 2 41.6808
-+1.1317 1 2 41.699
-+1.1333 1 2 41.8483
-+1.1349 1 2 41.8167
-+1.1365 1 2 41.7283
-+1.1381 1 2 41.7272
-+1.1397 1 2 41.6766
-+1.1413 1 2 41.6507
-+1.1429 1 2 41.717
-+1.1445 1 2 41.6307
-+1.1461 1 2 41.6191
-+1.1477 1 2 41.5865
-+1.1493 1 2 41.7532
-+1.1509 1 2 41.8116
-+1.1525 1 2 41.8531
-+1.1541 1 2 41.9009
-+1.1557 1 2 41.8892
-+1.1573 1 2 42.0201
-+1.1589 1 2 42.0454
-+1.1605 1 2 42.0837
-+1.1621 1 2 42.0024
-+1.1637 1 2 41.9005
-+1.1653 1 2 41.8476
-+1.1669 1 2 41.882
-+1.1685 1 2 41.8711
-+1.1701 1 2 41.9703
-+1.1717 1 2 42.0286
-+1.1733 1 2 42.1223
-+1.1749 1 2 41.9278
-+1.1765 1 2 41.9445
-+1.1781 1 2 41.9177
-+1.1797 1 2 41.9206
-+1.1813 1 2 41.9225
-+1.1829 1 2 41.8513
-+1.1845 1 2 41.8432
-+1.1861 1 2 41.9221
-+1.1877 1 2 41.8682
-+1.1893 1 2 41.8465
-+1.1909 1 2 41.8772
-+1.1925 1 2 41.7931
-+1.1941 1 2 41.8134
-+1.1957 1 2 41.6662
-+1.1973 1 2 41.6263
-+1.1989 1 2 41.6181
-+1.2005 1 2 41.5665
-+1.2021 1 2 41.5201
-+1.2037 1 2 41.4079
-+1.2053 1 2 41.2757
-+1.2069 1 2 41.2923
-+1.2085 1 2 41.4353
-+1.2101 1 2 41.3735
-+1.2117 1 2 41.3231
-+1.2133 1 2 41.1863
-+1.2149 1 2 41.3164
-+1.2165 1 2 41.3698
-+1.2181 1 2 41.4725
-+1.2197 1 2 41.4915
-+1.2213 1 2 41.4902
-+1.2229 1 2 41.569
-+1.2245 1 2 41.6725
-+1.2261 1 2 41.6901
-+1.2277 1 2 41.728
-+1.2293 1 2 41.6557
-+1.2309 1 2 41.5649
-+1.2325 1 2 41.5775
-+1.2341 1 2 41.5577
-+1.2357 1 2 41.5349
-+1.2373 1 2 41.5751
-+1.2389 1 2 41.5743
-+1.2405 1 2 41.6646
-+1.2421 1 2 41.5153
-+1.2437 1 2 41.6942
-+1.2453 1 2 41.6786
-+1.2469 1 2 41.5511
-+1.2485 1 2 41.6351
-+1.2501 1 2 41.6544
-+1.2517 1 2 41.6853
-+1.2533 1 2 41.737
-+1.2549 1 2 41.6553
-+1.2565 1 2 41.5772
-+1.2581 1 2 41.6952
-+1.2597 1 2 41.6345
-+1.2613 1 2 41.6344
-+1.2629 1 2 41.579
-+1.2645 1 2 41.5292
-+1.2661 1 2 41.5171
-+1.2677 1 2 41.5352
-+1.2693 1 2 41.5444
-+1.2709 1 2 41.5916
-+1.2725 1 2 41.6587
-+1.2741 1 2 41.7278
-+1.2757 1 2 41.8217
-+1.2773 1 2 41.9338
-+1.2789 1 2 41.9347
-+1.2805 1 2 41.8297
-+1.2821 1 2 41.8402
-+1.2837 1 2 41.7786
-+1.2853 1 2 41.6638
-+1.2869 1 2 41.7311
-+1.2885 1 2 41.7372
-+1.2901 1 2 41.7436
-+1.2917 1 2 41.7325
-+1.2933 1 2 41.7037
-+1.2949 1 2 41.7053
-+1.2965 1 2 41.547
-+1.2981 1 2 41.49
-+1.2997 1 2 41.4231
-+1.3013 1 2 41.4753
-+1.3029 1 2 41.493
-+1.3045 1 2 41.359
-+1.3061 1 2 41.4654
-+1.3077 1 2 41.4121
-+1.3093 1 2 41.4992
-+1.3109 1 2 41.522
-+1.3125 1 2 41.419
-+1.3141 1 2 41.3685
-+1.3157 1 2 41.3869
-+1.3173 1 2 41.2749
-+1.3189 1 2 41.2753
-+1.3205 1 2 41.3046
-+1.3221 1 2 41.3005
-+1.3237 1 2 41.2508
-+1.3253 1 2 41.36
-+1.3269 1 2 41.4
-+1.3285 1 2 41.329
-+1.3301 1 2 41.3695
-+1.3317 1 2 41.4276
-+1.3333 1 2 41.438
-+1.3349 1 2 41.4051
-+1.3365 1 2 41.6023
-+1.3381 1 2 41.5546
-+1.3397 1 2 41.5997
-+1.3413 1 2 41.6532
-+1.3429 1 2 41.6118
-+1.3445 1 2 41.5962
-+1.3461 1 2 41.6026
-+1.3477 1 2 41.7975
-+1.3493 1 2 41.8493
-+1.3509 1 2 41.8944
-+1.3525 1 2 41.8745
-+1.3541 1 2 41.8145
-+1.3557 1 2 42.0483
-+1.3573 1 2 42.0745
-+1.3589 1 2 42.2654
-+1.3605 1 2 42.2307
-+1.3621 1 2 42.2808
-+1.3637 1 2 42.3156
-+1.3653 1 2 42.3633
-+1.3669 1 2 42.4424
-+1.3685 1 2 42.4544
-+1.3701 1 2 42.436
-+1.3717 1 2 42.4394
-+1.3733 1 2 42.5086
-+1.3749 1 2 42.498
-+1.3765 1 2 42.595
-+1.3781 1 2 42.5839
-+1.3797 1 2 42.5369
-+1.3813 1 2 42.6522
-+1.3829 1 2 42.6124
-+1.3845 1 2 42.6975
-+1.3861 1 2 42.6967
-+1.3877 1 2 42.7666
-+1.3893 1 2 42.8887
-+1.3909 1 2 42.8461
-+1.3925 1 2 42.7416
-+1.3941 1 2 42.6182
-+1.3957 1 2 42.7154
-+1.3973 1 2 42.6552
-+1.3989 1 2 42.7308
-+1.4005 1 2 42.8425
-+1.4021 1 2 42.7479
-+1.4037 1 2 42.7152
-+1.4053 1 2 42.6759
-+1.4069 1 2 42.7462
-+1.4085 1 2 42.7324
-+1.4101 1 2 42.694
-+1.4117 1 2 42.686
-+1.4133 1 2 42.6199
-+1.4149 1 2 42.5437
-+1.4165 1 2 42.583
-+1.4181 1 2 42.5185
-+1.4197 1 2 42.5864
-+1.4213 1 2 42.6732
-+1.4229 1 2 42.6168
-+1.4245 1 2 42.6343
-+1.4261 1 2 42.5506
-+1.4277 1 2 42.4855
-+1.4293 1 2 42.4188
-+1.4309 1 2 42.4273
-+1.4325 1 2 42.4202
-+1.4341 1 2 42.3317
-+1.4357 1 2 42.523
-+1.4373 1 2 42.3736
-+1.4389 1 2 42.3316
-+1.4405 1 2 42.2989
-+1.4421 1 2 42.3361
-+1.4437 1 2 42.3296
-+1.4453 1 2 42.3152
-+1.4469 1 2 42.2661
-+1.4485 1 2 42.1399
-+1.4501 1 2 42.2543
-+1.4517 1 2 42.2237
-+1.4533 1 2 42.2518
-+1.4549 1 2 42.1071
-+1.4565 1 2 42.0942
-+1.4581 1 2 42.0449
-+1.4597 1 2 41.9739
-+1.4613 1 2 41.9725
-+1.4629 1 2 41.8841
-+1.4645 1 2 41.8742
-+1.4661 1 2 41.7581
-+1.4677 1 2 41.6954
-+1.4693 1 2 41.7074
-+1.4709 1 2 41.7357
-+1.4725 1 2 41.8706
-+1.4741 1 2 41.9232
-+1.4757 1 2 42.0388
-+1.4773 1 2 42.129
-+1.4789 1 2 42.1723
-+1.4805 1 2 42.1095
-+1.4821 1 2 42.0478
-+1.4837 1 2 42.1855
-+1.4853 1 2 42.0826
-+1.4869 1 2 42.1318
-+1.4885 1 2 42.1654
-+1.4901 1 2 42.0096
-+1.4917 1 2 41.896
-+1.4933 1 2 41.9864
-+1.4949 1 2 41.9943
-+1.4965 1 2 41.9386
-+1.4981 1 2 41.8514
-+1.4997 1 2 41.9142
-+1.5013 1 2 41.9292
-+1.5029 1 2 41.9711
-+1.5045 1 2 42.0471
-+1.5061 1 2 42.052
-+1.5077 1 2 41.9973
-+1.5093 1 2 41.9903
-+1.5109 1 2 42.0281
-+1.5125 1 2 42.0187
-+1.5141 1 2 42.0355
-+1.5157 1 2 42.1272
-+1.5173 1 2 42.1683
-+1.5189 1 2 42.1815
-+1.5205 1 2 42.2647
-+1.5221 1 2 42.355
-+1.5237 1 2 42.4967
-+1.5253 1 2 42.5039
-+1.5269 1 2 42.5876
-+1.5285 1 2 42.4722
-+1.5301 1 2 42.5723
-+1.5317 1 2 42.4851
-+1.5333 1 2 42.4807
-+1.5349 1 2 42.5418
-+1.5365 1 2 42.4434
-+1.5381 1 2 42.3226
-+1.5397 1 2 42.3814
-+1.5413 1 2 42.4023
-+1.5429 1 2 42.3954
-+1.5445 1 2 42.2666
-+1.5461 1 2 42.2909
-+1.5477 1 2 42.1269
-+1.5493 1 2 42.0858
-+1.5509 1 2 41.8922
-+1.5525 1 2 41.7649
-+1.5541 1 2 41.7367
-+1.5557 1 2 41.8239
-+1.5573 1 2 41.814
-+1.5589 1 2 41.6889
-+1.5605 1 2 41.7078
-+1.5621 1 2 41.5917
-+1.5637 1 2 41.5679
-+1.5653 1 2 41.6562
-+1.5669 1 2 41.5761
-+1.5685 1 2 41.6136
-+1.5701 1 2 41.7111
-+1.5717 1 2 41.7586
-+1.5733 1 2 41.8353
-+1.5749 1 2 41.8436
-+1.5765 1 2 41.8064
-+1.5781 1 2 41.8919
-+1.5797 1 2 41.9053
-+1.5813 1 2 41.8403
-+1.5829 1 2 41.947
-+1.5845 1 2 42.0072
-+1.5861 1 2 42.0497
-+1.5877 1 2 42.0123
-+1.5893 1 2 41.8927
-+1.5909 1 2 41.9164
-+1.5925 1 2 41.9712
-+1.5941 1 2 41.9965
-+1.5957 1 2 42.0839
-+1.5973 1 2 42.1785
-+1.5989 1 2 42.1342
-+1.6005 1 2 42.0421
-+1.6021 1 2 41.8803
-+1.6037 1 2 41.8013
-+1.6053 1 2 41.7301
-+1.6069 1 2 41.6201
-+1.6085 1 2 41.6897
-+1.6101 1 2 41.5669
-+1.6117 1 2 41.5465
-+1.6133 1 2 41.5609
-+1.6149 1 2 41.5886
-+1.6165 1 2 41.5853
-+1.6181 1 2 41.5611
-+1.6197 1 2 41.5302
-+1.6213 1 2 41.5951
-+1.6229 1 2 41.6429
-+1.6245 1 2 41.5532
-+1.6261 1 2 41.5751
-+1.6277 1 2 41.5025
-+1.6293 1 2 41.6135
-+1.6309 1 2 41.6234
-+1.6325 1 2 41.658
-+1.6341 1 2 41.717
-+1.6357 1 2 41.6442
-+1.6373 1 2 41.6135
-+1.6389 1 2 41.6518
-+1.6405 1 2 41.6339
-+1.6421 1 2 41.6311
-+1.6437 1 2 41.6324
-+1.6453 1 2 41.6576
-+1.6469 1 2 41.7568
-+1.6485 1 2 41.7132
-+1.6501 1 2 41.7532
-+1.6517 1 2 41.7756
-+1.6533 1 2 41.8324
-+1.6549 1 2 41.7475
-+1.6565 1 2 41.8021
-+1.6581 1 2 41.6797
-+1.6597 1 2 41.6382
-+1.6613 1 2 41.6877
-+1.6629 1 2 41.703
-+1.6645 1 2 41.7023
-+1.6661 1 2 41.5459
-+1.6677 1 2 41.5545
-+1.6693 1 2 41.5178
-+1.6709 1 2 41.5153
-+1.6725 1 2 41.4149
-+1.6741 1 2 41.4106
-+1.6757 1 2 41.4413
-+1.6773 1 2 41.4941
-+1.6789 1 2 41.4209
-+1.6805 1 2 41.4401
-+1.6821 1 2 41.4011
-+1.6837 1 2 41.4255
-+1.6853 1 2 41.4336
-+1.6869 1 2 41.4183
-+1.6885 1 2 41.4002
-+1.6901 1 2 41.4766
-+1.6917 1 2 41.4976
-+1.6933 1 2 41.4467
-+1.6949 1 2 41.4046
-+1.6965 1 2 41.355
-+1.6981 1 2 41.2774
-+1.6997 1 2 41.2372
-+1.7013 1 2 41.2202
-+1.7029 1 2 41.0531
-+1.7045 1 2 41.0398
-+1.7061 1 2 41.0753
-+1.7077 1 2 40.9744
-+1.7093 1 2 40.8879
-+1.7109 1 2 40.8641
-+1.7125 1 2 40.7433
-+1.7141 1 2 40.8022
-+1.7157 1 2 40.7826
-+1.7173 1 2 40.8423
-+1.7189 1 2 40.8038
-+1.7205 1 2 40.7689
-+1.7221 1 2 40.7473
-+1.7237 1 2 40.8005
-+1.7253 1 2 40.9045
-+1.7269 1 2 40.9407
-+1.7285 1 2 41.1168
-+1.7301 1 2 41.1363
-+1.7317 1 2 41.1181
-+1.7333 1 2 41.1728
-+1.7349 1 2 41.1945
-+1.7365 1 2 41.105
-+1.7381 1 2 41.0884
-+1.7397 1 2 41.1148
-+1.7413 1 2 41.1246
-+1.7429 1 2 40.9869
-+1.7445 1 2 40.9256
-+1.7461 1 2 40.96
-+1.7477 1 2 40.9092
-+1.7493 1 2 40.888
-+1.7509 1 2 40.8729
-+1.7525 1 2 40.9096
-+1.7541 1 2 40.9126
-+1.7557 1 2 40.9336
-+1.7573 1 2 40.9131
-+1.7589 1 2 40.9326
-+1.7605 1 2 40.9748
-+1.7621 1 2 41.052
-+1.7637 1 2 41.0121
-+1.7653 1 2 40.9946
-+1.7669 1 2 41.0184
-+1.7685 1 2 41.0637
-+1.7701 1 2 40.9225
-+1.7717 1 2 40.7561
-+1.7733 1 2 40.6681
-+1.7749 1 2 40.6653
-+1.7765 1 2 40.7758
-+1.7781 1 2 40.7903
-+1.7797 1 2 40.6362
-+1.7813 1 2 40.5872
-+1.7829 1 2 40.5208
-+1.7845 1 2 40.4751
-+1.7861 1 2 40.4831
-+1.7877 1 2 40.42
-+1.7893 1 2 40.4044
-+1.7909 1 2 40.3893
-+1.7925 1 2 40.4338
-+1.7941 1 2 40.4672
-+1.7957 1 2 40.3695
-+1.7973 1 2 40.334
-+1.7989 1 2 40.2848
-+1.8005 1 2 40.2814
-+1.8021 1 2 40.2124
-+1.8037 1 2 40.1883
-+1.8053 1 2 40.2111
-+1.8069 1 2 40.1793
-+1.8085 1 2 40.269
-+1.8101 1 2 40.2204
-+1.8117 1 2 40.2015
-+1.8133 1 2 40.1746
-+1.8149 1 2 40.2054
-+1.8165 1 2 40.282
-+1.8181 1 2 40.2725
-+1.8197 1 2 40.3625
-+1.8213 1 2 40.4124
-+1.8229 1 2 40.3562
-+1.8245 1 2 40.3786
-+1.8261 1 2 40.4239
-+1.8277 1 2 40.4812
-+1.8293 1 2 40.5068
-+1.8309 1 2 40.3518
-+1.8325 1 2 40.3508
-+1.8341 1 2 40.3223
-+1.8357 1 2 40.3062
-+1.8373 1 2 40.2812
-+1.8389 1 2 40.2724
-+1.8405 1 2 40.1588
-+1.8421 1 2 40.2318
-+1.8437 1 2 40.3202
-+1.8453 1 2 40.2966
-+1.8469 1 2 40.269
-+1.8485 1 2 40.3532
-+1.8501 1 2 40.2868
-+1.8517 1 2 40.4389
-+1.8533 1 2 40.4536
-+1.8549 1 2 40.3809
-+1.8565 1 2 40.3981
-+1.8581 1 2 40.3778
-+1.8597 1 2 40.4311
-+1.8613 1 2 40.2538
-+1.8629 1 2 40.2839
-+1.8645 1 2 40.3466
-+1.8661 1 2 40.4295
-+1.8677 1 2 40.3654
-+1.8693 1 2 40.3868
-+1.8709 1 2 40.4699
-+1.8725 1 2 40.3607
-+1.8741 1 2 40.456
-+1.8757 1 2 40.375
-+1.8773 1 2 40.3048
-+1.8789 1 2 40.2928
-+1.8805 1 2 40.2442
-+1.8821 1 2 40.1274
-+1.8837 1 2 40.1501
-+1.8853 1 2 40.1657
-+1.8869 1 2 40.1927
-+1.8885 1 2 40.1936
-+1.8901 1 2 40.346
-+1.8917 1 2 40.2777
-+1.8933 1 2 40.3668
-+1.8949 1 2 40.3655
-+1.8965 1 2 40.2565
-+1.8981 1 2 40.2496
-+1.8997 1 2 40.1788
-+1.9013 1 2 40.1816
-+1.9029 1 2 40.0968
-+1.9045 1 2 39.9444
-+1.9061 1 2 39.7876
-+1.9077 1 2 39.7565
-+1.9093 1 2 39.7803
-+1.9109 1 2 39.6649
-+1.9125 1 2 39.5759
-+1.9141 1 2 39.7236
-+1.9157 1 2 39.8028
-+1.9173 1 2 39.8179
-+1.9189 1 2 39.7948
-+1.9205 1 2 39.9289
-+1.9221 1 2 40.0175
-+1.9237 1 2 40.0372
-+1.9253 1 2 40.1162
-+1.9269 1 2 40.185
-+1.9285 1 2 40.031
-+1.9301 1 2 40.0494
-+1.9317 1 2 40.0031
-+1.9333 1 2 40.0195
-+1.9349 1 2 40.0502
-+1.9365 1 2 40.1279
-+1.9381 1 2 40.0557
-+1.9397 1 2 40.0749
-+1.9413 1 2 40.0748
-+1.9429 1 2 40.1816
-+1.9445 1 2 40.3043
-+1.9461 1 2 40.3245
-+1.9477 1 2 40.1958
-+1.9493 1 2 40.2106
-+1.9509 1 2 40.1694
-+1.9525 1 2 40.2034
-+1.9541 1 2 40.1842
-+1.9557 1 2 40.1966
-+1.9573 1 2 40.1088
-+1.9589 1 2 40.1069
-+1.9605 1 2 40.0609
-+1.9621 1 2 40.0205
-+1.9637 1 2 40.0346
-+1.9653 1 2 39.9948
-+1.9669 1 2 40.022
-+1.9685 1 2 40.0807
-+1.9701 1 2 39.9948
-+1.9717 1 2 40.0264
-+1.9733 1 2 40.0594
-+1.9749 1 2 39.9884
-+1.9765 1 2 39.9803
-+1.9781 1 2 39.9221
-+1.9797 1 2 40.1377
-+1.9813 1 2 40.1721
-+1.9829 1 2 40.0879
-+1.9845 1 2 40.1421
-+1.9861 1 2 40.251
-+1.9877 1 2 40.3465
-+1.9893 1 2 40.4605
-+1.9909 1 2 40.4596
-+1.9925 1 2 40.4596
-+1.9941 1 2 40.4971
-+1.9957 1 2 40.5251
-+1.9973 1 2 40.4736
-+1.9989 1 2 40.5182
-+2.0005 1 2 40.4576
-+2.0021 1 2 40.6302
-+2.0037 1 2 40.6741
-+2.0053 1 2 40.6342
-+2.0069 1 2 40.5737
-+2.0085 1 2 40.6502
-+2.0101 1 2 40.5491
-+2.0117 1 2 40.4903
-+2.0133 1 2 40.5685
-+2.0149 1 2 40.5657
-+2.0165 1 2 40.5267
-+2.0181 1 2 40.5928
-+2.0197 1 2 40.5079
-+2.0213 1 2 40.4579
-+2.0229 1 2 40.4759
-+2.0245 1 2 40.407
-+2.0261 1 2 40.4047
-+2.0277 1 2 40.4618
-+2.0293 1 2 40.4702
-+2.0309 1 2 40.4582
-+2.0325 1 2 40.4077
-+2.0341 1 2 40.4292
-+2.0357 1 2 40.4162
-+2.0373 1 2 40.5515
-+2.0389 1 2 40.4685
-+2.0405 1 2 40.3362
-+2.0421 1 2 40.3619
-+2.0437 1 2 40.3577
-+2.0453 1 2 40.3399
-+2.0469 1 2 40.2822
-+2.0485 1 2 40.2898
-+2.0501 1 2 40.2294
-+2.0517 1 2 40.1804
-+2.0533 1 2 40.2049
-+2.0549 1 2 40.2764
-+2.0565 1 2 40.3916
-+2.0581 1 2 40.4151
-+2.0597 1 2 40.3643
-+2.0613 1 2 40.3021
-+2.0629 1 2 40.2106
-+2.0645 1 2 40.2475
-+2.0661 1 2 40.2523
-+2.0677 1 2 40.2757
-+2.0693 1 2 40.2347
-+2.0709 1 2 40.1575
-+2.0725 1 2 40.0373
-+2.0741 1 2 40.0175
-+2.0757 1 2 40.159
-+2.0773 1 2 40.2157
-+2.0789 1 2 40.187
-+2.0805 1 2 40.1264
-+2.0821 1 2 40.0813
-+2.0837 1 2 40.0413
-+2.0853 1 2 39.9165
-+2.0869 1 2 39.9533
-+2.0885 1 2 39.8927
-+2.0901 1 2 39.8747
-+2.0917 1 2 39.9316
-+2.0933 1 2 39.9391
-+2.0949 1 2 39.8487
-+2.0965 1 2 39.8493
-+2.0981 1 2 39.897
-+2.0997 1 2 39.7625
-+2.1013 1 2 39.8421
-+2.1029 1 2 39.8473
-+2.1045 1 2 39.913
-+2.1061 1 2 39.9754
-+2.1077 1 2 40.0498
-+2.1093 1 2 39.9977
-+2.1109 1 2 39.887
-+2.1125 1 2 39.8512
-+2.1141 1 2 39.907
-+2.1157 1 2 39.8653
-+2.1173 1 2 39.9221
-+2.1189 1 2 40.0073
-+2.1205 1 2 39.9301
-+2.1221 1 2 39.8411
-+2.1237 1 2 39.772
-+2.1253 1 2 39.9087
-+2.1269 1 2 39.8412
-+2.1285 1 2 39.8735
-+2.1301 1 2 39.82
-+2.1317 1 2 39.9514
-+2.1333 1 2 39.9962
-+2.1349 1 2 39.8632
-+2.1365 1 2 39.7886
-+2.1381 1 2 39.7317
-+2.1397 1 2 39.7121
-+2.1413 1 2 39.7933
-+2.1429 1 2 39.6552
-+2.1445 1 2 39.6801
-+2.1461 1 2 39.6317
-+2.1477 1 2 39.651
-+2.1493 1 2 39.665
-+2.1509 1 2 39.6201
-+2.1525 1 2 39.6743
-+2.1541 1 2 39.5916
-+2.1557 1 2 39.5818
-+2.1573 1 2 39.5115
-+2.1589 1 2 39.6614
-+2.1605 1 2 39.6917
-+2.1621 1 2 39.6693
-+2.1637 1 2 39.6903
-+2.1653 1 2 39.7705
-+2.1669 1 2 39.7723
-+2.1685 1 2 39.6194
-+2.1701 1 2 39.6566
-+2.1717 1 2 39.7367
-+2.1733 1 2 39.8247
-+2.1749 1 2 39.7836
-+2.1765 1 2 39.8122
-+2.1781 1 2 39.8228
-+2.1797 1 2 39.89
-+2.1813 1 2 39.9475
-+2.1829 1 2 39.8709
-+2.1845 1 2 39.9637
-+2.1861 1 2 39.9508
-+2.1877 1 2 39.9547
-+2.1893 1 2 39.9256
-+2.1909 1 2 39.7496
-+2.1925 1 2 39.7117
-+2.1941 1 2 39.7534
-+2.1957 1 2 39.7239
-+2.1973 1 2 39.6692
-+2.1989 1 2 39.6537
-+2.2005 1 2 39.6685
-+2.2021 1 2 39.519
-+2.2037 1 2 39.5
-+2.2053 1 2 39.5073
-+2.2069 1 2 39.5284
-+2.2085 1 2 39.5222
-+2.2101 1 2 39.6878
-+2.2117 1 2 39.6432
-+2.2133 1 2 39.6703
-+2.2149 1 2 39.7117
-+2.2165 1 2 39.6568
-+2.2181 1 2 39.6641
-+2.2197 1 2 39.7832
-+2.2213 1 2 39.8304
-+2.2229 1 2 39.8245
-+2.2245 1 2 39.8003
-+2.2261 1 2 39.7801
-+2.2277 1 2 39.7915
-+2.2293 1 2 39.7327
-+2.2309 1 2 39.68
-+2.2325 1 2 39.7204
-+2.2341 1 2 39.7597
-+2.2357 1 2 39.8572
-+2.2373 1 2 39.818
-+2.2389 1 2 39.8431
-+2.2405 1 2 39.8792
-+2.2421 1 2 39.9151
-+2.2437 1 2 39.8889
-+2.2453 1 2 39.9369
-+2.2469 1 2 39.9935
-+2.2485 1 2 40.1022
-+2.2501 1 2 40.1375
-+2.2517 1 2 40.0679
-+2.2533 1 2 40.1025
-+2.2549 1 2 40.0913
-+2.2565 1 2 39.9501
-+2.2581 1 2 39.9844
-+2.2597 1 2 39.9745
-+2.2613 1 2 39.9799
-+2.2629 1 2 40.0362
-+2.2645 1 2 39.9537
-+2.2661 1 2 40.0772
-+2.2677 1 2 40.1269
-+2.2693 1 2 40.0828
-+2.2709 1 2 40.124
-+2.2725 1 2 40.1593
-+2.2741 1 2 40.0694
-+2.2757 1 2 40.121
-+2.2773 1 2 40.1985
-+2.2789 1 2 40.1817
-+2.2805 1 2 40.2425
-+2.2821 1 2 40.2672
-+2.2837 1 2 40.3445
-+2.2853 1 2 40.2706
-+2.2869 1 2 40.3864
-+2.2885 1 2 40.3916
-+2.2901 1 2 40.2386
-+2.2917 1 2 40.2982
-+2.2933 1 2 40.2699
-+2.2949 1 2 40.1852
-+2.2965 1 2 40.1364
-+2.2981 1 2 40.131
-+2.2997 1 2 40.1572
-+2.3013 1 2 40.1392
-+2.3029 1 2 40.1686
-+2.3045 1 2 40.2317
-+2.3061 1 2 40.3789
-+2.3077 1 2 40.408
-+2.3093 1 2 40.3152
-+2.3109 1 2 40.3325
-+2.3125 1 2 40.4596
-+2.3141 1 2 40.5197
-+2.3157 1 2 40.4972
-+2.3173 1 2 40.4751
-+2.3189 1 2 40.4304
-+2.3205 1 2 40.3387
-+2.3221 1 2 40.3176
-+2.3237 1 2 40.4217
-+2.3253 1 2 40.341
-+2.3269 1 2 40.3145
-+2.3285 1 2 40.3077
-+2.3301 1 2 40.3201
-+2.3317 1 2 40.1481
-+2.3333 1 2 40.1226
-+2.3349 1 2 40.2314
-+2.3365 1 2 40.0278
-+2.3381 1 2 39.9552
-+2.3397 1 2 39.878
-+2.3413 1 2 39.8912
-+2.3429 1 2 39.9004
-+2.3445 1 2 39.9044
-+2.3461 1 2 39.9267
-+2.3477 1 2 39.9145
-+2.3493 1 2 39.7734
-+2.3509 1 2 39.738
-+2.3525 1 2 39.6571
-+2.3541 1 2 39.7224
-+2.3557 1 2 39.839
-+2.3573 1 2 39.8616
-+2.3589 1 2 40.0297
-+2.3605 1 2 40.0907
-+2.3621 1 2 39.903
-+2.3637 1 2 39.9737
-+2.3653 1 2 40.0767
-+2.3669 1 2 39.9259
-+2.3685 1 2 39.9577
-+2.3701 1 2 39.869
-+2.3717 1 2 39.9809
-+2.3733 1 2 39.9376
-+2.3749 1 2 39.9286
-+2.3765 1 2 39.9544
-+2.3781 1 2 39.8775
-+2.3797 1 2 39.883
-+2.3813 1 2 39.8942
-+2.3829 1 2 39.897
-+2.3845 1 2 39.8474
-+2.3861 1 2 39.9072
-+2.3877 1 2 40.0131
-+2.3893 1 2 39.9448
-+2.3909 1 2 39.8631
-+2.3925 1 2 39.7965
-+2.3941 1 2 39.7542
-+2.3957 1 2 39.6913
-+2.3973 1 2 39.7743
-+2.3989 1 2 39.773
-+2.4005 1 2 39.8722
-+2.4021 1 2 39.9005
-+2.4037 1 2 39.8843
-+2.4053 1 2 39.8242
-+2.4069 1 2 39.8564
-+2.4085 1 2 39.9358
-+2.4101 1 2 40.0541
-+2.4117 1 2 39.9726
-+2.4133 1 2 39.9263
-+2.4149 1 2 39.986
-+2.4165 1 2 39.8929
-+2.4181 1 2 39.9642
-+2.4197 1 2 40.022
-+2.4213 1 2 40.0125
-+2.4229 1 2 40.0822
-+2.4245 1 2 40.015
-+2.4261 1 2 39.9429
-+2.4277 1 2 39.8302
-+2.4293 1 2 39.8809
-+2.4309 1 2 39.9241
-+2.4325 1 2 39.9563
-+2.4341 1 2 39.8674
-+2.4357 1 2 39.8192
-+2.4373 1 2 39.8877
-+2.4389 1 2 39.9179
-+2.4405 1 2 39.9081
-+2.4421 1 2 39.9788
-+2.4437 1 2 39.8996
-+2.4453 1 2 39.8969
-+2.4469 1 2 39.8911
-+2.4485 1 2 39.902
-+2.4501 1 2 39.9281
-+2.4517 1 2 40.0336
-+2.4533 1 2 40.0565
-+2.4549 1 2 40.0076
-+2.4565 1 2 39.9668
-+2.4581 1 2 39.833
-+2.4597 1 2 39.8537
-+2.4613 1 2 39.8036
-+2.4629 1 2 39.7898
-+2.4645 1 2 39.672
-+2.4661 1 2 39.8371
-+2.4677 1 2 39.8353
-+2.4693 1 2 39.7202
-+2.4709 1 2 39.8645
-+2.4725 1 2 39.8275
-+2.4741 1 2 39.821
-+2.4757 1 2 39.8253
-+2.4773 1 2 39.8782
-+2.4789 1 2 39.7941
-+2.4805 1 2 39.7712
-+2.4821 1 2 39.7933
-+2.4837 1 2 39.7291
-+2.4853 1 2 39.7502
-+2.4869 1 2 39.6319
-+2.4885 1 2 39.6435
-+2.4901 1 2 39.5839
-+2.4917 1 2 39.589
-+2.4933 1 2 39.5791
-+2.4949 1 2 39.5403
-+2.4965 1 2 39.6588
-+2.4981 1 2 39.7147
-+2.4997 1 2 39.6233
-+2.5013 1 2 39.4991
-+2.5029 1 2 39.5545
-+2.5045 1 2 39.6058
-+2.5061 1 2 39.659
-+2.5077 1 2 39.6832
-+2.5093 1 2 39.7204
-+2.5109 1 2 39.6853
-+2.5125 1 2 39.6543
-+2.5141 1 2 39.6133
-+2.5157 1 2 39.6028
-+2.5173 1 2 39.5498
-+2.5189 1 2 39.5876
-+2.5205 1 2 39.679
-+2.5221 1 2 39.7701
-+2.5237 1 2 39.8383
-+2.5253 1 2 39.6519
-+2.5269 1 2 39.7378
-+2.5285 1 2 39.6553
-+2.5301 1 2 39.6082
-+2.5317 1 2 39.6981
-+2.5333 1 2 39.7148
-+2.5349 1 2 39.7607
-+2.5365 1 2 39.8424
-+2.5381 1 2 39.8796
-+2.5397 1 2 39.8755
-+2.5413 1 2 40.0337
-+2.5429 1 2 39.9541
-+2.5445 1 2 39.9125
-+2.5461 1 2 39.8558
-+2.5477 1 2 39.8577
-+2.5493 1 2 39.935
-+2.5509 1 2 39.9381
-+2.5525 1 2 40.0426
-+2.5541 1 2 39.9957
-+2.5557 1 2 39.9919
-+2.5573 1 2 40.0099
-+2.5589 1 2 40.0534
-+2.5605 1 2 40.1268
-+2.5621 1 2 40.1653
-+2.5637 1 2 40.2292
-+2.5653 1 2 40.2918
-+2.5669 1 2 40.3704
-+2.5685 1 2 40.2998
-+2.5701 1 2 40.2687
-+2.5717 1 2 40.305
-+2.5733 1 2 40.2679
-+2.5749 1 2 40.2835
-+2.5765 1 2 40.2952
-+2.5781 1 2 40.2139
-+2.5797 1 2 40.2994
-+2.5813 1 2 40.3165
-+2.5829 1 2 40.2065
-+2.5845 1 2 40.203
-+2.5861 1 2 40.2157
-+2.5877 1 2 40.0744
-+2.5893 1 2 40.1838
-+2.5909 1 2 40.1233
-+2.5925 1 2 40.1495
-+2.5941 1 2 40.2024
-+2.5957 1 2 40.0471
-+2.5973 1 2 40.07
-+2.5989 1 2 40.214
-+2.6005 1 2 40.2429
-+2.6021 1 2 40.2879
-+2.6037 1 2 40.1909
-+2.6053 1 2 40.257
-+2.6069 1 2 40.3256
-+2.6085 1 2 40.3492
-+2.6101 1 2 40.3417
-+2.6117 1 2 40.3277
-+2.6133 1 2 40.3609
-+2.6149 1 2 40.3466
-+2.6165 1 2 40.3165
-+2.6181 1 2 40.2959
-+2.6197 1 2 40.333
-+2.6213 1 2 40.2715
-+2.6229 1 2 40.2513
-+2.6245 1 2 40.2436
-+2.6261 1 2 40.1851
-+2.6277 1 2 40.0019
-+2.6293 1 2 40.0666
-+2.6309 1 2 40.0045
-+2.6325 1 2 39.9561
-+2.6341 1 2 40.1058
-+2.6357 1 2 40.0797
-+2.6373 1 2 40.1953
-+2.6389 1 2 40.1487
-+2.6405 1 2 40.0267
-+2.6421 1 2 39.9817
-+2.6437 1 2 40.0563
-+2.6453 1 2 40.0727
-+2.6469 1 2 39.9775
-+2.6485 1 2 39.9023
-+2.6501 1 2 39.881
-+2.6517 1 2 39.9107
-+2.6533 1 2 39.9162
-+2.6549 1 2 39.8645
-+2.6565 1 2 39.8953
-+2.6581 1 2 39.9285
-+2.6597 1 2 40.1295
-+2.6613 1 2 40.081
-+2.6629 1 2 40.0422
-+2.6645 1 2 39.8502
-+2.6661 1 2 39.7768
-+2.6677 1 2 39.6417
-+2.6693 1 2 39.5808
-+2.6709 1 2 39.5806
-+2.6725 1 2 39.5011
-+2.6741 1 2 39.4579
-+2.6757 1 2 39.5089
-+2.6773 1 2 39.5627
-+2.6789 1 2 39.551
-+2.6805 1 2 39.6033
-+2.6821 1 2 39.5499
-+2.6837 1 2 39.6136
-+2.6853 1 2 39.5563
-+2.6869 1 2 39.6018
-+2.6885 1 2 39.5467
-+2.6901 1 2 39.7006
-+2.6917 1 2 39.7451
-+2.6933 1 2 39.7665
-+2.6949 1 2 39.9085
-+2.6965 1 2 39.8672
-+2.6981 1 2 39.8734
-+2.6997 1 2 39.9428
-+2.7013 1 2 39.8286
-+2.7029 1 2 39.7768
-+2.7045 1 2 39.598
-+2.7061 1 2 39.6567
-+2.7077 1 2 39.638
-+2.7093 1 2 39.5595
-+2.7109 1 2 39.448
-+2.7125 1 2 39.3877
-+2.7141 1 2 39.5415
-+2.7157 1 2 39.4811
-+2.7173 1 2 39.453
-+2.7189 1 2 39.4178
-+2.7205 1 2 39.3472
-+2.7221 1 2 39.3278
-+2.7237 1 2 39.3241
-+2.7253 1 2 39.2561
-+2.7269 1 2 39.2729
-+2.7285 1 2 39.2474
-+2.7301 1 2 39.3221
-+2.7317 1 2 39.351
-+2.7333 1 2 39.3529
-+2.7349 1 2 39.4899
-+2.7365 1 2 39.481
-+2.7381 1 2 39.4757
-+2.7397 1 2 39.6923
-+2.7413 1 2 39.5859
-+2.7429 1 2 39.4525
-+2.7445 1 2 39.4944
-+2.7461 1 2 39.5779
-+2.7477 1 2 39.6395
-+2.7493 1 2 39.6756
-+2.7509 1 2 39.6193
-+2.7525 1 2 39.5477
-+2.7541 1 2 39.5193
-+2.7557 1 2 39.4222
-+2.7573 1 2 39.3538
-+2.7589 1 2 39.2892
-+2.7605 1 2 39.2513
-+2.7621 1 2 39.2201
-+2.7637 1 2 39.1205
-+2.7653 1 2 39.2081
-+2.7669 1 2 39.153
-+2.7685 1 2 39.1188
-+2.7701 1 2 39.231
-+2.7717 1 2 39.1894
-+2.7733 1 2 39.198
-+2.7749 1 2 39.103
-+2.7765 1 2 39.2087
-+2.7781 1 2 39.1923
-+2.7797 1 2 39.1696
-+2.7813 1 2 39.264
-+2.7829 1 2 39.1262
-+2.7845 1 2 39.1431
-+2.7861 1 2 39.0207
-+2.7877 1 2 38.9358
-+2.7893 1 2 38.92
-+2.7909 1 2 38.816
-+2.7925 1 2 38.7976
-+2.7941 1 2 38.7275
-+2.7957 1 2 38.6386
-+2.7973 1 2 38.632
-+2.7989 1 2 38.6724
-+2.8005 1 2 38.5344
-+2.8021 1 2 38.6606
-+2.8037 1 2 38.518
-+2.8053 1 2 38.5129
-+2.8069 1 2 38.5401
-+2.8085 1 2 38.5706
-+2.8101 1 2 38.6294
-+2.8117 1 2 38.5
-+2.8133 1 2 38.4471
-+2.8149 1 2 38.5307
-+2.8165 1 2 38.6086
-+2.8181 1 2 38.6115
-+2.8197 1 2 38.5447
-+2.8213 1 2 38.4721
-+2.8229 1 2 38.391
-+2.8245 1 2 38.2338
-+2.8261 1 2 38.106
-+2.8277 1 2 38.1039
-+2.8293 1 2 38.1907
-+2.8309 1 2 38.3068
-+2.8325 1 2 38.2401
-+2.8341 1 2 38.1128
-+2.8357 1 2 38.0568
-+2.8373 1 2 38.025
-+2.8389 1 2 38.1025
-+2.8405 1 2 38.0147
-+2.8421 1 2 37.9638
-+2.8437 1 2 37.9567
-+2.8453 1 2 37.8423
-+2.8469 1 2 37.8368
-+2.8485 1 2 37.8442
-+2.8501 1 2 37.8816
-+2.8517 1 2 37.8727
-+2.8533 1 2 37.7633
-+2.8549 1 2 37.5958
-+2.8565 1 2 37.552
-+2.8581 1 2 37.5985
-+2.8597 1 2 37.5633
-+2.8613 1 2 37.6002
-+2.8629 1 2 37.6414
-+2.8645 1 2 37.6962
-+2.8661 1 2 37.874
-+2.8677 1 2 37.9597
-+2.8693 1 2 37.9899
-+2.8709 1 2 38.0089
-+2.8725 1 2 37.8876
-+2.8741 1 2 37.8388
-+2.8757 1 2 38.0628
-+2.8773 1 2 38.0097
-+2.8789 1 2 37.9961
-+2.8805 1 2 37.9909
-+2.8821 1 2 37.9607
-+2.8837 1 2 37.9103
-+2.8853 1 2 37.8655
-+2.8869 1 2 37.8972
-+2.8885 1 2 37.8565
-+2.8901 1 2 37.8423
-+2.8917 1 2 37.8143
-+2.8933 1 2 37.842
-+2.8949 1 2 37.6354
-+2.8965 1 2 37.6791
-+2.8981 1 2 37.7141
-+2.8997 1 2 37.7277
-+2.9013 1 2 37.9245
-+2.9029 1 2 37.8766
-+2.9045 1 2 37.8527
-+2.9061 1 2 37.8518
-+2.9077 1 2 37.8077
-+2.9093 1 2 37.8363
-+2.9109 1 2 37.8728
-+2.9125 1 2 37.9118
-+2.9141 1 2 38.0771
-+2.9157 1 2 38.0464
-+2.9173 1 2 37.9733
-+2.9189 1 2 38.1187
-+2.9205 1 2 38.0064
-+2.9221 1 2 38.0733
-+2.9237 1 2 38.059
-+2.9253 1 2 38.0907
-+2.9269 1 2 38.0122
-+2.9285 1 2 38.0713
-+2.9301 1 2 38.0883
-+2.9317 1 2 38.1023
-+2.9333 1 2 37.8761
-+2.9349 1 2 37.8783
-+2.9365 1 2 37.9907
-+2.9381 1 2 38.181
-+2.9397 1 2 38.2034
-+2.9413 1 2 38.1347
-+2.9429 1 2 38.1289
-+2.9445 1 2 38.0379
-+2.9461 1 2 38.0019
-+2.9477 1 2 38.0218
-+2.9493 1 2 37.9779
-+2.9509 1 2 38.0386
-+2.9525 1 2 38.098
-+2.9541 1 2 38.09
-+2.9557 1 2 37.9975
-+2.9573 1 2 38.0467
-+2.9589 1 2 38.1155
-+2.9605 1 2 38.1812
-+2.9621 1 2 38.1195
-+2.9637 1 2 38.1559
-+2.9653 1 2 37.998
-+2.9669 1 2 38.0019
-+2.9685 1 2 37.9481
-+2.9701 1 2 37.982
-+2.9717 1 2 37.9918
-+2.9733 1 2 37.9764
-+2.9749 1 2 37.9537
-+2.9765 1 2 37.9959
-+2.9781 1 2 38.0542
-+2.9797 1 2 38.0396
-+2.9813 1 2 37.9391
-+2.9829 1 2 37.9777
-+2.9845 1 2 37.8126
-+2.9861 1 2 37.7952
-+2.9877 1 2 37.8289
-+2.9893 1 2 37.7539
-+2.9909 1 2 37.7044
-+2.9925 1 2 37.763
-+2.9941 1 2 37.7234
-+2.9957 1 2 37.7256
-+2.9973 1 2 37.5786
-+2.9989 1 2 37.696
-+3.0005 1 2 37.6751
-+3.0021 1 2 37.8495
-+3.0037 1 2 37.8832
-+3.0053 1 2 37.7065
-+3.0069 1 2 37.7104
-+3.0085 1 2 37.6809
-+3.0101 1 2 37.5651
-+3.0117 1 2 37.5911
-+3.0133 1 2 37.5258
-+3.0149 1 2 37.5974
-+3.0165 1 2 37.5729
-+3.0181 1 2 37.5509
-+3.0197 1 2 37.5824
-+3.0213 1 2 37.5039
-+3.0229 1 2 37.4696
-+3.0245 1 2 37.4483
-+3.0261 1 2 37.5708
-+3.0277 1 2 37.7097
-+3.0293 1 2 37.6704
-+3.0309 1 2 37.7679
-+3.0325 1 2 37.898
-+3.0341 1 2 37.9325
-+3.0357 1 2 37.8942
-+3.0373 1 2 37.8865
-+3.0389 1 2 37.8832
-+3.0405 1 2 37.807
-+3.0421 1 2 37.7791
-+3.0437 1 2 37.8756
-+3.0453 1 2 37.9169
-+3.0469 1 2 37.9698
-+3.0485 1 2 37.9813
-+3.0501 1 2 38.0187
-+3.0517 1 2 38.1222
-+3.0533 1 2 38.1211
-+3.0549 1 2 37.9897
-+3.0565 1 2 37.9331
-+3.0581 1 2 37.9282
-+3.0597 1 2 37.953
-+3.0613 1 2 38.0329
-+3.0629 1 2 38.0066
-+3.0645 1 2 38.1124
-+3.0661 1 2 38.1842
-+3.0677 1 2 38.0029
-+3.0693 1 2 38.0317
-+3.0709 1 2 38.0169
-+3.0725 1 2 37.9298
-+3.0741 1 2 37.8719
-+3.0757 1 2 37.9297
-+3.0773 1 2 37.8985
-+3.0789 1 2 37.9496
-+3.0805 1 2 37.8829
-+3.0821 1 2 37.8026
-+3.0837 1 2 37.7571
-+3.0853 1 2 37.6838
-+3.0869 1 2 37.6115
-+3.0885 1 2 37.6468
-+3.0901 1 2 37.6289
-+3.0917 1 2 37.6429
-+3.0933 1 2 37.6795
-+3.0949 1 2 37.6666
-+3.0965 1 2 37.81
-+3.0981 1 2 37.7605
-+3.0997 1 2 37.8554
-+3.1013 1 2 37.8996
-+3.1029 1 2 37.9611
-+3.1045 1 2 37.8632
-+3.1061 1 2 37.8351
-+3.1077 1 2 37.9244
-+3.1093 1 2 37.9876
-+3.1109 1 2 37.9098
-+3.1125 1 2 37.8618
-+3.1141 1 2 37.7868
-+3.1157 1 2 37.815
-+3.1173 1 2 37.8266
-+3.1189 1 2 37.7433
-+3.1205 1 2 37.8081
-+3.1221 1 2 37.873
-+3.1237 1 2 37.9177
-+3.1253 1 2 37.8516
-+3.1269 1 2 37.7501
-+3.1285 1 2 37.7588
-+3.1301 1 2 37.6138
-+3.1317 1 2 37.6179
-+3.1333 1 2 37.6974
-+3.1349 1 2 37.7168
-+3.1365 1 2 37.7727
-+3.1381 1 2 37.8447
-+3.1397 1 2 37.9229
-+3.1413 1 2 37.9668
-+3.1429 1 2 37.9972
-+3.1445 1 2 38.0249
-+3.1461 1 2 38.1329
-+3.1477 1 2 38.1283
-+3.1493 1 2 38.2177
-+3.1509 1 2 38.2397
-+3.1525 1 2 38.3533
-+3.1541 1 2 38.3873
-+3.1557 1 2 38.359
-+3.1573 1 2 38.3485
-+3.1589 1 2 38.3005
-+3.1605 1 2 38.2889
-+3.1621 1 2 38.3555
-+3.1637 1 2 38.3436
-+3.1653 1 2 38.269
-+3.1669 1 2 38.4098
-+3.1685 1 2 38.427
-+3.1701 1 2 38.3594
-+3.1717 1 2 38.3921
-+3.1733 1 2 38.3296
-+3.1749 1 2 38.3223
-+3.1765 1 2 38.4375
-+3.1781 1 2 38.4594
-+3.1797 1 2 38.3751
-+3.1813 1 2 38.3825
-+3.1829 1 2 38.4232
-+3.1845 1 2 38.3004
-+3.1861 1 2 38.3324
-+3.1877 1 2 38.1971
-+3.1893 1 2 38.2343
-+3.1909 1 2 38.1625
-+3.1925 1 2 38.2795
-+3.1941 1 2 38.3987
-+3.1957 1 2 38.435
-+3.1973 1 2 38.4238
-+3.1989 1 2 38.4077
-+3.2005 1 2 38.3089
-+3.2021 1 2 38.3443
-+3.2037 1 2 38.3864
-+3.2053 1 2 38.4303
-+3.2069 1 2 38.4833
-+3.2085 1 2 38.4611
-+3.2101 1 2 38.4448
-+3.2117 1 2 38.41
-+3.2133 1 2 38.4998
-+3.2149 1 2 38.4533
-+3.2165 1 2 38.4404
-+3.2181 1 2 38.4867
-+3.2197 1 2 38.5181
-+3.2213 1 2 38.4418
-+3.2229 1 2 38.4555
-+3.2245 1 2 38.4166
-+3.2261 1 2 38.3719
-+3.2277 1 2 38.4772
-+3.2293 1 2 38.4944
-+3.2309 1 2 38.4304
-+3.2325 1 2 38.423
-+3.2341 1 2 38.3887
-+3.2357 1 2 38.5238
-+3.2373 1 2 38.6237
-+3.2389 1 2 38.7387
-+3.2405 1 2 38.7374
-+3.2421 1 2 38.6687
-+3.2437 1 2 38.6568
-+3.2453 1 2 38.5717
-+3.2469 1 2 38.4489
-+3.2485 1 2 38.3757
-+3.2501 1 2 38.4029
-+3.2517 1 2 38.2629
-+3.2533 1 2 38.308
-+3.2549 1 2 38.2546
-+3.2565 1 2 38.2784
-+3.2581 1 2 38.2926
-+3.2597 1 2 38.3716
-+3.2613 1 2 38.3131
-+3.2629 1 2 38.2123
-+3.2645 1 2 38.392
-+3.2661 1 2 38.3589
-+3.2677 1 2 38.4747
-+3.2693 1 2 38.5354
-+3.2709 1 2 38.5602
-+3.2725 1 2 38.506
-+3.2741 1 2 38.4314
-+3.2757 1 2 38.3883
-+3.2773 1 2 38.3033
-+3.2789 1 2 38.2689
-+3.2805 1 2 38.3401
-+3.2821 1 2 38.2842
-+3.2837 1 2 38.2328
-+3.2853 1 2 38.1381
-+3.2869 1 2 38.1348
-+3.2885 1 2 38.051
-+3.2901 1 2 38.0558
-+3.2917 1 2 38.0047
-+3.2933 1 2 38.0908
-+3.2949 1 2 38.0106
-+3.2965 1 2 37.9405
-+3.2981 1 2 37.8493
-+3.2997 1 2 37.894
-+3.3013 1 2 37.9424
-+3.3029 1 2 37.919
-+3.3045 1 2 37.9725
-+3.3061 1 2 37.9464
-+3.3077 1 2 38.0243
-+3.3093 1 2 38.0444
-+3.3109 1 2 37.9384
-+3.3125 1 2 37.9017
-+3.3141 1 2 37.9662
-+3.3157 1 2 37.8901
-+3.3173 1 2 37.8763
-+3.3189 1 2 37.9452
-+3.3205 1 2 37.9167
-+3.3221 1 2 37.9638
-+3.3237 1 2 38.062
-+3.3253 1 2 38.0288
-+3.3269 1 2 37.9663
-+3.3285 1 2 38.025
-+3.3301 1 2 37.9091
-+3.3317 1 2 37.8893
-+3.3333 1 2 37.906
-+3.3349 1 2 37.8586
-+3.3365 1 2 37.8689
-+3.3381 1 2 37.9555
-+3.3397 1 2 37.9397
-+3.3413 1 2 37.9151
-+3.3429 1 2 37.9746
-+3.3445 1 2 37.9176
-+3.3461 1 2 37.8987
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/UlE2PdcpStatsLte.txt ns3-oran-master/outputs/teste/UlE2PdcpStatsLte.txt
---- ns3-mmwave-oran/outputs/teste/UlE2PdcpStatsLte.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/UlE2PdcpStatsLte.txt	2026-09-28 16:15:08.591062272 -0300
-@@ -0,0 +1 @@
-+% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/UlE2PdcpStats.txt ns3-oran-master/outputs/teste/UlE2PdcpStats.txt
---- ns3-mmwave-oran/outputs/teste/UlE2PdcpStats.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/UlE2PdcpStats.txt	2026-09-28 16:15:08.591062272 -0300
-@@ -0,0 +1 @@
-+% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/UlE2RlcStatsLte.txt ns3-oran-master/outputs/teste/UlE2RlcStatsLte.txt
---- ns3-mmwave-oran/outputs/teste/UlE2RlcStatsLte.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/UlE2RlcStatsLte.txt	2026-09-28 16:15:08.591062272 -0300
-@@ -0,0 +1 @@
-+% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/outputs/teste/UlE2RlcStats.txt ns3-oran-master/outputs/teste/UlE2RlcStats.txt
---- ns3-mmwave-oran/outputs/teste/UlE2RlcStats.txt	1969-12-31 21:00:00.000000000 -0300
-+++ ns3-oran-master/outputs/teste/UlE2RlcStats.txt	2026-09-28 16:15:08.591062272 -0300
-@@ -0,0 +1 @@
-+% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
 Binary files ns3-mmwave-oran/__pycache__/utils.cpython-38.pyc and ns3-oran-master/__pycache__/utils.cpython-38.pyc differ
 Binary files ns3-mmwave-oran/__pycache__/wutils.cpython-38.pyc and ns3-oran-master/__pycache__/wutils.cpython-38.pyc differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/README.md ns3-oran-master/README.md
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/README.md ns3-oran-master/README.md
 --- ns3-mmwave-oran/README.md	2026-10-14 13:48:43.741938149 -0300
 +++ ns3-oran-master/README.md	2026-09-28 15:15:06.901117565 -0300
 @@ -1,199 +1,67 @@
@@ -22154,7 +20012,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -"hg clone http://code.nsnam.org/ns-3-dev"
 +## License
 +This software is licensed under the terms of the GNU GPLv2, inherited from the base ns-3 and ns3-mmwave modules.
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-master.cc ns3-oran-master/scratch/scenario-master.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-master.cc ns3-oran-master/scratch/scenario-master.cc
 --- ns3-mmwave-oran/scratch/scenario-master.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/scratch/scenario-master.cc	2026-09-28 15:15:06.929121217 -0300
 @@ -0,0 +1,1792 @@
@@ -23950,7 +21808,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +  
 +}
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-trainning2.cc ns3-oran-master/scratch/scenario-trainning2.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-trainning2.cc ns3-oran-master/scratch/scenario-trainning2.cc
 --- ns3-mmwave-oran/scratch/scenario-trainning2.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/scratch/scenario-trainning2.cc	2026-10-08 15:18:46.656057000 -0300
 @@ -0,0 +1,570 @@
@@ -24524,7 +22382,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +    return 0;
 +}
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-trainning.cc ns3-oran-master/scratch/scenario-trainning.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/scratch/scenario-trainning.cc ns3-oran-master/scratch/scenario-trainning.cc
 --- ns3-mmwave-oran/scratch/scenario-trainning.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/scratch/scenario-trainning.cc	2026-10-08 15:16:10.994919365 -0300
 @@ -0,0 +1,570 @@
@@ -25106,7 +22964,7 @@ Binary files ns3-mmwave-oran/src/aodv/test/aodv-chain-regression-test-4-0.pcap a
 Binary files ns3-mmwave-oran/src/aodv/test/bug-606-test-0-0.pcap and ns3-oran-master/src/aodv/test/bug-606-test-0-0.pcap differ
 Binary files ns3-mmwave-oran/src/aodv/test/bug-606-test-1-0.pcap and ns3-oran-master/src/aodv/test/bug-606-test-1-0.pcap differ
 Binary files ns3-mmwave-oran/src/aodv/test/bug-606-test-2-0.pcap and ns3-oran-master/src/aodv/test/bug-606-test-2-0.pcap differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.cc ns3-oran-master/src/applications/helper/udp-poisson-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.cc ns3-oran-master/src/applications/helper/udp-poisson-helper.cc
 --- ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/helper/udp-poisson-helper.cc	2026-09-28 15:15:06.949123827 -0300
 @@ -0,0 +1,146 @@
@@ -25256,7 +23114,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +}
 +
 +} // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.h ns3-oran-master/src/applications/helper/udp-poisson-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.h ns3-oran-master/src/applications/helper/udp-poisson-helper.h
 --- ns3-mmwave-oran/src/applications/helper/udp-poisson-helper.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/helper/udp-poisson-helper.h	2026-09-28 15:15:06.949123827 -0300
 @@ -0,0 +1,213 @@
@@ -25473,7 +23331,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +} // namespace ns3
 +
 +#endif /* UDP_POISSON_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-client.cc ns3-oran-master/src/applications/model/udp-poisson-client.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-client.cc ns3-oran-master/src/applications/model/udp-poisson-client.cc
 --- ns3-mmwave-oran/src/applications/model/udp-poisson-client.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/model/udp-poisson-client.cc	2026-09-28 15:15:06.957124871 -0300
 @@ -0,0 +1,248 @@
@@ -25725,7 +23583,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +
 +} // Namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-client.h ns3-oran-master/src/applications/model/udp-poisson-client.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-client.h ns3-oran-master/src/applications/model/udp-poisson-client.h
 --- ns3-mmwave-oran/src/applications/model/udp-poisson-client.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/model/udp-poisson-client.h	2026-09-28 15:15:06.957124871 -0300
 @@ -0,0 +1,111 @@
@@ -25840,7 +23698,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +} // namespace ns3
 +
 +#endif /* UDP_CLIENT_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-server.cc ns3-oran-master/src/applications/model/udp-poisson-server.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-server.cc ns3-oran-master/src/applications/model/udp-poisson-server.cc
 --- ns3-mmwave-oran/src/applications/model/udp-poisson-server.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/model/udp-poisson-server.cc	2026-09-28 15:15:06.957124871 -0300
 @@ -0,0 +1,210 @@
@@ -26054,7 +23912,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +}
 +
 +} // Namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-server.h ns3-oran-master/src/applications/model/udp-poisson-server.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/applications/model/udp-poisson-server.h ns3-oran-master/src/applications/model/udp-poisson-server.h
 --- ns3-mmwave-oran/src/applications/model/udp-poisson-server.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/applications/model/udp-poisson-server.h	2026-09-28 15:15:06.957124871 -0300
 @@ -0,0 +1,116 @@
@@ -26174,7 +24032,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +} // namespace ns3
 +
 +#endif /* UDP_POISSON_SERVER_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/applications/wscript ns3-oran-master/src/applications/wscript
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/applications/wscript ns3-oran-master/src/applications/wscript
 --- ns3-mmwave-oran/src/applications/wscript	2026-10-14 13:48:43.793931367 -0300
 +++ ns3-oran-master/src/applications/wscript	2026-09-28 15:15:06.957124871 -0300
 @@ -20,12 +20,15 @@
@@ -26212,7 +24070,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
      if (bld.env['ENABLE_EXAMPLES']):
 Binary files ns3-mmwave-oran/src/.DS_Store and ns3-oran-master/src/.DS_Store differ
 Binary files ns3-mmwave-oran/src/internet/model/.DS_Store and ns3-oran-master/src/internet/model/.DS_Store differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-ber.eps ns3-oran-master/src/lr-wpan/doc/802-15-4-ber.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-ber.eps ns3-oran-master/src/lr-wpan/doc/802-15-4-ber.eps
 --- ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-ber.eps	2026-10-14 13:48:43.877920411 -0300
 +++ ns3-oran-master/src/lr-wpan/doc/802-15-4-ber.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,1030 +0,0 @@
@@ -27246,7 +25104,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times-BoldItalic
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-per-sens.eps ns3-oran-master/src/lr-wpan/doc/802-15-4-per-sens.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-per-sens.eps ns3-oran-master/src/lr-wpan/doc/802-15-4-per-sens.eps
 --- ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-per-sens.eps	2026-10-14 13:48:43.877920411 -0300
 +++ ns3-oran-master/src/lr-wpan/doc/802-15-4-per-sens.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,3773 +0,0 @@
@@ -31023,7 +28881,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times-BoldItalic
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-psr-distance.eps ns3-oran-master/src/lr-wpan/doc/802-15-4-psr-distance.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-psr-distance.eps ns3-oran-master/src/lr-wpan/doc/802-15-4-psr-distance.eps
 --- ns3-mmwave-oran/src/lr-wpan/doc/802-15-4-psr-distance.eps	2026-10-14 13:48:43.877920411 -0300
 +++ ns3-oran-master/src/lr-wpan/doc/802-15-4-psr-distance.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,908 +0,0 @@
@@ -31935,7 +29793,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times-BoldItalic
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/epcEutranRunningTime.eps ns3-oran-master/src/lte/doc/source/figures/epcEutranRunningTime.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/epcEutranRunningTime.eps ns3-oran-master/src/lte/doc/source/figures/epcEutranRunningTime.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/epcEutranRunningTime.eps	2026-10-14 13:48:43.953910499 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/epcEutranRunningTime.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,848 +0,0 @@
@@ -32787,7 +30645,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Helvetica
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/epcRunningTime.eps ns3-oran-master/src/lte/doc/source/figures/epcRunningTime.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/epcRunningTime.eps ns3-oran-master/src/lte/doc/source/figures/epcRunningTime.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/epcRunningTime.eps	2026-10-14 13:48:43.953910499 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/epcRunningTime.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,801 +0,0 @@
@@ -33592,7 +31450,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Helvetica
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/epcSimulationTime.eps ns3-oran-master/src/lte/doc/source/figures/epcSimulationTime.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/epcSimulationTime.eps ns3-oran-master/src/lte/doc/source/figures/epcSimulationTime.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/epcSimulationTime.eps	2026-10-14 13:48:43.953910499 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/epcSimulationTime.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,797 +0,0 @@
@@ -34397,7 +32255,7 @@ Binary files ns3-mmwave-oran/src/lte/doc/source/figures/fading_pedestrian.pdf an
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/fading_urban_3kmph.pdf and ns3-oran-master/src/lte/doc/source/figures/fading_urban_3kmph.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/fading_vehicular.pdf and ns3-oran-master/src/lte/doc/source/figures/fading_vehicular.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/helpers.pdf and ns3-oran-master/src/lte/doc/source/figures/helpers.pdf differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lena-dual-stripe.eps ns3-oran-master/src/lte/doc/source/figures/lena-dual-stripe.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lena-dual-stripe.eps ns3-oran-master/src/lte/doc/source/figures/lena-dual-stripe.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/lena-dual-stripe.eps	2026-10-14 13:48:43.969908413 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/lena-dual-stripe.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,2994 +0,0 @@
@@ -37395,7 +35253,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Helvetica
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lenaThrTestCase1.eps ns3-oran-master/src/lte/doc/source/figures/lenaThrTestCase1.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lenaThrTestCase1.eps ns3-oran-master/src/lte/doc/source/figures/lenaThrTestCase1.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/lenaThrTestCase1.eps	2026-10-14 13:48:43.973907891 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/lenaThrTestCase1.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,1212 +0,0 @@
@@ -38611,7 +36469,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lenaThrTestCase2.eps ns3-oran-master/src/lte/doc/source/figures/lenaThrTestCase2.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lenaThrTestCase2.eps ns3-oran-master/src/lte/doc/source/figures/lenaThrTestCase2.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/lenaThrTestCase2.eps	2026-10-14 13:48:43.973907891 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/lenaThrTestCase2.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,927 +0,0 @@
@@ -39551,7 +37409,7 @@ Binary files ns3-mmwave-oran/src/lte/doc/source/figures/lte-fr-soft-1-rem.pdf an
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/lte-handover-algorithm.pdf and ns3-oran-master/src/lte/doc/source/figures/lte-handover-algorithm.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/lte-handover-campaign-rem.pdf and ns3-oran-master/src/lte/doc/source/figures/lte-handover-campaign-rem.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/lte-legacy-handover-algorithm.pdf and ns3-oran-master/src/lte/doc/source/figures/lte-legacy-handover-algorithm.pdf differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lte-mcs-index.eps ns3-oran-master/src/lte/doc/source/figures/lte-mcs-index.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lte-mcs-index.eps ns3-oran-master/src/lte/doc/source/figures/lte-mcs-index.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/lte-mcs-index.eps	2026-10-14 13:48:43.993905282 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/lte-mcs-index.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,841 +0,0 @@
@@ -40397,7 +38255,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -%%Trailer
 -%%DocumentFonts: Helvetica
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/lte-phy-interference.pdf and ns3-oran-master/src/lte/doc/source/figures/lte-phy-interference.pdf differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lte-strongest-cell-handover-algorithm.eps ns3-oran-master/src/lte/doc/source/figures/lte-strongest-cell-handover-algorithm.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/lte-strongest-cell-handover-algorithm.eps ns3-oran-master/src/lte/doc/source/figures/lte-strongest-cell-handover-algorithm.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/lte-strongest-cell-handover-algorithm.eps	2026-10-14 13:48:43.997904760 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/lte-strongest-cell-handover-algorithm.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,5124 +0,0 @@
@@ -45528,7 +43386,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/lte-ue-rrc-states.pdf and ns3-oran-master/src/lte/doc/source/figures/lte-ue-rrc-states.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/mac-random-access-contention.pdf and ns3-oran-master/src/lte/doc/source/figures/mac-random-access-contention.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/mac-random-access-noncontention.pdf and ns3-oran-master/src/lte/doc/source/figures/mac-random-access-noncontention.pdf differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/MCS_12_test.eps ns3-oran-master/src/lte/doc/source/figures/MCS_12_test.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/MCS_12_test.eps ns3-oran-master/src/lte/doc/source/figures/MCS_12_test.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/MCS_12_test.eps	2026-10-14 13:48:43.925914150 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/MCS_12_test.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,1187 +0,0 @@
@@ -46727,7 +44585,7 @@ Binary files ns3-mmwave-oran/src/lte/doc/source/figures/MCS_17_20.pdf and ns3-or
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/MCS_21_24.pdf and ns3-oran-master/src/lte/doc/source/figures/MCS_21_24.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/MCS_25_28.pdf and ns3-oran-master/src/lte/doc/source/figures/MCS_25_28.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/MCS_29_29.pdf and ns3-oran-master/src/lte/doc/source/figures/MCS_29_29.pdf differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/MCS_2_test.eps ns3-oran-master/src/lte/doc/source/figures/MCS_2_test.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/MCS_2_test.eps ns3-oran-master/src/lte/doc/source/figures/MCS_2_test.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/MCS_2_test.eps	2026-10-14 13:48:43.953910499 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/MCS_2_test.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,1563 +0,0 @@
@@ -48299,7 +46157,7 @@ Binary files ns3-mmwave-oran/src/lte/doc/source/figures/MCS_5_8.pdf and ns3-oran
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/MCS_9_12.pdf and ns3-oran-master/src/lte/doc/source/figures/MCS_9_12.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/miesm_scheme.pdf and ns3-oran-master/src/lte/doc/source/figures/miesm_scheme.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/nas-attach.pdf and ns3-oran-master/src/lte/doc/source/figures/nas-attach.pdf differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/profiling-memory.eps ns3-oran-master/src/lte/doc/source/figures/profiling-memory.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/profiling-memory.eps ns3-oran-master/src/lte/doc/source/figures/profiling-memory.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/profiling-memory.eps	2026-10-14 13:48:43.997904760 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/profiling-memory.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,1066 +0,0 @@
@@ -49369,7 +47227,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Helvetica
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/propagationModel.eps ns3-oran-master/src/lte/doc/source/figures/propagationModel.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/propagationModel.eps ns3-oran-master/src/lte/doc/source/figures/propagationModel.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/propagationModel.eps	2026-10-14 13:48:43.997904760 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/propagationModel.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,1072 +0,0 @@
@@ -50448,7 +48306,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/rrc-connection-establishment.pdf and ns3-oran-master/src/lte/doc/source/figures/rrc-connection-establishment.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/rrc-connection-reconfiguration-handover.pdf and ns3-oran-master/src/lte/doc/source/figures/rrc-connection-reconfiguration-handover.pdf differ
 Binary files ns3-mmwave-oran/src/lte/doc/source/figures/rrc-connection-reconfiguration.pdf and ns3-oran-master/src/lte/doc/source/figures/rrc-connection-reconfiguration.pdf differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/runningTime10s.eps ns3-oran-master/src/lte/doc/source/figures/runningTime10s.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/runningTime10s.eps ns3-oran-master/src/lte/doc/source/figures/runningTime10s.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/runningTime10s.eps	2026-10-14 13:48:44.001904236 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/runningTime10s.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,1021 +0,0 @@
@@ -51473,7 +49331,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Helvetica
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/simulationTime.eps ns3-oran-master/src/lte/doc/source/figures/simulationTime.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/doc/source/figures/simulationTime.eps ns3-oran-master/src/lte/doc/source/figures/simulationTime.eps
 --- ns3-mmwave-oran/src/lte/doc/source/figures/simulationTime.eps	2026-10-14 13:48:44.001904236 -0300
 +++ ns3-oran-master/src/lte/doc/source/figures/simulationTime.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,965 +0,0 @@
@@ -52442,7 +50300,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Helvetica
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.cc ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.cc ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.cc
 --- ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.cc	2026-10-14 13:48:44.013902769 -0300
 +++ ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.cc	2026-09-28 15:15:07.073139944 -0300
 @@ -1,811 +1,858 @@
@@ -53876,7 +51734,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  }
  
  } // namespace mmwave
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.h ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.h ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.h
 --- ns3-mmwave-oran/src/lte/helper/mmwave-bearer-stats-calculator.h	2026-10-14 13:48:44.013902769 -0300
 +++ ns3-oran-master/src/lte/helper/mmwave-bearer-stats-calculator.h	2026-09-28 15:15:07.073139944 -0300
 @@ -1,56 +1,57 @@
@@ -54740,7 +52598,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  };
  
  } // namespace mmwave
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/phy-rx-stats-calculator.cc ns3-oran-master/src/lte/helper/phy-rx-stats-calculator.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/phy-rx-stats-calculator.cc ns3-oran-master/src/lte/helper/phy-rx-stats-calculator.cc
 --- ns3-mmwave-oran/src/lte/helper/phy-rx-stats-calculator.cc	2026-10-14 13:48:44.013902769 -0300
 +++ ns3-oran-master/src/lte/helper/phy-rx-stats-calculator.cc	2026-09-28 15:15:07.073139944 -0300
 @@ -95,43 +95,43 @@
@@ -54822,7 +52680,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  }
  
  void
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/phy-stats-calculator.cc ns3-oran-master/src/lte/helper/phy-stats-calculator.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/helper/phy-stats-calculator.cc ns3-oran-master/src/lte/helper/phy-stats-calculator.cc
 --- ns3-mmwave-oran/src/lte/helper/phy-stats-calculator.cc	2026-10-14 13:48:44.013902769 -0300
 +++ ns3-oran-master/src/lte/helper/phy-stats-calculator.cc	2026-09-28 15:15:07.073139944 -0300
 @@ -192,33 +192,33 @@
@@ -54885,7 +52743,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  }
  
  
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/eps-bearer.cc ns3-oran-master/src/lte/model/eps-bearer.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/eps-bearer.cc ns3-oran-master/src/lte/model/eps-bearer.cc
 --- ns3-mmwave-oran/src/lte/model/eps-bearer.cc	2026-10-14 13:48:44.021901791 -0300
 +++ ns3-oran-master/src/lte/model/eps-bearer.cc	2026-09-28 15:15:07.073139944 -0300
 @@ -203,6 +203,60 @@
@@ -54949,7 +52807,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  double
  EpsBearer::GetPacketErrorLossRate () const
  {
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/eps-bearer.h ns3-oran-master/src/lte/model/eps-bearer.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/eps-bearer.h ns3-oran-master/src/lte/model/eps-bearer.h
 --- ns3-mmwave-oran/src/lte/model/eps-bearer.h	2026-10-14 13:48:44.021901791 -0300
 +++ ns3-oran-master/src/lte/model/eps-bearer.h	2026-09-28 15:15:07.073139944 -0300
 @@ -151,6 +151,8 @@
@@ -54961,7 +52819,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
    /**
     *
     *
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc ns3-oran-master/src/lte/model/lte-enb-net-device.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc ns3-oran-master/src/lte/model/lte-enb-net-device.cc
 --- ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc	2026-10-14 13:48:44.313866089 -0300
 +++ ns3-oran-master/src/lte/model/lte-enb-net-device.cc	2026-09-28 15:15:07.205157056 -0300
 @@ -18,447 +18,806 @@
@@ -57300,7 +55158,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  }
  
  } // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-enb-net-device.h ns3-oran-master/src/lte/model/lte-enb-net-device.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-enb-net-device.h ns3-oran-master/src/lte/model/lte-enb-net-device.h
 --- ns3-mmwave-oran/src/lte/model/lte-enb-net-device.h	2026-10-14 13:48:44.313866089 -0300
 +++ ns3-oran-master/src/lte/model/lte-enb-net-device.h	2026-09-28 15:15:07.205157056 -0300
 @@ -17,25 +17,29 @@
@@ -57897,7 +55755,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  
  }; // end of class LteEnbNetDevice
  
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-rlc-am.cc ns3-oran-master/src/lte/model/lte-rlc-am.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-rlc-am.cc ns3-oran-master/src/lte/model/lte-rlc-am.cc
 --- ns3-mmwave-oran/src/lte/model/lte-rlc-am.cc	2026-10-14 13:48:44.317865600 -0300
 +++ ns3-oran-master/src/lte/model/lte-rlc-am.cc	2026-09-28 15:15:07.213158093 -0300
 @@ -105,7 +105,7 @@
@@ -57909,7 +55767,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  }
  
  void
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-rlc-um.cc ns3-oran-master/src/lte/model/lte-rlc-um.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/lte-rlc-um.cc ns3-oran-master/src/lte/model/lte-rlc-um.cc
 --- ns3-mmwave-oran/src/lte/model/lte-rlc-um.cc	2026-10-14 13:48:44.321865112 -0300
 +++ ns3-oran-master/src/lte/model/lte-rlc-um.cc	2026-09-28 15:15:07.213158093 -0300
 @@ -458,6 +458,7 @@
@@ -57920,7 +55778,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
    m_rxPdu (m_rnti, m_lcid, rxPduParams.p->GetSize (), delay.GetNanoSeconds ());
  
    // 5.1.2.2 Receive operations
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.cc ns3-oran-master/src/lte/model/mc-enb-pdcp.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.cc ns3-oran-master/src/lte/model/mc-enb-pdcp.cc
 --- ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.cc	2026-10-14 13:48:44.333863644 -0300
 +++ ns3-oran-master/src/lte/model/mc-enb-pdcp.cc	2026-09-28 15:15:07.217158611 -0300
 @@ -207,6 +207,19 @@
@@ -57943,7 +55801,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  
  ////////////////////////////////////////
  void
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.h ns3-oran-master/src/lte/model/mc-enb-pdcp.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.h ns3-oran-master/src/lte/model/mc-enb-pdcp.h
 --- ns3-mmwave-oran/src/lte/model/mc-enb-pdcp.h	2026-10-14 13:48:44.333863644 -0300
 +++ ns3-oran-master/src/lte/model/mc-enb-pdcp.h	2026-09-28 15:15:07.217158611 -0300
 @@ -181,10 +181,49 @@
@@ -58032,7 +55890,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
    Ptr<UniformRandomVariable> m_uniformRNG;
  
    /**
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/ue-throughput-storage.cc ns3-oran-master/src/lte/model/ue-throughput-storage.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/ue-throughput-storage.cc ns3-oran-master/src/lte/model/ue-throughput-storage.cc
 --- ns3-mmwave-oran/src/lte/model/ue-throughput-storage.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/lte/model/ue-throughput-storage.cc	2026-09-28 15:15:07.217158611 -0300
 @@ -0,0 +1,13 @@
@@ -58049,7 +55907,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +
 +} // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/ue-throughput-storage.h ns3-oran-master/src/lte/model/ue-throughput-storage.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/model/ue-throughput-storage.h ns3-oran-master/src/lte/model/ue-throughput-storage.h
 --- ns3-mmwave-oran/src/lte/model/ue-throughput-storage.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/lte/model/ue-throughput-storage.h	2026-09-28 15:15:07.217158611 -0300
 @@ -0,0 +1,254 @@
@@ -58307,7 +56165,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +} // namespace ns3
 +
 +#endif /* UE_THROUGHPUT_STORAGE_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.dat ns3-oran-master/src/lte/test/reference/lte-mcs-index.dat
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.dat ns3-oran-master/src/lte/test/reference/lte-mcs-index.dat
 --- ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.dat	2026-10-14 13:48:44.353861198 -0300
 +++ ns3-oran-master/src/lte/test/reference/lte-mcs-index.dat	1969-12-31 21:00:00.000000000 -0300
 @@ -1,38 +0,0 @@
@@ -58349,7 +56207,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -28 28
 -29 28
 -30 28
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.eps ns3-oran-master/src/lte/test/reference/lte-mcs-index.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.eps ns3-oran-master/src/lte/test/reference/lte-mcs-index.eps
 --- ns3-mmwave-oran/src/lte/test/reference/lte-mcs-index.eps	2026-10-14 13:48:44.353861198 -0300
 +++ ns3-oran-master/src/lte/test/reference/lte-mcs-index.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,841 +0,0 @@
@@ -59194,7 +57052,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Helvetica
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/lte/wscript ns3-oran-master/src/lte/wscript
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/lte/wscript ns3-oran-master/src/lte/wscript
 --- ns3-mmwave-oran/src/lte/wscript	2026-10-14 13:48:44.353861198 -0300
 +++ ns3-oran-master/src/lte/wscript	2026-09-28 15:15:07.221159130 -0300
 @@ -140,7 +140,8 @@
@@ -59240,7 +57098,7 @@ Binary files ns3-mmwave-oran/src/mesh/test/dot11s/pmp-regression-test-1-1.pcap a
 Binary files ns3-mmwave-oran/src/mesh/test/flame/flame-regression-test-0-1.pcap and ns3-oran-master/src/mesh/test/flame/flame-regression-test-0-1.pcap differ
 Binary files ns3-mmwave-oran/src/mesh/test/flame/flame-regression-test-1-1.pcap and ns3-oran-master/src/mesh/test/flame/flame-regression-test-1-1.pcap differ
 Binary files ns3-mmwave-oran/src/mesh/test/flame/flame-regression-test-2-1.pcap and ns3-oran-master/src/mesh/test/flame/flame-regression-test-2-1.pcap differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.cc ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.cc ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.cc	2026-10-14 13:48:44.397855818 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -1,67 +1,67 @@
@@ -61403,7 +59261,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  }
  
  } // namespace mmwave
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.h ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.h ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-bearer-stats-connector.h	2026-10-14 13:48:44.397855818 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-bearer-stats-connector.h	2026-09-28 15:15:07.237161204 -0300
 @@ -1,60 +1,62 @@
@@ -62301,7 +60159,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  
 -
  #endif // MMWAVE_BEARER_STATS_CONNECTOR_H
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,1450 @@
@@ -63755,7 +61613,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +} // end of namespace mmwave
 +} // end of namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-downlink-radio-environment-map-helper.h	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,583 @@
@@ -64342,7 +62200,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +
 +#endif // MMWAVE_DOWNLINK_RADIO_ENVIRONMENT_MAP_HELPER_H
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-helper.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.cc	2026-10-14 13:48:44.397855818 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-helper.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -597,6 +597,13 @@
@@ -64458,7 +62316,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  uint64_t
  MmWaveHelper::GetStartTime ()
  {
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.h ns3-oran-master/src/mmwave/helper/mmwave-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.h ns3-oran-master/src/mmwave/helper/mmwave-helper.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-helper.h	2026-10-14 13:48:44.397855818 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-helper.h	2026-09-28 15:15:07.237161204 -0300
 @@ -111,6 +111,10 @@
@@ -64472,7 +62330,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
  
    /**
     * Set an attribute to the SpectrumPropagationLossModels
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,683 @@
@@ -65159,7 +63017,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +} // end of namespace mmwave 
 +} // end of namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-mc-radio-environment-map-helper.h	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,346 @@
@@ -65509,7 +63367,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +} // end namespace ns3
 +
 +#endif /* MMWAVE_MC_RADIO_ENVIRONMENT_MAP_HELPER_H */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.cc ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.cc
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,1523 @@
@@ -67036,7 +64894,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +} // end of namespace mmwave
 +} // end of namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.h ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.h
 --- ns3-mmwave-oran/src/mmwave/helper/mmwave-radio-environment-map-helper.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/helper/mmwave-radio-environment-map-helper.h	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,588 @@
@@ -67628,7 +65486,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +
 +#endif // MMWAVE_RADIO_ENVIRONMENT_MAP_HELPER_H
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mab-agent.cc ns3-oran-master/src/mmwave/model/mab-agent.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mab-agent.cc ns3-oran-master/src/mmwave/model/mab-agent.cc
 --- ns3-mmwave-oran/src/mmwave/model/mab-agent.cc	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/model/mab-agent.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,178 @@
@@ -67811,7 +65669,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +} // namespace ns3
 \ No newline at end of file
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mab-agent.h ns3-oran-master/src/mmwave/model/mab-agent.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mab-agent.h ns3-oran-master/src/mmwave/model/mab-agent.h
 --- ns3-mmwave-oran/src/mmwave/model/mab-agent.h	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/src/mmwave/model/mab-agent.h	2026-09-28 15:15:07.237161204 -0300
 @@ -0,0 +1,235 @@
@@ -68051,7 +65909,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +#endif // MAB_AGENT_H
 \ No newline at end of file
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.cc ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.cc
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.cc ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.cc
 --- ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.cc	2026-10-14 13:48:44.429851906 -0300
 +++ ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.cc	2026-09-28 15:15:07.237161204 -0300
 @@ -1,1353 +1,1762 @@
@@ -70946,7 +68804,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +
 +} // namespace mmwave
 +} // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.h ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.h
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.h ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.h
 --- ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.h	2026-10-14 13:48:44.429851906 -0300
 +++ ns3-oran-master/src/mmwave/model/mmwave-enb-net-device.h	2026-09-28 15:15:07.237161204 -0300
 @@ -1,65 +1,65 @@
@@ -71391,7 +69249,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 +} // namespace ns3
  
  #endif /* SRC_MMWAVE_MODEL_MMWAVE_ENB_NET_DEVICE_H_ */
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/wscript ns3-oran-master/src/mmwave/wscript
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mmwave/wscript ns3-oran-master/src/mmwave/wscript
 --- ns3-mmwave-oran/src/mmwave/wscript	2026-10-14 13:48:44.457848483 -0300
 +++ ns3-oran-master/src/mmwave/wscript	2026-09-28 15:15:07.245162241 -0300
 @@ -12,10 +12,15 @@
@@ -71446,7 +69304,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
          #'model/mmwave-enb-cmac-sap.h',
          #'model/mmwave-enb-rrc.h',
          #'model/mmwave-mac-sap.h',
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/mobility/test/mobility-trace-example.mob ns3-oran-master/src/mobility/test/mobility-trace-example.mob
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/mobility/test/mobility-trace-example.mob ns3-oran-master/src/mobility/test/mobility-trace-example.mob
 --- ns3-mmwave-oran/src/mobility/test/mobility-trace-example.mob	2026-10-14 13:48:44.469847015 -0300
 +++ ns3-oran-master/src/mobility/test/mobility-trace-example.mob	1969-12-31 21:00:00.000000000 -0300
 @@ -1,18 +0,0 @@
@@ -71469,7 +69327,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -now=+4e+09ns node=0 pos=0.228:0.983:0.000 vel=-0.724:-0.690:0.000
 -now=+4.31439e+09ns node=0 pos=0.000:0.766:0.000 vel=0.724:-0.690:0.000
 Binary files ns3-mmwave-oran/src/network/test/known.pcap and ns3-oran-master/src/network/test/known.pcap differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/spectrum/doc/spectrum-analyzer-example.eps ns3-oran-master/src/spectrum/doc/spectrum-analyzer-example.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/spectrum/doc/spectrum-analyzer-example.eps ns3-oran-master/src/spectrum/doc/spectrum-analyzer-example.eps
 --- ns3-mmwave-oran/src/spectrum/doc/spectrum-analyzer-example.eps	2026-10-14 13:48:44.605830386 -0300
 +++ ns3-oran-master/src/spectrum/doc/spectrum-analyzer-example.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,15622 +0,0 @@
@@ -87098,7 +84956,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 Binary files ns3-mmwave-oran/src/spectrum/doc/spectrum-channel-phy-interface.png and ns3-oran-master/src/spectrum/doc/spectrum-channel-phy-interface.png differ
 Binary files ns3-mmwave-oran/src/spectrum/doc/spectrum-tv-8vsb.png and ns3-oran-master/src/spectrum/doc/spectrum-tv-8vsb.png differ
 Binary files ns3-mmwave-oran/src/spectrum/doc/spectrum-tv-cofdm.png and ns3-oran-master/src/spectrum/doc/spectrum-tv-cofdm.png differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/spectrum/doc/spectrum-tv-rand-geo-points.eps ns3-oran-master/src/spectrum/doc/spectrum-tv-rand-geo-points.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/spectrum/doc/spectrum-tv-rand-geo-points.eps ns3-oran-master/src/spectrum/doc/spectrum-tv-rand-geo-points.eps
 --- ns3-mmwave-oran/src/spectrum/doc/spectrum-tv-rand-geo-points.eps	2026-10-14 13:48:44.609829897 -0300
 +++ ns3-oran-master/src/spectrum/doc/spectrum-tv-rand-geo-points.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,5740 +0,0 @@
@@ -92874,7 +90732,7 @@ Binary files ns3-mmwave-oran/src/test/ns3tcp/response-vectors/ns3tcp-state5-resp
 Binary files ns3-mmwave-oran/src/test/ns3tcp/response-vectors/ns3tcp-state6-response-vectors.pcap and ns3-oran-master/src/test/ns3tcp/response-vectors/ns3tcp-state6-response-vectors.pcap differ
 Binary files ns3-mmwave-oran/src/test/ns3tcp/response-vectors/ns3tcp-state7-response-vectors.pcap and ns3-oran-master/src/test/ns3tcp/response-vectors/ns3tcp-state7-response-vectors.pcap differ
 Binary files ns3-mmwave-oran/src/test/ns3tcp/response-vectors/ns3tcp-state8-response-vectors.pcap and ns3-oran-master/src/test/ns3tcp/response-vectors/ns3tcp-state8-response-vectors.pcap differ
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/wave/examples/low99-ct-unterstrass-1day.filt.7.adj.mob ns3-oran-master/src/wave/examples/low99-ct-unterstrass-1day.filt.7.adj.mob
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/wave/examples/low99-ct-unterstrass-1day.filt.7.adj.mob ns3-oran-master/src/wave/examples/low99-ct-unterstrass-1day.filt.7.adj.mob
 --- ns3-mmwave-oran/src/wave/examples/low99-ct-unterstrass-1day.filt.7.adj.mob	2026-10-14 13:48:44.705818159 -0300
 +++ ns3-oran-master/src/wave/examples/low99-ct-unterstrass-1day.filt.7.adj.mob	1969-12-31 21:00:00.000000000 -0300
 @@ -1,1515 +0,0 @@
@@ -94393,7 +92251,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -$ns_ at 300.010000 "$node_(33) switch OFF" ;# T_max_OFF  
 -$ns_ at 299.773230 "$node_(87) setdest 1071.000000 2103.000000 19.333470" ;# 
 -$ns_ at 300.010000 "$node_(87) switch OFF" ;# T_max_OFF  
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/clear-channel.eps ns3-oran-master/src/wifi/doc/source/figures/clear-channel.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/clear-channel.eps ns3-oran-master/src/wifi/doc/source/figures/clear-channel.eps
 --- ns3-mmwave-oran/src/wifi/doc/source/figures/clear-channel.eps	2026-10-14 13:48:44.725815714 -0300
 +++ ns3-oran-master/src/wifi/doc/source/figures/clear-channel.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,897 +0,0 @@
@@ -95294,7 +93152,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times-BoldItalic
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-ac.eps ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-ac.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-ac.eps ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-ac.eps
 --- ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-ac.eps	2026-10-14 13:48:44.725815714 -0300
 +++ ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-ac.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,3998 +0,0 @@
@@ -99296,7 +97154,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times-BoldItalic
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-ax.eps ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-ax.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-ax.eps ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-ax.eps
 --- ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-ax.eps	2026-10-14 13:48:44.725815714 -0300
 +++ ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-ax.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,6310 +0,0 @@
@@ -105610,7 +103468,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times-BoldItalic
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate.eps ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate.eps ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate.eps
 --- ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate.eps	2026-10-14 13:48:44.725815714 -0300
 +++ ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,3612 +0,0 @@
@@ -109226,7 +107084,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times-BoldItalic
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-n.eps ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-n.eps
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-n.eps ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-n.eps
 --- ns3-mmwave-oran/src/wifi/doc/source/figures/nist-frame-success-rate-n.eps	2026-10-14 13:48:44.725815714 -0300
 +++ ns3-oran-master/src/wifi/doc/source/figures/nist-frame-success-rate-n.eps	1969-12-31 21:00:00.000000000 -0300
 @@ -1,3664 +0,0 @@
@@ -112894,7 +110752,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -showpage
 -%%Trailer
 -%%DocumentFonts: Times-BoldItalic
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/test/80211b.plt ns3-oran-master/src/wifi/test/80211b.plt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/src/wifi/test/80211b.plt ns3-oran-master/src/wifi/test/80211b.plt
 --- ns3-mmwave-oran/src/wifi/test/80211b.plt	2026-10-14 13:48:44.789807889 -0300
 +++ ns3-oran-master/src/wifi/test/80211b.plt	1969-12-31 21:00:00.000000000 -0300
 @@ -1,48 +0,0 @@
@@ -112946,27 +110804,27 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 -"80211b.txt" using 2:8 title '2M IEEE', \
 -"80211b.txt" using 2:9 title '5.5M IEEE', \
 -"80211b.txt" using 2:10 title '11M IEEE'
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/UlE2PdcpStatsLte.txt ns3-oran-master/UlE2PdcpStatsLte.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/UlE2PdcpStatsLte.txt ns3-oran-master/UlE2PdcpStatsLte.txt
 --- ns3-mmwave-oran/UlE2PdcpStatsLte.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/UlE2PdcpStatsLte.txt	2026-10-08 17:27:16.361224467 -0300
 @@ -0,0 +1 @@
 +% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/UlE2PdcpStats.txt ns3-oran-master/UlE2PdcpStats.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/UlE2PdcpStats.txt ns3-oran-master/UlE2PdcpStats.txt
 --- ns3-mmwave-oran/UlE2PdcpStats.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/UlE2PdcpStats.txt	2026-10-08 17:27:16.361224467 -0300
 @@ -0,0 +1 @@
 +% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/UlE2RlcStatsLte.txt ns3-oran-master/UlE2RlcStatsLte.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/UlE2RlcStatsLte.txt ns3-oran-master/UlE2RlcStatsLte.txt
 --- ns3-mmwave-oran/UlE2RlcStatsLte.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/UlE2RlcStatsLte.txt	2026-10-08 17:27:16.361224467 -0300
 @@ -0,0 +1 @@
 +% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/UlE2RlcStats.txt ns3-oran-master/UlE2RlcStats.txt
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/UlE2RlcStats.txt ns3-oran-master/UlE2RlcStats.txt
 --- ns3-mmwave-oran/UlE2RlcStats.txt	1969-12-31 21:00:00.000000000 -0300
 +++ ns3-oran-master/UlE2RlcStats.txt	2026-10-08 17:27:16.361224467 -0300
 @@ -0,0 +1 @@
 +% start	end	CellId	IMSI	RNTI	LCID	nTxPDUs	TxBytes	nRxPDUs	RxBytes	delay	stdDev	min	max	PduSize	stdDev	min	max
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/utils/mmWave-dce18-patch.diff ns3-oran-master/utils/mmWave-dce18-patch.diff
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/utils/mmWave-dce18-patch.diff ns3-oran-master/utils/mmWave-dce18-patch.diff
 --- ns3-mmwave-oran/utils/mmWave-dce18-patch.diff	2026-10-14 13:48:44.837802021 -0300
 +++ ns3-oran-master/utils/mmWave-dce18-patch.diff	1969-12-31 21:00:00.000000000 -0300
 @@ -1,49 +0,0 @@
@@ -113019,7 +110877,7 @@ diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran
 - };
 - 
 - } // namespace ns3
-diff -urN '--exclude=.git' '--exclude=build' '--exclude=.vscode' ns3-mmwave-oran/utils/mmWave-newhandoverBranch-dce18-patch.diff ns3-oran-master/utils/mmWave-newhandoverBranch-dce18-patch.diff
+diff -urN '--exclude=.git' '--exclude=build' '--exclude=.txt' '--exclude=outputs' '--exclude=.vscode' ns3-mmwave-oran/utils/mmWave-newhandoverBranch-dce18-patch.diff ns3-oran-master/utils/mmWave-newhandoverBranch-dce18-patch.diff
 --- ns3-mmwave-oran/utils/mmWave-newhandoverBranch-dce18-patch.diff	2026-10-14 13:48:44.837802021 -0300
 +++ ns3-oran-master/utils/mmWave-newhandoverBranch-dce18-patch.diff	1969-12-31 21:00:00.000000000 -0300
 @@ -1,629 +0,0 @@
