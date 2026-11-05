@@ -45,53 +45,53 @@ Ptr<Building> CreateBuilding(Box buildingBox)
 
 
 
-void PrintThroughputInfo(NetDeviceContainer uesNetDevs) {
-    auto nUes = uesNetDevs.GetN();
-    for (uint16_t i = 0; i < nUes; i++) {
-        Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
-        uint64_t imsi = mcUeNetDevice->GetImsi();
-        uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
-        if (rnti) {
-            ObjectMapValue mapValueLte;
-            mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
-            for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte) {
-                Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
-                int drbId = static_cast<int>(drb->m_drbIdentity);
-                
-                double lteThp = UeThroughputStorage::GetLteThroughput(imsi, drbId);
-                double lteDelay = UeThroughputStorage::GetLteDelay(imsi, drbId);
-                uint64_t qciLte = UeThroughputStorage::GetDrbQci(imsi, drbId);
-                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-                          << "IMSI: " << imsi << " DRB: " << drbId << " QCI: " << qciLte 
-                          << " LTE THP = " << lteThp << " LTE DELAY = " << lteDelay << "\033[0m" << std::endl;
-                
-                double nrThp = UeThroughputStorage::GetNrThroughput(imsi, drbId);
-                double nrDelay = UeThroughputStorage::GetNrDelay(imsi, drbId);
-                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-                          << "IMSI: " << imsi << " DRB: " << drbId << " QCI: " << qciLte 
-                          << " NR THP = " << nrThp << " NR DELAY = " << nrDelay << "\033[0m" << std::endl;
-                
-                double aggThp = UeThroughputStorage::GetAggregatedThroughput(imsi, drbId);
-                std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
-                          << "IMSI: " << imsi << " DRB: " << drbId << " Agg Thp = " << aggThp << "\033[0m" << std::endl;
-            }
-        }
-    }
-    Simulator::Schedule(Seconds(0.1), &PrintThroughputInfo, uesNetDevs);
-}
+// void PrintThroughputInfo(NetDeviceContainer uesNetDevs) {
+//     auto nUes = uesNetDevs.GetN();
+//     for (uint16_t i = 0; i < nUes; i++) {
+//         Ptr<McUeNetDevice> mcUeNetDevice = DynamicCast<McUeNetDevice>(uesNetDevs.Get(i));
+//         uint64_t imsi = mcUeNetDevice->GetImsi();
+//         uint16_t rnti = mcUeNetDevice->GetLteRrc()->GetRnti();
+//         if (rnti) {
+//             ObjectMapValue mapValueLte;
+//             mcUeNetDevice->GetLteTargetEnb()->GetRrc()->GetUeManager(rnti)->GetAttribute("DataRadioBearerMap", mapValueLte);
+//             for (auto iterLte = mapValueLte.Begin(); iterLte != mapValueLte.End(); ++iterLte) {
+//                 Ptr<LteDataRadioBearerInfo> drb = DynamicCast<LteDataRadioBearerInfo>(iterLte->second);
+//                 int drbId = static_cast<int>(drb->m_drbIdentity);
+//                 
+//                 double lteThp = UeThroughputStorage::GetLteThroughput(imsi, drbId);
+//                 double lteDelay = UeThroughputStorage::GetLteDelay(imsi, drbId);
+//                 uint64_t qciLte = UeThroughputStorage::GetDrbQci(imsi, drbId);
+//                 std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
+//                           << "IMSI: " << imsi << " DRB: " << drbId << " QCI: " << qciLte 
+//                           << " LTE THP = " << lteThp << " LTE DELAY = " << lteDelay << "\033[0m" << std::endl;
+//                 
+//                 double nrThp = UeThroughputStorage::GetNrThroughput(imsi, drbId);
+//                 double nrDelay = UeThroughputStorage::GetNrDelay(imsi, drbId);
+//                 std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
+//                           << "IMSI: " << imsi << " DRB: " << drbId << " QCI: " << qciLte 
+//                           << " NR THP = " << nrThp << " NR DELAY = " << nrDelay << "\033[0m" << std::endl;
+//                 
+//                 double aggThp = UeThroughputStorage::GetAggregatedThroughput(imsi, drbId);
+//                 std::cout << "\033[1;32m" << "Time: " << Simulator::Now().GetSeconds() << "s | "
+//                           << "IMSI: " << imsi << " DRB: " << drbId << " Agg Thp = " << aggThp << "\033[0m" << std::endl;
+//             }
+//         }
+//     }
+//     Simulator::Schedule(Seconds(0.1), &PrintThroughputInfo, uesNetDevs);
+// }
 
-void PrintUePosition(NodeContainer ues) {
-    for (uint32_t i = 0; i < ues.GetN(); ++i) {
-        Ptr<MobilityModel> mob = ues.Get(i)->GetObject<MobilityModel>();
-        if (mob) {
-            Vector pos = mob->GetPosition();
-            std::cout << "\033[1;36mTime: " << Simulator::Now().GetSeconds() 
-                      << "s | UE " << ues.Get(i)->GetId() 
-                      << " Position: (" << pos.x << ", " << pos.y << ", " << pos.z << ")\033[0m" << std::endl;
-        }
-    }
-    Simulator::Schedule(Seconds(1.0), &PrintUePosition, ues);
-}
+// void PrintUePosition(NodeContainer ues) {
+//     for (uint32_t i = 0; i < ues.GetN(); ++i) {
+//         Ptr<MobilityModel> mob = ues.Get(i)->GetObject<MobilityModel>();
+//         if (mob) {
+//             Vector pos = mob->GetPosition();
+//             std::cout << "\033[1;36mTime: " << Simulator::Now().GetSeconds() 
+//                       << "s | UE " << ues.Get(i)->GetId() 
+//                       << " Position: (" << pos.x << ", " << pos.y << ", " << pos.z << ")\033[0m" << std::endl;
+//         }
+//     }
+//     Simulator::Schedule(Seconds(1.0), &PrintUePosition, ues);
+// }
 
 void RegisterSimulationTime(double t) {
     std::string time = std::to_string(t);
@@ -602,8 +602,8 @@ int main(int argc, char *argv[]) {
         Simulator::Schedule(Seconds(t), &RegisterSimulationTime, t);
     }
 
-    Simulator::Schedule(Seconds(1.0), &PrintThroughputInfo, mcUeDevs);
-    Simulator::Schedule(Seconds(1.0), &PrintUePosition, allUeNodes);
+    // Simulator::Schedule(Seconds(1.0), &PrintThroughputInfo, mcUeDevs);
+    // Simulator::Schedule(Seconds(1.0), &PrintUePosition, allUeNodes);
     Simulator::Stop(Seconds(simTime + 0.001));
     RunSimulationWithTimeCounter();
 
