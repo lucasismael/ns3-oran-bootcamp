@@ -345,7 +345,7 @@ Para confirmar que a compilação gerou os executáveis de simulação e que as 
 
 Você também pode inspecionar se a biblioteca dinâmica da interface O-RAN foi gerada no diretório de saída:
 ```bash
-ls -lh build/optimized/contrib/oran-interface/libns3.33-oran-interface-optimized.so
+ls -lh build/optimized/lib/libns3.33-oran-interface-optimized.so
 ```
 
 Com a biblioteca presente e as customizações do patch incorporadas, o simulador está pronto para executar cenários com a interface E2 integrada.
