@@ -1,0 +1,40 @@
+#!/bin/bash
+#set -x 
+
+# Garante a execução a partir do diretório do script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
+# Pré-vôo: Garante que Registry (:5000) e ChartMuseum (:8090) estão ativos
+"$SCRIPT_DIR/../start_repo.sh"
+
+export CHART_REPO_URL=http://0.0.0.0:8090
+
+echo ">>> Desinstalando xappkpimon prévio (se houver)..."
+dms_cli uninstall xappkpimon ricxapp || true
+
+echo ">>> Executando build otimizado com Dockerfile.fast (usando imagem base)..."
+docker build --network=host . -f Dockerfile.fast -t 127.0.0.1:5000/kpimon_dev:1.0.0
+
+echo ">>> Enviando imagem para o registry local..."
+docker push 127.0.0.1:5000/kpimon_dev:1.0.0
+
+echo ">>> Realizando onboarding no DMS..."
+dms_cli onboard ./xapp-descriptor/config.json ./xapp-descriptor/schema.json
+
+echo ">>> Instalando xappkpimon via Helm no namespace ricxapp..."
+dms_cli install xappkpimon 1.0.0 ricxapp
+
+echo "Wait for 10 seconds"
+sleep 10
+
+# Filtra especificamente o pod do xApp kpimon
+pod_name=$(kubectl get pods -n ricxapp --no-headers -o custom-columns=":metadata.name" | grep -E "kpimon" | head -n 1)
+
+echo "=========================================================="
+echo "Comando para acessar o pod do KPIMON:"
+echo "kubectl exec -ti -n ricxapp $pod_name bash"
+echo ""
+echo "Para executar o KPIMON:"
+echo "kubectl exec -ti -n ricxapp $pod_name -- ./kpimon -f /opt/ric/config/config-file.json"
+echo "=========================================================="

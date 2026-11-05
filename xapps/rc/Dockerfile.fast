@@ -1,0 +1,28 @@
+# ===================================================================================
+# Dockerfile.fast: Compilação Ultra-Rápida do RC xApp usando Imagem Base
+# ===================================================================================
+
+# Stage 1: Build rápido utilizando as bibliotecas E2 e RMR pré-instaladas
+FROM 127.0.0.1:5000/oran-xapp-base:1.0.0 as rcbuild
+
+ENV PATH=/opt/go/1.14/bin:$PATH
+WORKDIR /go/src/gerrit.o-ran-sc.org/r/ric-app/rc
+COPY go.mod .
+COPY cmd cmd
+COPY control control
+COPY xapp-descriptor xapp-descriptor
+
+# Compilação instantânea do binário Go (sem compilar os 629 arquivos C de e2ap/ e e2sm/)
+RUN go build -o rc ./cmd/rc.go
+
+# Stage 2: Runtime enxuto
+FROM 127.0.0.1:5000/oran-xapp-runtime:1.0.0
+
+ENV CFG_FILE /opt/ric/config/config-file.json
+ENV RMR_SEED_RT /opt/routes.txt
+COPY routes.txt /opt/routes.txt
+
+WORKDIR /go/src/gerrit.o-ran-sc.org/r/ric-app/rc
+COPY --from=rcbuild /go/src/gerrit.o-ran-sc.org/r/ric-app/rc/rc .
+
+CMD ./rc

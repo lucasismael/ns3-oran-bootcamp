@@ -21,11 +21,27 @@
 #include "ns3/mc-enb-pdcp.h"
 #include <ns3/cosine-antenna-model.h>
 #include "ns3/epc-tft.h"
+#include "ns3/buildings-module.h"
+#include "ns3/mobility-building-info.h"
+#include "ns3/building.h"
+#include "ns3/box.h"
 
 using namespace ns3;
 using namespace mmwave;
 
 NS_LOG_COMPONENT_DEFINE ("ScenarioTrainning");
+
+Ptr<Building> CreateBuilding(Box buildingBox)
+{
+    Ptr<Building> building = CreateObject<Building>();
+    building->SetBoundaries(buildingBox);
+    building->SetNRoomsX(1);
+    building->SetNRoomsY(1);
+    building->SetNFloors(1);
+    building->SetBuildingType(Building::Commercial);
+    building->SetExtWallsType(Building::ConcreteWithWindows);
+    return building;
+}
 
 
 
@@ -282,8 +298,8 @@ int main(int argc, char *argv[]) {
 
     CommandLine cmd;
     double simTime = 300.0;
-    double simSplitRatio = 0.0;
-    double dataRateMbb = 100.0;
+    double simSplitRatio = 0.5;
+    double dataRateMbb = 20.0;
     double dataRateXr = 15.0;
     uint32_t nUesMixed = 1;
     uint32_t nUesBackground = 0;
@@ -313,8 +329,8 @@ int main(int argc, char *argv[]) {
     Config::SetDefault ("ns3::LteEnbNetDevice::EnableCuUpReport", BooleanValue(true));
     Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableCuCpReport", BooleanValue(true));
     Config::SetDefault ("ns3::LteEnbNetDevice::EnableCuCpReport", BooleanValue(true));
-    Config::SetDefault ("ns3::MmWaveEnbNetDevice::ReducedPmValues", BooleanValue (true));
-    Config::SetDefault ("ns3::LteEnbNetDevice::ReducedPmValues", BooleanValue (true));
+    Config::SetDefault ("ns3::MmWaveEnbNetDevice::ReducedPmValues", BooleanValue (false));
+    Config::SetDefault ("ns3::LteEnbNetDevice::ReducedPmValues", BooleanValue (false));
     Config::SetDefault ("ns3::LteEnbNetDevice::EnableE2FileLogging", BooleanValue (enableE2FileLogging));
     Config::SetDefault ("ns3::MmWaveEnbNetDevice::EnableE2FileLogging", BooleanValue (enableE2FileLogging));
 
@@ -327,8 +343,15 @@ int main(int argc, char *argv[]) {
     Config::SetDefault("ns3::LteEnbRrc::FirstSibTime", UintegerValue(2)); 
     Config::SetDefault("ns3::LteEnbRrc::SystemInformationPeriodicity", TimeValue(MilliSeconds(5.0)));
     Config::SetDefault("ns3::LteEnbRrc::AdmitHandoverRequest", BooleanValue(false));
+    Config::SetDefault("ns3::LteEnbRrc::OutageThreshold", DoubleValue(-5.0));
     Config::SetDefault("ns3::LteEnbRrc::SecondaryCellHandoverMode", StringValue ("NoAuto"));
+    Config::SetDefault("ns3::LteEnbRrc::HoSinrDifference", DoubleValue(3.0));
     Config::SetDefault("ns3::MmWaveHelper::LteHandoverAlgorithm", StringValue("ns3::NoOpHandoverAlgorithm"));
+    Config::SetDefault("ns3::LteUePhy::RsrpSinrSamplePeriod", UintegerValue(100));
+    Config::SetDefault("ns3::MmWaveEnbPhy::UpdateSinrEstimatePeriod", IntegerValue(100000));
+    Config::SetDefault("ns3::MmWaveEnbMac::NumberOfRaPreambles", UintegerValue(40));
+    Config::SetDefault("ns3::MmWaveHelper::BasicCellId", UintegerValue(1));
+    Config::SetDefault("ns3::MmWaveHelper::BasicImsi", UintegerValue(0));
     
     // PHY MAC parameters
     Config::SetDefault ("ns3::MmWavePhyMacCommon::Bandwidth", DoubleValue (100e6));
@@ -340,12 +363,18 @@ int main(int argc, char *argv[]) {
     Config::SetDefault("ns3::LteEnbPhy::TxPower", DoubleValue(46));
     Config::SetDefault("ns3::LteUePhy::TxPower", DoubleValue(24));
     
-    // Setup Channel model (No buildings)
+    // Setup Channel and Building model (aligned with scenario-master)
+    Config::SetDefault("ns3::BuildingsPropagationLossModel::ShadowSigmaOutdoor", DoubleValue(0));
+    Config::SetDefault("ns3::BuildingsPropagationLossModel::ShadowSigmaIndoor", DoubleValue(0));
+    Config::SetDefault("ns3::BuildingsPropagationLossModel::ShadowSigmaExtWalls", DoubleValue(0));
+    Config::SetDefault("ns3::BuildingsPropagationLossModel::InternalWallLoss", DoubleValue(0));
+
     Config::SetDefault("ns3::ThreeGppChannelModel::Scenario", StringValue("UMa"));
-    Config::SetDefault("ns3::ThreeGppPropagationLossModel::ShadowingEnabled", BooleanValue(true));
-    // Config::SetDefault("ns3::ThreeGppChannelConditionModel::UpdatePeriod", TimeValue (MilliSeconds (100)));
+    Config::SetDefault("ns3::ThreeGppPropagationLossModel::ShadowingEnabled", BooleanValue(false));
+    Ptr<BuildingsChannelConditionModel> buildingsChannelConditionModel = CreateObject<BuildingsChannelConditionModel>();
+    Config::SetDefault("ns3::ThreeGppPropagationLossModel::ChannelConditionModel", PointerValue(buildingsChannelConditionModel));
     
-    // Missing configs from scenario-master
+    // Configs from scenario-master
     Config::SetDefault("ns3::MmWaveEnbPhy::NoiseFigure", DoubleValue(7));
     Config::SetDefault("ns3::MmWaveUePhy::NoiseFigure", DoubleValue(13));
     Config::SetDefault("ns3::LteEnbPhy::NoiseFigure", DoubleValue(5));
@@ -358,7 +387,6 @@ int main(int argc, char *argv[]) {
     Config::SetDefault("ns3::ThreeGppAntennaArrayModel::ElementGain", DoubleValue(5));
     Config::SetDefault("ns3::ThreeGppAntennaArrayModel::AntennaHorizontalSpacing", DoubleValue(0.5));
     Config::SetDefault("ns3::ThreeGppAntennaArrayModel::AntennaVerticalSpacing", DoubleValue(0.5));
-    Config::SetDefault("ns3::ThreeGppAntennaArrayModel::BearingAngle", DoubleValue(0.785398));
     Config::SetDefault("ns3::CosineAntennaModel::Beamwidth", DoubleValue(60));
     Config::SetDefault("ns3::CosineAntennaModel::Orientation", DoubleValue(225));
     Config::SetDefault("ns3::MmWaveFlexTtiMacScheduler::HarqEnabled", BooleanValue(true));
@@ -384,10 +412,9 @@ int main(int argc, char *argv[]) {
     mmwaveHelper->SetBeamformingModelType("ns3::MmWaveDftBeamforming");
     mmwaveHelper->SetMcUeNetDeviceAttribute("LteDlEarfcn", UintegerValue(100));
 
-    mmwaveHelper->SetPathlossModelType("ns3::ThreeGppUmiStreetCanyonPropagationLossModel");
+    mmwaveHelper->SetPathlossModelType("ns3::ThreeGppIndoorOfficePropagationLossModel");
     mmwaveHelper->SetLtePathlossModelType("ns3::ThreeGppUmaPropagationLossModel");
-    // mmwaveHelper->SetChannelConditionModelType("ns3::AlwaysLosChannelConditionModel");
-    mmwaveHelper->SetChannelConditionModelType("ns3::ThreeGppUmaChannelConditionModel");
+    mmwaveHelper->SetChannelConditionModelType("ns3::BuildingsChannelConditionModel");
 
     mmwaveHelper->SetLteEnbAntennaModelType("ns3::CosineAntennaModel");
     mmwaveHelper->SetLteEnbAntennaModelAttribute("Orientation", DoubleValue(225));
@@ -425,10 +452,12 @@ int main(int argc, char *argv[]) {
     allEnbNodes.Add(lteEnbNodes);
     allEnbNodes.Add(mmWaveEnbNodes);
 
+    Box buildingBox = Box(0, 120, 0, 50, 0, 3);
+
     // Mobility
     Ptr<ListPositionAllocator> enbPositionAlloc = CreateObject<ListPositionAllocator> ();
     enbPositionAlloc->Add(Vector (250.0, 250.0, 25.0)); // LTE eNB
-    enbPositionAlloc->Add(Vector (0.0, 0.0, 3.0));     // mmWave gNB
+    enbPositionAlloc->Add(Vector (0.0, 25.0, 3.0));     // mmWave gNB
 
     MobilityHelper enbMobility;
     enbMobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
@@ -465,6 +494,10 @@ int main(int argc, char *argv[]) {
         backgroundUesMobility.SetPositionAllocator(backgroundUesPositionAlloc);
         backgroundUesMobility.Install(ueNodesBackground);
     }
+
+    Ptr<Building> building = CreateBuilding(buildingBox);
+    BuildingsHelper::Install(allUeNodes);
+    BuildingsHelper::Install(allEnbNodes);
 
     // Devices
     NetDeviceContainer lteEnbDevs;
@@ -557,11 +590,19 @@ int main(int argc, char *argv[]) {
     Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosBkg, backgroundUesNetDevs);
     Simulator::Schedule(Seconds(0.5), &SetDrbsSplitRatiosMix, mixedUesNetDevs, simSplitRatio, 0.0);
 
+    mmwaveHelper->EnableTraces ();
+
+    // Trick to enable PHY/MAC traces for the LTE stack
+    Ptr<LteHelper> lteHelper = CreateObject<LteHelper> ();
+    lteHelper->Initialize ();
+    lteHelper->EnablePhyTraces ();
+    lteHelper->EnableMacTraces ();
+
     for (double t = 0; t <= simTime; t = t + 1) {
         Simulator::Schedule(Seconds(t), &RegisterSimulationTime, t);
     }
 
-    // Simulator::Schedule(Seconds(1.0), &PrintThroughputInfo, mcUeDevs);
+    Simulator::Schedule(Seconds(1.0), &PrintThroughputInfo, mcUeDevs);
     Simulator::Schedule(Seconds(1.0), &PrintUePosition, allUeNodes);
     Simulator::Stop(Seconds(simTime + 0.001));
     RunSimulationWithTimeCounter();

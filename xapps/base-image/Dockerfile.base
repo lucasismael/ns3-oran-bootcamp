@@ -1,0 +1,91 @@
+# ===================================================================================
+# Dockerfile.base: Imagem Base Unificada para Compilação e Execução de xApps O-RAN
+# ===================================================================================
+
+# -----------------------------------------------------------------------------------
+# STAGE 1: Builder Base (Go 1.14 + CGO + RMR 4.7.4 + libe2proto + Wrappers E2AP/E2SM)
+# -----------------------------------------------------------------------------------
+FROM nexus3.o-ran-sc.org:10002/o-ran-sc/bldr-ubuntu18-c-go:1.9.0 as xapp-base-builder
+
+ENV PATH=/opt/go/1.14/bin:$PATH
+ENV PATH $PATH:/usr/local/bin
+ENV GOPATH /go
+ENV GOBIN /go/bin
+
+# 1. Instalação de RMR 4.7.4 (Runtime + Dev)
+ARG RMRVERSION=4.7.4
+ARG RMRLIBURL=https://packagecloud.io/o-ran-sc/release/packages/debian/stretch/rmr_${RMRVERSION}_amd64.deb/download.deb
+ARG RMRDEVURL=https://packagecloud.io/o-ran-sc/release/packages/debian/stretch/rmr-dev_${RMRVERSION}_amd64.deb/download.deb
+RUN wget --content-disposition ${RMRLIBURL} && dpkg -i rmr_${RMRVERSION}_amd64.deb && \
+    wget --content-disposition ${RMRDEVURL} && dpkg -i rmr-dev_${RMRVERSION}_amd64.deb && \
+    rm -f rmr_${RMRVERSION}_amd64.deb rmr-dev_${RMRVERSION}_amd64.deb
+
+# 2. Pacotes essenciais do sistema
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates libgnutls30 nano cmake build-essential && \
+    rm -rf /var/lib/apt/lists/*
+
+# 3. Compilação e Instalação da libe2proto (E2AP / E2SM-KPM v1.0 para KPIMon)
+WORKDIR /tmp/libe2proto_build
+RUN git clone -b ns-o-ran https://github.com/wineslab/libe2proto.git . && \
+    cmake . && make -j$(nproc) && make install && \
+    mkdir -p /usr/local/include/libe2proto && \
+    cp src/wrapper/wrapper.h /usr/local/include/libe2proto/ && \
+    cp src/e2ap/*.h /usr/local/include/libe2proto/ && \
+    cp src/e2sm/*.h /usr/local/include/libe2proto/ && \
+    ldconfig && \
+    rm -rf /tmp/libe2proto_build
+
+# 4. Compilação e Instalação dos Wrappers E2AP e E2SM-RC (para xApp RC)
+COPY rc/e2ap /tmp/rc_e2ap
+RUN cd /tmp/rc_e2ap && \
+    gcc -c -fPIC -Iheaders/ lib/*.c wrapper.c && \
+    gcc *.o -shared -o libe2apwrapper.so && \
+    cp libe2apwrapper.so /usr/local/lib/ && \
+    mkdir -p /usr/local/include/e2ap && \
+    cp wrapper.h headers/*.h /usr/local/include/e2ap/ && \
+    ldconfig && \
+    rm -rf /tmp/rc_e2ap
+
+COPY rc/e2sm /tmp/rc_e2sm
+RUN cd /tmp/rc_e2sm && \
+    gcc -c -fPIC -Iheaders/ lib/*.c wrapper.c && \
+    gcc *.o -shared -o libe2smwrapper.so && \
+    cp libe2smwrapper.so /usr/local/lib/ && \
+    mkdir -p /usr/local/include/e2sm && \
+    cp wrapper.h headers/*.h /usr/local/include/e2sm/ && \
+    ldconfig && \
+    rm -rf /tmp/rc_e2sm
+
+# 5. Pré-instalação de bibliotecas xapp-frame e dependências no GOPATH
+WORKDIR /go/src/gerrit.o-ran-sc.org/r/ric-plt
+RUN git clone -b cherry "https://gerrit.o-ran-sc.org/r/ric-plt/sdlgo" && \
+    git clone -b v0.4.11 "https://gerrit.o-ran-sc.org/r/ric-plt/xapp-frame" xapp-frame && \
+    cd xapp-frame && \
+    GO111MODULE=on go mod edit -replace github.com/go-redis/redis@v6.15.3+incompatible=github.com/go-redis/redis@v6.15.9+incompatible && \
+    GOPROXY=https://proxy.golang.org GO111MODULE=on go mod vendor -v && \
+    cp -r vendor/* /go/src/ && \
+    rm -rf vendor
+
+
+# -----------------------------------------------------------------------------------
+# STAGE 2: Runtime Base (Ubuntu 18.04 + RMR + Bibliotecas E2 pré-carregadas)
+# -----------------------------------------------------------------------------------
+FROM ubuntu:18.04 as xapp-runtime-base
+
+ENV PATH $PATH:/usr/local/bin
+ENV GOPATH /go
+ENV GOBIN /go/bin
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates libgnutls30 nano && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copia todas as bibliotecas compiladas (.so) e cabeçalhos
+COPY --from=xapp-base-builder /usr/local/lib /usr/local/lib
+COPY --from=xapp-base-builder /usr/local/include /usr/local/include
+RUN ldconfig
+
+# Diretório padrão para configuração do xapp-frame
+WORKDIR /go/src/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/config/
+COPY --from=xapp-base-builder /go/src/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/config/config-file.yaml .

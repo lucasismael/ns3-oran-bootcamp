@@ -1,0 +1,24 @@
+# ===================================================================================
+# Dockerfile.fast: Compilação Ultra-Rápida do KPIMon usando Imagem Base
+# ===================================================================================
+
+# Stage 1: Build rápido utilizando as bibliotecas E2 e RMR pré-instaladas
+FROM 127.0.0.1:5000/oran-xapp-base:1.0.0 as kpimonbuild
+
+WORKDIR /go/src/gerrit.o-ran-sc.org/r/scp/ric-app/kpimon
+COPY control/ control/
+COPY cmd/ cmd/
+
+# Compila exclusivamente o binário Go (o wrapper CGO utiliza a libe2proto da imagem base)
+RUN go build -o kpimon ./cmd/kpimon.go
+
+# Stage 2: Runtime enxuto (já com bibliotecas .so e pacotes essenciais pré-instalados)
+FROM 127.0.0.1:5000/oran-xapp-runtime:1.0.0
+
+ENV RMR_SEED_RT /opt/routes.txt
+COPY routes.txt /opt/routes.txt
+
+WORKDIR /go/src/gerrit.o-ran-sc.org/r/scp/ric-app/kpimon
+COPY --from=kpimonbuild /go/src/gerrit.o-ran-sc.org/r/scp/ric-app/kpimon/kpimon .
+
+CMD sleep infinity

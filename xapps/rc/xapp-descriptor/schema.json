@@ -1,0 +1,17 @@
+{
+        "$schema": "http://json-schema.org/draft-07/schema#", "$id": "#/controls",
+        "type": "object",
+        "title": "Controls Section Schema",
+        "required": [
+                "logLevel"
+        ],
+        "properties": {
+            "logLevel" : {
+                "$id": "#/properties/logLevel",
+                "type": "integer",
+                "title": "log level",
+                "default": 4,
+                "examples": [4]
+            }
+        }
+}

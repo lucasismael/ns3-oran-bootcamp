@@ -268,7 +268,9 @@ O bootcamp está dividido em etapas práticas sequenciais. Acesse os roteiros de
 | 🌐 [**Lab 1: Fundamentos da Arquitetura O-RAN e Deploy do Near-RT RIC**](./labs/lab01-setup-RIC.md) | Fundamentos da Arquitetura O-RAN, orquestração Cloud-Native (Kubernetes e Helm), configuração da RECIPE e deploy dos microsserviços do RIC | ✅ Disponível |
 | ⚙️ [**Lab 2: Fundamentos do ns-3, Arquitetura ns-O-RAN e Preparação do Ambiente**](./labs/lab02-setup-ns3.md) | Fundamentos do ns-3, pilha 5G mmWave/DC, arquitetura ns-O-RAN, aplicação do patch do bootcamp e compilação com Waf | ✅ Disponível |
 | 🔄 [**Lab 3: Validação da Integração ns-3 e Near-RT RIC**](./labs/lab03-validacao-e2setup.md) | Protocolo E2AP, transporte SCTP, barramento RMR, execução do cenário de simulação e validação via REST API | ✅ Disponível |
-| 📊 **Lab 4: Onboarding do KPIMon xApp e Simulação** | Implantação de xApp no RIC e coleta de telemetria da simulação em tempo real | ⏳ *Em breve* |
+| 📦 [**Lab 4: Fundamentos de xApps, Arquitetura Cloud-Native e Onboarding**](./labs/lab04-fundamentos-xapps-onboarding.md) | O que é um xApp, loops de controle (rApp vs xApp vs dApp), arquitetura com `xapp-frame`, descritores (`config.json`/`schema.json`) e deploy via `dms_cli` | ✅ Disponível |
+| 📊 [**Lab 5: Fundamentos de E2AP/E2SM e Telemetria com KPIMon xApp**](./labs/lab05-e2ap-e2sm-ricindication.md) | Fundamentos de E2AP e E2SM-KPM, ciclo de vida da RIC Indication (Construção, Codificação, Envio e Decodificação), ASN.1 APER e observabilidade em tempo real | ✅ Disponível |
+| 🔁 [**Lab 6: Controle em Malha Fechada (Closed-Loop) com E2SM-RC e ns-3**](./labs/lab06-closed-loop-ran-control.md) | Norma O-RAN E2SM-RC (WG3), PDU `RICcontrolRequest`, DRB Split Ratio Control, princípio do design agnóstico e atuação dinâmica em tempo real no ns-3 | ✅ Disponível |
 
 ---
 
@@ -281,5 +283,60 @@ Neste laboratório, aprofundamos a teoria do simulador ns-3 (versão 3.33), o fu
 ### [Lab 3: Validação da Integração ns-3 e Near-RT RIC (O Caminho do E2 Setup)](./labs/lab03-validacao-e2setup.md)
 Neste laboratório, o foco é validar e dissecar a comunicação fim-a-fim entre o ns-3 e o Near-RT RIC através do procedimento de E2 Setup. O roteiro aprofunda a especificação do protocolo E2AP (Procedimentos Elementares e codificação ASN.1 APER), a camada de transporte SCTP (multi-streaming e RFC 4960), a mensageria interna RMR e o armazenamento na Shared Data Layer (SDL/Redis). Guiamos o aluno pela parametrização do cenário de Conectividade Dupla (`scenario-trainning.cc`), observabilidade em tempo real nos pods do `e2term` e homologação definitiva dos nós com status CONNECTED via API REST do E2 Manager.
 
-### Lab 4: Onboarding do KPIMon xApp e Execução da Simulação *(Em breve)*
-O último laboratório realiza o fechamento do loop da arquitetura (Simulador ↔ RIC ↔ xApp). O roteiro orientará sobre como obter o código de um xApp de monitoramento de métricas, configurar um registro local de imagens Docker, realizar o processo de onboarding e lançamento no cluster Kubernetes e visualizar as métricas sendo coletadas em tempo real.
+### [Lab 4: Fundamentos de xApps, Arquitetura Cloud-Native e Onboarding no Near-RT RIC](./labs/lab04-fundamentos-xapps-onboarding.md)
+O quarto laboratório introduz formalmente o conceito e os blocos construtivos de um xApp na O-RAN. O roteiro aborda os loops temporais de controle (rApp vs. xApp vs. dApp), os pilares de desenvolvimento de microsserviços Cloud-Native com o framework `xapp-frame`, suas interfaces (RMR, SDL/Redis, A1, métricas Prometheus) e os arquivos descritores padronizados (`config.json` e `schema.json`). O aluno executa na prática o pipeline de onboarding local com Docker Registry, ChartMuseum e `dms_cli`, auditando a inicialização do Pod no namespace `ricxapp`.
+
+### [Lab 5: Fundamentos de E2AP/E2SM e Telemetria com KPIMon xApp](./labs/lab05-e2ap-e2sm-ricindication.md)
+O quinto laboratório realiza o fechamento completo do loop de monitoramento da arquitetura O-RAN (Simulador ↔ Near-RT RIC ↔ xApp). O roteiro aprofunda os fundamentos dos protocolos E2AP e E2SM (especificamente o E2SM-KPM v1), dissecando a PDU `RICindication` (Procedimento de Classe 2), a desmistificação do ASN.1 e da codificação binária APER em C++ no ns-3, o transporte SCTP/RMR e a decodificação em Go no xApp KPIMON. O aluno dispara a simulação e homologa a extração contínua de métricas de rádio (Throughput, Latência, SINR, PRB usage) em tempo real.
+
+### [Lab 6: Controle em Malha Fechada (Closed-Loop) com E2SM-RC e ns-3](./labs/lab06-closed-loop-ran-control.md)
+O sexto laboratório consolida o ciclo completo de controle em malha fechada (*Closed-Loop RAN Control*: Sense $\to$ Decide $\to$ Act) no Near-RT RIC. O roteiro aprofunda a norma O-RAN E2SM-RC (WG3 v1.0), dissecando o serviço de Controle de Portadora de Rádio (*Radio Bearer Control* - Style 1, Action ID 6: DRB Split Ratio Control) e a PDU `RICcontrolRequest` (Procedimento de Classe 1). O aluno compreende o princípio do design agnóstico da O-RAN, analisa como a mensagem é codificada no xApp RC em Go e traduzida no ns-3 para reprogramar o ponto de bifurcação de pacotes no `McEnbPdcp` em tempo real, executando testes dinâmicos de migração de tráfego entre LTE e mmWave via `split_command.sh`.
+
+---
+
+## 📂 4. Estrutura do Repositório e xApps
+
+```text
+ns3-oran-bootcamp/
+├── labs/                     # Roteiros didáticos passo a passo (Labs 1 a 6)
+├── patches/                  # Patches de adaptação (patch_bootcamp.patch para o ns-3)
+├── scenarios/                # Cenários de simulação em C++ (scenario-trainning.cc)
+└── xapps/                    # Código-fonte e descritores dos xApps O-RAN
+    ├── README.md             # Guia de compilação e deploy dos xApps
+    ├── start_repo.sh         # Inicializador do Registry (:5000) e ChartMuseum (:8090)
+    ├── base-image/           # Imagens base pré-compiladas (oran-xapp-base / runtime)
+    │   ├── Dockerfile.base
+    │   └── build_base.sh     # Compilação única das libs ASN.1 CGO (libe2proto)
+    ├── kpimon/               # xApp KPIMon (Monitoramento E2SM-KPM v1.0)
+    │   ├── cmd/
+    │   ├── control/
+    │   ├── xapp-descriptor/  # config.json e schema.json
+    │   ├── Dockerfile.fast   # Build ultra-rápido baseado em oran-xapp-base
+    │   ├── launch_app_fast.sh# Deploy acelerado (< 10 segundos)
+    │   └── launch_app.sh     # Automação de build tradicional
+    └── rc/                   # xApp RC (Controle de RAN E2SM-RC v1.0)
+        ├── cmd/
+        ├── control/
+        ├── xapp-descriptor/  # config_dev.json e schema.json
+        ├── Dockerfile.fast   # Build ultra-rápido baseado em oran-xapp-base
+        ├── launch_app_fast.sh# Deploy acelerado (< 10 segundos)
+        ├── launch_app.sh     # Automação de build tradicional
+        └── split_command.sh  # Script de injeção de comandos de split ratio
+```
+
+> [!IMPORTANT]
+> ### ⚠️ Observação sobre Privilégios de Execução (`sudo -i`) e Builds Rápidos
+> Os ciclos de vida dos xApps (construção de imagens via Docker, publicação no registro local `:5000`, publicação de pacotes Helm no ChartMuseum `:8090` e operações com o `dms_cli`) exigem acesso ao socket do Docker e privilégios administrativos.
+> 
+> Execute sempre em sessão de superusuário:
+> ```bash
+> sudo -i
+> 
+> # 1. Compilação das imagens base (feita uma única vez):
+> cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
+> ./build_base.sh
+> 
+> # 2. Deploy acelerado de qualquer xApp em poucos segundos:
+> cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon && ./launch_app_fast.sh
+> cd /home/ns3/ns3-oran-bootcamp/xapps/rc && ./launch_app_fast.sh
+> ```

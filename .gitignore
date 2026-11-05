@@ -1,0 +1,18 @@
+# Logs
+*.log
+kpimon*.log
+
+# IDE & Editor files
+.vscode/
+.vscoderoot/
+*.swp
+*~
+
+# Helm / Chartmuseum caches & archives
+xapps/**/charts/*.tgz
+xapps/**/charts/index-cache.yaml
+xapps/charts/*.tgz
+xapps/charts/index-cache.yaml
+
+# Build & binaries
+bin/
