@@ -8,7 +8,7 @@ Este repositório fornece o ambiente, os roteiros e as configurações necessár
 
 ## 🌐 1. Conexão ao Laboratório Remoto (VPN LANCE e Acesso SSH)
 
-As atividades práticas deste bootcamp são desenvolvidas em **Máquinas Virtuais (VMs) dedicadas** hospedadas na infraestrutura de servidores do laboratório **LANCE (UFRN)**. Cada participante conta com uma VM privativa alocada na sub-rede `172.31.0.0/12`.
+As atividades práticas deste bootcamp são desenvolvidas em **Máquinas Virtuais (VMs) dedicadas** hospedadas na infraestrutura de servidores do laboratório **LANCE (UFRN)**. Cada participante conta com uma VM privativa alocada na sub-rede `172.31.0.0/16`.
 
 Para acessar esse ambiente a partir do seu computador pessoal, é necessário iniciar um túnel VPN transparente com o utilitário **`sshuttle`**. Essa ferramenta encaminha exclusivamente as requisições destinadas à faixa de rede interna do laboratório através do servidor gateway do LANCE, preservando sua conexão de internet local para as demais tarefas.
 
@@ -16,7 +16,7 @@ Para acessar esse ambiente a partir do seu computador pessoal, é necessário in
 flowchart LR
     subgraph LOCAL["💻 Seu Computador (Windows ou Linux)"]
         direction TB
-        T1["Terminal 1: VPN (sshuttle)<br/>Túnel ativo para 172.31.0.0/12"]
+        T1["Terminal 1: VPN (sshuttle)<br/>Túnel ativo para 172.31.0.0/16"]
         T2["Terminal 2: Sessão SSH<br/>Acesso à sua VM"]
     end
 
@@ -24,7 +24,7 @@ flowchart LR
         SERVER["Servidor SSH<br/>177.20.148.103:2245"]
     end
 
-    subgraph CLOUD["☁️ Infraestrutura LANCE (Rede 172.31.0.0/12)"]
+    subgraph CLOUD["☁️ Infraestrutura LANCE (Rede 172.31.0.0/16)"]
         VM["Sua Máquina Virtual<br/>172.31.0.xxx:22<br/>(ns-3 + Near-RT RIC)"]
     end
 
@@ -42,7 +42,7 @@ flowchart LR
 | **VPN LANCE (`sshuttle`)** | **Servidor e Porta** | `177.20.148.103:2245` | Gateway de acesso externo do laboratório |
 | | **Usuário do Gateway** | `bootcampns3` | Conta utilizada para estabelecer o túnel |
 | | **Senha da VPN** | `<SENHA_FORNECIDA>` | Senha de autenticação fornecida pela organização do evento |
-| | **Sub-rede Tunelada** | `172.31.0.0/12` | Faixa de endereçamento das VMs dos alunos |
+| | **Sub-rede Tunelada** | `172.31.0.0/16` | Faixa de endereçamento das VMs dos alunos |
 | **Sua Máquina Virtual (SSH)** | **Endereço IP (Host)** | `172.31.0.xxx` | Substitua `xxx` pelo número atribuído a você |
 | | **Porta** | `22` | Porta padrão do serviço OpenSSH |
 | | **Usuário** | `bootcamp` | Usuário de trabalho configurado na VM |
@@ -72,7 +72,7 @@ sudo apt install -y python3 python3-pip openssh-client sshuttle
 O `sshuttle` gerencia as rotas locais de rede no kernel via `iptables` ou `nftables`, exigindo privilégios administrativos (`sudo`):
 
 ```bash
-sudo python3 -m sshuttle -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/12
+sudo python3 -m sshuttle -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/16
 ```
 
 1. Digite a senha do `sudo` da sua própria máquina caso o sistema solicite autorização.
@@ -118,9 +118,9 @@ Para usuários de Windows, o acesso é realizado de forma nativa através do **P
    * No menu Iniciar, pesquise por **PowerShell**, clique com o botão direito e selecione **"Executar como Administrador"** (exigência indispensável para acionar o driver de rede WinDivert).
    * Execute o comando do túnel:
      ```powershell
-     python -m sshuttle -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/12
+     python -m sshuttle -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/16
      ```
-     *(Se a sua versão do sshuttle requerer a seleção explícita do driver de captura no Windows, utilize: `python -m sshuttle --method windivert -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/12`)*.
+     *(Se a sua versão do sshuttle requerer a seleção explícita do driver de captura no Windows, utilize: `python -m sshuttle --method windivert -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/16`)*.
    * Ao ser solicitado, digite a senha da VPN fornecida pela organização do evento.
    * Mantenha esta janela aberta durante a execução das práticas.
 
