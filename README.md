@@ -41,7 +41,7 @@ flowchart LR
 | :--- | :--- | :--- | :--- |
 | **VPN LANCE (`sshuttle`)** | **Servidor e Porta** | `177.20.148.103:2245` | Gateway de acesso externo do laboratório |
 | | **Usuário do Gateway** | `bootcampns3` | Conta utilizada para estabelecer o túnel |
-| | **Senha da VPN** | `<SENHA_FORNECIDA>` | Senha de autenticação no gateway |
+| | **Senha da VPN** | `<SENHA_FORNECIDA>` | Senha de autenticação fornecida pela organização do evento |
 | | **Sub-rede Tunelada** | `172.31.0.0/12` | Faixa de endereçamento das VMs dos alunos |
 | **Sua Máquina Virtual (SSH)** | **Endereço IP (Host)** | `172.31.0.xxx` | Substitua `xxx` pelo número atribuído a você |
 | | **Porta** | `22` | Porta padrão do serviço OpenSSH |
@@ -52,29 +52,18 @@ flowchart LR
 
 ### 1.2 Instruções de Acesso para Linux (Começando do Zero)
 
-Siga os passos abaixo em distribuições Linux (como Ubuntu, Debian, Fedora ou Arch).
+Siga os passos abaixo em distribuições Ubuntu, Debian e seus derivados.
 
 #### Passo 1: Instalação das Ferramentas Essenciais
 Abra o terminal do seu sistema operacional e instale o Python 3, o gerenciador de pacotes `pip`, o cliente SSH e o utilitário `sshuttle`:
 
-* **No Ubuntu, Debian e derivados:**
-  ```bash
-  sudo apt update
-  sudo apt install -y python3 python3-pip openssh-client sshuttle
-  ```
-
-* **No Fedora, Red Hat ou Rocky Linux:**
-  ```bash
-  sudo dnf install -y python3 python3-pip openssh-clients sshuttle
-  ```
-
-* **No Arch Linux ou Manjaro:**
-  ```bash
-  sudo pacman -Sy python python-pip openssh sshuttle
-  ```
+```bash
+sudo apt update
+sudo apt install -y python3 python3-pip openssh-client sshuttle
+```
 
 > [!TIP]
-> Caso sua distribuição não liste o pacote `sshuttle` no repositório nativo, você pode instalá-lo diretamente pelo `pip`:
+> Caso o pacote `sshuttle` não esteja disponível no repositório nativo da sua distribuição, você pode instalá-lo diretamente pelo `pip`:
 > ```bash
 > pip3 install sshuttle
 > ```
@@ -87,10 +76,7 @@ sudo python3 -m sshuttle -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 17
 ```
 
 1. Digite a senha do `sudo` da sua própria máquina caso o sistema solicite autorização.
-2. Quando for solicitado o password de `bootcampns3@177.20.148.103:2245`, informe a senha da VPN:
-   ```text
-   <SENHA_FORNECIDA>
-   ```
+2. Quando for solicitado o password de `bootcampns3@177.20.148.103:2245`, informe a senha da VPN fornecida pela organização do evento.
 3. Assim que a conexão for autenticada, o utilitário exibirá o status operacional (`Connected.`).
 4. **Mantenha este terminal aberto!** Ele deve permanecer em execução para sustentar a rota até a rede do laboratório.
 
@@ -111,50 +97,7 @@ aluno
 
 ### 1.3 Instruções de Acesso para Windows (Começando do Zero)
 
-Para usuários de Windows, apresentamos duas abordagens: a **Opção A (via WSL 2)**, que é a alternativa recomendada devido à total compatibilidade com o ecossistema Linux, e a **Opção B (Nativa)**, executada diretamente no PowerShell.
-
-#### Opção A (Recomendada): Usando o WSL 2 (Ubuntu no Windows)
-
-O *Windows Subsystem for Linux* (WSL 2) disponibiliza um ambiente Linux nativo diretamente no Windows.
-
-1. **Instalar o WSL (caso não possua instalado):**
-   * Abra o **PowerShell** como Administrador (clique com o botão direito no menu Iniciar > "PowerShell (Admin)" ou "Terminal (Admin)").
-   * Digite o comando de instalação:
-     ```powershell
-     wsl --install
-     ```
-   * Reinicie o computador se solicitado pelo assistente do Windows.
-
-2. **Preparar o ambiente Ubuntu:**
-   * Localize e abra o aplicativo **Ubuntu** no menu Iniciar.
-   * Na primeira inicialização, informe um nome de usuário e uma senha local de sua escolha.
-   * Atualize os repositórios e instale os utilitários de rede:
-     ```bash
-     sudo apt update
-     sudo apt install -y python3 python3-pip openssh-client sshuttle iptables
-     ```
-
-3. **Terminal 1 do WSL (Iniciar a VPN):**
-   * Inicie o túnel VPN dentro do terminal do Ubuntu:
-     ```bash
-     sudo python3 -m sshuttle -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/12
-     ```
-   * Digite sua senha local do Ubuntu se requisitado pelo `sudo`.
-   * Quando solicitada a senha do gateway, digite a senha da VPN: `<SENHA_FORNECIDA>`
-   * Mantenha essa janela aberta.
-
-4. **Terminal 2 do WSL (Acessar a Máquina Virtual):**
-   * Abra uma segunda aba ou nova janela do aplicativo Ubuntu e conecte-se à sua máquina:
-     ```bash
-     ssh -p22 bootcamp@172.31.0.xxx
-     ```
-   * Informe a senha: `aluno`
-
----
-
-#### Opção B: Conexão Nativa no Windows (PowerShell / Prompt de Comando)
-
-Caso queira executar a conexão sem instalar o WSL:
+Para usuários de Windows, o acesso é realizado de forma nativa através do **PowerShell**:
 
 1. **Instalar o Python 3 no Windows:**
    * Baixe o instalador oficial em [python.org](https://www.python.org/downloads/).
@@ -165,7 +108,7 @@ Caso queira executar a conexão sem instalar o WSL:
    * Para confirmar, abra o PowerShell e digite `ssh`. Caso não seja reconhecido, instale em: *Configurações > Aplicativos > Recursos Opcionais > Adicionar um recurso > Cliente OpenSSH*.
 
 3. **Instalar o `sshuttle` e o driver `pydivert`:**
-   * No ambiente Windows nativo, o `sshuttle` utiliza a biblioteca `pydivert` (que traz embarcado o driver WinDivert para captura de pacotes TCP).
+   * No ambiente Windows nativo, o `sshuttle` utiliza a biblioteca `pydivert` (que traz embarcado o driver WinDivert para captura e roteamento de pacotes TCP).
    * Abra o PowerShell ou Prompt de Comando e execute:
      ```powershell
      pip install sshuttle pydivert
@@ -177,8 +120,8 @@ Caso queira executar a conexão sem instalar o WSL:
      ```powershell
      python -m sshuttle -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/12
      ```
-     *(Se sua versão do sshuttle requerer a seleção explícita do driver de captura no Windows, utilize: `python -m sshuttle --method windivert -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/12`)*.
-   * Ao ser solicitado, digite a senha da VPN: `<SENHA_FORNECIDA>`
+     *(Se a sua versão do sshuttle requerer a seleção explícita do driver de captura no Windows, utilize: `python -m sshuttle --method windivert -r bootcampns3@177.20.148.103:2245 -x 177.20.148.103 172.31.0.0/12`)*.
+   * Ao ser solicitado, digite a senha da VPN fornecida pela organização do evento.
    * Mantenha esta janela aberta durante a execução das práticas.
 
 5. **Terminal 2: Conectar à Máquina Virtual:**
@@ -206,7 +149,7 @@ Caso queira executar a conexão sem instalar o WSL:
   ssh-keygen -R 172.31.0.xxx
   ```
 * **Erro de autorização ao inicializar o túnel:**
-  Certifique-se de executar o `sshuttle` com privilégios de superusuário (`sudo` no Linux/WSL e `Executar como Administrador` no PowerShell do Windows).
+  Certifique-se de executar o `sshuttle` com privilégios de superusuário (`sudo` no Linux e `Executar como Administrador` no PowerShell do Windows).
 
 ---
 
@@ -311,21 +254,21 @@ ns3-oran-bootcamp/
     │   ├── cmd/
     │   ├── control/
     │   ├── xapp-descriptor/  # config.json e schema.json
-    │   ├── Dockerfile.fast   # Build ultra-rápido baseado em oran-xapp-base
-    │   ├── launch_app_fast.sh# Deploy acelerado (< 10 segundos)
+    │   ├── Dockerfile.fast   # Build utilizando a imagem base
+    │   ├── launch_app_fast.sh# Script de deploy utilizando a imagem base
     │   └── launch_app.sh     # Automação de build tradicional
     └── rc/                   # xApp RC (Controle de RAN E2SM-RC v1.0)
         ├── cmd/
         ├── control/
         ├── xapp-descriptor/  # config_dev.json e schema.json
-        ├── Dockerfile.fast   # Build ultra-rápido baseado em oran-xapp-base
-        ├── launch_app_fast.sh# Deploy acelerado (< 10 segundos)
+        ├── Dockerfile.fast   # Build utilizando a imagem base
+        ├── launch_app_fast.sh# Script de deploy utilizando a imagem base
         ├── launch_app.sh     # Automação de build tradicional
         └── split_command.sh  # Script de injeção de comandos de split ratio
 ```
 
 > [!IMPORTANT]
-> ### ⚠️ Observação sobre Privilégios de Execução (`sudo -i`) e Builds Rápidos
+> ### ⚠️ Observação sobre Privilégios de Execução (`sudo -i`) e Build dos xApps
 > Os ciclos de vida dos xApps (construção de imagens via Docker, publicação no registro local `:5000`, publicação de pacotes Helm no ChartMuseum `:8090` e operações com o `dms_cli`) exigem acesso ao socket do Docker e privilégios administrativos.
 > 
 > Execute sempre em sessão de superusuário:
@@ -336,7 +279,7 @@ ns3-oran-bootcamp/
 > cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
 > ./build_base.sh
 > 
-> # 2. Deploy acelerado de qualquer xApp em poucos segundos:
+> # 2. Deploy dos xApps utilizando a imagem base:
 > cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon && ./launch_app_fast.sh
 > cd /home/ns3/ns3-oran-bootcamp/xapps/rc && ./launch_app_fast.sh
 > ```

@@ -575,11 +575,11 @@ O código-fonte do xApp KPIMON customizado para o bootcamp está localizado em `
    cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
    ```
 
-3. **Execute o deploy otimizado (⚡ Recomendado):**
+3. **Execute o deploy com a imagem base (Recomendado):**
    ```bash
    ./launch_app_fast.sh
    ```
-   *(Alternativamente, se desejar compilar todas as camadas CGO do zero, você pode utilizar `./launch_app.sh`).*
+   *(Alternativamente, se desejar compilar todas as camadas do zero, você pode utilizar `./launch_app.sh`).*
 
    *O script assegura que os repositórios locais estejam ativos, desinstala versões prévias, compila a imagem Docker, registra os descritores no App Manager via `dms_cli` e dispara o deploy no namespace `ricxapp`.*
 
@@ -724,5 +724,5 @@ Procure pelo bloco do protocolo **E2AP**:
 
 1. Abra o arquivo [`xapps/kpimon/control/control.go`](../xapps/kpimon/control/control.go).
 2. Localize a função `logMatchedUEs()` e adicione uma linha de cálculo que compute a taxa agregada em Megabits por segundo ($\text{Mbps} = \text{NR.Throughput} / 1000$) sempre que o valor for reportado.
-3. Recompile a imagem localmente e reinicie o xApp utilizando `./launch_app_fast.sh` (em apenas alguns segundos!) ou `./launch_app.sh`.
+3. Recompile a imagem localmente e reinicie o xApp utilizando `./launch_app_fast.sh` ou `./launch_app.sh`.
 4. Execute o cenário do ns-3 e valide se o seu log personalizado exibe o novo valor calculado em tempo real!

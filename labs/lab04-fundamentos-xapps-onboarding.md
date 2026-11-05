@@ -449,9 +449,9 @@ echo "To run the kpimon: ./kpimon -f /opt/ric/config/config-file.json"
 
 Agora que você compreende cada etapa da automação, temos dois métodos disponíveis para compilar e subir o xApp no cluster:
 
-#### Opção 1: Método Otimizado com Imagens Base (⚡ Altamente Recomendado)
+#### Opção 1: Método com Imagens Base (Recomendado)
 
-No ambiente O-RAN, a compilação do código CGO e de centenas de arquivos ASN.1 (`libe2proto`) do zero pode levar vários minutos no modo tradicional. Para acelerar radicalmente o ciclo de desenvolvimento (de minutos para poucos segundos), o projeto dispõe de **imagens base pré-compiladas** e do script [`launch_app_fast.sh`](../xapps/kpimon/launch_app_fast.sh).
+No ambiente O-RAN, a compilação de todas as dependências e bibliotecas CGO (`libe2proto`) do zero a cada alteração é mais demorada. Para simplificar o processo de desenvolvimento e testes, o projeto disponibiliza **imagens base** e o script [`launch_app_fast.sh`](../xapps/kpimon/launch_app_fast.sh).
 
 > [!IMPORTANT]
 > **Privilégios de Execução (`sudo -i`):**
@@ -467,12 +467,12 @@ No ambiente O-RAN, a compilação do código CGO e de centenas de arquivos ASN.1
    ```
    *Esse script compila o Stage 1 (`oran-xapp-base:1.0.0` com todos os cabeçalhos ASN.1 e libs C) e o Stage 2 (`oran-xapp-runtime:1.0.0`) e os publica no registry local `127.0.0.1:5000`.*
 
-2. **Fazer o Onboarding e Deploy Instantâneo do KPIMON:**
+2. **Fazer o Onboarding e Deploy do KPIMON:**
    ```bash
    cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
    ./launch_app_fast.sh
    ```
-   *O `launch_app_fast.sh` utiliza o `Dockerfile.fast`, compilando apenas o código Go sobre a imagem base em menos de 10 segundos!*
+   *O `launch_app_fast.sh` utiliza o `Dockerfile.fast`, compilando o código Go sobre a imagem base já preparada.*
 
 ---
 

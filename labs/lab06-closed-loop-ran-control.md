@@ -9,7 +9,7 @@ Ao final deste laboratório, você será capaz de:
 3. **Dissecar a Construção da PDU E2AP `RICcontrolRequest`:** Analisar como uma mensagem de controle é estruturada em Go, codificada em binário ASN.1 APER através de CGO (`libe2proto`) e despachada pelo barramento RMR.
 4. **Dominar o Princípio do Design Agnóstico da O-RAN:** Compreender como a O-RAN separa as diretrizes abstratas de controle da implementação física de cada fabricante, e como o Agente E2 no ns-3 traduz Information Elements (IEs) normalizados em chamadas de métodos concretos do rádio (`McEnbPdcp::SetSplitRatio`).
 5. **Compreender a Física de Conectividade Dupla (LTE + mmWave):** Entender a alocação de tráfego na camada PDCP (*Packet Data Convergence Protocol*) em cenários de agregação multi-tecnologia.
-6. **Executar a Prática de Controle em Tempo Real:** Realizar o deploy do xApp RC utilizando o fluxo otimizado de imagens base (`launch_app_fast.sh`), injetar comandos de reconfiguração em tempo real (`split_command.sh`) e observar a migração dinâmica do tráfego nos logs do ns-3 e na telemetria do xApp KPIMON.
+6. **Executar a Prática de Controle em Tempo Real:** Realizar o deploy do xApp RC utilizando o fluxo com imagens base (`launch_app_fast.sh`), injetar comandos de reconfiguração em tempo real (`split_command.sh`) e observar a migração dinâmica do tráfego nos logs do ns-3 e na telemetria do xApp KPIMON.
 
 ---
 
@@ -348,29 +348,29 @@ Observe a precisão do encadeamento: o comando originado em uma especificação 
 
 Um dos maiores obstáculos no desenvolvimento ágil de xApps é o tempo de compilação: a biblioteca de protocolos O-RAN (`libe2proto`) contém mais de 600 arquivos de estruturas geradas pelo compilador ASN.1. Compilar todas as dependências a cada pequena alteração de código levava entre 3 a 5 minutos por deploy.
 
-Para resolver definitivamente esse problema, o ambiente do bootcamp adota uma **Arquitetura de Compilação Multi-Estágio com Imagens Base**:
+Para simplificar esse processo, o ambiente do bootcamp adota uma **Estrutura de Build com Imagens Base**:
 
 ```mermaid
 flowchart TD
-    subgraph BASE["🏗️ Imagens Base (Compiladas apenas 1 vez via build_base.sh)"]
-        BUILDER["oran-xapp-base:1.0.0<br/>• Ubuntu 20.04 + Golang 1.18<br/>• Headers e Bibliotecas ASN.1 (libe2proto)<br/>• RMR Libraries pré-instaladas"]
-        RUNTIME["oran-xapp-runtime:1.0.0<br/>• Imagem enxuta de execução<br/>• Dependências de SO e RMR"]
+    subgraph BASE["🏗️ Imagens Base (Preparadas via build_base.sh)"]
+        BUILDER["oran-xapp-base:1.0.0<br/>• Ambiente de compilação<br/>• Bibliotecas ASN.1 (libe2proto)<br/>• Bibliotecas RMR"]
+        RUNTIME["oran-xapp-runtime:1.0.0<br/>• Imagem base de execução<br/>• Dependências de sistema"]
     end
 
-    subgraph FAST["⚡ Deploy Contínuo (Compilação em < 10 segundos)"]
-        FAST_BUILD["launch_app_fast.sh (Dockerfile.fast)<br/>Compila EXCLUSIVAMENTE o código Go da sua aplicação"]
+    subgraph FAST["📦 Deploy do xApp"]
+        FAST_BUILD["launch_app_fast.sh (Dockerfile.fast)<br/>Compila o código Go da aplicação"]
         PUSH["Docker Push para Registry Local (:5000)"]
         ONBOARD["dms_cli onboard & install no Near-RT RIC"]
         
         FAST_BUILD --> PUSH --> ONBOARD
     end
 
-    BUILDER ==>|"Serve de base para compilação rápida"| FAST_BUILD
-    RUNTIME ==>|"Serve de base para container final"| FAST_BUILD
+    BUILDER ==>|"Base para compilar"| FAST_BUILD
+    RUNTIME ==>|"Base para executar"| FAST_BUILD
 ```
 
-* **[`xapps/base-image/build_base.sh`](../xapps/base-image/build_base.sh):** Compila o builder base e o runtime base e os publica no registry local `127.0.0.1:5000`. Esse passo só precisa ser executado uma única vez.
-* **[`launch_app_fast.sh`](../xapps/rc/launch_app_fast.sh):** Presente em `xapps/kpimon/` e `xapps/rc/`. Utiliza o `Dockerfile.fast`, reaproveita toda a compilação ASN.1 pré-existente e compila apenas o binário Go da sua aplicação em menos de 10 segundos!
+* **[`xapps/base-image/build_base.sh`](../xapps/base-image/build_base.sh):** Prepara as imagens base e as envia para o registro local `127.0.0.1:5000`. Esse passo só precisa ser executado uma única vez.
+* **[`launch_app_fast.sh`](../xapps/rc/launch_app_fast.sh):** Presente em `xapps/kpimon/` e `xapps/rc/`. Utiliza o `Dockerfile.fast` sobre a imagem base para compilar e instalar o xApp diretamente.
 
 ---
 

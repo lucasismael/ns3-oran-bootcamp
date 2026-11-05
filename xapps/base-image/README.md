@@ -46,7 +46,7 @@ cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
 ./launch_app.sh   # Utiliza o Dockerfile padrão
 ```
 
-### 2. Método Otimizado (Via Imagem Base - Build em segundos):
+### 2. Método via Imagem Base:
 ```bash
 sudo -i
 # (Certifique-se de ter gerado a base com ./build_base.sh previamente)

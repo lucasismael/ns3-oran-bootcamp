@@ -53,9 +53,9 @@ xapps/<nome-do-xapp>/
 
 Você pode testar e rodar os xApps de duas formas distintas:
 
-### Opção A: Método Otimizado via Imagem Base (⚡ Recomendado: build em segundos)
+### Opção A: Método via Imagem Base (Recomendado)
 
-Neste modo, as bibliotecas E2AP, E2SM, RMR e ferramentas CGO já vêm pré-compiladas na imagem base, dispensando a compilação de código C repetitiva.
+Neste modo, as bibliotecas E2AP, E2SM, RMR e ferramentas CGO já vêm preparadas na imagem base, tornando o fluxo de desenvolvimento mais simples.
 
 ```bash
 sudo -i
@@ -64,11 +64,11 @@ sudo -i
 cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
 ./build_base.sh
 
-# 2. Deploy ultra-rápido do KPIMON xApp:
+# 2. Deploy do KPIMON xApp:
 cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
 ./launch_app_fast.sh
 
-# 3. Deploy ultra-rápido do RC xApp:
+# 3. Deploy do RC xApp:
 cd /home/ns3/ns3-oran-bootcamp/xapps/rc
 ./launch_app_fast.sh
 ./split_command.sh 50
