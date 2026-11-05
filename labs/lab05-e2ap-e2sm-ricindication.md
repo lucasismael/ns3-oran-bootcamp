@@ -19,8 +19,8 @@ Ao final deste laboratório, você será capaz de:
 5. Desmistificar o **ASN.1** (*Abstract Syntax Notation One*): entender seu papel como linguagem formal de contrato (IDL), por que a O-RAN não utiliza formatos web como JSON/XML, como funciona o compilador `asn1c` e por que a regra de codificação **APER** (*Aligned Packed Encoding Rules*) é mandatória em redes celulares.
 6. Rastrear no código C++ do ns-3 (`oran-interface`) as rotinas de amostragem de dados, construção de objetos ASN.1 e serialização binária com o compilador `asn1c` (`asn_encode_to_new_buffer`).
 7. Compreender a arquitetura de recepção e decodificação no ecossistema Go/CGO do xApp KPIMON, identificando como os wrappers do `libe2proto` processam as cargas úteis binárias.
-8. Realizar o *onboarding* e o *deploy* do container do xApp KPIMON no cluster Kubernetes via ferramenta `dms_cli`.
-9. Executar o cenário de simulação integrado e realizar observabilidade em múltiplos níveis: correlacionando os logs de envio do simulador, o trânsito no pod `e2term` e a exibição das métricas decodificadas no xApp KPIMON.
+8. Executar o xApp KPIMON via `kubectl exec`, ativando o barramento RMR e disparando o fluxo periódico de subscrições E2 (`RIC_SUB_REQ`).
+9. Executar o cenário de simulação integrado e realizar observabilidade correlacionando os logs de envio do simulador ns-3 com a recepção e decodificação das métricas no xApp KPIMON.
 
 ---
 
@@ -536,11 +536,11 @@ Exemplo real de saída gerada:
 Agora realizaremos a homologação prática do envio de `RICindication` entre o ns-3 e o xApp KPIMON.
 
 ### Pré-requisitos
-Certifique-se de que o cluster Kubernetes do Near-RT RIC está ativo (concluído no [Lab 1](./lab01-setup-RIC.md)) e que a compilação do ns-3 com `oran-interface` foi concluída (concluído no [Lab 2](./lab02-setup-ns3.md)).
+Certifique-se de que o cluster Kubernetes do Near-RT RIC está ativo (concluído no [Lab 1](./lab01-setup-RIC.md)), que a compilação do ns-3 com `oran-interface` foi concluída (concluído no [Lab 2](./lab02-setup-ns3.md)), que o handshake de E2 Setup foi validado (concluído no [Lab 3](./lab03-validacao-e2setup.md)) e que o Pod do xApp KPIMON já foi instalado e encontra-se ativo no namespace `ricxapp` (concluído no [Lab 4](./lab04-fundamentos-xapps-onboarding.md)).
 
 ---
 
-### Passo 1: Verificar a Saúde dos Microsserviços do RIC
+### Passo 1: Verificar a Saúde dos Microsserviços do RIC e do Pod do KPIMON
 
 Abra um terminal e verifique se todos os pods do Near-RT RIC estão em estado `Running`:
 
@@ -550,75 +550,49 @@ kubectl get pods -n ricplt
 
 Confirme especificamente que os pods **`e2term`**, **`submgr`**, **`e2mgr`** e **`dbaas`** estão saudáveis.
 
----
+Em seguida, verifique se o Pod do xApp KPIMON (já provisionado no [Laboratório 4](./lab04-fundamentos-xapps-onboarding.md)) está ativo no namespace `ricxapp`:
 
-### Passo 2: Construir e Implantar o xApp KPIMON
+```bash
+kubectl get pods -n ricxapp
+```
 
-O código-fonte do xApp KPIMON customizado para o bootcamp está localizado em `xapps/kpimon`.
+*Saída esperada:*
+```text
+NAME                                  READY   STATUS    RESTARTS   AGE
+ricxapp-xappkpimon-xxxxxxxxxx-xxxxx   1/1     Running   0          10m
+```
 
 > [!NOTE]
-> [!IMPORTANT]
-> **Privilégios de Execução (`sudo -i`):**
-> Como as etapas a seguir realizam `docker build`, publicação no registry local `:5000` e instalação via `dms_cli` no Kubernetes, certifique-se de executar os comandos com privilégios de superusuário:
+> **E se o pod do KPIMON não estiver listado?**
+> Como o container foi configurado no Laboratório 4 com `sleep infinity`, ele permanece rodando em segundo plano. Caso você tenha recriado o ambiente ou o pod tenha sido removido, basta navegar até o diretório do xApp e executar o script de deploy como superusuário (`sudo -i`):
 > ```bash
-> sudo -i
+> cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+> ./launch_app_fast.sh
 > ```
-
-1. **Garantir que as Imagens Base estão compiladas (executado uma única vez):**
-   ```bash
-   cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
-   ./build_base.sh
-   ```
-
-2. **Navegue até o diretório do xApp KPIMON:**
-   ```bash
-   cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
-   ```
-
-3. **Execute o deploy com a imagem base (Recomendado):**
-   ```bash
-   ./launch_app_fast.sh
-   ```
-   *(Alternativamente, se desejar compilar todas as camadas do zero, você pode utilizar `./launch_app.sh`).*
-
-   *O script assegura que os repositórios locais estejam ativos, desinstala versões prévias, compila a imagem Docker, registra os descritores no App Manager via `dms_cli` e dispara o deploy no namespace `ricxapp`.*
-
-4. **Verifique se o pod do xApp foi criado com sucesso:**
-   ```bash
-   kubectl get pods -n ricxapp
-   ```
-   *Saída esperada:*
-   ```text
-   NAME                                READY   STATUS    RESTARTS   AGE
-   ricxapp-xappkpimon-xxxxxxxxxx-xxxxx 1/1     Running   0          30s
-   ```
+> Se o pod já estiver listado como `Running`, **não é necessário executar nenhum script de deploy**.
 
 ---
 
-### Passo 3: Preparar os Terminais de Observabilidade
+### Passo 2: Iniciar e Monitorar o xApp KPIMON (Terminal 1)
 
-Para visualizar o ciclo de vida completo da mensagem em tempo real, utilizaremos múltiplos terminais ou janelas do utilitário `tmux`:
+Para acompanhar o ciclo de vida completo da telemetria em tempo real, utilizaremos **dois terminais**:
+* **Terminal 1**: Execução do processo do xApp KPIMON (emite subscrições e decodifica indicações).
+* **Terminal 2**: Execução do simulador ns-3 (estabelece conexão E2 e transmite os relatórios).
 
-#### 📟 Terminal 1: Executar e Monitorar o xApp KPIMON
-Como vimos no [Laboratório 4](./lab04-fundamentos-xapps-onboarding.md), o container do xApp foi inicializado em modo de desenvolvimento (`sleep infinity`). No Terminal 1, execute o binário do KPIMON para que ele inicie o barramento RMR e o loop de subscrição:
+No **Terminal 1**, execute o binário do KPIMON dentro do container para inicializar o barramento RMR e disparar as requisições de subscrição:
 
 ```bash
 POD_NAME=$(kubectl get pods -n ricxapp -o jsonpath='{.items[0].metadata.name}')
 kubectl exec -ti -n ricxapp $POD_NAME -- ./kpimon -f /opt/ric/config/config-file.json
 ```
-*Observe que o xApp iniciará o envio periódico de subscrições (`RIC_SUB_REQ`) para os nós `gnb_131_133_31000000` e `gnb_131_133_32000000`.*
 
-#### 📟 Terminal 2: Monitorar os Logs de Chegada no `e2term`
-No Terminal 2, acompanhe em tempo real a recepção dos pacotes SCTP e a publicação no barramento RMR pelo `e2term`:
-```bash
-kubectl logs -n ricplt -l app=ricplt-e2term-alpha -f | grep -E "RIC_INDICATION|E2_SETUP|RIC_SUB"
-```
+*Observe que o xApp inicializa o barramento RMR na porta `4560` e inicia o envio periódico de subscrições (`RIC_SUB_REQ`) para os nós alvo `gnb_131_133_31000000` e `gnb_131_133_32000000`. Como o ns-3 ainda não foi iniciado, ele registrará timeouts de subscrição e repetirá as tentativas automaticamente a cada intervalo.*
 
 ---
 
-### Passo 4: Executar a Simulação do ns-3 com Geração de Tráfego
+### Passo 3: Executar a Simulação do ns-3 com Geração de Tráfego (Terminal 2)
 
-No **Terminal 3**, execute o cenário de treinamento do ns-3 apontando para o IP do `e2term` e isolando os arquivos gerados com `--cwd`:
+No **Terminal 2**, execute o cenário de treinamento do ns-3 apontando para o IP do `e2term` e isolando os arquivos gerados com `--cwd`:
 
 ```bash
 cd /home/ns3/ns3-mmwave-oran
@@ -638,24 +612,28 @@ mkdir -p ./outputs/teste
 > **Por que utilizar o parâmetro `--cwd=./outputs/teste`?**
 > Por padrão, o ns-3 grava diversos arquivos de métricas e traces (`.txt`, `.tr`, `.pcap`) diretamente no diretório raiz onde o comando `./waf` é executado. O argumento `--cwd` (*Change Working Directory*) instrui o simulador a salvar todos os relatórios exclusivamente dentro de `./outputs/teste`, mantendo a raiz do ns-3 limpa e organizada.
 
-#### O que observar durante a execução:
+---
 
-1. **No Terminal 3 (ns-3):**
+### Passo 4: Analisar a Correlação de Eventos em Tempo Real
+
+Observe o comportamento sincronizado entre os dois terminais durante a execução:
+
+1. **No Terminal 2 (ns-3):**
    * Os nós eNB e gNB realizam o handshake de `E2 Setup` com sucesso (`status: CONNECTED`).
-   * O nó recebe a mensagem `Received RIC Subscription Request` enviada pelo KPIMON.
-   * O simulador inicia o envio periódico:
+   * O nó de rádio recebe a requisição de subscrição emitida pelo KPIMON:
+     ```text
+     Received RIC Subscription Request
+     ```
+   * O nó envia a resposta de admissão (`RIC Subscription Response`) e passa a gerar e transmitir periodicamente as mensagens de telemetria E2SM-KPM:
      ```text
      LteEnbNetDevice 1 BuildAndSendMessage at time 2.1
      Send LTE CU-UP
      Send LTE CU-CP
      ```
-2. **No Terminal 2 (`e2term`):**
-   * O `e2term` registra a recepção de pacotes SCTP vindos da porta do ns-3 e despacha as mensagens pelo RMR:
-     ```text
-     [INFO] Message type 12050 sent to RMR bus
-     ```
-3. **No Terminal 1 (xApp KPIMON):**
-   * O xApp recebe o `Mtype 12050`, decodifica o cabeçalho e corpo E2SM-KPM e começa a cuspir os relatórios estruturados de métricas de usuário:
+
+2. **No Terminal 1 (xApp KPIMON):**
+   * O xApp recebe a confirmação de subscrição (`RIC_SUB_RESP`).
+   * A cada segundo, o xApp recebe a mensagem RMR de tipo 12050 (`RIC_INDICATION`), decodifica o cabeçalho e corpo E2SM-KPM e imprime na tela as métricas de rádio detalhadas por usuário:
      ```text
      [RIC Indication] E2 Node: gnb_131_133_32000000 | ReqID: 123 | FuncID: 200 | ActionID: 0 | IndSN: 1
      --- [E2SM-KPM Indication Header (Format 1)] ---
@@ -674,7 +652,7 @@ mkdir -p ./outputs/teste
 
 ---
 
-### Passo 5: Inspeção com Captura de Tráfego de Rede (`tshark`)
+### Passo 5: Inspeção com Captura de Tráfego de Rede (`tshark`) (Opcional)
 
 Para inspecionar o pacote binário trafegando pelo socket SCTP antes de entrar no cluster, execute uma captura na interface de loopback ou interface de rede externa:
 
