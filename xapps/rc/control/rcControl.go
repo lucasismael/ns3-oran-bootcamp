@@ -52,10 +52,8 @@ func NewControl() Control {
 		}
 	}
 
-	autoMode := false
-	if os.Getenv("RC_AUTO_MODE") == "true" || os.Getenv("RC_AUTO_MODE") == "1" {
-		autoMode = true
-	}
+	autoModeStr := strings.ToLower(strings.TrimSpace(os.Getenv("RC_AUTO_MODE")))
+	autoMode := (autoModeStr == "true" || autoModeStr == "1")
 
 	autoInterval := 5
 	if val, err := strconv.Atoi(os.Getenv("RC_AUTO_INTERVAL")); err == nil && val > 0 {

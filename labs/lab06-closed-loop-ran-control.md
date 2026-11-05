@@ -612,14 +612,26 @@ Restaure o balanceamento de carga clássico:
 
 Atualmente, o comando de split ratio é disparado manualmente pelo operador através do script `./split_command.sh`.
 
-O xApp RC possui uma funcionalidade nativa de loop autônomo controlada por variáveis de ambiente!
+O xApp RC já possui um mecanismo nativo de loop autônomo, e o seu descritor já vem previamente estruturado com a seção `appenv` contendo a automação desativada por padrão (`"RC_AUTO_MODE": "false"`).
+
+Para ativar o ciclo autônomo:
 
 1. Abra o descritor de configuração do xApp RC em [`xapps/rc/xapp-descriptor/config_dev.json`](../xapps/rc/xapp-descriptor/config_dev.json);
-2. Adicione ou modifique as variáveis de ambiente na seção `envs`:
+2. Na seção `appenv`, altere apenas a variável `"RC_AUTO_MODE"` de `"false"` para `"true"`:
    ```json
-   "RC_AUTO_MODE": "true",
-   "RC_AUTO_INTERVAL": "10"
+     "appenv": {
+       "RC_AUTO_MODE": "true",
+       "RC_AUTO_INTERVAL": "10"
+     },
    ```
-3. Reimplante o xApp utilizando `./launch_app_fast.sh`;
-4. Inicie o ns-3 e o KPIMON;
-5. Observe no Terminal 2 o xApp alternando **automaticamente** o Split Ratio a cada 10 segundos entre 0%, 25%, 50%, 75% e 100%, e comprove no KPIMON a transição suave de throughput entre as pernas LTE e mmWave sem qualquer intervenção humana!
+3. Salve o arquivo e reimplante o xApp executando:
+   ```bash
+   cd /home/ns3/ns3-oran-bootcamp/xapps/rc
+   sudo ./launch_app_fast.sh
+   ```
+4. Com a simulação do ns-3 e o KPIMON em execução, acompanhe os logs em tempo real do pod do RC:
+   ```bash
+   POD_NAME=$(kubectl get pods -n ricxapp --no-headers -o custom-columns=":metadata.name" | grep -E "^ricxapp-rc-" | head -n 1)
+   kubectl logs -f -n ricxapp $POD_NAME
+   ```
+5. Observe o xApp alternando **automaticamente** o Split Ratio a cada 10 segundos entre 0%, 25%, 50%, 75% e 100%, e comprove no terminal do KPIMON a transição de vazão entre as pernas LTE e mmWave sem nenhuma intervenção manual!

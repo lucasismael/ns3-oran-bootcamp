@@ -60,6 +60,10 @@
     "txMessages": ["RIC_CONTROL_REQ"],
     "policies": []
   },
+  "appenv": {
+    "RC_AUTO_MODE": "false",
+    "RC_AUTO_INTERVAL": "10"
+  },
   "controls": {
     "logLevel": 4
   }
