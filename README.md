@@ -47,6 +47,8 @@ flowchart LR
 | | **Porta** | `22` | Porta padrão do serviço OpenSSH |
 | | **Usuário** | `bootcamp` | Usuário de trabalho configurado na VM |
 | | **Senha do Usuário** | `aluno` | Senha de login e privilégios administrativos (`sudo`) |
+| **Interface Gráfica (RDP)** | **Porta** | `3389` | Porta de acesso à Área de Trabalho Remota (XFCE) |
+| | **Usuário / Senha** | `bootcamp` / `aluno` | Mesmas credenciais do acesso via terminal |
 
 ---
 
@@ -134,7 +136,77 @@ Para usuários de Windows, o acesso é realizado de forma nativa através do **P
 
 ---
 
-### 1.4 Dicas de Operação e Resolução de Problemas
+### 1.4 Acesso via Interface Gráfica (GUI / Área de Trabalho Remota)
+
+Caso prefira interagir com a máquina virtual através de um ambiente desktop visual (XFCE), o serviço de **Área de Trabalho Remota (RDP / XRDP)** está disponível na porta `3389`.
+
+#### Opção A: Conexão Direta (com VPN / sshuttle ativa)
+* **No Windows:**
+  1. Pressione `Win + R`, digite `mstsc` e pressione **Enter** (ou abra o aplicativo **Conexão de Área de Trabalho Remota**).
+  2. No campo **Computador**, insira o IP da sua VM:
+     ```text
+     172.31.0.xxx
+     ```
+  3. Clique em **Conectar**.
+  4. Quando a tela de autenticação do XRDP carregar (sessão `Xorg`), informe:
+     * **username:** `bootcamp`
+     * **password:** `aluno`
+
+* **No Linux:**
+  1. Utilize o cliente **Remmina** (ou qualquer outro cliente RDP):
+     ```bash
+     sudo apt install -y remmina remmina-plugin-rdp
+     ```
+  2. Crie uma nova conexão do tipo **RDP**, aponte para `172.31.0.xxx:3389`, usuário `bootcamp` e senha `aluno`.
+
+---
+
+#### Opção B: Conexão via Túnel SSH (Recomendado se a porta 3389 estiver inacessível)
+Caso a VPN não roteie a porta 3389 diretamente ou você receba erro de timeout/desconexão:
+
+1. No terminal do seu computador (PowerShell, CMD ou terminal Linux), abra um túnel SSH:
+   ```bash
+   ssh -L 3390:localhost:3389 bootcamp@172.31.0.xxx
+   ```
+   *(Informe a senha `aluno` e mantenha este terminal aberto durante o uso).*
+
+2. No Windows, abra o `mstsc` e conecte em:
+   ```text
+   localhost:3390
+   ```
+3. Autentique-se com o usuário `bootcamp` e a senha `aluno`.
+
+---
+
+<details>
+<summary>🛠️ <strong>Nota para Administradores: Como provisionar o XRDP na VM Base (Proxmox)</strong></summary>
+
+Caso esteja preparando a imagem/template base no Proxmox antes de clonar para as VMs dos alunos, execute este bloco no terminal da máquina base:
+
+```bash
+# 1. Atualizar repositórios e instalar XRDP e XFCE
+sudo apt update && sudo apt install -y xrdp xfce4 xfce4-goodies
+
+# 2. Adicionar o usuário xrdp ao grupo de certificados
+sudo adduser xrdp ssl-cert
+
+# 3. Configurar a sessão XFCE para o usuário atual e novos usuários criados (/etc/skel)
+echo "xfce4-session" > ~/.xsession
+chmod +x ~/.xsession
+echo "xfce4-session" | sudo tee /etc/skel/.xsession
+
+# 4. Inserir correção do D-Bus no /etc/xrdp/startwm.sh (evita tela preta)
+sudo sed -i '0,/test -x \/etc\/X11\/Xsession/s//unset DBUS_SESSION_BUS_ADDRESS\nunset XDG_RUNTIME_DIR\n&/' /etc/xrdp/startwm.sh
+
+# 5. Habilitar o serviço para iniciar com o sistema
+sudo systemctl enable --now xrdp
+```
+
+</details>
+
+---
+
+### 1.5 Dicas de Operação e Resolução de Problemas
 
 * **Como encerrar a VPN com segurança:**
   Ao finalizar as atividades, vá até o Terminal 1 (onde o `sshuttle` está rodando) e pressione `Ctrl + C`. O túnel será desfeito e o roteamento da sua máquina voltará ao estado inicial.
