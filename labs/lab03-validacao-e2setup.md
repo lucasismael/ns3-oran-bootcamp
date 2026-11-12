@@ -361,7 +361,7 @@ Ainda no **Terminal 1**, copie o código do cenário para a pasta de desenvolvim
 
 ```bash
 # 1. Copia o cenário para a pasta scratch do ns-3
-cp ~/ns3-oran-bootcamp/scenarios/scenario-trainning.cc ~/ns3-mmwave-oran/scratch/
+cp /home/bootcamp/ns3-oran-bootcamp/scenarios/scenario-trainning.cc ~/ns3-mmwave-oran/scratch/
 
 # 2. Navega até o diretório do simulador
 cd ~/ns3-mmwave-oran

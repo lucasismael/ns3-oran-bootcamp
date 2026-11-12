@@ -279,7 +279,7 @@ Vamos analisar as implementações em C++ que geram a telemetria dentro do módu
 
 ### 2.1 Construção do Cabeçalho e Mensagem E2SM-KPM
 
-No arquivo [`kpm-indication.h`](file:///home/ns3/ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.h), as classes `KpmIndicationHeader` e `KpmIndicationMessage` abstraem a manipulação das estruturas complexas geradas pelo `asn1c`.
+No arquivo [`kpm-indication.h`](file:///home/bootcamp/ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.h), as classes `KpmIndicationHeader` e `KpmIndicationMessage` abstraem a manipulação das estruturas complexas geradas pelo `asn1c`.
 
 #### 1. Construção do Cabeçalho (*Indication Header Format 1*):
 ```cpp
@@ -298,7 +298,7 @@ Ptr<KpmIndicationHeader> header = Create<KpmIndicationHeader>(
 ```
 
 #### 2. Codificação Interna com o `asn1c`:
-Em [`kpm-indication.cc`](file:///home/ns3/ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.cc#L76-L84):
+Em [`kpm-indication.cc`](file:///home/bootcamp/ns3-mmwave-oran/contrib/oran-interface/model/kpm-indication.cc#L76-L84):
 ```cpp
 void KpmIndicationHeader::Encode(E2SM_KPM_IndicationHeader_t *descriptor)
 {
@@ -325,7 +325,7 @@ O corpo da mensagem transporta os **Containers de Medição de Desempenho (PM Co
 
 ### 2.2 O Encapsulamento no Envelope E2AP
 
-Uma vez que os buffers binários do cabeçalho (`header->m_buffer`) e da mensagem (`cuUpMsg->m_buffer`) foram produzidos, eles são encapsulados na PDU `E2AP_PDU` pela biblioteca `e2sim` através da função [`encoding::generate_e2apv1_indication_request_parameterized()`](file:///home/ns3/ns-o-ran-e2-sim/e2sim/src/encoding/encode_e2apv1.cpp#L633-L759):
+Uma vez que os buffers binários do cabeçalho (`header->m_buffer`) e da mensagem (`cuUpMsg->m_buffer`) foram produzidos, eles são encapsulados na PDU `E2AP_PDU` pela biblioteca `e2sim` através da função [`encoding::generate_e2apv1_indication_request_parameterized()`](file:///home/bootcamp/ns-o-ran-e2-sim/e2sim/src/encoding/encode_e2apv1.cpp#L633-L759):
 
 ```cpp
 void encoding::generate_e2apv1_indication_request_parameterized(
@@ -403,7 +403,7 @@ void encoding::generate_e2apv1_indication_request_parameterized(
 
 ### 2.3 O Ponto de Disparo no Dispositivo de Rede ns-3
 
-Nos arquivos [`lte-enb-net-device.cc`](file:///home/ns3/ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc#L1533-L1572) e [`mmwave-enb-net-device.cc`](file:///home/ns3/ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.cc), a função `BuildAndSendReportMessage()` é invocada periodicamente pelo temporizador de simulação. 
+Nos arquivos [`lte-enb-net-device.cc`](file:///home/bootcamp/ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc#L1533-L1572) e [`mmwave-enb-net-device.cc`](file:///home/bootcamp/ns3-mmwave-oran/src/mmwave/model/mmwave-enb-net-device.cc), a função `BuildAndSendReportMessage()` é invocada periodicamente pelo temporizador de simulação. 
 
 Ao ser acionada, ela coleta as estatísticas dos calculadores de PDCP e RLC e despacha a mensagem pela interface E2:
 
@@ -566,7 +566,7 @@ ricxapp-xappkpimon-xxxxxxxxxx-xxxxx   1/1     Running   0          10m
 > **E se o pod do KPIMON não estiver listado?**
 > Como o container foi configurado no Laboratório 4 com `sleep infinity`, ele permanece rodando em segundo plano. Caso você tenha recriado o ambiente ou o pod tenha sido removido, basta navegar até o diretório do xApp e executar o script de deploy como superusuário (`sudo -i`):
 > ```bash
-> cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+> cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
 > ./launch_app_fast.sh
 > ```
 > Se o pod já estiver listado como `Running`, **não é necessário executar nenhum script de deploy**.
@@ -595,7 +595,7 @@ kubectl exec -ti -n ricxapp $POD_NAME -- ./kpimon -f /opt/ric/config/config-file
 No **Terminal 2**, execute o cenário de treinamento do ns-3 apontando para o IP do `e2term` e isolando os arquivos gerados com `--cwd`:
 
 ```bash
-cd /home/ns3/ns3-mmwave-oran
+cd /home/bootcamp/ns3-mmwave-oran
 
 # 1. Obtém o IP atual do pod e2term no Kubernetes
 E2TERM_IP=$(kubectl get pods -n ricplt -l app=ricplt-e2term-alpha -o jsonpath='{.items[0].status.podIP}')

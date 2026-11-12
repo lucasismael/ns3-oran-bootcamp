@@ -296,7 +296,7 @@ Acesse o diretório raiz do simulador e aplique o patch utilizando o utilitário
 
 ```bash
 cd ~/ns3-mmwave-oran
-patch -p1 < ~/ns3-oran-bootcamp/patches/patch_bootcamp.patch
+patch -p1 < /home/bootcamp/ns3-oran-bootcamp/patches/patch_bootcamp.patch
 ```
 
 > [!TIP]

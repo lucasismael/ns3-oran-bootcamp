@@ -255,9 +255,9 @@ Assim que o texto é gravado na fila, a goroutine `listenCommandPipe()` em `rcCo
 
 ### 2.2 Lado do ns-3: Recepção, Validação e Atuação na Pilha de Rádio
 
-Quando a mensagem serializada via SCTP atinge a porta do simulador ns-3, o módulo de interface O-RAN (`contrib/oran-interface`) repassa a PDU para a classe de dispositivo de rede eNB LTE em [`src/lte/model/lte-enb-net-device.cc`](file:///home/ns3/ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc).
+Quando a mensagem serializada via SCTP atinge a porta do simulador ns-3, o módulo de interface O-RAN (`contrib/oran-interface`) repassa a PDU para a classe de dispositivo de rede eNB LTE em [`src/lte/model/lte-enb-net-device.cc`](file:///home/bootcamp/ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc).
 
-#### 1. Recepção do Callback e Decodificação do Comando ([`lte-enb-net-device.cc#L475`](file:///home/ns3/ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc#L475)):
+#### 1. Recepção do Callback e Decodificação do Comando ([`lte-enb-net-device.cc#L475`](file:///home/bootcamp/ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc#L475)):
 
 ```cpp
 void
@@ -299,7 +299,7 @@ LteEnbNetDevice::ControlMessageReceivedCallback(E2AP_PDU_t* sub_req_pdu)
 }
 ```
 
-#### 2. Aplicação Direta na Pilha de Rádio via `SetUeQoS` ([`lte-enb-net-device.cc#L380`](file:///home/ns3/ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc#L380)):
+#### 2. Aplicação Direta na Pilha de Rádio via `SetUeQoS` ([`lte-enb-net-device.cc#L380`](file:///home/bootcamp/ns3-mmwave-oran/src/lte/model/lte-enb-net-device.cc#L380)):
 
 Aqui ocorre a **concretização do comando agnóstico**:
 
@@ -392,7 +392,7 @@ Agora, colocaremos a teoria em prática em um teste fim a fim de malha fechada.
 Antes de subir os xApps, certifique-se de que as imagens base estejam construídas no registro local:
 
 ```bash
-cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/base-image
 ./build_base.sh
 ```
 
@@ -405,7 +405,7 @@ cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
 O xApp KPIMON será os nossos "olhos", coletando as métricas de rádio para que possamos auditar a transferência de tráfego em tempo real:
 
 ```bash
-cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
 ./launch_app_fast.sh
 ```
 
@@ -418,7 +418,7 @@ Aguarde a mensagem de confirmação do onboarding e deploy via Helm no namespace
 Agora, realizaremos o onboarding e deploy do xApp de Controle de RAN:
 
 ```bash
-cd /home/ns3/ns3-oran-bootcamp/xapps/rc
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/rc
 ./launch_app_fast.sh
 ```
 
@@ -473,7 +473,7 @@ kubectl logs -f -n ricxapp $POD_RC
 No **Terminal 3**, inicie a simulação do ns-3 apontando para o IP do `e2term`, definindo o Split Ratio inicial em `0.0` (100% mmWave) e direcionando os arquivos gerados para a pasta de saída via `--cwd`:
 
 ```bash
-cd /home/ns3/ns3-mmwave-oran
+cd /home/bootcamp/ns3-mmwave-oran
 
 # 1. Obtém o IP atual do pod e2term no Kubernetes
 E2TERM_IP=$(kubectl get pods -n ricplt -l app=ricplt-e2term-alpha -o jsonpath='{.items[0].status.podIP}')
@@ -505,7 +505,7 @@ Com a simulação em execução, vá para o **Terminal 4** e explore a reconfigu
 Vamos forçar o transmissor a enviar todo o tráfego pela perna LTE (Split Ratio = 100%):
 
 ```bash
-cd /home/ns3/ns3-oran-bootcamp/xapps/rc
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/rc
 ./split_command.sh 100
 ```
 
@@ -565,7 +565,7 @@ Restaure o balanceamento de carga clássico:
 * **Solução:**
   ```bash
   sudo -i
-  /home/ns3/ns3-oran-bootcamp/xapps/start_repo.sh
+  /home/bootcamp/ns3-oran-bootcamp/xapps/start_repo.sh
   export CHART_REPO_URL=http://0.0.0.0:8090
   dms_cli health
   ```
@@ -626,7 +626,7 @@ Para ativar o ciclo autônomo:
    ```
 3. Salve o arquivo e reimplante o xApp executando:
    ```bash
-   cd /home/ns3/ns3-oran-bootcamp/xapps/rc
+   cd /home/bootcamp/ns3-oran-bootcamp/xapps/rc
    sudo ./launch_app_fast.sh
    ```
 4. Com a simulação do ns-3 e o KPIMON em execução, acompanhe os logs em tempo real do pod do RC:

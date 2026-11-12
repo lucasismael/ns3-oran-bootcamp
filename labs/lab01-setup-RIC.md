@@ -406,7 +406,7 @@ O repositório do bootcamp já inclui o arquivo [`fix_a1mediator.patch`](../patc
 
 2. Aplique o patch a partir do arquivo do bootcamp:
    ```bash
-   patch -p1 < ~/ns3-oran-bootcamp/patches/fix_a1mediator.patch
+   patch -p1 < /home/bootcamp/ns3-oran-bootcamp/patches/fix_a1mediator.patch
    ```
 
 ---

@@ -348,10 +348,10 @@ ns3-oran-bootcamp/
 > sudo -i
 > 
 > # 1. Compilação das imagens base (feita uma única vez):
-> cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
+> cd /home/bootcamp/ns3-oran-bootcamp/xapps/base-image
 > ./build_base.sh
 > 
 > # 2. Deploy dos xApps utilizando a imagem base:
-> cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon && ./launch_app_fast.sh
-> cd /home/ns3/ns3-oran-bootcamp/xapps/rc && ./launch_app_fast.sh
+> cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon && ./launch_app_fast.sh
+> cd /home/bootcamp/ns3-oran-bootcamp/xapps/rc && ./launch_app_fast.sh
 > ```

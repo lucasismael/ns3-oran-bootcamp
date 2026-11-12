@@ -20,7 +20,7 @@ Este diretório contém os códigos-fonte, descritores de empacotamento O-RAN e 
 > sudo -i
 > 
 > # Navegação até o repositório do bootcamp
-> cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+> cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
 > 
 > # Inicializar a infraestrutura local (Registry + ChartMuseum) se ainda não estiver ativa
 > ./start_repo.sh
@@ -61,15 +61,15 @@ Neste modo, as bibliotecas E2AP, E2SM, RMR e ferramentas CGO já vêm preparadas
 sudo -i
 
 # 1. Gerar e publicar a imagem base no registry local (executar apenas uma vez):
-cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/base-image
 ./build_base.sh
 
 # 2. Deploy do KPIMON xApp:
-cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
 ./launch_app_fast.sh
 
 # 3. Deploy do RC xApp:
-cd /home/ns3/ns3-oran-bootcamp/xapps/rc
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/rc
 ./launch_app_fast.sh
 ./split_command.sh 50
 ```
@@ -84,14 +84,14 @@ Neste modo (original), cada xApp constrói sua imagem independentemente a partir
 sudo -i
 
 # 1. Inicializar Registry e ChartMuseum (apenas uma vez):
-cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
 ./start_repo.sh
 
 # 2. Deploy do KPIMON xApp:
 ./launch_app.sh
 
 # 3. Deploy do RC xApp:
-cd /home/ns3/ns3-oran-bootcamp/xapps/rc
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/rc
 ./launch_app.sh
 ./split_command.sh 50
 ```

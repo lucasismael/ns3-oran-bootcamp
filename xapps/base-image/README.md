@@ -25,7 +25,7 @@ Como essa etapa gerencia imagens no daemon Docker e publica no registro local `:
 
 ```bash
 sudo -i
-cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/base-image
 ./build_base.sh
 ```
 
@@ -42,7 +42,7 @@ Você pode testar e comparar o funcionamento de ambos os métodos lado a lado:
 ### 1. Método Tradicional (Standalone - Recompila tudo do zero):
 ```bash
 sudo -i
-cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
 ./launch_app.sh   # Utiliza o Dockerfile padrão
 ```
 
@@ -50,6 +50,6 @@ cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
 ```bash
 sudo -i
 # (Certifique-se de ter gerado a base com ./build_base.sh previamente)
-cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
 ./launch_app_fast.sh   # Utiliza Dockerfile.fast
 ```

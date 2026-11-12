@@ -343,7 +343,7 @@ O ecossistema de onboarding necessita de dois serviços locais ativos no host:
 
 1. Navegue até o diretório do xApp KPIMON dentro do repositório do bootcamp:
    ```bash
-   cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+   cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
    ```
 2. Inspecione o script auxiliar [`start_repo.sh`](../xapps/kpimon/start_repo.sh):
    ```bash
@@ -462,14 +462,14 @@ No ambiente O-RAN, a compilação de todas as dependências e bibliotecas CGO (`
 
 1. **Compilar e publicar as Imagens Base (execute apenas uma vez):**
    ```bash
-   cd /home/ns3/ns3-oran-bootcamp/xapps/base-image
+   cd /home/bootcamp/ns3-oran-bootcamp/xapps/base-image
    ./build_base.sh
    ```
    *Esse script compila o Stage 1 (`oran-xapp-base:1.0.0` com todos os cabeçalhos ASN.1 e libs C) e o Stage 2 (`oran-xapp-runtime:1.0.0`) e os publica no registry local `127.0.0.1:5000`.*
 
 2. **Fazer o Onboarding e Deploy do KPIMON:**
    ```bash
-   cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+   cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
    ./launch_app_fast.sh
    ```
    *O `launch_app_fast.sh` utiliza o `Dockerfile.fast`, compilando o código Go sobre a imagem base já preparada.*
@@ -481,7 +481,7 @@ No ambiente O-RAN, a compilação de todas as dependências e bibliotecas CGO (`
 Caso queira recompilar todas as camadas da imagem Docker do zero (incluindo dependências de sistema e CGO):
 
 ```bash
-cd /home/ns3/ns3-oran-bootcamp/xapps/kpimon
+cd /home/bootcamp/ns3-oran-bootcamp/xapps/kpimon
 ./launch_app.sh
 ```
 
